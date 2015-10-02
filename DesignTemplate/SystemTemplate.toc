@@ -1,0 +1,134 @@
+\contentsline {chapter}{Title}{i}{Doc-Start}
+\contentsline {chapter}{Contents}{v}{chapter*.1}
+\contentsline {chapter}{List of Figures}{vii}{chapter*.2}
+\contentsline {chapter}{List of Tables}{ix}{chapter*.3}
+\contentsline {chapter}{List of Algorithms}{xi}{chapter*.4}
+\contentsline {chapter}{Overview Statements}{xiii}{chapter*.5}
+\contentsline {section}{\numberline {0.1}Mission Statement}{xiii}{section.0.1}
+\contentsline {section}{\numberline {0.2}Elevator Pitch}{xiii}{section.0.2}
+\contentsline {chapter}{Document Preparation and Updates}{xv}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Overview and concept of operations}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Scope}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Purpose}{1}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Major System Component \#1}{1}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Major System Component \#2}{1}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Major System Component \#3}{1}{subsection.1.2.3}
+\contentsline {section}{\numberline {1.3}Systems Goals}{1}{section.1.3}
+\contentsline {section}{\numberline {1.4}System Overview and Diagram}{1}{section.1.4}
+\contentsline {section}{\numberline {1.5}Technologies Overview}{2}{section.1.5}
+\contentsline {chapter}{\numberline {2}Project Overview}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Team Members and Roles}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Project Management Approach}{3}{section.2.2}
+\contentsline {section}{\numberline {2.3}Phase Overview}{3}{section.2.3}
+\contentsline {section}{\numberline {2.4}Terminology and Acronyms}{3}{section.2.4}
+\contentsline {chapter}{\numberline {3}User Stories, Backlog and Requirements}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Overview}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Scope}{5}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Purpose of the System}{5}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2} Stakeholder Information}{5}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Customer or End User (Product Owner)}{5}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Management or Instructor (Scrum Master)}{5}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Investors}{5}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Developers --Testers}{5}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Business Need}{6}{section.3.3}
+\contentsline {section}{\numberline {3.4}Requirements and Design Constraints}{6}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}System Requirements}{6}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Network Requirements}{6}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Development Environment Requirements}{6}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Project Management Methodology}{6}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}User Stories}{6}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}User Story \#1}{6}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.a}User Story \#1 Breakdown}{6}{subsubsection.3.5.1.1}
+\contentsline {subsection}{\numberline {3.5.2}User Story \#2}{7}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.a}User Story \#2 Breakdown}{7}{subsubsection.3.5.2.1}
+\contentsline {subsection}{\numberline {3.5.3}User Story \#3}{7}{subsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.3.a}User Story \#3 Breakdown}{7}{subsubsection.3.5.3.1}
+\contentsline {section}{\numberline {3.6}Research or Proof of Concept Results}{7}{section.3.6}
+\contentsline {section}{\numberline {3.7}Supporting Material}{7}{section.3.7}
+\contentsline {chapter}{\numberline {4}Design and Implementation}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}Major Component \#1 }{9}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Technologies Used}{10}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Component Overview}{10}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Phase Overview}{10}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4} Architecture Diagram}{10}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Data Flow Diagram}{10}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}Design Details}{10}{subsection.4.1.6}
+\contentsline {section}{\numberline {4.2}Major Component \#2 }{10}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Technologies Used}{10}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Component Overview}{11}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Phase Overview}{11}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4} Architecture Diagram}{11}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Data Flow Diagram}{11}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Design Details}{11}{subsection.4.2.6}
+\contentsline {section}{\numberline {4.3}Major Component \#3 }{11}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Technologies Used}{11}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Component Overview}{11}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Phase Overview}{11}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4} Architecture Diagram}{11}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}Data Flow Diagram}{11}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.6}Design Details}{11}{subsection.4.3.6}
+\contentsline {chapter}{\numberline {5}System and Unit Testing}{13}{chapter.5}
+\contentsline {section}{\numberline {5.1}Overview}{13}{section.5.1}
+\contentsline {section}{\numberline {5.2}Dependencies}{13}{section.5.2}
+\contentsline {section}{\numberline {5.3}Test Setup and Execution}{13}{section.5.3}
+\contentsline {chapter}{\numberline {6}Development Environment}{15}{chapter.6}
+\contentsline {section}{\numberline {6.1}Development IDE and Tools}{15}{section.6.1}
+\contentsline {section}{\numberline {6.2}Source Control}{15}{section.6.2}
+\contentsline {section}{\numberline {6.3}Dependencies}{15}{section.6.3}
+\contentsline {section}{\numberline {6.4}Build Environment}{15}{section.6.4}
+\contentsline {section}{\numberline {6.5}Development Machine Setup}{15}{section.6.5}
+\contentsline {chapter}{\numberline {7}Release -- Setup -- Deployment}{17}{chapter.7}
+\contentsline {section}{\numberline {7.1}Deployment Information and Dependencies}{17}{section.7.1}
+\contentsline {section}{\numberline {7.2}Setup Information}{17}{section.7.2}
+\contentsline {section}{\numberline {7.3}System Versioning Information}{17}{section.7.3}
+\contentsline {chapter}{\numberline {8}User Documentation}{19}{chapter.8}
+\contentsline {section}{\numberline {8.1}User Guide}{19}{section.8.1}
+\contentsline {section}{\numberline {8.2}Installation Guide}{19}{section.8.2}
+\contentsline {section}{\numberline {8.3}Programmer Manual}{19}{section.8.3}
+\contentsline {chapter}{\numberline {9}Class Index}{21}{chapter.9}
+\contentsline {section}{\numberline {9.1}Class List}{21}{section.9.1}
+\contentsline {chapter}{\numberline {10}Class Documentation}{23}{chapter.10}
+\contentsline {section}{\numberline {10.1}Poly Class Reference}{23}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Constructor \& Destructor Documentation}{23}{subsection.10.1.1}
+\contentsline {subsubsection}{\numberline {10.1.1.a}Poly}{23}{subsubsection.10.1.1.1}
+\contentsline {subsubsection}{\numberline {10.1.1.b}$\sim $\discretionary {-}{}{}Poly}{23}{subsubsection.10.1.1.2}
+\contentsline {subsection}{\numberline {10.1.2}Member Function Documentation}{23}{subsection.10.1.2}
+\contentsline {subsubsection}{\numberline {10.1.2.a}myfunction}{23}{subsubsection.10.1.2.1}
+\contentsline {chapter}{\numberline {11}Business Plan}{25}{chapter.11}
+\contentsline {section}{\numberline {11.1}Business Model}{25}{section.11.1}
+\contentsline {section}{\numberline {11.2}Market and Competition}{25}{section.11.2}
+\contentsline {section}{\numberline {11.3}Regulatory environment}{25}{section.11.3}
+\contentsline {section}{\numberline {11.4}Intellectual Property and Freedom to Operate}{25}{section.11.4}
+\contentsline {section}{\numberline {11.5}Management Team and Advisors}{25}{section.11.5}
+\contentsline {section}{\numberline {11.6}Sources and Uses of Capital}{25}{section.11.6}
+\contentsline {section}{\numberline {11.7}Financial Statements}{25}{section.11.7}
+\contentsline {section}{\numberline {11.8}Metrics and Milestones}{25}{section.11.8}
+\contentsline {section}{\numberline {11.9}Exit Plan}{25}{section.11.9}
+\contentsline {chapter}{\numberline {12}Experimental Log}{27}{chapter.12}
+\contentsline {chapter}{\numberline {13}Research Results}{29}{chapter.13}
+\contentsline {section}{\numberline {13.1}Result 1}{29}{section.13.1}
+\contentsline {section}{\numberline {13.2}Result 2}{29}{section.13.2}
+\contentsline {section}{\numberline {13.3}Conclusions}{29}{section.13.3}
+\contentsline {section}{\numberline {13.4}Further work}{29}{section.13.4}
+\contentsline {chapter}{Bibliography}{31}{chapter*.7}
+\contentsline {chapter}{Software Agreement}{SA-1}{chapter.14}
+\contentsline {chapter}{\numberline {A}Product Description}{A-1}{appendix.A}
+\contentsline {chapter}{\numberline {B}Publications}{B-1}{appendix.B}
+\contentsline {chapter}{\numberline {C}Sprint Reports}{C-1}{appendix.C}
+\contentsline {section}{\numberline {1}Sprint Report \#1}{C-1}{section.C.1}
+\contentsline {section}{\numberline {2}Sprint Report \#2}{C-1}{section.C.2}
+\contentsline {section}{\numberline {3}Sprint Report \#3}{C-1}{section.C.3}
+\contentsline {section}{\numberline {4}Sprint Report ...}{C-1}{section.C.4}
+\contentsline {chapter}{\numberline {D}Industrial Experience and Resumes}{D-1}{appendix.D}
+\contentsline {section}{\numberline {1}Resumes}{D-1}{section.D.1}
+\contentsline {section}{\numberline {2}ABET: Industrial Experience Reports}{D-1}{section.D.2}
+\contentsline {subsection}{\numberline {2.1}Name1}{D-1}{subsection.D.2.1}
+\contentsline {subsection}{\numberline {2.2}Name2}{D-1}{subsection.D.2.2}
+\contentsline {subsection}{\numberline {2.3}Name3}{D-1}{subsection.D.2.3}
+\contentsline {chapter}{\numberline {E}Acknowledgment}{E-1}{appendix.E}
+\contentsline {chapter}{\numberline {F}Supporting Materials}{F-1}{appendix.F}
+\contentsline {chapter}{\LaTeX \ Example}{BM-1}{appendix*.8}
+\contentsline {section}{\numberline {1}Introduction}{BM-1}{section.F.1}
+\contentsline {section}{\numberline {2}Ordinary Text}{BM-1}{section.F.2}
+\contentsline {section}{\numberline {3}Displayed Text}{BM-2}{section.F.3}
+\contentsline {section}{\numberline {4}Build process}{BM-2}{section.F.4}
