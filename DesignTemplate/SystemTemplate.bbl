@@ -1,0 +1,41 @@
+\begin{thebibliography}{1}
+
+\bibitem{arkin2009governing}
+R.~Arkin.
+\newblock {\em Governing Lethal Behavior in Autonomous Robots}.
+\newblock Taylor \& Francis, 2009.
+
+\bibitem{Choset:2005:PRM}
+Howie Choset, Kevin~M. Lynch, Seth Hutchinson, George~A Kantor, Wolfram
+  Burgard, Lydia~E. Kavraki, and Sebastian Thrun.
+\newblock {\em Principles of Robot Motion: Theory, Algorithms, and
+  Implementations}.
+\newblock MIT Press, Cambridge, MA, June 2005.
+
+\bibitem{lavalle2006}
+S.~M. LaValle.
+\newblock {\em Planning Algorithms}.
+\newblock Cambridge University Press, Cambridge, U.K., 2006.
+\newblock Available at http://planning.cs.uiuc.edu/.
+
+\bibitem{lumelsky:1987}
+V.~Lumelsky and A.~Stepanov.
+\newblock Path planning strategies for point mobile automation moving amidst
+  unknown obstacles of arbirary shape.
+\newblock {\em Algorithmica}, pages 403--430, 1987.
+
+\bibitem{nolfi2000evolutionary}
+S.A. NOLFI and D.A. FLOREANO.
+\newblock {\em Evolutionary Robotics: The Biology, Intelligence, and Technology
+  of Self-Organizing Machines}.
+\newblock A Bradford book. A BRADFORD BOOK/THE MIT PRESS, 2000.
+
+\bibitem{wiki:asimo}
+Wikipedia.
+\newblock Asimo --- {W}ikipedia{,} the free encyclopedia.
+\newblock
+  \url{http://upload.wikimedia.org/wikipedia/commons/thumb/0/05/HONDA_ASIMO.jpg/450px-HONDA_ASIMO.jpg},
+  2013.
+\newblock [Online; accessed June 23, 2013].
+
+\end{thebibliography}
