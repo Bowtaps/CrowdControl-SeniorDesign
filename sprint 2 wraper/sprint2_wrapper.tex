@@ -1,0 +1,132 @@
+\documentclass[11pt]{article}
+
+\usepackage[width=7.0in, height=9.0in, top=1.0in, papersize={8.5in,11in}]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{datetime}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+\usepackage{verbatim}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{framed}
+\usepackage{pdfpages}
+\usepackage{listings}
+\lstset{language=C}
+
+\lstset{language=python,frame=ltrb,framesep=5pt,basicstyle=\normalsize,
+ keywordstyle=\ttfamily\color{DarkRed},
+%morecomment=[n][\textbf]{In\ [}{]\:},
+%morecomment=[n][\textbf]{Out\ [}{]\:},
+morecomment=[s][\color{blue}]{In\ [}{]\:},
+morecomment=[s][\color{red}]{Out[}{]\:},
+identifierstyle=\ttfamily\color{DarkBlue}\bfseries,
+commentstyle=\color{DarkGreen},
+stringstyle=\ttfamily,
+showstringspaces=false,tabsize = 3}
+
+
+\lstdefinelanguage{shell} {
+commentstyle = \color{black},
+keywordstyle = \color{black},
+stringstyle = \color{black},
+identifierstyle = \color{black},
+morecomment=[s][\color{blue}]{In\ [}{]\:},
+morecomment=[s][\color{red}]{Out[}{]\:},
+ }
+
+\pagestyle{empty}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+%\usepackage{sectsty}
+%\sectionfont{\MakeUppercase\rmfamily\hrule}
+
+\usepackage{titlesec}
+\titleformat{\section}
+	{\normalfont\large\bfseries}{}{0em}{\hrule height 1pt\vspace{2pt}}[\hrule height 0.2pt]
+
+\begin{document}
+
+{\fontsize{16}{16}\selectfont Sprint  Report \#2}
+
+\section*{Team Overview}
+
+\subsection*{Name}
+CrowdControl
+\subsection*{Members}
+Charles Bonn, Joseph Mowry, Evan Hammer, Daniel Andrus, Johnathon Ackerman
+\subsection*{Project Title}
+CrowdControl Group Mananagement Moble Application
+\subsection*{Company}
+Bowtaps
+
+\section*{Work Summary}
+	\begin{itemize}
+	\item Code UX
+		\begin{enumerate}
+		\item Map Screen
+		\item Group info Screen
+		\item Group Messaging
+		\item Start page
+		\item Group Info UI
+		\end{enumerate}
+	\item Model
+		\begin{enumerate}
+		\item User Model
+		\item Communication layer
+		\end{enumerate}
+	\item Research on public/private key passing
+	\end{itemize}
+
+\section*{BackLog}
+
+	\begin{itemize}
+	\item Code UX
+		\begin{enumerate}
+		\item Maping features
+		\item Messaging UI
+		\end{enumerate}
+	\item Model
+		\begin{enumerate}
+		\item User Model
+		\item Communication Layer
+		\item Link backend and front end
+		\end{enumerate}
+	\item Impliment Cloud code
+	\item Busness Plan
+
+	\end{itemize}
+
+\section*{Success}
+Sucesses have been jumps in the code progress. Testing has been going well and progress has been made twords the end goal. 
+
+
+\section*{Issues and Changes}
+Some issues that have been ran into have been
+
+	\begin{itemize}
+	\item Public/Private key passing for increased security
+	\item Differences between IOS and android coding standards not allowing for similar looks between operating systems.
+	\item Testing of mapping features 
+	\end{itemize}
+
+
+
+
+	
+\section*{Team Details}
+The team is going strong. With a busy scimester not all meeting times have worked out. But with a hard drive we are working twords our goal of creating an app and starting our own bussness. We are still currently meeting with advisors to better our busness plan and create marketing plans.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
