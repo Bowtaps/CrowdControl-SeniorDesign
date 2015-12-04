@@ -1,0 +1,146 @@
+\documentclass[11pt]{article}
+
+\usepackage[width=7.0in, height=9.0in, top=1.0in, papersize={8.5in,11in}]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{datetime}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+\usepackage{verbatim}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{framed}
+\usepackage{pdfpages}
+\usepackage{listings}
+\lstset{language=C}
+
+\lstset{language=python,frame=ltrb,framesep=5pt,basicstyle=\normalsize,
+ keywordstyle=\ttfamily\color{DarkRed},
+%morecomment=[n][\textbf]{In\ [}{]\:},
+%morecomment=[n][\textbf]{Out\ [}{]\:},
+morecomment=[s][\color{blue}]{In\ [}{]\:},
+morecomment=[s][\color{red}]{Out[}{]\:},
+identifierstyle=\ttfamily\color{DarkBlue}\bfseries,
+commentstyle=\color{DarkGreen},
+stringstyle=\ttfamily,
+showstringspaces=false,tabsize = 3}
+
+
+\lstdefinelanguage{shell} {
+commentstyle = \color{black},
+keywordstyle = \color{black},
+stringstyle = \color{black},
+identifierstyle = \color{black},
+morecomment=[s][\color{blue}]{In\ [}{]\:},
+morecomment=[s][\color{red}]{Out[}{]\:},
+ }
+
+\pagestyle{empty}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+%\usepackage{sectsty}
+%\sectionfont{\MakeUppercase\rmfamily\hrule}
+
+\usepackage{titlesec}
+\titleformat{\section}
+	{\normalfont\large\bfseries}{}{0em}{\hrule height 1pt\vspace{2pt}}[\hrule height 0.2pt]
+
+\begin{document}
+
+{\fontsize{16}{16}\selectfont Sprint  Report \#3}
+
+\section*{Team Overview}
+
+\subsection*{Name}
+CrowdControl
+\subsection*{Members}
+Charles Bonn, Joseph Mowry, Evan Hammer, Daniel Andrus, Johnathon Ackerman
+\subsection*{Project Title}
+CrowdControl Group Mananagement Moble Application
+\subsection*{Company}
+Bowtaps
+
+\section*{Work Summary}
+	\begin{itemize}
+	\item IOS
+		\begin{enumerate}
+		\item Loggin
+			\begin{enumerate}
+			\item Create User
+			\item Facebook Connection
+			\end{enumerate}
+		\item Mapping
+		\item Working on Join Group
+		\end{enumerate}
+	\item Android
+		\begin{enumerate}
+		\item Loggin
+			\begin{enumerate}
+			\item Create User
+			\item Facebook Connection
+			\end{enumerate}
+		\item Mapping
+		\item Working on Join Group
+		\end{enumerate}
+	\item Server
+		\begin{enumerate}
+		\item Fixed Connection Issues
+		\item User Connections Created
+		\end{enumerate}
+
+	\end{itemize}
+
+\section*{BackLog}
+
+	\begin{itemize}
+	\item Messaging API
+	\item Join Group Implimentationl
+	\item Cloud Code
+	\begin{enumerate}
+	\item Group Clean Up
+	\item User Information Links
+	\end{enumerate}
+	\item Busness Plan
+	\begin{enumerate}
+	\item South Dakota Gigant Vision
+	\item SDSMT Busness Plan Compition
+	\end{enumerate}
+
+	\end{itemize}
+
+\section*{Success}
+Sucesses have been group team work twords busness plan compitions on the busness side. On the development side was recreating some of the database to increase effeciency with parse. Logging in has been connected to Facebook accounts.
+
+
+\section*{Issues and Changes}
+Some issues that have been ran into have been
+
+	\begin{itemize}
+	\item Public/Private key passing for increased security
+	\item Server connection issues from table to table with group creation
+	\item Changes in the database schema
+	\item GUI updates to more modern standards.
+	\end{itemize}
+
+
+
+
+	
+\section*{Team Details}
+With busness plan compitions and the end of the scimester we have all been busy. We have come together to fix issues that where unable to be seen in the beginning with Parse table creation on the mobile side verses non mobile.
+
+The Busness plan and compition are comming along strong and allowing use to more focous on the primary goals of the direction of the company.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
