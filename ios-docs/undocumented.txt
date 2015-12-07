@@ -1,0 +1,60 @@
+GroupModel.swift
+	struct Waypoint
+	var waypointId: Int
+	var longitude: Double
+	var latitude: Double
+	var message: String
+	protocol GroupModel: BaseModel
+	var generalLocation: PFGeoPoint {get set}
+	var groupDescription: String {get set}
+	var groupName: String {get set}
+	var groupMembers: [UserProfileModel] {get}
+SignupViewController.swift
+	@IBOutlet weak var nameField: UITextField!
+	@IBOutlet weak var emailField: UITextField!
+	@IBOutlet weak var passwordField: UITextField!
+	@IBOutlet weak var passwordConfirmField: UITextField!
+	@IBOutlet weak var submitButton: UIButton!
+	var signupFormFields = [UITextField]()
+	override func viewDidLoad()
+	@IBAction func submitButtonTapped(sender: AnyObject)
+	func textFieldShouldReturn(textField: UITextField) -> Bool
+	func submitForm()
+ParseGroupModel.swift
+	class ParseGroupModel: ParseBaseModel, GroupModel
+	var groupMembers: [UserProfileModel]
+AppDelegate.swift
+	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
+	func applicationWillResignActive(application: UIApplication)
+	func applicationDidEnterBackground(application: UIApplication)
+	func applicationWillEnterForeground(application: UIApplication)
+	func applicationDidBecomeActive(application: UIApplication)
+	func applicationWillTerminate(application: UIApplication)
+ChatViewController.swift
+	let name: String
+	let message: String
+	let time: String
+	override func viewDidLoad()
+	override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+WelcomeViewController.swift
+	class WelcomeViewController: UIViewController
+	var goToEventView = false
+	override func viewDidAppear(animated: Bool)
+	@IBAction func facebookButtonTapped(sender: AnyObject)
+	@IBAction func rewindToWelcomeView(segue: UIStoryboardSegue)
+	@IBAction func rewindToEventView(segue: UIStoryboardSegue)
+GroupInfoViewController.swift
+	override func viewDidLoad()
+	override func didReceiveMemoryWarning()
+LoginViewController.swift
+	@IBOutlet weak var emailField: UITextField!
+	@IBOutlet weak var passwordField: UITextField!
+	@IBOutlet weak var submitButton: UIButton!
+	var loginFormFields = [UITextField]()
+	override func viewDidLoad()
+MapViewController.swift
+	override func viewDidLoad()
+	override func didReceiveMemoryWarning()
