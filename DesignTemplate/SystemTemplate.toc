@@ -18,9 +18,9 @@
 \contentsline {section}{\numberline {1.5}Technologies Overview}{2}{section.1.5}
 \contentsline {chapter}{\numberline {2}Project Overview}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Team Members and Roles}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Project Management Approach}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}Phase Overview}{3}{section.2.3}
-\contentsline {section}{\numberline {2.4}Terminology and Acronyms}{3}{section.2.4}
+\contentsline {section}{\numberline {2.2}Project Management Approach}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Phase Overview}{4}{section.2.3}
+\contentsline {section}{\numberline {2.4}Terminology and Acronyms}{4}{section.2.4}
 \contentsline {chapter}{\numberline {3}User Stories, Backlog and Requirements}{5}{chapter.3}
 \contentsline {section}{\numberline {3.1}Overview}{5}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Scope}{5}{subsection.3.1.1}
