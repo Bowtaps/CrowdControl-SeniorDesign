@@ -34,16 +34,7 @@ Suggestions are both a plus for the user and our way of making a monitary develo
 The goal of this application is to create a group management application with group messaging, GPS tracking, and group management freatures all under a data safe enviroment though encryption.
 
 \section{System Overview and Diagram}
-Provide a more detailed description of the major system components
-without getting too detailed.  This section should contain a
-high-level block and/or flow diagram of the system highlighting the
-major components.  See Figure~\ref{systemdiagram}.  This is a floating
-figure environment.  \LaTeX\ will try to put it close to where it was
-typeset but will not allow the figure to be split if moving it can not
-happen.  Figures, tables, algorithms and many other floating
-environments are automatically numbered and placed in the appropriate
-type of table of contents.  You can move these and the numbers will
-update correctly.
+The basic overview of Crowd Control can be seen in the diagram below. See Figure~\ref{ModuleFlowDiagram}. Crowd Control will be using a model view controller design structure. With the model view controller design method we are able to abstract the user interface from the control structures that will comminicate with the third party services such as Parse, Google play sercvies, or Apple Map Features. The model of each respective opperating system ( Android or iOS ) will be able to communicate with the respective mapping feature ( Google Play Sercives or Apple Map Features ). While both models will be able to communcate with Parse, our backend server. Though Parse, using their features, will be able to connect user profiles to their facebook and twitter accounts for faster loggin.
 
 \begin{figure}[tbh]
 \begin{center}
@@ -53,26 +44,32 @@ update correctly.
 \end{figure}
 
 \section{Technologies Overview}
-This section should contain a list of specific technologies used to
-develop the system.  The list should contain the name of the
-technology, brief description, link to reference material for further
-understanding, and briefly how/where/why it was used in the system.
-See Table~\ref{somenumbers}.  This is a floating table environment.
-\LaTeX\ will try to put it close to where it was typeset but will not
-allow the table to be split.
+Some technologies used in the creation of Crowd Control are Google Play Services, Apple Map Features, and Parse.
 
-\begin{table}[tbh]
-\caption{A sample Table ... some numbers. \label{somenumbers}}
-\begin{center}
-\begin{tabular}{|r|l|}
-  \hline
-  7C0 & hexadecimal \\
-  3700 & octal \\ \cline{2-2}
-  11111000000 & binary \\
-  \hline \hline
-  1984 & decimal \\
-  \hline
-\end{tabular}
-\end{center}
-\end{table}
+\subsection{Google Play Services}
+	\subsubsection{Description}
+	Google Play Services contains the native android API for mapping features. With this it allows for commiuncation between a map and your gps location along with other mapping features.
+\newline
+REFERENCE LINK:  \url{https://developers.google.com/android/guides/setup}
+	\subsubsection{Usage}
+	Google Play Services will be used on the Android device as the default map. We chose to go with Google Play services to give android users a more native feel when it comes to using the maping features. This allows for a less intrusive feel when it comes to using Crowd Control. This will be used for displaying your location on a map, displaying other users in your group on a map, and displaying event suggestions on the map.
+
+\subsection{Apple Map Features}
+	\subsubsection{Description}
+	Apple Map Features is the native iOS API for mapping features. With this it allows for comminucaton between a map and your gps location along with other mapping features.
+\newline
+REFERENCE LINK: \url{https://developer.apple.com/maps/}
+	\subsubsection{Usage}
+Apple Map Features will be used on the iOSdevice as the default map. We chose to go with Apple Map Features to give iOS users a more native feel when it comes to using the maping features. This allows for a less intrusive feel when it comes to using Crowd Control. This will be used for displaying your location on a map, displaying other users in your group on a map, and displaying event suggestions on the map
+
+\subsection{Parse}
+	\subsubsection{Description}
+	Parse is our backend database. It allows us to save information that is needed along with giving us a way to connect to both facebook and twitter.
+\newline
+REFERENCE LINK: \url{http://parse.com/}
+	\subsubsection{Usage}
+	Parse will be used to save informtion, group information, and avertisement information. It will be the main comminucation between devices and past user information
+
+
+
 
