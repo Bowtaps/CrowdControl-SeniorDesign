@@ -7,13 +7,14 @@
     <meta charset='utf-8'>
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
+    
   </head>
   <body>
     <a name="//apple_ref/swift/Protocol/BaseModel" class="dashAnchor"></a>
     <a title="BaseModel Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (59% documented)</p>
+        <p><a href="../index.html"> Docs</a> (60% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -42,6 +43,12 @@
                 <a href="../Classes/GroupInfoViewController.html">GroupInfoViewController</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/GroupOverviewController.html">GroupOverviewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupTableController.html">GroupTableController</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/LoginViewController.html">LoginViewController</a>
               </li>
               <li class="nav-group-task">
@@ -54,6 +61,9 @@
                 <a href="../Classes/ParseGroupModel.html">ParseGroupModel</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/ParseLocationModel.html">ParseLocationModel</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/ParseModelManager.html">ParseModelManager</a>
               </li>
               <li class="nav-group-task">
@@ -63,10 +73,10 @@
                 <a href="../Classes/ParseUserProfileModel.html">ParseUserProfileModel</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/SignupViewController.html">SignupViewController</a>
+                <a href="../Classes/SettingsViewController.html">SettingsViewController</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/WelcomeViewController.html">WelcomeViewController</a>
+                <a href="../Classes/SignupViewController.html">SignupViewController</a>
               </li>
             </ul>
           </li>
@@ -78,6 +88,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/GroupModel.html">GroupModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationModel.html">LocationModel</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ModelManager.html">ModelManager</a>
@@ -254,14 +267,14 @@ or pushed to storage.</p>
                         <p>Loads this object from storage, either local or remote as determined by the implementation.</p>
 
 <p>This is a blocking function and should be executed on a thread separate from the main
-thread. See <code>loadInBackground()</code> for loading this object on a separate thread. This function
-will throw an exception if an error occurs.</p>
+thread. See <code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel16loadInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">loadInBackground(_:)</a></code> for loading this object on a separate thread. This
+function will throw an exception if an error occurs.</p>
 
 <div class="aside aside-see-also">
-          <p class="aside-title">See also</p>
-          <code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel16loadInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">loadInBackground(_:)</a></code>
+    <p class="aside-title">See also</p>
+    <code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel16loadInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">loadInBackground(_:)</a></code>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -295,16 +308,18 @@ execution or if an error occurs, this function passes control back to the main t
 calling the closure that was optionally passed as an argument.</p>
 
 <div class="aside aside-parameter">
-          <p class="aside-title">Parameter</p>
-          <p>Parameter callback: Optional callback function to call after successful execution or if an
+    <p class="aside-title">Parameter</p>
+    <p>Parameter callback: Optional callback function to call after successful execution or if an
                   error occurs. If <code>nil</code> is provided, then the callback will not be
                   called.</p>
 
-        </div><div class="aside aside-see-also">
-          <p class="aside-title">See also</p>
-          <p><code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel4loaduRq_S0__Fq_FzT_T_">load()</a></code></p>
+</div>
 
-        </div>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel4loaduRq_S0__Fq_FzT_T_">load()</a></code></p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -354,14 +369,14 @@ calling the closure that was optionally passed as an argument.</p>
                         <p>Saves this object storage, either local or remote as determined by the implementation.</p>
 
 <p>This is a blocking function and should be executed on a thread separate from the main
-thread. See <code>saveInBackground()</code> for saving this object on a separate thread. This function
-will throw an exception if an error occurs.</p>
+thread. See <code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel16saveInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">saveInBackground(_:)</a></code> for saving this object on a separate thread. This
+function will throw an exception if an error occurs.</p>
 
 <div class="aside aside-see-also">
-          <p class="aside-title">See also</p>
-          <code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel16saveInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">saveInBackground(_:)</a></code>
+    <p class="aside-title">See also</p>
+    <code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel16saveInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">saveInBackground(_:)</a></code>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -395,16 +410,18 @@ execution or if an error occurs, this function passes control back to the main t
 calling the closure that was optionally passed as an argument.</p>
 
 <div class="aside aside-parameter">
-          <p class="aside-title">Parameter</p>
-          <p>Parameter callback: Optional callback function to call after successful execution or if an
+    <p class="aside-title">Parameter</p>
+    <p>Parameter callback: Optional callback function to call after successful execution or if an
                   error occurs. If <code>nil</code> is provided, then the callback will not be
                   called.</p>
 
-        </div><div class="aside aside-see-also">
-          <p class="aside-title">See also</p>
-          <p><code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel4saveuRq_S0__Fq_FzT_T_">save()</a></code></p>
+</div>
 
-        </div>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel4saveuRq_S0__Fq_FzT_T_">save()</a></code></p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -443,8 +460,8 @@ calling the closure that was optionally passed as an argument.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2015-12-02)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.4.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-01-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
