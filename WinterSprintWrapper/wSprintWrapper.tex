@@ -1,0 +1,208 @@
+\documentclass[11pt]{article}
+
+\usepackage[width=7.0in, height=9.0in, top=1.0in, papersize={8.5in,11in}]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{datetime}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+\usepackage{verbatim}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{framed}
+\usepackage{pdfpages}
+\usepackage{listings}
+\lstset{language=C}
+
+\lstset{language=python,frame=ltrb,framesep=5pt,basicstyle=\normalsize,
+ keywordstyle=\ttfamily\color{DarkRed},
+%morecomment=[n][\textbf]{In\ [}{]\:},
+%morecomment=[n][\textbf]{Out\ [}{]\:},
+morecomment=[s][\color{blue}]{In\ [}{]\:},
+morecomment=[s][\color{red}]{Out[}{]\:},
+identifierstyle=\ttfamily\color{DarkBlue}\bfseries,
+commentstyle=\color{DarkGreen},
+stringstyle=\ttfamily,
+showstringspaces=false,tabsize = 3}
+
+
+\lstdefinelanguage{shell} {
+commentstyle = \color{black},
+keywordstyle = \color{black},
+stringstyle = \color{black},
+identifierstyle = \color{black},
+morecomment=[s][\color{blue}]{In\ [}{]\:},
+morecomment=[s][\color{red}]{Out[}{]\:},
+ }
+
+\pagestyle{empty}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+%\usepackage{sectsty}
+%\sectionfont{\MakeUppercase\rmfamily\hrule}
+
+\usepackage{titlesec}
+\titleformat{\section}
+	{\normalfont\large\bfseries}{}{0em}{\hrule height 1pt\vspace{2pt}}[\hrule height 0.2pt]
+
+\begin{document}
+
+{\fontsize{16}{16}\selectfont Winter Sprint}
+
+\section*{Team Overview}
+
+\subsection*{Name}
+CrowdControl
+\subsection*{Members}
+Charles Bonn, Joseph Mowry, Evan Hammer, Daniel Andrus, Johnathon Ackerman
+\subsection*{Project Title}
+CrowdControl - Group Management Mobile Application
+\subsection*{Company}
+Bowtaps
+
+\section*{Deliverables}
+	\begin{itemize}
+	\item iOS
+		\begin{enumerate}
+		\item Login/Logout
+			\begin{enumerate}
+			\item Improved login/signup screens
+			\item Logout feature added
+			\end{enumerate}
+		\item Settings
+			\begin{enumerate}
+			\item Settings screen implemented
+			\item Logout functionality nested in the Settings screen
+			\end{enumerate}
+		\item Groups
+			\begin{enumerate}
+			\item Leaving/Joining a group implemented
+			\item Basic group operations
+			\item Detect if users are in a group
+			\end{enumerate}
+		\end{enumerate}
+		
+	\item Android
+		\begin{enumerate}
+		\item Login
+			\begin{enumerate}
+			\item Automatic login on startup (from datastore)
+			\item Login to existing account via email address
+			\end{enumerate}
+		\item Settings
+			\begin{enumerate}
+			\item Page layout created and linked from GroupJoin page
+			\item Logout functionality implemented
+			\end{enumerate}
+		\item Groups
+			\begin{enumerate}
+			\item Leave button implemented
+			\item Tested adding/removing users from groups
+			\end{enumerate}
+		\end{enumerate}
+
+	\item Misc/Transitional
+		\begin{enumerate}
+			\item Further documented Android code to prepare for team merge
+			\item Android code review with iOS team, to prepare for team merge
+		\end{enumerate}
+
+	\end{itemize}
+
+\section*{Remaining Backlog}
+Here are the incomplete items/features for this sprint:
+	\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Messaging (Sinch API)
+			\item GPS Location (backend models)
+			\item Persistent groups through local datastore
+		\end{itemize}
+		
+		\item iOS
+		\begin{itemize}
+			\item Messaging (Sinch API)
+		\end{itemize}
+	\end{itemize}
+
+\section*{Successes}
+
+	\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Login through email
+			\item Settings page (layout and implementation)
+			\item Local Datastore (individual automatic login)
+		\end{itemize}
+		
+		\item iOS
+		\begin{itemize}
+			\item Login/Logout
+			\item Settings page (layout and implementation)
+			\item Group functionality written
+		\end{itemize}
+	\end{itemize}
+
+
+\section*{Issues and Changes}
+Some issues that we encountered include:
+
+	\begin{itemize}
+		\item Android
+			\begin{itemize}
+				\item Issues
+				\begin{itemize}
+					\item Tried to manually create queries in the Parse API. We were unaware of built-in methods to accomplish the tasks. This set us back a bit.
+					\item Encountered NullPointerException in the UserModel model. Had to change the structure to use an application global variable.					
+				\end{itemize}
+				
+				\item Changes
+				\begin{itemize}
+					\item Further development on Settings is now added to the backlog
+					\item Sign out functionality is now added to the backlog
+					\item Leave Group functionality is now added to the backlog			
+				\end{itemize}
+			\end{itemize}
+		\item iOS
+			\begin{itemize}
+				\item Issues
+				\begin{itemize}
+					\item Unexpected complications with database design
+					\item Layout complications
+					\item Issues with the underlying data models
+					\item Parallel programming complications
+				\end{itemize}
+			\end{itemize}
+		
+		\item Misc/Transitional
+		\begin{itemize}
+			\item iOS development will be postponed, in favor of an Android prototype. This is to ensure that Android will meet expectations for the design fair.
+			\item Team communication and long-distance coordination was difficult.
+			\item Holidays and vacations imepeded our ability to be productive.
+		\end{itemize}
+	\end{itemize}
+
+
+
+
+	
+\section*{Team Details}
+Our team fell behind in the first semester, and in an effort to mitigate this, we allocated work towards the Winter Sprint. From here, unsatisfactory progress was still met, and we decided on another large refactor.\\
+
+For the remainder of our project development, the iOS team will halt development and assist the Android team, so that Bowtaps can guarantee a satisfactory product for the design fair in Spring 2016.\\
+
+Finally, to hopefully achieve better group management, we have elected Daniel Andrus to serve as acting Scrum Master.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
