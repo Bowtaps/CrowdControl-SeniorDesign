@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UserProfileModel Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/UserProfileModel" class="dashAnchor"></a>
+    <a title="UserProfileModel Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (60% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        UserProfileModel Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChatViewController.html">ChatViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConversationModel.html">ConversationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupInfoViewController.html">GroupInfoViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupOverviewController.html">GroupOverviewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupTableController.html">GroupTableController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MapViewController.html">MapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseBaseModel.html">ParseBaseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseGroupModel.html">ParseGroupModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseLocationModel.html">ParseLocationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseModelManager.html">ParseModelManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseUserModel.html">ParseUserModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseUserProfileModel.html">ParseUserProfileModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingsViewController.html">SettingsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignupViewController.html">SignupViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BaseModel.html">BaseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/GroupModel.html">GroupModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationModel.html">LocationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ModelManager.html">ModelManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UserModel.html">UserModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UserProfileModel.html">UserProfileModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Waypoint.html">Waypoint</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>UserProfileModel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">UserProfileModel</span><span class="p">:</span> <span class="kt">BaseModel</span></code></pre>
+
+                </div>
+              </div>
+            <p>Model protocol representing the public profile of any user in the app. This model is intended to
+be an adequate interface for interacting with other users of the app, as it contains sufficient
+information about the other user to communicate with them.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP13Crowd_Control16UserProfileModel11displayNameSS"></a>
+                    <a name="//apple_ref/swift/Property/displayName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP13Crowd_Control16UserProfileModel11displayNameSS">displayName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The outward-facing display name of the other user. May be <code>nil</code> if this value has not been
+set. This value is not unique to users an should <em>never</em> be used as an index or identifier.
+This value can and should, however, be used in the following capacities:</p>
+
+<ul>
+<li>Displayed as a label identifying the user to other users</li>
+<li>Returned as a search result when and if searching for users is ever performed</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">displayName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span><span class="k">get</span> <span class="k">set</span><span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-01-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

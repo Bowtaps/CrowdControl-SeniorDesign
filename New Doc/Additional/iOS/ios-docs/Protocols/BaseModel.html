@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BaseModel Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/BaseModel" class="dashAnchor"></a>
+    <a title="BaseModel Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (60% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BaseModel Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChatViewController.html">ChatViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConversationModel.html">ConversationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupInfoViewController.html">GroupInfoViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupOverviewController.html">GroupOverviewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupTableController.html">GroupTableController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MapViewController.html">MapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseBaseModel.html">ParseBaseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseGroupModel.html">ParseGroupModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseLocationModel.html">ParseLocationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseModelManager.html">ParseModelManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseUserModel.html">ParseUserModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseUserProfileModel.html">ParseUserProfileModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingsViewController.html">SettingsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignupViewController.html">SignupViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BaseModel.html">BaseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/GroupModel.html">GroupModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationModel.html">LocationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ModelManager.html">ModelManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UserModel.html">UserModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UserProfileModel.html">UserProfileModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Waypoint.html">Waypoint</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BaseModel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">BaseModel</span></code></pre>
+
+                </div>
+              </div>
+            <p>Base model protocol, which is to be implemented by all model classes in the project. Provides
+access to basic information about the model, such as:</p>
+
+<ul>
+<li>Unique identifier</li>
+<li>Creation timestamp</li>
+<li>Last updated timestamp</li>
+<li>Flag indicating modification since last save</li>
+<li>Methods for loading from and saving to storage</li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP13Crowd_Control9BaseModel2idSS"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP13Crowd_Control9BaseModel2idSS">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID of the object as determined by remote storage. This value is automatically generated
+when the object is stored and is usually determined by a remote server. It is valid for this
+value to be nil, and thus should be used with care and only if absolutely necessary.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span><span class="k">get</span><span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP13Crowd_Control9BaseModel7createdCSo6NSDate"></a>
+                    <a name="//apple_ref/swift/Property/created" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP13Crowd_Control9BaseModel7createdCSo6NSDate">created</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Timestamp of when this object was first created and stored. This value may be automatically
+determined by the server if the model is using a remote machine for storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">created</span><span class="p">:</span> <span class="kt">NSDate</span> <span class="p">{</span><span class="k">get</span><span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP13Crowd_Control9BaseModel7updatedCSo6NSDate"></a>
+                    <a name="//apple_ref/swift/Property/updated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP13Crowd_Control9BaseModel7updatedCSo6NSDate">updated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Timestamp of the last time this object was updated in storage. This value may be
+automatically determined by the server if the model is using a remote machine for storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">updated</span><span class="p">:</span> <span class="kt">NSDate</span> <span class="p">{</span><span class="k">get</span><span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP13Crowd_Control9BaseModel8modifiedSb"></a>
+                    <a name="//apple_ref/swift/Property/modified" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP13Crowd_Control9BaseModel8modifiedSb">modified</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag indicating whether or not this object has been modified since it was last pulled from
+or pushed to storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">modified</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span><span class="k">get</span><span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP13Crowd_Control9BaseModel4loaduRq_S0__Fq_FzT_T_"></a>
+                    <a name="//apple_ref/swift/Method/load()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP13Crowd_Control9BaseModel4loaduRq_S0__Fq_FzT_T_">load()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads this object from storage, either local or remote as determined by the implementation.</p>
+
+<p>This is a blocking function and should be executed on a thread separate from the main
+thread. See <code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel16loadInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">loadInBackground(_:)</a></code> for loading this object on a separate thread. This
+function will throw an exception if an error occurs.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel16loadInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">loadInBackground(_:)</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">load</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP13Crowd_Control9BaseModel16loadInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/loadInBackground(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP13Crowd_Control9BaseModel16loadInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">loadInBackground(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads this object from storage, either local or remote as determined by the implementation.</p>
+
+<p>This function spawns a new thread and reloads this object from storage. After successful
+execution or if an error occurs, this function passes control back to the main thread by
+calling the closure that was optionally passed as an argument.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter callback: Optional callback function to call after successful execution or if an
+                  error occurs. If <code>nil</code> is provided, then the callback will not be
+                  called.</p>
+
+</div>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel4loaduRq_S0__Fq_FzT_T_">load()</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">loadInBackground</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="nv">object</span><span class="p">:</span> <span class="kt">BaseModel</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional callback function to call after successful execution or if an error occurs. If <code>nil</code> is provided, then the callback will not be called.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP13Crowd_Control9BaseModel4saveuRq_S0__Fq_FzT_T_"></a>
+                    <a name="//apple_ref/swift/Method/save()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP13Crowd_Control9BaseModel4saveuRq_S0__Fq_FzT_T_">save()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Saves this object storage, either local or remote as determined by the implementation.</p>
+
+<p>This is a blocking function and should be executed on a thread separate from the main
+thread. See <code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel16saveInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">saveInBackground(_:)</a></code> for saving this object on a separate thread. This
+function will throw an exception if an error occurs.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel16saveInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">saveInBackground(_:)</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">save</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP13Crowd_Control9BaseModel16saveInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/saveInBackground(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP13Crowd_Control9BaseModel16saveInBackgrounduRq_S0__Fq_FGSqFT6objectGSqPS0___5errorGSqCSo7NSError__T__T_">saveInBackground(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Saves this object to storage, either local or remote as determined by the implementation.</p>
+
+<p>This function spawns a new thread and sends this object to storage. After successful
+execution or if an error occurs, this function passes control back to the main thread by
+calling the closure that was optionally passed as an argument.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter callback: Optional callback function to call after successful execution or if an
+                  error occurs. If <code>nil</code> is provided, then the callback will not be
+                  called.</p>
+
+</div>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Protocols/BaseModel.html#/s:FP13Crowd_Control9BaseModel4saveuRq_S0__Fq_FzT_T_">save()</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">saveInBackground</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="nv">object</span><span class="p">:</span> <span class="kt">BaseModel</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional callback function to call after successful execution or if an error occurs. If <code>nil</code> is provided, then the callback will not be called.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-01-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
