@@ -1,0 +1,43 @@
+
+
+% !TEX encoding = UTF-8 Unicode
+% !TEX root = CCBusinessPlan.tex
+
+\documentclass{book}
+
+\input{BusinessPlanStyle.tex} % This sets the format.
+
+% Add your title page contents here 
+\title{{\color{SDColor3} \rule{\linewidth}{0.5mm}}\\[2mm] {\huge \bfseries \color{SDColor3} CrowdControl }\\[-1mm] {\color{SDColor3}\rule{\linewidth}{0.5mm}} \\  \vfill
+{\LARGE \bfseries \color{SDColor4} Business Plan }\\  \vfill 
+{\color{SDColor3} Bowtaps} }
+\author{\color{SDColor3} Charles Bonn \and \color{SDColor3} Johnathan Ackerman \and  \color{SDColor3} Daniel Andrus \and  \color{SDColor3}Evan Hammer \and  \color{SDColor3} Joseph Mowry }
+\date{\color{SDColor3} \today}
+
+
+\begin{document}
+
+\frontmatter
+
+\addcontentsline{toc}{chapter}{Title}
+\maketitle
+\tableofcontents
+\addcontentsline{toc}{chapter}{Contents}
+
+ 
+\mainmatter
+
+
+\input{ExecutiveSummary.tex}  
+\input{GeneralCompanyDescription.tex}
+\input{Product.tex}
+\input{Strategy.tex}
+\input{PersonalSummary.tex}
+
+\backmatter
+\input{MarketAnalysis.tex}
+
+
+
+
+\end{document}
