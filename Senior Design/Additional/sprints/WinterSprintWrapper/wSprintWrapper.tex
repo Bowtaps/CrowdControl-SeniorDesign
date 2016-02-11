@@ -48,7 +48,7 @@ morecomment=[s][\color{red}]{Out[}{]\:},
 
 \begin{document}
 
-{\fontsize{16}{16}\selectfont Sprint 4}
+{\fontsize{16}{16}\selectfont Winter Sprint}
 
 \section*{Team Overview}
 
@@ -63,38 +63,34 @@ Bowtaps
 
 \section*{Deliverables}
 	\begin{itemize}
+	\item iOS
+		(TODO)
+		
 	\item Android
 		\begin{enumerate}
-		\item Group Messaging
+		\item Login
 			\begin{enumerate}
-			\item Created a Layout
-			\item Used Sinch code to create a service
-			\item Implemented group messaging
+			\item Automatic login on startup (from datastore)
+			\item Login to existing account via email address
 			\end{enumerate}
-		\item Location
+		\item Settings
 			\begin{enumerate}
 			\item Page layout created and linked from GroupJoin page
-			\item MapFragment has buttons for homing and syncing group locations
-			\item Retrieving the user's location on instantiation of the MapFragment
+			\item Logout functionality implemented
 			\end{enumerate}
-		\item Group update service
+		\item Groups
 			\begin{enumerate}
-			\item Checks for updates in near real-time
-			\item Updates group settings when changed
-			\item Updates group members if someone leaves or joins
+			\item Leave button implemented
+			\item Tested adding/removing users from groups
 			\end{enumerate}
 		\end{enumerate}
+	\item Server
+		(TODO)
 
-	\item Server (cloud code)
-		\begin{enumerate}
-			\item Functional Group update indicator
-			\item Join group function
-			\item Leave group function
-		\end{enumerate}
-		
 	\item Misc/Transitional
 		\begin{enumerate}
-			\item Business Plan
+			\item Further documented Android code to prepare for team merge
+			\item Android code review with iOS team, to prepare for team merge
 		\end{enumerate}
 
 	\end{itemize}
@@ -104,13 +100,12 @@ Here are the incomplete items/features for this sprint:
 	\begin{itemize}
 		\item Android
 		\begin{itemize}
-			\item Group messaging unit tests
-			\item GPS Location unit tests
+			\item Messaging (Sinch API)
+			\item GPS Location (backend models)
+			\item Persistent groups through local datastore
 		\end{itemize}
-		\item Cloud Code
-		\begin{itemize}
-			\item Testing on Group Functions.
-		\end{itemize}
+		
+		\item iOS (TODO)
 	\end{itemize}
 
 \section*{Successes}
@@ -118,60 +113,51 @@ Here are the incomplete items/features for this sprint:
 	\begin{itemize}
 		\item Android
 		\begin{itemize}
-			\item Group messaging is working with no known bugs
-			\item User and group locations implemented
-			\item Groups now sync when changes are made
+			\item Login through email
+			\item Settings page (layout and implementation)
+			\item Local Datastore (individual automatic login)
 		\end{itemize}
 		
-		\item Server (cloud code)
-		\begin{itemize}
-			\item Returning group update information
-			\item Check for Existing Email
-		\end{itemize}
+		\item iOS (TODO)
 	\end{itemize}
 
 
 \section*{Issues and Changes}
-Some issues that we encountered include:
+Some issues that have been ran into have been
 
 	\begin{itemize}
 		\item Android
 			\begin{itemize}
 				\item Issues
 				\begin{itemize}
-					\item TODO				
+					\item Tried to manually create queries in the Parse API. We were unaware of built-in methods to accomplish the tasks. This set us back on time.
+					\item Encountered NullPointerException in the UserModel model. Had to change the structure to use an application global variable.					
 				\end{itemize}
 				
 				\item Changes
 				\begin{itemize}
-					\item Added group update service - was not part of original backlog		
-					\item Added user location homing on MapFragment - was not part of original backlog		
+					\item Further development on Settings is now added to the backlog
+					\item Sign out functionality is now added to the backlog
+					\item Leave Group functionality is now added to the backlog			
 				\end{itemize}
 			\end{itemize}
-			
-		\item Server (cloud code)
+		\item iOS
+		\item Misc/Transitional
 		\begin{itemize}
-				\item Issues
-				\begin{itemize}
-					\item Cloud functions improperly writing data.			
-				\end{itemize}
-				
-				\item Changes
-				\begin{itemize}
-					\item Added join and leave cloud functions to backlog	
-				\end{itemize}
-			\end{itemize}
+			\item iOS development will be postponed, in favor of an Android prototype. This is to ensure that Android will meet expectations for the design fair.
+		\end{itemize}
 	\end{itemize}
+
 
 
 
 	
 \section*{Team Details}
-Dan and Johnny started off Sprint 4 by working on messaging-related features, while Joe and Evan worked on GPS and map features. Nick focused on the business plan, updating the existing documentation to use the updated layout, and was tasked with installing the Fabric SDK.\\
+Our team fell behind in the first semester, and in an effort to mitigate this, we allocated work towards the Winter Sprint. From here, unsatisfactory progress was still met, and we decided on another large refactor.\\
 
-For week two of the sprint, Johnny focused on group messaging. Dan and Nick also worked together on cloud code, targeting the leaving/joining groups, and a group update service in Android. Evan wrote a LocationManager class and stubbed out methods, that Joe wrote an interface for and made a UI for in the MapFragment.\\
+For the remainder of our project development, the iOS team will halt development and assist the Android team, so that Bowtaps can guarantee a satisfactory product for the design fair in Spring 2016.\\
 
-Week three continued with Joe and Evan working on various location features, while Dan and Johnny worked on the update service and messaging features respectively. Nick focused on cloud code and business plan/documentation writing.
+Finally, to hopefully achieve better group management, we have elected Daniel Andrus to serve as acting Scrum Master.
 
 
 
