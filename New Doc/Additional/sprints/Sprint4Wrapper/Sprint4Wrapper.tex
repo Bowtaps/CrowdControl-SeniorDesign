@@ -1,0 +1,180 @@
+\documentclass[11pt]{article}
+
+\usepackage[width=7.0in, height=9.0in, top=1.0in, papersize={8.5in,11in}]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{datetime}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+\usepackage{verbatim}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{framed}
+\usepackage{pdfpages}
+\usepackage{listings}
+\lstset{language=C}
+
+\lstset{language=python,frame=ltrb,framesep=5pt,basicstyle=\normalsize,
+ keywordstyle=\ttfamily\color{DarkRed},
+%morecomment=[n][\textbf]{In\ [}{]\:},
+%morecomment=[n][\textbf]{Out\ [}{]\:},
+morecomment=[s][\color{blue}]{In\ [}{]\:},
+morecomment=[s][\color{red}]{Out[}{]\:},
+identifierstyle=\ttfamily\color{DarkBlue}\bfseries,
+commentstyle=\color{DarkGreen},
+stringstyle=\ttfamily,
+showstringspaces=false,tabsize = 3}
+
+
+\lstdefinelanguage{shell} {
+commentstyle = \color{black},
+keywordstyle = \color{black},
+stringstyle = \color{black},
+identifierstyle = \color{black},
+morecomment=[s][\color{blue}]{In\ [}{]\:},
+morecomment=[s][\color{red}]{Out[}{]\:},
+ }
+
+\pagestyle{empty}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+%\usepackage{sectsty}
+%\sectionfont{\MakeUppercase\rmfamily\hrule}
+
+\usepackage{titlesec}
+\titleformat{\section}
+	{\normalfont\large\bfseries}{}{0em}{\hrule height 1pt\vspace{2pt}}[\hrule height 0.2pt]
+
+\begin{document}
+
+{\fontsize{16}{16}\selectfont Sprint 4}
+
+\section*{Team Overview}
+
+\subsection*{Name}
+CrowdControl
+\subsection*{Members}
+Charles Bonn, Joseph Mowry, Evan Hammer, Daniel Andrus, Johnathon Ackerman
+\subsection*{Project Title}
+CrowdControl - Group Management Mobile Application
+\subsection*{Company}
+Bowtaps
+
+\section*{Deliverables}
+	\begin{itemize}
+	\item Android
+		\begin{enumerate}
+		\item Group Messaging
+			\begin{enumerate}
+			\item Created a Layout
+			\item Used Sinch code to create a service
+			\item Implemented group messaging
+			\end{enumerate}
+		\item Location
+			\begin{enumerate}
+			\item Page layout created and linked from GroupJoin page
+			\item MapFragment has buttons for homing and syncing group locations
+			\item Retrieving the user's location on instantiation of the MapFragment
+			\end{enumerate}
+		\item Group update service
+			\begin{enumerate}
+			\item Checks for updates in near real-time
+			\item Updates group settings when changed
+			\item Updates group members if someone leaves or joins
+			\end{enumerate}
+		\end{enumerate}
+
+	\item Server (cloud code)
+		\begin{enumerate}
+			\item TODO
+		\end{enumerate}
+		
+	\item Misc/Transitional
+		\begin{enumerate}
+			\item TODO
+		\end{enumerate}
+
+	\end{itemize}
+
+\section*{Remaining Backlog}
+Here are the incomplete items/features for this sprint:
+	\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Group messaging unit tests
+			\item GPS Location unit tests
+		\end{itemize}
+	\end{itemize}
+
+\section*{Successes}
+
+	\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Group messaging is working with no known bugs
+			\item User and group locations implemented
+			\item Groups now sync when changes are made
+		\end{itemize}
+		
+		\item Server (cloud code)
+		\begin{itemize}
+			\item TODO
+		\end{itemize}
+	\end{itemize}
+
+
+\section*{Issues and Changes}
+Some issues that we encountered include:
+
+	\begin{itemize}
+		\item Android
+			\begin{itemize}
+				\item Issues
+				\begin{itemize}
+					\item TODO				
+				\end{itemize}
+				
+				\item Changes
+				\begin{itemize}
+					\item Added group update service - was not part of original backlog		
+					\item Added user location homing on MapFragment - was not part of original backlog		
+				\end{itemize}
+			\end{itemize}
+			
+		\item Server (cloud code)
+		\begin{itemize}
+				\item Issues
+				\begin{itemize}
+					\item TODO				
+				\end{itemize}
+				
+				\item Changes
+				\begin{itemize}
+					\item Added join and leave cloud functions to backlog	
+				\end{itemize}
+			\end{itemize}
+	\end{itemize}
+
+
+
+	
+\section*{Team Details}
+Dan and Johnny started off Sprint 4 by working on messaging-related features, while Joe and Evan worked on GPS and map features. Nick focused on the business plan, updating the existing documentation to use the updated layout, and was tasked with installing the Fabric SDK.\\
+
+For week two of the sprint, Johnny focused on group messaging. Dan and Nick also worked together on cloud code, targeting the leaving/joining groups, and a group update service in Android. Evan wrote a LocationManager class and stubbed out methods, that Joe wrote an interface for and made a UI for in the MapFragment.\\
+
+Week three continued with Joe and Evan working on various location features, while Dan and Johnny worked on the update service and messaging features respectively. Nick focused on cloud code and business plan/documentation writing.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
