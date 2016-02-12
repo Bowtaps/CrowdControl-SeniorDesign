@@ -39,29 +39,87 @@ morecomment=[s][\color{red}]{Out[}{]\:},
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-%\usepackage{sectsty}
-%\sectionfont{\MakeUppercase\rmfamily\hrule}
+\usepackage{sectsty}
+\sectionfont{\MakeUppercase\rmfamily\hrule}
 
 \usepackage{titlesec}
 \titleformat{\section}
-	{\normalfont\large\bfseries}{}{0em}{\hrule height 1pt\vspace{2pt}}[\hrule height 0.2pt]
+{\normalfont\large\bfseries}{}{0em}{\hrule height 1pt\vspace{2pt}}[\hrule height 0.2pt]
 
 \begin{document}
 
-{\fontsize{16}{16}\selectfont Sprint 4}
+{\fontsize{16}{16}\selectfont Sprint Report \#4}
 
 \section*{Team Overview}
 
 \subsection*{Name}
-CrowdControl
+Crowd Control
 \subsection*{Members}
-Charles Bonn, Joseph Mowry, Evan Hammer, Daniel Andrus, Johnathon Ackerman
+Johnathan Ackerman, Daniel Andrus, Charles Bonn, Evan Hammer, Joseph Mowry
 \subsection*{Project Title}
-CrowdControl - Group Management Mobile Application
+Crowd Control - Group Management Mobile Application
 \subsection*{Company}
 Bowtaps
 
+
+\section*{Backlog}
+The following items/features were assigned at the beginning of the sprint, and worked on throughout its duration. It is broken down by week as such:
+
+\begin{description}
+	\item[Week 1] \hfill
+		\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Begin implementing Sinch
+			\item Create location and messaging views and managers
+			\item Design models and manager classes for messaging and location
+			\item
+		\end{itemize}
+		\item Cloud Code
+		\begin{itemize}
+			\item Group data parsing started
+		\end{itemize}
+	\end{itemize}
+	
+  \item[Week 2] \hfill
+		\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Broadcast/receive messages to/from all members in a group
+			\item Create a layout for messaging
+			\item Create a MapFragment to display a map
+			\item Created buttons overtop the MapFragment to correspond to syncing and homing locations
+		\end{itemize}
+		\item Cloud code
+		\begin{itemize}
+			\item Leaving and joining groups handled
+			\item Checking existing email upon login (validation)
+		\end{itemize}
+	\end{itemize}
+  
+  \item[Week 3] \hfill
+		\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Retrieve locations of group members, place their locations on the map via pins
+			\item Update group settings and data when changed
+			\item Update Group members if someone leaves or joins a group
+			\item Group messaging unit tests
+			\item GPS Location unit tests
+		\end{itemize}
+		\item Cloud Code
+		\begin{itemize}
+			\item Returning group information upon changes
+			\item Functional Group update indicator complete
+			\item Basic group functionality implemented fully (login/logout, join/leave groups, update on change)
+		\end{itemize}
+	\end{itemize}
+\end{description}
+
+Documentation and Business Plan work was carried out through all weeks of the sprint, and is ongoing.\\
+
 \section*{Deliverables}
+During this sprint, these are the items/features from the backlog that were successfully achieved:
 	\begin{itemize}
 	\item Android
 		\begin{enumerate}
@@ -70,12 +128,14 @@ Bowtaps
 			\item Created a Layout
 			\item Used Sinch code to create a service
 			\item Implemented group messaging
+			\item Group messaging is working with no known bugs
 			\end{enumerate}
 		\item Location
 			\begin{enumerate}
 			\item Page layout created and linked from GroupJoin page
 			\item MapFragment has buttons for homing and syncing group locations
 			\item Retrieving the user's location on instantiation of the MapFragment
+			\item User and group locations implemented
 			\end{enumerate}
 		\item Group update service
 			\begin{enumerate}
@@ -88,48 +148,19 @@ Bowtaps
 	\item Server (cloud code)
 		\begin{enumerate}
 			\item Functional Group update indicator
+			\item Returning group update information
 			\item Join group function
 			\item Leave group function
+			\item Check for Existing Email
 		\end{enumerate}
 		
 	\item Misc/Transitional
 		\begin{enumerate}
-			\item Business Plan
+			\item Business Plan filled out, also a version tailored towards the Governor's Giant Vision contest
+			\item Documentation done inside and outside of the source code files
 		\end{enumerate}
 
 	\end{itemize}
-
-\section*{Remaining Backlog}
-Here are the incomplete items/features for this sprint:
-	\begin{itemize}
-		\item Android
-		\begin{itemize}
-			\item Group messaging unit tests
-			\item GPS Location unit tests
-		\end{itemize}
-		\item Cloud Code
-		\begin{itemize}
-			\item Testing on Group Functions.
-		\end{itemize}
-	\end{itemize}
-
-\section*{Successes}
-
-	\begin{itemize}
-		\item Android
-		\begin{itemize}
-			\item Group messaging is working with no known bugs
-			\item User and group locations implemented
-			\item Groups now sync when changes are made
-		\end{itemize}
-		
-		\item Server (cloud code)
-		\begin{itemize}
-			\item Returning group update information
-			\item Check for Existing Email
-		\end{itemize}
-	\end{itemize}
-
 
 \section*{Issues and Changes}
 Some issues that we encountered include:
@@ -139,7 +170,8 @@ Some issues that we encountered include:
 			\begin{itemize}
 				\item Issues
 				\begin{itemize}
-					\item TODO				
+					\item Permissions to obtain contacts and locations from the device posed a challenge - still not handling the request gracefully
+					\item Had difficulty implementing a custom AlertDialogFragment that extends DialogFragment, inside of other fragments such as MapFragment, GroupInfoFragment, etc.
 				\end{itemize}
 				
 				\item Changes
@@ -158,20 +190,37 @@ Some issues that we encountered include:
 				
 				\item Changes
 				\begin{itemize}
-					\item Added join and leave cloud functions to backlog	
+					\item Added join and leave cloud functions - was not part of original backlog
 				\end{itemize}
 			\end{itemize}
 	\end{itemize}
 
+\section*{Remaining Backlog}
+The following items/features remain either incomplete or need improvement for this sprint, and will carry onto the next sprint:
+	\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Group messaging unit tests
+			\item GPS Location unit tests
+		\end{itemize}
+		\item Cloud Code
+		\begin{itemize}
+			\item Testing on Group Functions.
+		\end{itemize}
+	\end{itemize}
 
 
 	
 \section*{Team Details}
+Here are some auxiliary details about our workflow and division of responsibilities, during the sprint: \\\\
+
 Dan and Johnny started off Sprint 4 by working on messaging-related features, while Joe and Evan worked on GPS and map features. Nick focused on the business plan, updating the existing documentation to use the updated layout, and was tasked with installing the Fabric SDK.\\
 
 For week two of the sprint, Johnny focused on group messaging. Dan and Nick also worked together on cloud code, targeting the leaving/joining groups, and a group update service in Android. Evan wrote a LocationManager class and stubbed out methods, that Joe wrote an interface for and made a UI for in the MapFragment.\\
 
-Week three continued with Joe and Evan working on various location features, while Dan and Johnny worked on the update service and messaging features respectively. Nick focused on cloud code and business plan/documentation writing.
+Week three continued with Joe and Evan working on various location features, while Dan and Johnny worked on the update service and messaging features respectively. Nick focused on cloud code and business plan/documentation writing.\\
+
+Additionally, this was the first sprint in which we had Dan serve as acting Scrum Master, to aid in organization and appointment of responsibilities. Though he did officially take this role on during our Winter Sprint (Sprint 3.5), most of us were either working remotely or unavailable, thus we were unable to fully utilize this new organizational change until now.
 
 
 
