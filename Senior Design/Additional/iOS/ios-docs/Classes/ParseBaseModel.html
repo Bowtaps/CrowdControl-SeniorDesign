@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ParseBaseModel Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ParseBaseModel" class="dashAnchor"></a>
+    <a title="ParseBaseModel Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (60% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ParseBaseModel Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChatViewController.html">ChatViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConversationModel.html">ConversationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupInfoViewController.html">GroupInfoViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupOverviewController.html">GroupOverviewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupTableController.html">GroupTableController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MapViewController.html">MapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseBaseModel.html">ParseBaseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseGroupModel.html">ParseGroupModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseLocationModel.html">ParseLocationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseModelManager.html">ParseModelManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseUserModel.html">ParseUserModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseUserProfileModel.html">ParseUserProfileModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingsViewController.html">SettingsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignupViewController.html">SignupViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BaseModel.html">BaseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/GroupModel.html">GroupModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationModel.html">LocationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ModelManager.html">ModelManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UserModel.html">UserModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UserProfileModel.html">UserProfileModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Waypoint.html">Waypoint</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ParseBaseModel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ParseBaseModel</span><span class="p">:</span> <span class="kt">BaseModel</span></code></pre>
+
+                </div>
+              </div>
+            <p>The core Parse implementation for models. Implements the BaseModel protocol
+and provies functionality to access the basic information about the model,
+such as:</p>
+
+<ul>
+<li>Unique identifier</li>
+<li>Creation timestamp</li>
+<li>Last updated timestamp</li>
+<li>Flag indicating modification since last save</li>
+<li>Methods for loading from and saving to storage</li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13Crowd_Control14ParseBaseModel11parseObjectCSo8PFObject"></a>
+                    <a name="//apple_ref/swift/Property/parseObject" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13Crowd_Control14ParseBaseModel11parseObjectCSo8PFObject">parseObject</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Internal reference to the Parse API object representing this object in
+the remote database.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">parseObject</span><span class="p">:</span> <span class="kt">PFObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control14ParseBaseModelcFMS0_FT15withParseObjectCSo8PFObject_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(withParseObject:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control14ParseBaseModelcFMS0_FT15withParseObjectCSo8PFObject_S0_">init(withParseObject:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Class constructor. Initializes the instance from a <code>PFObject</code>.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter withParseObject: The Parse object to tie this model to the Parse
+                         Parse database.</p>
+
+</div>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p>SeeAlso PFObject</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">withParseObject</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">PFObject</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withParseObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Parse object to tie this model to the Parse Parse database.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13Crowd_Control14ParseBaseModel2idSS"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13Crowd_Control14ParseBaseModel2idSS">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Read-only computed value representing the ID of the object as defined in
+the <code><a href="../Protocols/BaseModel.html">BaseModel</a></code> protocol.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    BaseModel.id
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13Crowd_Control14ParseBaseModel7createdCSo6NSDate"></a>
+                    <a name="//apple_ref/swift/Property/created" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13Crowd_Control14ParseBaseModel7createdCSo6NSDate">created</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Read-only computed value for the timestamp when this object was
+initially created as defined in the <code><a href="../Protocols/BaseModel.html">BaseModel</a></code> protocol.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    BaseModel.created
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">created</span><span class="p">:</span> <span class="kt">NSDate</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13Crowd_Control14ParseBaseModel7updatedCSo6NSDate"></a>
+                    <a name="//apple_ref/swift/Property/updated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13Crowd_Control14ParseBaseModel7updatedCSo6NSDate">updated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Read-only computed value for the timestamp when this object was
+last updated on the server as defined in the <code><a href="../Protocols/BaseModel.html">BaseModel</a></code> protocol.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    BaseModel.updated
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">updated</span><span class="p">:</span> <span class="kt">NSDate</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13Crowd_Control14ParseBaseModel8modifiedSb"></a>
+                    <a name="//apple_ref/swift/Property/modified" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13Crowd_Control14ParseBaseModel8modifiedSb">modified</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Read-only computed value indicating whether or not the data contained
+in this model is <q>dirty</q>, which is to say that this model contains
+changes that have not been saved to the server.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    BaseModel.modified
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">modified</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control14ParseBaseModel4loadFS0_FzT_T_"></a>
+                    <a name="//apple_ref/swift/Method/load()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control14ParseBaseModel4loadFS0_FzT_T_">load()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reloads this object from Parse as defined by the <code><a href="../Protocols/BaseModel.html">BaseModel</a></code> protocol.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    BaseModel.load()
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">load</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control14ParseBaseModel16loadInBackgroundFS0_FGSqFT6objectGSqPS_9BaseModel__5errorGSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/loadInBackground(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control14ParseBaseModel16loadInBackgroundFS0_FGSqFT6objectGSqPS_9BaseModel__5errorGSqCSo7NSError__T__T_">loadInBackground(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reloads this object from Parse asynchronously as defined by the
+<code><a href="../Protocols/BaseModel.html">BaseModel</a></code> protocol.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    BaseModel.loadInBackground(_:)
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">loadInBackground</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="nv">object</span><span class="p">:</span> <span class="kt">BaseModel</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control14ParseBaseModel4saveFS0_FzT_T_"></a>
+                    <a name="//apple_ref/swift/Method/save()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control14ParseBaseModel4saveFS0_FzT_T_">save()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Saves this object to Parse as defined by the <code><a href="../Protocols/BaseModel.html">BaseModel</a></code> protocol.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    BaseModel.save()
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">save</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control14ParseBaseModel16saveInBackgroundFS0_FGSqFT6objectGSqPS_9BaseModel__5errorGSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/saveInBackground(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control14ParseBaseModel16saveInBackgroundFS0_FGSqFT6objectGSqPS_9BaseModel__5errorGSqCSo7NSError__T__T_">saveInBackground(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Saves this object to Parse as defined by the <code><a href="../Protocols/BaseModel.html">BaseModel</a></code> protocol.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    BaseModel.saveInBackground(_:)
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">saveInBackground</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="nv">object</span><span class="p">:</span> <span class="kt">BaseModel</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-01-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

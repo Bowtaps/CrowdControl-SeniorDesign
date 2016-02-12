@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ParseModelManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ParseModelManager" class="dashAnchor"></a>
+    <a title="ParseModelManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (60% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ParseModelManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChatViewController.html">ChatViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConversationModel.html">ConversationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupInfoViewController.html">GroupInfoViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupOverviewController.html">GroupOverviewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupTableController.html">GroupTableController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MapViewController.html">MapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseBaseModel.html">ParseBaseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseGroupModel.html">ParseGroupModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseLocationModel.html">ParseLocationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseModelManager.html">ParseModelManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseUserModel.html">ParseUserModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseUserProfileModel.html">ParseUserProfileModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingsViewController.html">SettingsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignupViewController.html">SignupViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BaseModel.html">BaseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/GroupModel.html">GroupModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationModel.html">LocationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ModelManager.html">ModelManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UserModel.html">UserModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UserProfileModel.html">UserProfileModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Waypoint.html">Waypoint</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ParseModelManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ParseModelManager</span><span class="p">:</span> <span class="kt">ModelManager</span></code></pre>
+
+                </div>
+              </div>
+            <p>A Parse implementation of the <code><a href="../Protocols/ModelManager.html">ModelManager</a></code> protocol. Class designed to query Parse for various
+models, including users and groups.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager9logInUserFS0_FzTSS8passwordSS_PS_9UserModel_"></a>
+                    <a name="//apple_ref/swift/Method/logInUser(_:password:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager9logInUserFS0_FzTSS8passwordSS_PS_9UserModel_">logInUser(_:password:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compares the submitted username and password to storage and returns a <code><a href="../Protocols/UserModel.html">UserModel</a></code> object if
+the user was successfully logged in. Otherewise, it throws an exception.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter username: The username of the user to log in.
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter password: The password to use to log in.</p>
+
+</div>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>A user object if the login was successful.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">logInUser</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UserModel</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>username</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The username of the user to log in.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The password to use to log in.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A user object if the login was successful.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager21logInUserInBackgroundFS0_FTSS8passwordSS8callbackGSqFT4userGSqPS_9UserModel__5errorGSqCSo7NSError__T___T_"></a>
+                    <a name="//apple_ref/swift/Method/logInUserInBackground(_:password:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager21logInUserInBackgroundFS0_FTSS8passwordSS8callbackGSqFT4userGSqPS_9UserModel__5errorGSqCSo7NSError__T___T_">logInUserInBackground(_:password:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compares the submitted username and password to storage on a separate thread, executing the
+given callback if successful. If login is unsuccessful, it throws an exception.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter username: The username of the user to log in.
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter password: The password to use to log in.
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter callback: An optional callback to call once the operation is complete.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">logInUserInBackground</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="nv">user</span><span class="p">:</span> <span class="kt">UserModel</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>username</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The username of the user to log in.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The password to use to log in.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional callback to call once the operation is complete.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager10createUserFS0_FzTSS5emailSS8passwordSS_PS_9UserModel_"></a>
+                    <a name="//apple_ref/swift/Method/createUser(_:email:password:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager10createUserFS0_FzTSS5emailSS8passwordSS_PS_9UserModel_">createUser(_:email:password:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to create a new user in the system, ensuring that the given username is unique.
+Also creates the corresponding user profile object. Both objects are then stored in the
+server.</p>
+
+<p>This is a blocking function that can take several seconds to complete. If an operation
+fails, then an exception will be thrown.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter username: The username of the new user. Must be unique from all other users.
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter password: The password of the new user.</p>
+
+</div>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>The newly created <code><a href="../Protocols/UserModel.html">UserModel</a></code> if the operation is successful.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">createUser</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UserModel</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>username</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The username of the new user. Must be unique from all other users.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The password of the new user.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The newly created <code><a href="../Protocols/UserModel.html">UserModel</a></code> if the operation is successful.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager22createUserInBackgroundFS0_FTSS5emailSS8passwordSS8callbackGSqFT4userGSqPS_9UserModel__5errorGSqCSo7NSError__T___T_"></a>
+                    <a name="//apple_ref/swift/Method/createUserInBackground(_:email:password:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager22createUserInBackgroundFS0_FTSS5emailSS8passwordSS8callbackGSqFT4userGSqPS_9UserModel__5errorGSqCSo7NSError__T___T_">createUserInBackground(_:email:password:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to create a new user in the system, ensuring that the given username is unique.
+Also creates the corresponding <code>UserProfileObject</code>. Both objects are then stored in the
+server.</p>
+
+<p>This is an asynchronous function that will pass control back to the main thread by executing
+the given callback prameter if it is not <code>nil</code>.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter username: The username of the new user. Must be unique from all other users.
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter password: The password of the new user.
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter callback: The callback function that will be executed after the operation
+                  is complete, either successfully or unsuccessfully.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">createUserInBackground</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="nv">user</span><span class="p">:</span> <span class="kt">UserModel</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>username</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The username of the new user. Must be unique from all other users.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The password of the new user.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback function that will be executed after the operation is complete, either successfully or unsuccessfully.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager11currentUserFS0_FT_GSqPS_9UserModel__"></a>
+                    <a name="//apple_ref/swift/Method/currentUser()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager11currentUserFS0_FT_GSqPS_9UserModel__">currentUser()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves the currently logged-in user. If no user is logged in, returns <code>nil</code>.</p>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    The current <code><a href="../Protocols/UserModel.html">UserModel</a></code> if one is logged in, or <code>nil</code> if no user is logged in.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">currentUser</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UserModel</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current <code><a href="../Protocols/UserModel.html">UserModel</a></code> if one is logged in, or <code>nil</code> if no user is logged in.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager17logOutCurrentUserFS0_FT_Sb"></a>
+                    <a name="//apple_ref/swift/Method/logOutCurrentUser()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager17logOutCurrentUserFS0_FT_Sb">logOutCurrentUser()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Logs out the currently logged in user, removing them from any caches and returning whether
+or not the operation was successful.</p>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    true if the operation was successful and the user was successfully logged out,
+       false if not.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">logOutCurrentUser</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if the operation was successful and the user was successfully logged out, false if not.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager11fetchGroupsFS0_FzT_GSaPS_10GroupModel__"></a>
+                    <a name="//apple_ref/swift/Method/fetchGroups()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager11fetchGroupsFS0_FzT_GSaPS_10GroupModel__">fetchGroups()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetches all groups in storage synchronously.</p>
+
+<p>This is a blocking function that can take several seconds to complete. If an operation
+fails, then an exception will be thrown.</p>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    Array of all <code><a href="../Protocols/GroupModel.html">GroupModel</a></code> objects in storage.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">fetchGroups</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">GroupModel</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Array of all <code><a href="../Protocols/GroupModel.html">GroupModel</a></code> objects in storage.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager23fetchGroupsInBackgroundFS0_FGSqFT7resultsGSqGSaPS_10GroupModel___5errorGSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/fetchGroupsInBackground(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager23fetchGroupsInBackgroundFS0_FGSqFT7resultsGSqGSaPS_10GroupModel___5errorGSqCSo7NSError__T__T_">fetchGroupsInBackground(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetches all gropus in storage asynchronously.</p>
+
+<p>This is an asynchronous function that will pass control back to the main thread by executing
+the given callback parameter if it is not <code>nil</code>.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter callback: The callback function that will be executed after the operation is
+                  complete, either successfully or unsuccessfully.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">fetchGroupsInBackground</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="nv">results</span><span class="p">:</span> <span class="p">[</span><span class="kt">GroupModel</span><span class="p">]?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback function that will be executed after the operation is complete, either successfully or unsuccessfully.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager12currentGroupFS0_FT_GSqPS_10GroupModel__"></a>
+                    <a name="//apple_ref/swift/Method/currentGroup()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager12currentGroupFS0_FT_GSqPS_10GroupModel__">currentGroup()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the cached currently active group of which the current user is member, if any. If no
+user is logged in or the logged in user is not a member of any groups, this method will
+return <code>nil</code>. This function does not access storage in any way.</p>
+
+<p>This method deals exclusively with cached values. In order to update the cached value,
+either set the cached value directly using <code><a href="../Classes/ParseModelManager.html#/s:FC13Crowd_Control17ParseModelManager15setCurrentGroupFS0_FGSqPS_10GroupModel__T_">setCurrentGroup(_:)</a></code> or allowing it to be set
+automatically using <code><a href="../Classes/ParseModelManager.html#/s:FC13Crowd_Control17ParseModelManager17fetchCurrentGroupFS0_FzT_GSqPS_10GroupModel__">fetchCurrentGroup()</a></code> and <code><a href="../Classes/ParseModelManager.html#/s:FC13Crowd_Control17ParseModelManager29fetchCurrentGroupInBackgroundFS0_FGSqFT6resultGSqPS_10GroupModel__5errorGSqCSo7NSError__T__T_">fetchCurrentGroupInBackground(_:)</a></code>.</p>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    The <code><a href="../Protocols/GroupModel.html">GroupModel</a></code> of which the logged in user (if any) is a member of, or <code>nil</code> if
+       no such group exists.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">currentGroup</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">GroupModel</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The <code><a href="../Protocols/GroupModel.html">GroupModel</a></code> of which the logged in user (if any) is a member of, or <code>nil</code> if no such group exists.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager15setCurrentGroupFS0_FGSqPS_10GroupModel__T_"></a>
+                    <a name="//apple_ref/swift/Method/setCurrentGroup(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager15setCurrentGroupFS0_FGSqPS_10GroupModel__T_">setCurrentGroup(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the current cached value of the active group. Set the value to <code>nil</code> to indicate that
+there are no currently active groups. This function does not modify storage in anyway.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter group: The current active <code><a href="../Protocols/GroupModel.html">GroupModel</a></code>, or <code>nil</code> if no groups are currently
+               active.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setCurrentGroup</span><span class="p">(</span><span class="nv">group</span><span class="p">:</span> <span class="kt">GroupModel</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>group</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current active <code>GroupModel</code>, or <code>nil</code> if no groups are currently active.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager17fetchCurrentGroupFS0_FzT_GSqPS_10GroupModel__"></a>
+                    <a name="//apple_ref/swift/Method/fetchCurrentGroup()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager17fetchCurrentGroupFS0_FzT_GSqPS_10GroupModel__">fetchCurrentGroup()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the current active group from storage. If a user is currently logged in and is member
+of a group, this function will find that group and return it, or will return <code>nil</code> if no
+such group exists or if no user is logged in. The results of this function are cached and
+can be accessed with a call to <code><a href="../Classes/ParseModelManager.html#/s:FC13Crowd_Control17ParseModelManager12currentGroupFS0_FT_GSqPS_10GroupModel__">currentGroup()</a></code>.</p>
+
+<p>This is a blocking function that can take several seconds to complete. If an operation
+fails, then an exception will be thrown.</p>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>The active <code><a href="../Protocols/GroupModel.html">GroupModel</a></code> or <code>nil</code> if no group is active.</p>
+
+</div>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p>fetchCurrentGroupInBackground(_:)</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">fetchCurrentGroup</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">GroupModel</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The active <code><a href="../Protocols/GroupModel.html">GroupModel</a></code> or <code>nil</code> if no group is active.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control17ParseModelManager29fetchCurrentGroupInBackgroundFS0_FGSqFT6resultGSqPS_10GroupModel__5errorGSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/fetchCurrentGroupInBackground(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control17ParseModelManager29fetchCurrentGroupInBackgroundFS0_FGSqFT6resultGSqPS_10GroupModel__5errorGSqCSo7NSError__T__T_">fetchCurrentGroupInBackground(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the current active group from storage asynchronously. If a user is currently logged in
+and is a member of a group, this function will find that group and return it. If no such
+group can be found or no user is logged in, then this function will return <code>nil</code>. The
+results of this function are cached and can be accessed with a call to <code><a href="../Classes/ParseModelManager.html#/s:FC13Crowd_Control17ParseModelManager12currentGroupFS0_FT_GSqPS_10GroupModel__">currentGroup()</a></code>.</p>
+
+<p>This is an asynchronous function that will pass control back to the main thread by executing
+the given callback parameter if it is not <code>nil</code>.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter callback: The callback function that will be executed after the operation is
+                  complete, either successfully or unsuccessfully.</p>
+
+</div>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p>fetchCurrentGroup()</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">fetchCurrentGroupInBackground</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="nv">result</span><span class="p">:</span> <span class="kt">GroupModel</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback function that will be executed after the operation is complete, either successfully or unsuccessfully.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-01-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

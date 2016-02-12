@@ -1,0 +1,92 @@
+GroupModel.swift
+	struct Waypoint
+	var waypointId: Int
+	var longitude: Double
+	var latitude: Double
+	var message: String
+GroupTableController.swift
+	class GroupTableController: UITableViewController
+	@IBOutlet weak var groupTable: UITableView!
+	var groups: [GroupModel] = []
+	var selectedGroup: GroupModel?
+	override func viewDidLoad()
+	override func viewDidAppear(animated: Bool)
+	override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+	@IBAction func doRefresh(sender: AnyObject)
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
+SignupViewController.swift
+	@IBOutlet weak var scrollView: UIScrollView!
+	@IBOutlet weak var facebookButton: UIButton!
+	@IBOutlet weak var twitterButton: UIButton!
+	@IBOutlet weak var emailButton: UIButton!
+	@IBOutlet weak var nameField: UITextField!
+	@IBOutlet weak var emailField: UITextField!
+	@IBOutlet weak var passwordField: UITextField!
+	@IBOutlet weak var passwordConfirmField: UITextField!
+	@IBOutlet weak var submitButton: UIButton!
+	var signupFormFields = [UITextField]()
+	required init?(coder aDecoder: NSCoder)
+	deinit
+	override func viewDidLoad()
+	override func viewDidAppear(animated: Bool)
+	@IBAction func facebookButtonTapped(sender: AnyObject)
+	@IBAction func twitterButtonTapped(sender: AnyObject)
+	@IBAction func submitButtonTapped(sender: AnyObject)
+	func registerForKeyboardNotifications()
+	func deregisterFromKeyboardNotifications()
+	func adjustForKeyboard(notification: NSNotification)
+	func textFieldShouldReturn(textField: UITextField) -> Bool
+	func submitForm()
+	func unwindIfLoggedIn()
+	@IBAction func rewindToWelcomeView(segue: UIStoryboardSegue)
+SettingsViewController.swift
+	class SettingsViewController: UIViewController
+	@IBOutlet weak var logoutButton: UIBarButtonItem!
+	@IBAction func onLogoutTapped(sender: AnyObject)
+AppDelegate.swift
+	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
+	func applicationWillResignActive(application: UIApplication)
+	func applicationDidEnterBackground(application: UIApplication)
+	func applicationWillEnterForeground(application: UIApplication)
+	func applicationDidBecomeActive(application: UIApplication)
+	func applicationWillTerminate(application: UIApplication)
+ChatViewController.swift
+	let name: String
+	let message: String
+	let time: String
+	override func viewDidLoad()
+	override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+GroupInfoViewController.swift
+	override func viewDidLoad()
+	override func didReceiveMemoryWarning()
+	@IBAction func onLeaveGroupButtonTapped(sender: AnyObject)
+LoginViewController.swift
+	@IBOutlet weak var scrollView: UIScrollView!
+	@IBOutlet weak var emailField: UITextField!
+	@IBOutlet weak var passwordField: UITextField!
+	@IBOutlet weak var submitButton: UIButton!
+	var loginFormFields = [UITextField]()
+	required init?(coder aDecoder: NSCoder)
+	deinit
+	override func viewDidLoad()
+	func registerForKeyboardNotifications()
+	func deregisterFromKeyboardNotifications()
+	func adjustForKeyboard(notification: NSNotification)
+GroupOverviewController.swift
+	class GroupOverviewController: UIViewController
+	var groupToDisplay: GroupModel?
+	var groupLeader: UserProfileModel?
+	@IBOutlet weak var groupNameLabel: UILabel!
+	@IBOutlet weak var groupLeaderLabel: UILabel!
+	@IBOutlet weak var groupDescriptionLabel: UILabel!
+	@IBAction func onRequestButtonTapped(sender: AnyObject)
+	override func viewDidLoad()
+MapViewController.swift
+	override func viewDidLoad()
+	override func didReceiveMemoryWarning()
