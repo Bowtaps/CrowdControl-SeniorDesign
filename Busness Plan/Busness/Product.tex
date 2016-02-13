@@ -14,6 +14,25 @@
 
 Crowd Control is a mobile application designed to “ease the experience of going out.” Crowd Control seeks to provide users involved in nightlife events, concerts, festivals, and any other group activities, mobile technology to add value to their overall experience. 
 
+\section{Third Party Requirements}
+
+This application is designed to be a background tool. It has to handle importing and exporting messaging and GPS data to and from the user. It has to keep this information up-to-date as well as quickly accessible. It also has to store this information in a safe and secure way.
+For the side being developed in Android. We have handled the following problems though the use of services, and the UX design of the app. For storing the information, we are using a back-end service called Parse. Parse encrypts all of its data and gives great functionality to a database. Another service being used for the messaging, Sinch. Sinch also uses encryption to protect app-to-app messages.
+The goal of our UX is to make it so that the user the doesn't have to think about the about. We accomplish this by implementing a one-time log in for the user. Another way we will be streamlining things is by keeping the app at the group screen when launched when the user is in said group.\\
+
+\noindent
+\textbf{Parse}
+
+Parse is a back-end database service that is the backbone of this app. The entirety of its database is encrypted for our users protection. Inside Parse we are using several tables. These tables abstract user information so that even the displayed information is limited to protect the user.\\
+
+\noindent
+\textbf{Sinch}
+
+Sinch is a back-end messaging system. It provides encrypted device-to-device messaging. Though sinch, we will be able to maintain a more stable messaging platform.
+
+
+
+
 \section{Developement Requirements}
 
 An important question we need to ask ourselves right away is what type of application we want to develop. The two basics types to choose from are a native version and a cross platform development.  The following information pulled directly from uxmag.com will outline the differences, strengths, and drawbacks of both types.
@@ -105,7 +124,7 @@ Hardware &
 \end{tabularx}
 \end{center}
 
-
+\noindent
 \textbf{Our Decision}
 
 Both approaches certainly have their share of benefits as well as drawbacks. A long-term strategy would seem to favor web-based over native apps, but no matter which approach is taken, a well-orchestrated user experience is the best defense in the rapidly evolving world of mobile platforms and devices. We have decided to use the native approach because it allows for a more 
