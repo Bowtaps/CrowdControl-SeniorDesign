@@ -18,12 +18,13 @@
 \contentsline {chapter}{\numberline {4}Strategy and Implementation Summary}{7}{chapter.4}
 \contentsline {section}{\numberline {4.1}Market Strategy}{7}{section.4.1}
 \contentsline {section}{\numberline {4.2}Sales Strategy}{7}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Price Setting}{7}{subsection.4.2.1}
-\contentsline {chapter}{\numberline {5}Personal Summary}{8}{chapter.5}
-\contentsline {section}{\numberline {5.1}Personnel Plan}{8}{section.5.1}
+\contentsline {subsection}{\numberline {4.2.1}In-App Pricing}{7}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Advertisement Pricing}{8}{subsection.4.2.2}
+\contentsline {chapter}{\numberline {5}Personal Summary}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}Personnel Plan}{9}{section.5.1}
 \contentsline {chapter}{Market Analysis}{BM-1}{chapter*.2}
 \contentsline {section}{\numberline {1}Market Segmentation}{BM-1}{section.5.1}
 \contentsline {section}{\numberline {2}Demographics}{BM-1}{section.5.2}
 \contentsline {section}{\numberline {3}Sizing up the Market}{BM-1}{section.5.3}
-\contentsline {section}{\numberline {4}Assement of competition}{BM-2}{section.5.4}
+\contentsline {section}{\numberline {4}Assessment of competition}{BM-2}{section.5.4}
 \contentsline {section}{\numberline {5}SWOT Analysis}{BM-2}{section.5.5}
