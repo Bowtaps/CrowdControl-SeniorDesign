@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.18)  12 FEB 2016 20:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.18)  12 FEB 2016 20:21
 entering extended mode
 **./CCBusinessPlan.tex
 (CCBusinessPlan.tex
@@ -1723,41 +1723,78 @@ LaTeX Font Info:    Try loading font information for TS1+lmss on input line 18.
 ("C:\Users\nick\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ts1lmss.fd"
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 36--38
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--43
 
  []
 
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 42--44
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
+Underfull \hbox (badness 10000) in paragraph at lines 48--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--50
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
  []
 
 ) (Product.tex [3]
 Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 105--105
+\T1/lmss/m/n/10 hard-ware fea-tures al-low-ing in-ter-est-ing func-tion-al-i-ti
+es such as tak-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+
+ []
+
 [4
 
-]
-Overfull \vbox (84.20464pt too high) has occurred while \output is active []
-
-
-[5]
+] [5]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 129.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10> not available
@@ -1828,7 +1865,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 43.
 Here is how much of TeX's memory you used:
  25886 strings out of 493634
  463260 string characters out of 3135647
- 623263 words of memory out of 3000000
+ 622263 words of memory out of 3000000
  28639 multiletter control sequences out of 15000+200000
  63876 words of font info for 68 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -1841,7 +1878,7 @@ pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss
 mss17.pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/l
 m/lmssbo10.pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmssbx10.pfb>
-Output written on CCBusinessPlan.pdf (13 pages, 167642 bytes).
+Output written on CCBusinessPlan.pdf (13 pages, 167510 bytes).
 PDF statistics:
  231 PDF objects out of 1000 (max. 8388607)
  38 named destinations out of 1000 (max. 500000)
