@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.18)  12 FEB 2016 19:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.18)  12 FEB 2016 20:04
 entering extended mode
 **./CCBusinessPlan.tex
 (CCBusinessPlan.tex
@@ -324,16 +324,6 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-
-! LaTeX Error: Option clash for package geometry.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 
-     
-? 
 ("C:\Users\nick\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xypic\xy.sty"
 ("C:\Users\nick\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xypic\xy.tex"
 Bootstrap'ing: catcodes, docmode,
@@ -1763,7 +1753,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--50
 Chapter 3.
 [4
 
-] [5]
+]
+Overfull \vbox (84.20464pt too high) has occurred while \output is active []
+
+
+[5]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 129.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10> not available
@@ -1834,24 +1828,22 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 43.
 Here is how much of TeX's memory you used:
  25886 strings out of 493634
  463260 string characters out of 3135647
- 621263 words of memory out of 3000000
+ 623263 words of memory out of 3000000
  28639 multiletter control sequences out of 15000+200000
  63876 words of font info for 68 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  64i,12n,72p,3302b,406s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
-}{C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.
-enc}{C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.
-enc}<C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi
-7.pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lm
-ss10.pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm
-/lmss12.pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/lm/lmss17.pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmssbo10.pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/lm/lmssbx10.pfb>
-Output written on CCBusinessPlan.pdf (13 pages, 170555 bytes).
+}{C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc
+}<C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss10.
+pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss
+12.pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
+mss17.pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/l
+m/lmssbo10.pfb><C:/Users/nick/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmssbx10.pfb>
+Output written on CCBusinessPlan.pdf (13 pages, 167642 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
+ 231 PDF objects out of 1000 (max. 8388607)
  38 named destinations out of 1000 (max. 500000)
  229 words of extra memory for PDF output out of 10000 (max. 10000000)
 

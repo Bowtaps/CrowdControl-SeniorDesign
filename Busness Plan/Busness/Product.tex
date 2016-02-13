@@ -27,34 +27,30 @@ A native app is one that is built for a specific platform, such as iPhone or And
 \arrayrulecolor{green}\hline
 \textbf{\textcolor{myGreen}{Native Application Strengths}} & \\
 \hline
-Target 1.A Halve, between 1990 and 2015, the proportion of the people whose income is less than \$1 a day. & 
+Speed. & 
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[1.1] Proportion of population below \$1 purchasing power parity (PPP) a day$^a$
-\item[1.2] Poverty Gap ratio [incidence x depth of poverty]
-\item[1.3] Share of the poorest quintile in national consumption
+\item[1.1] 
+Native apps tend to be faster and more responsive. Because the code that runs the app is stored locally on the phone, there is no time spent waiting for static content (such as images and text) to be downloaded from the web. While dynamic content may still need to be accessed from the web, it’s an improvement over the web-based model in which everything needs to be downloaded each time.
+
 \end{itemize} 
 \end{minipage}\\
 
 \arrayrulecolor{black}\hline
 
-Target 1.B Achieve full and productive employment and decent work for all, including women and young people &
+Local Storage &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[1.4] Growth of GDP per person employed 
-\item[1.5] Employment to population ratio
-\item[1.6] Proportion of employed people living below \$1 (PP) a day
-\item[1.7] Proportion of own-account and contribution family workers in total employment
+\item[1.2] Native apps can run asynchronously, meaning dynamic information can be stored locally on the phone temporarily and synced with the central web-based server later. While new technologies and features (such as those in Xamarin) will allow for this to also be done in cross platform environment it is not as reliable as native
 \end{itemize} 
 \end{minipage}\\
 
 \hline
 
-Target 1.C Halve, between 1990 and 2015, the proportion of people who suffer from hunger &
+Killer Features &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[1.8] Prevalence of underweight children under five years of age
-\item[1.9] Proportion of population below minimum level of dietary energy consumption
+\item[1.3]  Going with the native app approach gives you access to that platform's hardware features allowing interesting functionalities such as taking photos, accessing GPS information, making phone calls, leveraging near field communication (NFC), etc. Because web-based apps are platform agnostic, they do not have access to the device’s hardware features.
 \end{itemize}
 \end{minipage}\\
 
@@ -63,12 +59,10 @@ Target 1.C Halve, between 1990 and 2015, the proportion of people who suffer fro
 \textbf{\textcolor{myGreen}{Native App Draw Backs}} \\
 \hline
 
-Target 2.A Ensure that by 2015 children everywhere, boy and girls alike, will be able to complete a full course of primary schooling. &
+Coding &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[2.1] Net enrollment ratio in primary education
-\item[2.2] Proportion of pupils starting grade 1 who reach last grade of primary education
-\item[2.3] Literacy rate of 15- to 24-year-olds, women and men
+\item[2.1] The biggest drawback to developing a native app vs. a cross platform one is that a separate code base must be created and maintained for each individual platform. For example, if you decided to initially build an iPhone app, you would have to design, code, and deploy an iOS app to the App Store. If you then decide down the road that you also want an Android version, you will have to redesign the app for the Android device, code and deploy it to the Android app store—likewise for other platforms. From a development perspective, the code bases are two entirely different languages and will have to be completely rewritten simply to mimic the original app’s functionality.
 \end{itemize}
 \end{minipage}\\
 
@@ -78,13 +72,20 @@ Target 2.A Ensure that by 2015 children everywhere, boy and girls alike, will be
 \textbf{\textcolor{myGreen}{Cross Platform Strengths}}} \\
 \hline
 
-Target 3.A Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015 &
+Single Solution &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[3.1] Ratios of girls to boys in primary, secondary and tertiary education
-\item[3.2] Share of women in wage employment in the non-agricultural sector.
+\item[3.1] The biggest upside to a cross platform development approach is, of course, the biggest downside to a native one. When developing a cross platform you are centralizing your offering. Single-source means that there is a single version of the code base that all users across all platforms access and use
 \end{itemize} 
 \end{minipage}\\
+
+Single Code Updates &
+\begin{minipage}[t]{\linewidth}%
+\begin{itemize}
+\item[3.1] With the language being written in a single language allows for faster updates and new features to be added.  
+\end{itemize} 
+\end{minipage}\\
+
 
 
 %section 4
@@ -93,11 +94,10 @@ Target 3.A Eliminate gender disparity in primary and secondary education, prefer
 \textbf{\textcolor{myGreen}{Cross Platform Draw Backs}}} \\
 \hline
 
-Target 3.A Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015 &
+Hardware &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[3.1] Ratios of girls to boys in primary, secondary and tertiary education
-\item[3.2] Share of women in wage employment in the non-agricultural sector.
+\item[3.1] With cross platform development does not always properly implement the features of the native language. For the things that require specific native code you have to create translators to go between the cross code and the native code.
 \end{itemize} 
 \end{minipage}\\
 
