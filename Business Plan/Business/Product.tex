@@ -9,7 +9,9 @@
 \renewcommand{\arraystretch}{1.5}
 
 \chapter{The Product}
+
 \section{Introduction}
+
 Crowd Control is a mobile application designed to "ease the experience of going out" by providing
 simple yet powerful group communication tools. Crowd Control seeks to help users with easy-to-use
 group messaging and organizational features. The product is most useful in loud and crowded places
@@ -197,40 +199,69 @@ between the cross code and the native code.
 
 \section{Product Description}
 
+\subsection{Overview}
+
 Crowd Control is a mobile application that aims to ease the experience of going out by providing group
 management, group messaging, and GPS tracking features. All of these useful tools are bundled into a
 single, easy-to-use mobile application that is easy to set up, simple to learn, and fun to use. With Crowd
 Control, users will be able to keep in communication and find each other, even when in loud and
 crowded places.
 
-\subsection{Overview}
-
-The application was built to serve three primary aspects of crowd control: 
-\begin{itemize}
-\item Event-based group management
-\item Integrated group chat
-\item Opt-in periodic location updates
-         (Detailed)
-\end{itemize}
-
 \subsection{Features}
 
-\textit{\textbf{Group Management:}}\\
+The application is built to provide the following core features:
 
-The application will allow users to create temporary groups with known and unknown users. The groups will disband after an event is over, allowing a more dynamic experience. \\
+\begin{itemize}
+\item Event-based group management
+\item Integrated group instant messaging
+\item Optional periodic location updates
+\end{itemize}
+
+These features, while essential to the product, are far from the only features that are in development.
+Crowd Control is built to grow with its customers, and future versions will contain additional features
+that will compliment the rest.\\
 
 \noindent
-\textit{\textbf{Group Messaging:}} \\
+\textit{\textbf{Group Management}}
 
-The mobile application will feature an integrated messenger, which removes the need for users to resort to third-party services to communicate with group members. Along with third party messaging apps ( ones that are outside of the app ) it allows for ease because it eliminates the issues associated with group messaging such as, cross platform messaging, cross carrier messaging, and time stamping issues. \\
+Crowd Control will allow users to create temporary "groups" that they can invite their friends and family
+to join. Once joined, members of this group can take advantage of the other features of the app for as
+long as the group is in use. After an amount of time specified by the group leader or if the group
+becomes inactive and unused for several hours, then the group will be "disbanded", removing all
+users from the group and unlinking their profiles with one another. Leaders can manually disband a
+group whenever they desire.
+
+The flexible nature of the group management will allow users to join groups without concern for whom
+might also be in the group, as personal data will never be automatically shared with the other users
+in the group without consent. This offers several advantages over, say, exchanging phone numbers.\\
 
 \noindent
-\textit{\textbf{GPS Tracking:}}\\
+\textit{\textbf{Instant Messaging}}
 
-Many third-party applications use the GPS feature to help track other users. Our GPS tracking is designed with groups and battery life in mind. Our implementation would be less demanding on the users' batteries by only sending location updates at customizable time intervals or when requested. Because the groups are temporary, tracking stops after the group is disbanded. \\
+Crowd Control will feature integrated instant messaging, which removes the need for users to resort to
+alternate communication platforms such as SMS to communicate with group members. This also
+contributes towards the overall goal of ease of use because it eliminates the need for members to
+use multiple apps to stay in contact; all the needed features in a single bundle. Additionally, because
+the messaging is group-based and built right into the application, there's no need for group members
+to exchange permanent contact information with other members they may not know.\\
 
+\noindent
+\textit{\textbf{GPS Locating}}
 
+In many social situations, noise levels and other factors can distract people so that they cannot hear
+or respond to phone calls or messages from those they are with. Crowd Control solves this problem by
+automatically sharing each user's geographical location with the other members of the group. This way,
+if the group cannot locate or contact another group member, they could use this application to locate
+them.
 
+Because personal privacy is one of the top priorities of Crowd Control, individual location gathering is
+performed on each user's own device and encrypted so that no one but the other members in the group
+can read the information. Additionally, location tracking features are entirely optional and can be
+disabled on a per-user and per-group basis.
 
-
-
+Many third-party applications use the GPS feature to help track other users. Our GPS tracking is
+designed with battery life in mind; it is important that Crowd Control can operate without significant
+power use, as the target use cases involve users straying far from power source. Our implementation
+is less demanding on the user's battery by only sending location updates at customizable time intervals
+or when requested. Because the groups are temporary, tracking stops after the group is disbanded or if
+the user force-closes the application.
