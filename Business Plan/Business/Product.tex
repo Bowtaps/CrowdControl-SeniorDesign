@@ -89,6 +89,8 @@ we have determined that Crowd Control should be developed natively. Despite the 
 potential effort that this would require, it will enable us to build an overall better experience for our users
 and will avoid a potentially risky dependency on another project that lies outside of our control.
 
+
+
 \begin{center}
 \begin{tabularx}{\textwidth}[t]{m{4cm} X}
 %table spot one
@@ -99,7 +101,10 @@ Speed.  &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
 \item[1.1] 
-Native apps tend to be faster and more responsive. Because the code that runs the app is stored locally on the phone, there is no time spent waiting for static content (such as images and text) to be downloaded from the web. While dynamic content may still need to be accessed from the web, it’s an improvement over the web-based model in which everything needs to be downloaded each time.\\
+Native apps tend to be faster and more responsive. Because the code that runs the app is stored
+locally on the phone, there is no time spent waiting for static content (such as images and text) to be
+downloaded from the web. While dynamic content may still need to be accessed from the web, it's an
+improvement over the web-based model in which everything needs to be downloaded each time.\\
 
 \end{itemize} 
 \end{minipage}\\
@@ -109,7 +114,10 @@ Native apps tend to be faster and more responsive. Because the code that runs th
 Local Storage &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[1.2] Native apps can run asynchronously, meaning dynamic information can be stored locally on the phone temporarily and synced with the central web-based server later. While new technologies and features (such as those in Xamarin) will allow for this to also be done in cross platform environment it is not as reliable as native.\\
+\item[1.2] Native apps can run asynchronously, meaning dynamic information can be stored locally on
+the phone temporarily and synced with the central web-based server later. While new technologies and
+features (such as those in Xamarin) will allow for this to also be done in cross platform environment it is
+not as reliable as native.\\
 \end{itemize} 
 \end{minipage}\\
 
@@ -118,7 +126,10 @@ Local Storage &
 Killer Features &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[1.3]  Going with the native app approach gives you access to that platform's hardware features allowing interesting functionalities such as taking photos, accessing GPS information, making phone calls, leveraging near field communication (NFC), etc. Because web-based apps are platform agnostic, they do not have access to the device’s hardware features.\\
+\item[1.3]  Going with the native app approach gives you access to that platform's hardware features
+allowing interesting functionalities such as taking photos, accessing GPS information, making phone
+calls, leveraging near field communication (NFC), etc. Because web-based apps are platform agnostic,
+they do not have access to the device's hardware features.\\
 \end{itemize}
 \end{minipage}\\
 
@@ -130,7 +141,13 @@ Killer Features &
 Coding &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[2.1] The biggest drawback to developing a native app vs. a cross platform one is that a separate code base must be created and maintained for each individual platform. For example, if you decided to initially build an iPhone app, you would have to design, code, and deploy an iOS app to the App Store. If you then decide down the road that you also want an Android version, you will have to redesign the app for the Android device, code and deploy it to the Android app store—likewise for other platforms. From a development perspective, the code bases are two entirely different languages and will have to be completely rewritten simply to mimic the original app’s functionality.\\
+\item[2.1] The biggest drawback to developing a native app vs. a cross platform one is that a separate
+code base must be created and maintained for each individual platform. For example, if you decided to
+initially build an iPhone app, you would have to design, code, and deploy an iOS app to the App Store.
+If you then decide down the road that you also want an Android version, you will have to redesign the
+app for the Android device, code and deploy it to the Android app store---likewise for other platforms.
+From a development perspective, the code bases are two entirely different languages and will have to
+be completely rewritten simply to mimic the original app's functionality.\\
 \end{itemize}
 \end{minipage}\\
 
@@ -143,18 +160,20 @@ Coding &
 Single Solution &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[3.1] The biggest upside to a cross platform development approach is, of course, the biggest downside to a native one. When developing a cross platform you are centralizing your offering. Single-source means that there is a single version of the code base that all users across all platforms access and use.\\
+\item[3.1] The biggest upside to a cross platform development approach is, of course, the biggest
+downside to a native one. When developing a cross platform you are centralizing your offering.
+Single-source means that there is a single version of the code base that all users across all platforms
+access and use.\\
 \end{itemize} 
 \end{minipage}\\
 
 Single Code Updates &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[3.2] With the language being written in a single language allows for faster updates and new features to be added.  \\
+\item[3.2] With the language being written in a single language allows for faster updates and new
+features to be added.  \\
 \end{itemize} 
 \end{minipage}\\
-
-
 
 %section 4
 \hline
@@ -165,17 +184,24 @@ Single Code Updates &
 Hardware &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[3.1] With cross platform development does not always properly implement the features of the native language. For the things that require specific native code you have to create translators to go between the cross code and the native code.
+\item[3.1] With cross platform development does not always properly implement the features of the
+native language. For the things that require specific native code you have to create translators to go
+between the cross code and the native code.
 \end{itemize} 
 \end{minipage}\\
-
 
 \end{tabularx}
 \end{center}
 
+
+
 \section{Product Description}
 
-Crowd Control is a mobile application, which aims to add value to the overall experience of event goers though group management, integrated group messaging, and GPS locations. All of these features will be bundled into a easy to use mobile application that allows for everything your group needs to know to be in one location at all times.
+Crowd Control is a mobile application that aims to ease the experience of going out by providing group
+management, group messaging, and GPS tracking features. All of these useful tools are bundled into a
+single, easy-to-use mobile application that is easy to set up, simple to learn, and fun to use. With Crowd
+Control, users will be able to keep in communication and find each other, even when in loud and
+crowded places.
 
 \subsection{Overview}
 
@@ -201,7 +227,7 @@ The mobile application will feature an integrated messenger, which removes the n
 \noindent
 \textit{\textbf{GPS Tracking:}}\\
 
-Many third-party applications use the GPS feature to help track other users. Our GPS tracking is designed with groups and battery life in mind. Our implementation would be less demanding on the users’ batteries by only sending location updates at customizable time intervals or when requested. Because the groups are temporary, tracking stops after the group is disbanded. \\
+Many third-party applications use the GPS feature to help track other users. Our GPS tracking is designed with groups and battery life in mind. Our implementation would be less demanding on the users' batteries by only sending location updates at customizable time intervals or when requested. Because the groups are temporary, tracking stops after the group is disbanded. \\
 
 
 
