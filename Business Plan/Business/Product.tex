@@ -9,9 +9,7 @@
 \renewcommand{\arraystretch}{1.5}
 
 \chapter{The Product}
-
 \section{Introduction}
-
 Crowd Control is a mobile application designed to "ease the experience of going out" by providing
 simple yet powerful group communication tools. Crowd Control seeks to help users with easy-to-use
 group messaging and organizational features. The product is most useful in loud and crowded places
@@ -66,10 +64,30 @@ Sinch to give our users the best experience possible.
 
 \section{Developement Requirements}
 
-An important question we need to ask ourselves right away is what type of application we want to develop. The two basics types to choose from are a native version and a cross platform development.  The following information pulled directly from \url{uxmag.com} will outline the differences, strengths, and drawbacks of both types.
-A native app is one that is built for a specific platform, such as iPhone or Android, using their code libraries and accessing their available hardware features (camera, GPS, etc). A cross platform compiler, such as Xamarin, allows for simultaneous development on both platforms but does have its drawbacks.. Let's explore the pros and cons of both approaches.
+One of the most critical decisions to make when building a mobile application is to choose the target
+platform. Applications built for as many platforms as possible can reach a wider market, but such
+projects can be expensive and technically challenging to successfully undertake. There exist tools that
+allow applications to be developed for multiple platforms simultaneously, but they bring with them a
+different set of difficulties and limitations. The chart on the next page displays information pulled directly from \url{uxmag.com} that outlines the key differences, strengths, and drawbacks of multi-platform
+development using native technologies versus cross-platform tools.\\
 
+\noindent
+\textbf{Our Decision}
 
+There is no question that Crowd Control must exist on multiple platforms; the combined popularity of
+the top smartphone platforms creates a target market that we cannot afford to ignore. This boils our
+decision down to choosing between developing Crowd Control using native technologies and
+building it using cross-platform tools and services. Both approaches certainly have their share of
+benefits as well as drawbacks. A long-term strategy would seem to favor web-based over native apps,
+but no matter which approach is taken, a well-orchestrated user experience is the best defense in the
+rapidly evolving world of mobile platforms and devices. Additionally, cross-platform tools would carry
+an additional development cost and applications built with these tools are subject to feature limitations
+that native applications are not bound by.
+
+Weighing the pros and cons between developing a native application or a cross-platform application,
+we have determined that Crowd Control should be developed natively. Despite the additional time and
+potential effort that this would require, it will enable us to build an overall better experience for our users
+and will avoid a potentially risky dependency on another project that lies outside of our control.
 
 \begin{center}
 \begin{tabularx}{\textwidth}[t]{m{4cm} X}
@@ -154,11 +172,6 @@ Hardware &
 
 \end{tabularx}
 \end{center}
-
-\noindent
-\textbf{Our Decision}
-
-Both approaches certainly have their share of benefits as well as drawbacks. A long-term strategy would seem to favor web-based over native apps, but no matter which approach is taken, a well-orchestrated user experience is the best defense in the rapidly evolving world of mobile platforms and devices. We have decided to use the native approach because it allows for a more 
 
 \section{Product Description}
 
