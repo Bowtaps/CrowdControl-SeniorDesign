@@ -12,31 +12,84 @@
 
 \section{Introduction}
 
-Crowd Control is a mobile application designed to “ease the experience of going out.” Crowd Control seeks to provide users involved in nightlife events, concerts, festivals, and any other group activities, mobile technology to add value to their overall experience. 
+Crowd Control is a mobile application designed to "ease the experience of going out" by providing
+simple yet powerful group communication tools. Crowd Control seeks to help users with easy-to-use
+group messaging and organizational features. The product is most useful in loud and crowded places
+where direct communication with group members is difficult, such as concerts, festivals, and
+amusement parks.
+
+
 
 \section{Third Party Requirements}
 
-This application is designed to be a background tool. It has to handle importing and exporting messaging and GPS data to and from the user. It has to keep this information up-to-date as well as quickly accessible. It also has to store this information in a safe and secure way.
-For the side being developed in Android. We have handled the following problems though the use of services, and the UX design of the app. For storing the information, we are using a back-end service called Parse. Parse encrypts all of its data and gives great functionality to a database. Another service being used for the messaging, Sinch. Sinch also uses encryption to protect app-to-app messages.
-The goal of our UX is to make it so that the user the doesn't have to think about the about. We accomplish this by implementing a one-time log in for the user. Another way we will be streamlining things is by keeping the app at the group screen when launched when the user is in said group.\\
+Crowd Control is designed to be a background tool. It has to handle instant messaging, retrieving and
+securely distributing GPS data to other group members, and doing so while minimizing power
+consumption and network access. The information must be kept up-to-date and be quickly accessible.
+Additionally, all of this personal user information must be stored and communicated securely. Using
+capable third party services for storing and transmitting data and well-designed user interfaces, Crowd
+Control is capable of meeting all of these requirements.
+
+For storing data, we are using Parse as our back-end service. Data stored on Parse servers is
+encrypted while simultaneously being easily accessible using the provided developer APIs. For instant
+messaging, Crowd Control will be using the Sinch messaging service. Sinch also uses encryption to
+protect app-to-app messages.
+
+The goals of our user experience designs are to keep the app simple to learn, easy to use, and fun to
+experience. We accomplish these goals by employing modern UI design techniques, keeping the
+application as responsive and straightforward as possible, and by streamlining and simplifying
+important tasks. For example, Crowd Control only requires the user to sign up or log in one time,
+remembering who the user is form that point on. Another example is automatically displaying only the
+most relevant information; when a user is currently part of a group, the context of the application will
+change to be entirely focused on the group.\\
 
 \noindent
 \textbf{Parse}
 
-Parse is a back-end database service that is the backbone of this app. The entirety of its database is encrypted for our users protection. Inside Parse we are using several tables. These tables abstract user information so that even the displayed information is limited to protect the user.\\
+Parse is a back-end database service that is the backbone of Crowd Control. Parse provides data
+storage and retrieval services, cloud functionality, and customizability that will allow our application to
+function exactly as intended. The entirety of the data stored in Parse is encrypted for our users'
+protection. Additionally, our own database designs allow user messages and geolocations to be
+encrypted end-to-end, meaning that no one other than group members---not even ourselves---can view
+messages and location data shared between our users.\\
 
 \noindent
 \textbf{Sinch}
 
-Sinch is a back-end messaging system. It provides encrypted device-to-device messaging. Through Sinch, we will be able to maintain a more stable messaging platform.
-
+Sinch is a back-end messaging service that allows us to provide group messaging to our users without
+needing to reimplement such a system ourselves. Instant messages sent through Sinch are encrypted
+end-to-end, meaning that even if the data was intercepted, it would be unreadable except by those
+whom the message was intended for. Fast message passing, push notifications, and secure
+communication are the features promised by this service, and Crowd Control will be making full use of
+Sinch to give our users the best experience possible.
 
 
 
 \section{Developement Requirements}
 
-An important question we need to ask ourselves right away is what type of application we want to develop. The two basics types to choose from are a native version and a cross platform development.  The following information pulled directly from \url{uxmag.com} will outline the differences, strengths, and drawbacks of both types.
-A native app is one that is built for a specific platform, such as iPhone or Android, using their code libraries and accessing their available hardware features (camera, GPS, etc). A cross platform compiler, such as Xamarin, allows for simultaneous development on both platforms but does have its drawbacks.. Let's explore the pros and cons of both approaches.
+One of the most critical decisions to make when building a mobile application is to choose the target
+platform. Applications built for as many platforms as possible can reach a wider market, but such
+projects can be expensive and technically challenging to successfully undertake. There exist tools that
+allow applications to be developed for multiple platforms simultaneously, but they bring with them a
+different set of difficulties and limitations. The chart on the next page displays information pulled directly from \url{uxmag.com} that outlines the key differences, strengths, and drawbacks of multi-platform
+development using native technologies versus cross-platform tools.\\
+
+\noindent
+\textbf{Our Decision}
+
+There is no question that Crowd Control must exist on multiple platforms; the combined popularity of
+the top smartphone platforms creates a target market that we cannot afford to ignore. This boils our
+decision down to choosing between developing Crowd Control using native technologies and
+building it using cross-platform tools and services. Both approaches certainly have their share of
+benefits as well as drawbacks. A long-term strategy would seem to favor web-based over native apps,
+but no matter which approach is taken, a well-orchestrated user experience is the best defense in the
+rapidly evolving world of mobile platforms and devices. Additionally, cross-platform tools would carry
+an additional development cost and applications built with these tools are subject to feature limitations
+that native applications are not bound by.
+
+Weighing the pros and cons between developing a native application or a cross-platform application,
+we have determined that Crowd Control should be developed natively. Despite the additional time and
+potential effort that this would require, it will enable us to build an overall better experience for our users
+and will avoid a potentially risky dependency on another project that lies outside of our control.
 
 
 
@@ -50,7 +103,10 @@ Speed.  &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
 \item[1.1] 
-Native apps tend to be faster and more responsive. Because the code that runs the app is stored locally on the phone, there is no time spent waiting for static content (such as images and text) to be downloaded from the web. While dynamic content may still need to be accessed from the web, it’s an improvement over the web-based model in which everything needs to be downloaded each time.\\
+Native apps tend to be faster and more responsive. Because the code that runs the app is stored
+locally on the phone, there is no time spent waiting for static content (such as images and text) to be
+downloaded from the web. While dynamic content may still need to be accessed from the web, it's an
+improvement over the web-based model in which everything needs to be downloaded each time.\\
 
 \end{itemize} 
 \end{minipage}\\
@@ -60,7 +116,10 @@ Native apps tend to be faster and more responsive. Because the code that runs th
 Local Storage &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[1.2] Native apps can run asynchronously, meaning dynamic information can be stored locally on the phone temporarily and synced with the central web-based server later. While new technologies and features (such as those in Xamarin) will allow for this to also be done in cross platform environment it is not as reliable as native.\\
+\item[1.2] Native apps can run asynchronously, meaning dynamic information can be stored locally on
+the phone temporarily and synced with the central web-based server later. While new technologies and
+features (such as those in Xamarin) will allow for this to also be done in cross platform environment it is
+not as reliable as native.\\
 \end{itemize} 
 \end{minipage}\\
 
@@ -69,7 +128,10 @@ Local Storage &
 Killer Features &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[1.3]  Going with the native app approach gives you access to that platform's hardware features allowing interesting functionalities such as taking photos, accessing GPS information, making phone calls, leveraging near field communication (NFC), etc. Because web-based apps are platform agnostic, they do not have access to the device’s hardware features.\\
+\item[1.3]  Going with the native app approach gives you access to that platform's hardware features
+allowing interesting functionalities such as taking photos, accessing GPS information, making phone
+calls, leveraging near field communication (NFC), etc. Because web-based apps are platform agnostic,
+they do not have access to the device's hardware features.\\
 \end{itemize}
 \end{minipage}\\
 
@@ -81,7 +143,13 @@ Killer Features &
 Coding &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[2.1] The biggest drawback to developing a native app vs. a cross platform one is that a separate code base must be created and maintained for each individual platform. For example, if you decided to initially build an iPhone app, you would have to design, code, and deploy an iOS app to the App Store. If you then decide down the road that you also want an Android version, you will have to redesign the app for the Android device, code and deploy it to the Android app store—likewise for other platforms. From a development perspective, the code bases are two entirely different languages and will have to be completely rewritten simply to mimic the original app’s functionality.\\
+\item[2.1] The biggest drawback to developing a native app vs. a cross platform one is that a separate
+code base must be created and maintained for each individual platform. For example, if you decided to
+initially build an iPhone app, you would have to design, code, and deploy an iOS app to the App Store.
+If you then decide down the road that you also want an Android version, you will have to redesign the
+app for the Android device, code and deploy it to the Android app store---likewise for other platforms.
+From a development perspective, the code bases are two entirely different languages and will have to
+be completely rewritten simply to mimic the original app's functionality.\\
 \end{itemize}
 \end{minipage}\\
 
@@ -94,18 +162,20 @@ Coding &
 Single Solution &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[3.1] The biggest upside to a cross platform development approach is, of course, the biggest downside to a native one. When developing a cross platform you are centralizing your offering. Single-source means that there is a single version of the code base that all users across all platforms access and use.\\
+\item[3.1] The biggest upside to a cross platform development approach is, of course, the biggest
+downside to a native one. When developing a cross platform you are centralizing your offering.
+Single-source means that there is a single version of the code base that all users across all platforms
+access and use.\\
 \end{itemize} 
 \end{minipage}\\
 
 Single Code Updates &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[3.2] With the language being written in a single language allows for faster updates and new features to be added.  \\
+\item[3.2] With the language being written in a single language allows for faster updates and new
+features to be added.  \\
 \end{itemize} 
 \end{minipage}\\
-
-
 
 %section 4
 \hline
@@ -116,51 +186,82 @@ Single Code Updates &
 Hardware &
 \begin{minipage}[t]{\linewidth}%
 \begin{itemize}
-\item[3.1] With cross platform development does not always properly implement the features of the native language. For the things that require specific native code you have to create translators to go between the cross code and the native code.
+\item[3.1] With cross platform development does not always properly implement the features of the
+native language. For the things that require specific native code you have to create translators to go
+between the cross code and the native code.
 \end{itemize} 
 \end{minipage}\\
-
 
 \end{tabularx}
 \end{center}
 
-\noindent
-\textbf{Our Decision}
 
-Both approaches certainly have their share of benefits as well as drawbacks. A long-term strategy would seem to favor web-based over native apps, but no matter which approach is taken, a well-orchestrated user experience is the best defense in the rapidly evolving world of mobile platforms and devices. We have decided to use the native approach because it allows for a more 
 
 \section{Product Description}
 
-Crowd Control is a mobile application, which aims to add value to the overall experience of event goers though group management, integrated group messaging, and GPS locations. All of these features will be bundled into a easy to use mobile application that allows for everything your group needs to know to be in one location at all times.
-
 \subsection{Overview}
 
-The application was built to serve three primary aspects of crowd control: 
-\begin{itemize}
-\item Event-based group management
-\item Integrated group chat
-\item Opt-in periodic location updates
-         (Detailed)
-\end{itemize}
+Crowd Control is a mobile application that aims to ease the experience of going out by providing group
+management, group messaging, and GPS tracking features. All of these useful tools are bundled into a
+single, easy-to-use mobile application that is easy to set up, simple to learn, and fun to use. With Crowd
+Control, users will be able to keep in communication and find each other, even when in loud and
+crowded places.
 
 \subsection{Features}
 
-\textit{\textbf{Group Management:}}\\
+The application is built to provide the following core features:
 
-The application will allow users to create temporary groups with known and unknown users. The groups will disband after an event is over, allowing a more dynamic experience. \\
+\begin{itemize}
+\item Event-based group management
+\item Integrated group instant messaging
+\item Optional periodic location updates
+\end{itemize}
+
+These features, while essential to the product, are far from the only features that are in development.
+Crowd Control is built to grow with its customers, and future versions will contain additional features
+that will compliment the rest.\\
 
 \noindent
-\textit{\textbf{Group Messaging:}} \\
+\textit{\textbf{Group Management}}
 
-The mobile application will feature an integrated messenger, which removes the need for users to resort to third-party services to communicate with group members. Along with third party messaging apps ( ones that are outside of the app ) it allows for ease because it eliminates the issues associated with group messaging such as, cross platform messaging, cross carrier messaging, and time stamping issues. \\
+Crowd Control will allow users to create temporary "groups" that they can invite their friends and family
+to join. Once joined, members of this group can take advantage of the other features of the app for as
+long as the group is in use. After an amount of time specified by the group leader or if the group
+becomes inactive and unused for several hours, then the group will be "disbanded", removing all
+users from the group and unlinking their profiles with one another. Leaders can manually disband a
+group whenever they desire.
+
+The flexible nature of the group management will allow users to join groups without concern for whom
+might also be in the group, as personal data will never be automatically shared with the other users
+in the group without consent. This offers several advantages over, say, exchanging phone numbers.\\
 
 \noindent
-\textit{\textbf{GPS Tracking:}}\\
+\textit{\textbf{Instant Messaging}}
 
-Many third-party applications use the GPS feature to help track other users. Our GPS tracking is designed with groups and battery life in mind. Our implementation would be less demanding on the users’ batteries by only sending location updates at customizable time intervals or when requested. Because the groups are temporary, tracking stops after the group is disbanded. \\
+Crowd Control will feature integrated instant messaging, which removes the need for users to resort to
+alternate communication platforms such as SMS to communicate with group members. This also
+contributes towards the overall goal of ease of use because it eliminates the need for members to
+use multiple apps to stay in contact; all the needed features in a single bundle. Additionally, because
+the messaging is group-based and built right into the application, there's no need for group members
+to exchange permanent contact information with other members they may not know.\\
 
+\noindent
+\textit{\textbf{GPS Locating}}
 
+In many social situations, noise levels and other factors can distract people so that they cannot hear
+or respond to phone calls or messages from those they are with. Crowd Control solves this problem by
+automatically sharing each user's geographical location with the other members of the group. This way,
+if the group cannot locate or contact another group member, they could use this application to locate
+them.
 
+Because personal privacy is one of the top priorities of Crowd Control, individual location gathering is
+performed on each user's own device and encrypted so that no one but the other members in the group
+can read the information. Additionally, location tracking features are entirely optional and can be
+disabled on a per-user and per-group basis.
 
-
-
+Many third-party applications use the GPS feature to help track other users. Our GPS tracking is
+designed with battery life in mind; it is important that Crowd Control can operate without significant
+power use, as the target use cases involve users straying far from power source. Our implementation
+is less demanding on the user's battery by only sending location updates at customizable time intervals
+or when requested. Because the groups are temporary, tracking stops after the group is disbanded or if
+the user force-closes the application.
