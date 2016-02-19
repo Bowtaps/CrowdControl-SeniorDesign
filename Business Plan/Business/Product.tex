@@ -12,24 +12,55 @@
 
 \section{Introduction}
 
-Crowd Control is a mobile application designed to “ease the experience of going out.” Crowd Control seeks to provide users involved in nightlife events, concerts, festivals, and any other group activities, mobile technology to add value to their overall experience. 
+Crowd Control is a mobile application designed to "ease the experience of going out" by providing
+simple yet powerful group communication tools. Crowd Control seeks to help users with easy-to-use
+group messaging and organizational features. The product is most useful in loud and crowded places
+where direct communication with group members is difficult, such as concerts, festivals, and
+amusement parks.
+
+
 
 \section{Third Party Requirements}
 
-This application is designed to be a background tool. It has to handle importing and exporting messaging and GPS data to and from the user. It has to keep this information up-to-date as well as quickly accessible. It also has to store this information in a safe and secure way.
-For the side being developed in Android. We have handled the following problems though the use of services, and the UX design of the app. For storing the information, we are using a back-end service called Parse. Parse encrypts all of its data and gives great functionality to a database. Another service being used for the messaging, Sinch. Sinch also uses encryption to protect app-to-app messages.
-The goal of our UX is to make it so that the user the doesn't have to think about the about. We accomplish this by implementing a one-time log in for the user. Another way we will be streamlining things is by keeping the app at the group screen when launched when the user is in said group.\\
+Crowd Control is designed to be a background tool. It has to handle instant messaging, retrieving and
+securely distributing GPS data to other group members, and doing so while minimizing power
+consumption and network access. The information must be kept up-to-date and be quickly accessible.
+Additionally, all of this personal user information must be stored and communicated securely. Using
+capable third party services for storing and transmitting data and well-designed user interfaces, Crowd
+Control is capable of meeting all of these requirements.
+
+For storing data, we are using Parse as our back-end service. Data stored on Parse servers is
+encrypted while simultaneously being easily accessible using the provided developer APIs. For instant
+messaging, Crowd Control will be using the Sinch messaging service. Sinch also uses encryption to
+protect app-to-app messages.
+
+The goals of our user experience designs are to keep the app simple to learn, easy to use, and fun to
+experience. We accomplish these goals by employing modern UI design techniques, keeping the
+application as responsive and straightforward as possible, and by streamlining and simplifying
+important tasks. For example, Crowd Control only requires the user to sign up or log in one time,
+remembering who the user is form that point on. Another example is automatically displaying only the
+most relevant information; when a user is currently part of a group, the context of the application will
+change to be entirely focused on the group.\\
 
 \noindent
 \textbf{Parse}
 
-Parse is a back-end database service that is the backbone of this app. The entirety of its database is encrypted for our users protection. Inside Parse we are using several tables. These tables abstract user information so that even the displayed information is limited to protect the user.\\
+Parse is a back-end database service that is the backbone of Crowd Control. Parse provides data
+storage and retrieval services, cloud functionality, and customizability that will allow our application to
+function exactly as intended. The entirety of the data stored in Parse is encrypted for our users'
+protection. Additionally, our own database designs allow user messages and geolocations to be
+encrypted end-to-end, meaning that no one other than group members---not even ourselves---can view
+messages and location data shared between our users.\\
 
 \noindent
 \textbf{Sinch}
 
-Sinch is a back-end messaging system. It provides encrypted device-to-device messaging. Through Sinch, we will be able to maintain a more stable messaging platform.
-
+Sinch is a back-end messaging service that allows us to provide group messaging to our users without
+needing to reimplement such a system ourselves. Instant messages sent through Sinch are encrypted
+end-to-end, meaning that even if the data was intercepted, it would be unreadable except by those
+whom the message was intended for. Fast message passing, push notifications, and secure
+communication are the features promised by this service, and Crowd Control will be making full use of
+Sinch to give our users the best experience possible.
 
 
 
