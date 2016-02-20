@@ -148,7 +148,8 @@ showstringspaces=false,tabsize = 3}
 %\titleformat*{\subsection}{\large\bfseries}
 %\titleformat*{\subsubsection}{\large\bfseries}
 
-\titleformat*{\section}{\Large\bfseries\color{SDColor1}}  
+\titleformat*{\section}{\Large\bfseries\color{SDColor1}}
+\titlespacing*{\chapter}{0pt}{0ex}{5ex}
 \titleformat*{\subsection}{\large\bfseries\color{SDColor2}}
 \titleformat*{\subsubsection}{\large\bfseries\color{SDColor5}}
 \setcounter{secnumdepth}{3}
@@ -169,7 +170,7 @@ showstringspaces=false,tabsize = 3}
   \if@openright\cleardoublepage\else\clearpage\fi% chapters begin on right page
   \stdchapter{##1}% output standard chapter heading
   \setcounter{section}{0}% restart the section numbering
-  \renewcommand{\thepage}{BM-\arabic{page}}% Redefine page numbering format
+  \renewcommand{\thepage}{AP-\arabic{page}}% Redefine page numbering format
   \renewcommand{\thesection}{\arabic{section}}% Redefine section number format
 }}
 \makeatother% Restore the normal behavior of '@'

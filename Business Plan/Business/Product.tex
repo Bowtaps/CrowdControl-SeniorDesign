@@ -135,6 +135,12 @@ they do not have access to the device's hardware features.\\
 \end{itemize}
 \end{minipage}\\
 
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{m{4cm} X}
+
 % section 2
 \arrayrulecolor{green}\hline
 \textbf{\textcolor{myGreen}{Native App Draw Backs}} \\
@@ -153,8 +159,14 @@ be completely rewritten simply to mimic the original app's functionality.\\
 \end{itemize}
 \end{minipage}\\
 
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{m{4cm} X}
+
 % section 3
-\hline
+\arrayrulecolor{green}\hline
 \multicolumn{2}{l}{%
 \textbf{\textcolor{myGreen}{Cross Platform Strengths}}} \\
 \hline
@@ -177,8 +189,13 @@ features to be added.  \\
 \end{itemize} 
 \end{minipage}\\
 
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{m{4cm} X}
 %section 4
-\hline
+\arrayrulecolor{green}\hline\hline
 \multicolumn{2}{l}{%
 \textbf{\textcolor{myGreen}{Cross Platform Draw Backs}}} \\
 \hline
@@ -228,10 +245,10 @@ Crowd Control will allow users to create temporary "groups" that they can invite
 to join. Once joined, members of this group can take advantage of the other features of the app for as
 long as the group is in use. After an amount of time specified by the group leader or if the group
 becomes inactive and unused for several hours, then the group will be "disbanded", removing all
-users from the group and unlinking their profiles with one another. Leaders can manually disband a
+users from the group and unlinking their profiles from one another. Leaders can manually disband a
 group whenever they desire.
 
-The flexible nature of the group management will allow users to join groups without concern for whom
+The flexible nature of group management will allow users to join groups without concern for who
 might also be in the group, as personal data will never be automatically shared with the other users
 in the group without consent. This offers several advantages over, say, exchanging phone numbers.\\
 
@@ -251,7 +268,7 @@ to exchange permanent contact information with other members they may not know.\
 In many social situations, noise levels and other factors can distract people so that they cannot hear
 or respond to phone calls or messages from those they are with. Crowd Control solves this problem by
 automatically sharing each user's geographical location with the other members of the group. This way,
-if the group cannot locate or contact another group member, they could use this application to locate
+if the group cannot find or contact another group member, they could use this application to locate
 them.
 
 Because personal privacy is one of the top priorities of Crowd Control, individual location gathering is
@@ -261,7 +278,7 @@ disabled on a per-user and per-group basis.
 
 Many third-party applications use the GPS feature to help track other users. Our GPS tracking is
 designed with battery life in mind; it is important that Crowd Control can operate without significant
-power use, as the target use cases involve users straying far from power source. Our implementation
+power use, as the target use cases involve users straying far from any power source. Our implementation
 is less demanding on the user's battery by only sending location updates at customizable time intervals
 or when requested. Because the groups are temporary, tracking stops after the group is disbanded or if
 the user force-closes the application.
