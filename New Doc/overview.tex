@@ -9,47 +9,52 @@
 
 \section{Team Members and Team Name}
 
-The team name is BowTaps. Bow taps currently consists of the members Charles Bonn, Johnathon Ackerman, Daniel Andrus, Evan Hammer, and Joesph Mowry.
+The team name is Bowtaps. Bowtaps currently consists of the members Charles Bonn, Johnathan Ackerman, Daniel Andrus, Evan Hammer, and Joesph Mowry.
 
 \section{Client}
-BowTaps is a start up company out of SDSM\&T created by the team members of BowTaps. Our goal is to create easy to use software applications that help ease the everyday life of the user.
+Bowtaps is a start up company out of SDSM\&T created by the team members of Bowtaps. Our goal is to create easy to use software applications that help ease the everyday life of the user.
 
 \section{Project}
-The project is to create a moble application that combinds gps tracking, group messaging and group management features into one easy to use application.
+The project is to create a mobile application that combines GPS tracking, group messaging and group management features into one easy to use application.
 
 \subsection{Purpose of the System}
-Crowd Control is a mobile application designed to ease the experence of going out though the implimentation of integrated group messaging, GPS tracking and group management features. Along with the features to manage your group at the event Crowd Control also gives suggestions of local events, restraunts and attraction. This allows the group to continue even when the next item on the agenda is a mystry. 
+Crowd Control is a mobile application designed to ease the experience of going out though the implementation of integrated group messaging, GPS tracking and group management features. Along with the features to manage your group at the event Crowd Control also gives suggestions of local events, restaurants and attraction. This allows the group to continue even when the next item on the agenda is a mystery. 
 
 
-Even though Crowd Control is designed for the party sceen and people going out to events, it uses can be expanded to fit more purposes. Crowd Control can be used to help manage any kind of group at an event such as church groups or school field trips.
+Even though Crowd Control is designed for the party scene, and people going out to events; it's uses can be expanded to fit more purposes. Crowd Control can be used to help manage any kind of group at an event such as church groups, tour groups, or school field trips.
 
 \section{Business Need}
 Use this section to define what business need exist and how this software will 
 meet and/or exceed that business need.   (still fill out)
 
+(TODO)
 
 \section{Deliverables}
 
 Provide a complete description of the client requested deliverables.   This section should be the section your software contract references.   ( still fill out)
 
 \section{System Description}
-Crowd Control is a mobile application designed to ease the experence of going out though the implimentation of integrated group messaging, GPS tracking and group management features. Along with the features to manage your group at the event Crowd Control also gives suggestions of local events, restraunts and attraction. This allows the group to continue even when the next item on the agenda is a mystry. 
+Behind the UI, Crowd Control is written using an MVC architecture. IOS is written natively in Swift under the IDE XCode. On the Android side, the code is written in Native Mobile Java under Android Studio.
 
+The code for Android uses xml files for layouts which act as the view in MVC. Each activity acts as a controller. Each one of the models has an interface, which is how the controllers get access to the functions and data provided by the model. Each interface is set up in such a way that it uses OOP inheritance to generalize the models, thus abstracting our third party software.
 
-Even though Crowd Control is designed for the party sceen and people going out to events, it uses can be expanded to fit more purposes. Crowd Control can be used to help manage any kind of group at an event such as church groups or school field trips.
-
+(TODO) IOS??
 
 \subsection{Integrated Group Messaging}
-Integrated group messaging is an important feature of Crowd Control. Integrated group messaging allows for communication between cross platform, different phone brands, and different carriers. This allows for seamless communicaton between users with out the issues associated with messaging such as messages not using the same format, messages not going to all recipiants, and messages with users in the group that you do no want to have your personal information.
+Integrated group messaging is an important feature of Crowd Control. It allows for communication between cross platform, different phone brands, and different carriers. This allows for seamless communication between users with out the issues associated with messaging such as messages not using the same format, messages not going to all recipients, and messages with users in the group that you do not want to have your personal information.
+
+Currently this is handled by a third party called Sinch. Sinch messaging handles the encryption of messages for the security of our users. Also, Sinch uses app to app messaging. In this way, any device with Crowd Control can send a message to other group members. However, since our app is currently only implemented on Android, messages can only be passed between Android users. It only needs either an internet connection or cell service to function.
 
 \subsection{GPS Location services}
-GPS allows for tracking of members in the group on a local map of the area. With this feature you will be able to keep track of anyone in the group off of their last GPS check in. This is useful to help locate members of the group that maybe lost or unable to be located. This feature will have the option of being able to opt out when the user does not want to have their location known to the group. When the users battary is low it will allow for the check in period to be extended or turned off to save battary life.
+GPS allows for tracking of members in the group on a local map of the area. With this feature you will be able to keep track of anyone in the group off of their last GPS check in. This is useful to help locate members of the group that maybe lost or unable to be located. This feature will have the option of being able to opt out when the user does not want to have their location known to the group. When the users battery is low it will allow for the check in period to be extended or turned off to save battery life.
+
+(TODO)
 
 \subsection{Group Management Features}
-The group management features allow for information to be shared with the group. A group management menu will allow for a group agenda to be posted as well as updates when the agenda changes. With the GPS features it will allow for the group leader to set way points for the group.  
+The group management features allow for information to be shared with the group. A group management menu will allow for a group agenda to be posted as well as updates when the agenda changes. With the GPS features it will allow for the group leader to set way-points for the group.  
 
 \subsection{Suggestions}
-Suggestions are both a plus for the user and our way of making a monitary developement. Suggestions are sponsored by local busnesses in the form of an ad. Altough these are not traditional ads, they are in the form of local points of intrest such as restraunts, bars, amusement parks, or bowling alllys. The possibilities are endless. With the suggestion method it will allow for our users to have helpful suggestions of places for their group to attend as well as exposure for the local busnesses that are sponsering Crowd Control.
+Suggestions are both a plus for the user and our way of making a monitary development. Suggestions are sponsored by local businesses in the form of an ad. Although these are not traditional ads, they are in the form of local points of interest such as restaurants, bars, amusement parks, or bowling allies. The possibilities are endless. With the suggestion method it will allow for our users to have helpful suggestions of places for their group to attend as well as exposure for the local businesses that are sponsoring Crowd Control.
 
 
 \section{System Overview and Diagram}
