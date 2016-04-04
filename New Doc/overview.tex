@@ -1,24 +1,27 @@
 % !TEX root = DesignDocument.tex
 
 
-\chapter{Overview and concept of operations}
+\chapter{Overview and Concept of Operations}
 
 %The overview should take the form of an executive summary.  Give the reader a feel 
 %for the purpose of the document, what is contained in the document, and an idea 
 %of the purpose for the system or product. 
 
-\section{Bowtaps and its team}
+\section{Bowtaps and Its Team}
 
-Bowtaps is a start up company out of SDSM\&T created by the team members of Bowtaps. Our goal is to create easy to use software applications that help ease the everyday life of the user. Bowtaps currently consists of the members Charles Bonn, Johnathan Ackerman, Daniel Andrus, Evan Hammer, and Joesph Mowry.
+Bowtaps is a start up company from Rapid City, SD that began working together at the SDSM\&T campus. Our goal is to create easy to use software applications that help ease the everyday life of the user. Their software aims to be both well-constructed and maintainable, and their products are made with sustainability in mind. Bowtaps currently consists of the members Charles Bonn, Johnathan Ackerman, Daniel Andrus, Evan Hammer, and Joesph Mowry. Their roles and experience are further detailed in section C of this document.
 
 \section{Crowd Control}
-Our flag-ship product(Crowd Control) is to create a mobile application that combines GPS tracking, group messaging and group management features into one easy to use application. 
+Crowd Control is our flagship product designed and created by Bowtaps. Its goal is to combine GPS tracking, group messaging and group management features into one easy to use application. A primary focus of this product is to be maintainable and modular, so that if better solutions arise, those can be implemented with minimal refactoring.
+
+User information is perhaps our greatest focus in Crowd Control's design; careful measures were taken to assure that sensitive user information is kept safely, vulnerabilities are removed, and risks are mitigated. Before Crowd Control is released to the public, we will implement an encryption scheme called AES-256. Bowtaps also uses third-party services such as Parse and Sinch that guarantee safety in storage and transmission of data through their access points.
+
+Crowd Control, in addition to being written in a maintainable, well-designed manner, is aimed to be a sustainable commercial product. Bowtaps is using what they have gathered from various business accelerators and entrepreneurship-focused learning material to apply those concepts to the real-life startup company, Bowtaps, LLC. Bowtaps uses their recently acquired business skills to market Crowd Control, project associated finances, and seek investors for expansion.
 
 \subsection{Purpose of the System}
 Crowd Control is a mobile application designed to ease the experience of going out though the implementation of integrated group messaging, GPS tracking and group management features. Along with the features to manage your group at the event Crowd Control also gives suggestions of local events, restaurants and attraction. This allows the group to continue even when the next item on the agenda is a mystery. 
 
-
-Even though Crowd Control is designed for the party scene, and people going out to events; it's uses can be expanded to fit more purposes. Crowd Control can be used to help manage any kind of group at an event such as church groups, tour groups, or school field trips.
+Even though Crowd Control is initially designed for the event-goer scene, it's uses can be expanded to fit more purposes. Crowd Control can be used to help manage any kind of group at an event such as church groups, tour groups, or school field trips.
 
 \section{Business Need}
 \begin{comment}
@@ -26,20 +29,36 @@ Use this section to define what business need exist and how this software will
 meet and/or exceed that business need.   (still fill out)
 \end{comment}
 
-(TODO)
+Currently, there is no product on the market that encompasses all the features of group management, in-app messaging, and GPS tracking in one easy-to-use package. For example, Facebook is a popular option for group messaging and event creation, but it doesn't allow users to track each other for a duration of time. Crowd Control allows for both group messaging and event creation, as well as GPS tracking and better group management, specifically tailored to those at an event. Facebook's limited group management features are specifically designed for planning an event ahead-of-time, not necessarily managing during an event.
+
+Crowd Control not only addresses the needs of those seeking group management/communication during events, but also helps serve as a platform for businesses to advertise themselves to users in the form of events and promotions. Those events are available in the form of nearby events that users can choose to set as their destination upon creating a group. This is a mutually beneficial feature for the users and for the businesses themselves.
 
 \section{Deliverables}
 \begin{comment}
 Provide a complete description of the client requested deliverables.   This section should be the section your software contract references.   ( still fill out)
 \end{comment}
-(TODO)
+The deliverables for this two-semester senior design project are the following items:
+	\begin{itemize}
+	  \item Crowd Control mobile application
+	  \item Associated JavaDoc documentation
+	  \item Senior Design document - some included items include:
+	  	\begin{itemize}
+		  \item General documentation
+		  \item User manual and various code documentation
+		  \item Business plan for Bowtaps, LLC
+		  \item Sprint reports
+		\end{itemize}
+	  \item Design fair presentation
+	\end{itemize}
+
 
 \section{System Description}
 Behind the UI, Crowd Control is written using an MVC architecture. IOS is written natively in Swift under the IDE XCode. On the Android side, the code is written in Native Mobile Java under Android Studio.
 
-The code for Android uses xml files for layouts which act as the view in MVC. Each activity acts as a controller. Each one of the models has an interface, which is how the controllers get access to the functions and data provided by the model. Each interface is set up in such a way that it uses OOP inheritance to generalize the models, thus abstracting our third party software.\\
-
-(TODO) IOS??
+The code for Android uses XML files for storing layout-related code, which act as the view in the MVC pattern. Each activity acts as a controller. Each one of the models has an interface, which is how the controllers get access to the functions and data provided by the model. Each interface is set up in such a way that it uses OOP inheritance to generalize the models, thus abstracting our third party software. This contract allows us to write our code in such a way that, if ever needed, we could change the underlying implementation of certain modules with minimal refactoring.\\\\
+%Remove explicit newlines after iOS section is taken care of.
+The iOS platform follows a very similar MVC design pattern, too.\\
+(TODO: iOS details needed.)
 
 \subsection{Integrated Group Messaging}
 Integrated group messaging is an important feature of Crowd Control. It allows for communication between cross platform, different phone brands, and different carriers. This allows for seamless communication between users with out the issues associated with messaging such as messages not using the same format, messages not going to all recipients, and messages with users in the group that you do not want to have your personal information.
@@ -49,7 +68,6 @@ Currently this is handled by a third party called Sinch. Sinch messaging handles
 \subsection{GPS Location services}
 GPS allows for tracking of members in the group on a local map of the area. With this feature you will be able to keep track of anyone in the group off of their last GPS check in. This is useful to help locate members of the group that maybe lost or unable to be located. This feature will have the option of being able to opt out when the user does not want to have their location known to the group. When the users battery is low it will allow for the check in period to be extended or turned off to save battery life.
 
-(TODO)
 
 \subsection{Group Management Features}
 The group management features allow for information to be shared with the group. A group management menu will allow for a group agenda to be posted as well as updates when the agenda changes. With the GPS features it will allow for the group leader to set way-points for the group.  
