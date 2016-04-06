@@ -1,16 +1,81 @@
 % !TEX root = DesignDocument.tex
 
 
-\chapter{System  and Unit Testing}
+\chapter{System and Unit Testing}
 
-This section describes the approach taken with regard to system and unit testing. 
+Crowd Control utilizes multiple sevices across different platforms, requiring
+all parts to be operating correctly in order to provide consistent service to
+all users. We use system and unit tesing to assist developers in identifing 
+potential issues and to verify that the product being produced meets
+requirements. The goal of system and unit tesing is to automate the process to
+increase development efficiency and reduce tesing errors.
+
+Given the time constraints and scope of Crowd Control, we have been forced to
+make compromises in regards to system and unit tesing. Implementing and running
+automated unit testing, can be as time-consuming as writing production code. In
+fact, it is extremely common for a single function of production code to require
+many times as many lines of unit testing code to completely test the function.
+While automated tesing provides many invaluable benefits, it would ultimately be
+a hinderance to the project if it means missing critical deadlines and not
+achieving crucial project milestones.
+
+In this section, we describe our approach to testing, our goals, and the test
+cases that we have developed and implemented thus far. We also discuss the
+future plans for testing and how we will be able to devote more time and energy
+towards this project in the upcoming months.
+
 
 \section{Overview}
-Provides a brief overview of the testing approach, testing frameworks, and general 
-how testing is/will be done to provide a measure of success for the system. 
 
-Each requirement (user story component) should be tested.    A review of objectives and
-constraints might be needed here.  
+For this project, we use a combination of ``black-box'' and ``white-box''
+tesing. This means that there are some aspects of the project that we have
+created ourselves and have full control over its execution, and there are others
+that we have little control over because it is was provided by a third party.
+In practical terms, it means that we can test our own code with the full
+knowledge of how it is intended to work, allowing us to design tests that target
+potential problem areas. When designing tests that make use of a third-party
+service or a library that we have not written ourselves, we can only write tests
+that verify that the supplied functionality works as documented.
+
+Because one of the goals of this project is to develop the applications using
+native languages and technology, we make use of the most established testing
+frameworks for the platform we are tesing on. For the iOS application, we use
+the testing tools and frameworks built directly into Xcode. For the Android
+application, we use Espresso for tesing our interface and JUnit for tesing our
+classes and methods. To test Parse, the third party service we use for data
+storage and retrieval, we use unit tesing on both Android and iOS, as
+interacting with Parse requires a running application on a device. To test
+Sinch, the third party service we use for instant messaging between users, we
+use the unit tesing frameworks we use for testing our Android and iOS
+applications since interacting with Sinch also requires a running instance of
+the application on a device.
+
+Running unit tests in all of the frameworks above yields a list of binary
+results; for each test executed, we receive either a ``pass'' or ``fail''
+result. If a test fails, we may also receive a message describing the issue
+that caused the test to fail. There exist several conditions that could cause
+a test to fail.
+
+\begin{itemize}
+	\item An uncaught exception is thrown
+	\item A runtime error is encountered
+	\item The application crashes
+	\item A test assertion fails
+\end{itemize}
+
+When designing test cases, we begin with the set of user stories identified at
+the beginning of the project. A list of user stories can be found in the section
+\ref{userStories}. From these user stories, we build a testing matrix that will
+be referenced when writing our automated tests. Tests are then written as the
+code they are intended to test is written.
+
+Tests are also to be run relatively frequently. Ideally, developers would enable
+the set of tests relevant for the aspect of the project they are currently
+working on and run those tests as needed during development and again before the
+code is merged in with the rest of the project. Then, the full set of tests
+would be run automatically and at a time that would not interfere with
+development or execution of the product.
+
 
 \section{Dependencies}
 Describe the basic dependencies which should include unit testing frameworks and 
