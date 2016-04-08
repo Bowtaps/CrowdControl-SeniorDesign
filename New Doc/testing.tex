@@ -5,17 +5,17 @@
 
 Crowd Control utilizes multiple sevices across different platforms, requiring
 all parts to be operating correctly in order to provide consistent service to
-all users. We use system and unit tesing to assist developers in identifing 
+all users. We use system and unit testing to assist developers in identifing 
 potential issues and to verify that the product being produced meets
-requirements. The goal of system and unit tesing is to automate the process to
-increase development efficiency and reduce tesing errors.
+requirements. The goal of system and unit testing is to automate the process to
+increase development efficiency and reduce testing errors.
 
 Given the time constraints and scope of Crowd Control, we have been forced to
-make compromises in regards to system and unit tesing. Implementing and running
+make compromises in regards to system and unit testing. Implementing and running
 automated unit testing, can be as time-consuming as writing production code. In
 fact, it is extremely common for a single function of production code to require
 many times as many lines of unit testing code to completely test the function.
-While automated tesing provides many invaluable benefits, it would ultimately be
+While automated testing provides many invaluable benefits, it would ultimately be
 a hinderance to the project if it means missing critical deadlines and not
 achieving crucial project milestones.
 
@@ -28,7 +28,7 @@ towards this project in the upcoming months.
 \section{Overview}
 
 For this project, we use a combination of ``black-box'' and ``white-box''
-tesing. This means that there are some aspects of the project that we have
+testing. This means that there are some aspects of the project that we have
 created ourselves and have full control over its execution, and there are others
 that we have little control over because it is was provided by a third party.
 In practical terms, it means that we can test our own code with the full
@@ -39,14 +39,14 @@ that verify that the supplied functionality works as documented.
 
 Because one of the goals of this project is to develop the applications using
 native languages and technology, we make use of the most established testing
-frameworks for the platform we are tesing on. For the iOS application, we use
+frameworks for the platform we are testing on. For the iOS application, we use
 the testing tools and frameworks built directly into Xcode. For the Android
-application, we use Espresso for tesing our interface and JUnit for tesing our
+application, we use Espresso for testing our interface and JUnit for testing our
 classes and methods. To test Parse, the third party service we use for data
-storage and retrieval, we use unit tesing on both Android and iOS, as
+storage and retrieval, we use unit testing on both Android and iOS, as
 interacting with Parse requires a running application on a device. To test
 Sinch, the third party service we use for instant messaging between users, we
-use the unit tesing frameworks we use for testing our Android and iOS
+use the unit testing frameworks we use for testing our Android and iOS
 applications since interacting with Sinch also requires a running instance of
 the application on a device.
 
@@ -78,8 +78,150 @@ development or execution of the product.
 
 
 \section{Dependencies}
-Describe the basic dependencies which should include unit testing frameworks and 
-reference material. 
+
+This project can be broken into several pieces that all work together to form a
+single cohesive product. Taken individually, these pieces would be of little
+utility. It is important that we test each how well each component interacts
+with each other as well as each isolated part as best we can. The four main
+components of this project are as follows:
+
+\begin{itemize}
+	\item Android client application
+	\item iOS client application
+	\item Parse service and cloud code
+	\item Sinch service
+\end{itemize}
+
+Each of these aspects of the project need to be somehow tested, although some
+parts can be more accurately tested than others. More thorough requirement
+breakdowns of each aspect are described in the subsections below.
+
+
+\subsection{Android Client Application}
+
+To test our client code running locally on Android devices, we use two testing
+frameworks: JUnit for testing Android-independent code and Espresso for testing
+navigation and user interface requirements. These frameworks are run from within
+our integrated development environment, Android Studio. Additionally, for
+interface testing, we require a running emulator or a connected Android device on
+which Android Studio can run the unit tests.
+
+While developing unit tests for the JUnit and Espresso frameworks, we use
+\href{https://google.github.io/android-testing-support-library/docs/index.html}
+{Google's Android testing Support Library Documentation} website. This resource
+provides accurate information on installing and using these frameworks in
+conjunction with Android Studio. Writing unit tests and best practices, as well
+as class documentation are available from this website.
+
+
+\subsection{iOS Client Application}
+
+To test our client code running locally on iOS devices, we use the testing tools
+included in Xcode, our iOS integrated development environment. Backend unit
+testing and interface testing are all handled by the same framework. These tests
+are run from within Xcode. Interface tests require a running iOS emulator or an
+iOS device connected to the computer. Because the unit testing tools used to
+test iOS devices are tied to Xcode, this means that the tests can only be run on
+a Macintosh computer.
+
+While developing unit tests for iOS devices, we reference \href{https://developer.apple.com/library/ios/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html}
+{iOS Developer Library} website. This resource contains instructions on
+designing and setting up unit tests, as well as instructions on running unit
+tests. Class documentation can also be found on this website.
+
+
+\subsection{Parse Service and Cloud Code}
+
+Some aspects of our project exist as ``cloud code'', which is custom server-side
+logic executed by our database backend service, Parse. This cloud code is
+written in JavaScript and handles database operations that require security,
+data integrity, consistency, and efficency. However, because this cloud code
+runs on a remote server to which we have limited access and concealed knowledge
+of its internal workings, we are forced to test the our code by the only means
+we have; using the client applications.
+
+Parse does not supply testing features, and thus we must devise a way to execute
+our own unit tests using the tools we have. To test the functionality of our
+cloud code and our Parse interaction code, we require these things:
+
+\begin{enumerate}
+	\item The Parse libraries installed
+	\item Parse interactivity built into the application
+	\item An active Internet connection to the Parse service
+	\item An emulator/simulator/developer device
+	\item The testing framework associated with the client platform being used
+	for testing
+	\item A Parse application key
+	\item A separate Parse database dedicated to testing
+\end{enumerate}
+
+In order to run tests on our cloud code, we use both versions of our client (iOS
+and Android) to connect to the Parse server, perform database operations by
+calling cloud code, then verifying the results. We use the aforementioned
+testing frameworks to develop and execute these tests on both platforms. These
+tests can be performed on device simulators, device emulators, and physical
+developer devices alike.
+
+When using client software to test server software, we must properly configure
+the clients to interact with the database as if it were no different than a
+production database. Thus, we require that the Parse libraries be included in
+the project and that actual Parse functionality built into the application. As
+with all Parse-enabled applications, this requires a unique application key be
+assigned by Parse and used to access the database.
+
+Because running tests on Parse result in changes to the data in the database we
+are testing with, it is crucial that the automated tests be run on an
+independent Parse database dedicated to testing. Running such tests on either
+the production or development databases could result in irreversable destruction
+of data that we cannot afford to jeapordize. In order to avoid this, all unit
+tests that involve testing Parse functionality should be executed using a
+database where the data is used exclusively for testing.
+
+
+\subsection{Sinch Service}
+
+Another crucial third party service we utilize is Sinch, an instant messaging
+platform that we use in conjunction with Parse. This service does not have cloud
+code support, but that is okay since we have no need for cloud code here.
+However, it is important that we test how well our client applications connect
+to and use the service to ensure that communications run smoothly.
+
+In order to test the functionality of Sinch and how well our applications
+interact with it, we require these things:
+
+\begin{enumerate}
+	\item The Sinch libraries installed
+	\item Sinch functionality built into the application
+	\item An active internet connection to Sinch
+	\item An emulator/simulator/developer device running the application
+	\item The testing framework associated with the client platform being used
+	for testing
+	\item A Sinch application key
+	\item A separate Sinch application dedicated to testing
+\end{enumerate}
+
+As with Parse, Sinch is a third party service to which we have limited access
+and no knowledge of the implementation details. With the addition of the fact
+that we have no cloud code for Sinch to test, the only aspect of this service we
+need to test is how our client applications interact with the service.
+
+To test our integration with Sinch, we run tests using our Android and iOS
+client applications on either device emulators, device simulators, or physical
+development devices. To develop and run these tests, we use the aforementioned
+testing frameworks used for testing the client code itself on each platform.
+We then run our tests on these devices, which cause the application to connect
+to and communicate with Sinch using the provided developer API. Sinch requires
+an active Internet connection, so the success of the tests do depend on the
+testing devices to have a stable Internet connection to the Internet.
+
+Lastly, like Parse, Sinch supplies a unique application key which our clients
+use to authenticate with the Sinch servers. All versions of our client
+applications use this key and is what allows them to communicate with each
+other. Also like Parse, we require that all tests run through Sinch also be run
+using a special Sinch application key that is completely separate from the
+production and development versions of the application. We must do this in order
+to avoid user ID conflicts and to limit any operations that may affect service
+uptime and reliability.
 
 
 \section{Test Setup and Execution}
