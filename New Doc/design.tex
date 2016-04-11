@@ -37,10 +37,35 @@ The bibtex extracts and formats the requested entries.  The next pdflatex puts t
 The bibliography is automatically constructed.  
  
  \section{Architecture and System Design}
- This is where you will place the overall system design or the architecture.   This section should be image rich.  There is the old phrase {\it a picture is worth a thousand words}, in this class it could be worth a hundred points (well if you sum up over the entire team).   One needs to enter the design and why a particular design has been done.   
+ This is section will detail the overall system design and general architecture of Crowd Control. The software was designed in such a way that minimizes dependency from third-party services such as Sinch and Parse.
  
  \subsection{Design Selection}
- Failed designs, design ideas, rejected designs here.
+Sprint 1 was centered around designing of the database schema and the general system architecture. Bowtaps produced various high-level designs on both the front-end and back-end of the system that were deeply inspected before deciding on our current implementation.
+
+\subsubsection{Early Design Ideas}
+The original database design for Crowd Control consisted of three tables with associated data. Though this design provided a good sense of direction and foundation to build upon, it eventually would need to expand as Crowd Control's feature set expanded.
+
+	\begin{figure}[tbh]
+	\begin{center}
+	\fbox{\includegraphics[scale=.6]{Additional/DesignPictures/CC_dbSchema1.PNG}}
+	\end{center}
+	\caption{Early database schema. \label{EarlyDBSchema}}
+	\end{figure}
+
+Another caveat to this design is the failure to differentiate between public and private user data. In Crowd Control, each user has data that is private to that user, such as their email and password. However, there is also a set of public data that can be viewed by other users, such as their display name or their location. This iteration of the schema only has one user entity, that stores their information. A small lack of understanding about Parse's no-SQL implementation lead us to improperly design our entities in this way. It was later deemed that this separation between front-facing and hidden user data entities was necessary in terms of ease-of-access and information privacy.
+
+\subsubsection{Improvements to Early Designs}
+In reflection of the shortcomings of the first design iteration, the database schema was restructured to better fit Crowd Control's needs. More entities were added to the overall schema. One such addition was a ``CCUser'' table to hold the public data associated with a user. It is important to note that the ``User'' table was left to hold a user's private data. Those changes and some additions resulted in the below schema. 
+
+	\begin{figure}[tbh]
+	\begin{center}
+	\fbox{\includegraphics[scale=.6]{Additional/DesignPictures/CC_dbSchema2.PNG}}
+	\end{center}
+	\caption{Early database schema. \label{EarlyDBSchema}}
+	\end{figure}
+
+\subsubsection{Current Design}
+(What we have now, further concerns?)
  
  \subsection{Data Structures and Algorithms}
  Describe the special data structures and any special algorithms.
