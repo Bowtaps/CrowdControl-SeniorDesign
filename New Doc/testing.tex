@@ -241,5 +241,87 @@ The unit tests are described here.
 
 \section{Successes, Issues and Problems}
 
+During the course of our project's development, we have encountered various
+successes, issues, and problems in regards to system and unit tesing. Details on
+each of these are listed below, along with a summary on the changes made to our
+testing backlog throughout the course of this project.
+
+
+\subsection{Successes}
+
+The greatest success of our work in unit and system tesing has been in the
+development of our testing matrix. Our tesing matrix, while not comprehensive
+(as such a matrix requires years of refining to produce), will act as a set of
+blueprints when setting up automated tests. At over one hundred test cases
+strong, this matrix defines the behavior of our application in many different
+possible states. Using this information, we can implement automated unit tests
+more efficiently than if we did not have such a matrix.
+
+A secondary success in our testing efforts was in discovering that all of the
+necessary tesing frameworks are free and are mature enough to have exhaustive
+documentation and support. We have access to a plethora of information that has
+aided us in designing and implementing unit and system tests using these native
+tools. Additionaly, the tools we are using integrate seamlessly into the IDEs we
+are using for development, reducing the number of tools required to use them.
+
+Finally, we have succeeded in designing and implementing a number of unit tests
+for both iOS and Android versions of our client applications. As implementing
+unit tests takes a significant time investment, the ones we have built provide a
+good foundation upon which to build. On iOS for example, many interface tests
+related to the login and signup screens have been implemented and are used for
+tesing account creation and login. On Android, we have implemented a similar set
+of unit tests as we did for iOS.
+
+
+\subsection{Issues}
+
+One major issue we encountered when designing unit tests was the fact that none
+of the team members have had significant experience doing so. Although a number
+of us have had a moderate amount of formal education on the subject through
+couse and guest lectures, none have designed or implemented automated tesing in
+a project of this magnitude. Thus, an enormous part of testing for this project
+was devoted to studying testing methods used in other projects and researching
+how to use our tools to build these tests.
+
+The second issue encountered was time constraints. Our goals to turn this
+project into a viable product fit for the market required that we focus heavily
+on progress towards a working prototype that can be demonstrated by the end of
+the semester. Automated tesing, although an important development tool, requires
+a large time investment overhead that we could not afford if we desired to meet
+requirement deadlines and achieve our critical milestones.
+
+When making the concious decision to prioritize our efforts, we agreed that code
+separability and maintainability should not be neglected. These two tennants of
+software development are heavilty promoted by automated tesing. By choosing to
+prioritize separability and maintainability when designing our software, we are
+confident that delaying automated tesing will be less of a hurdle when the time
+comes to implement them. Regardless, we are aware that by not investing the time
+now, we are accruing ``technical debt'', which means that this task will be more
+difficult to accomplish the longer we delay.
+
+
+\subsection{Problems}
+
+The unit and system testing section of this project was not without its own set
+of problems. Many of these we did not forsee, as they are problems that have
+arisen from our tools or our tesing devices, both of which we have limited
+control over.
+
+Xcode, the IDE chosen for iOS development underwent an update that apeared to
+cause UI tesing on iOS to become undependable. Often unit tests run using this
+tool would immediately report failures without apparently running the test
+properly. It is possible that this is a configuration error, but it is one that
+we have yet to solve if it is. Other Xcode users have reported similar problems
+using these features.
+
+Another problem encountered was in using our hardware devices to run automated
+tesing. For the most part, the device simulators and emulators are adequate for
+running most tests. In some cases, the devices would not cooperate with the
+testing frameworks. These devices would either run too slowly for the tests and
+sometimes reject the incoming connection to the IDE. In the end, we decided to
+forego solving these technical difficulties to focus on product development and
+business-related issues.
+
+
 \subsection{Changes to the Backlog}
 
