@@ -225,15 +225,136 @@ uptime and reliability.
 
 
 \section{Test Setup and Execution}
-Describe how test cases were developed, setup, and executed.  This section can 
-be extremely involved if a complete list of test cases was warranted for the system.   One 
-approach is to list each requirement, module, or component and describe the test.
 
-The unit tests are described here.
+As with most aspects of software development, test setup and execution requires
+two distinct phases: design and execution. As functionality and features are
+designed and built, correlating tests are designed concurrently and added to our
+testing matrix. After a test has been adequately designed with inputs and
+expected outputs defined, the unit tests can be implemented in whatever testing
+framework associated with the platform which the tests are targetting.
 
-\section{System Testing}
+Setting up unit tests involves referencing the previously designed test
+parameters while writing code that will run on the target platform within the
+selected testing framework. For example, implementing a unit test that will run
+on the Android platform, we create a new unit test class for the portion of the
+code we aim to test, following framework usage. The specifics on implementing a
+unit test within the constraints of a framework often differ greatly between
+frameworks.
 
-\section{System Integration Analysis}
+Essentially, we create a new testing class that extends some framework-supplied
+class. We then create functions that will perform the tests under different
+conditions, called test cases. Usually, if our goal is to test the functionality
+of a single class, we will create a single test class with the sole purpose of
+testing said class.
+
+A full breakdown of our most current testing matrix can be found in the
+sections \ref{systemTesting} and \ref{systemIntegrationAnalysis}.
+
+
+\section{System Testing} \label{systemTesting}
+
+Most of the unit tests our team has designed are related to the functionality of
+each individual application as it relates to itself and its own internal
+functionality. Below is the portion of our testing matrix that contains tests
+that deal exclusively with an individual application ensuring that its own
+internal functionality is correct; these tests do not test how well the
+application integrates with the other products and services in this project.
+
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Requirements} & \textbf{Test Case} & \textbf{Expected} \\
+
+\hline
+Log in with email & Valid credentials & Success \\
+                  & Invalid email & Failure \\
+                  & Invalid password & Failure \\
+\hline
+Log in with Facebook & Valid credentials & Success \\
+                     & Invalid credentials & Failure \\
+\hline
+Log in with Twitter & Valid credentials & Success \\
+                    & Invalid credentials & Failure \\
+\hline
+Sign up with email & Email already in use & Message \\
+                   & Valid credentials & Success \\
+                   & Invalid password & Failure \\
+                   & Unconfirmed password & Failure \\
+                   & Invalid email & Failure + Message \\
+                   & Whitespace-only username & Failure + Message \\
+                   & Empty username & Failure + Message \\
+                   & Empty email & Failure + Message \\
+                   & Empty password & Failure + Message \\
+\hline
+Create a group & No name & Message \\
+               & Whitespace-only name & Failure + Message \\
+               & No description & Success + Message \\
+               & Whitespace-only description & Success + Message \\
+               & Else & Success + trim whitespace + collapse whitepace in name \\
+\hline
+Search for users & Enter display name & Display list of matching users or ``no matches'' \\
+                 & Enter email & Detect email, no change \\
+                 & Enter phone number & Detect phone number, no change \\
+                 & Enter incomplete phone number or incomplete email & Display ``no matches'' \\
+\hline
+Send invite to users to join group & By email unassociated with user & Generate and send email \\
+                                   & By email associated with user & Send app notification to user, display invite in-app \\
+                                   & By phone number unassociated with user & Detect phone number, no change \\
+                                   & By phone number associated with user & Send app notification to user, display invite in-app \\
+\hline
+Join a public group & Tap ``join group'' & Displays confirmation message (y/n) \\
+                    & Accept confirmation message & Message ``request sent'' \\
+                    & Decline confirmation message & Dismiss message \\
+\hline
+Join group via invite & Tap ``join'' & Join group \\
+                      & Tap ``delete'' & Delete invitation \\
+\hline
+Leave a group & Tap ``Leave Group'' & Display confirmation message (y/n) \\
+              & Accept confirmation message & If leader, display confirmation to choose new leader (y/n), else leave the current group and return to nearby groups \\
+              & Leader accepts confirmation & Display list of group members \\
+              & Leader declines confirmation & Leave current group and return to nearby group list \\
+              & Decline confirmation message & Dismiss message, do not leave group \\
+\hline
+Group leader disbands group & Leader taps ``disband group'' & Display confirmation message (y/n) \\
+                            & Accept confirmation & Display message to all users and return to join group page \\
+                            & Decline confirmation & Dismiss message, do not leave group \\
+\hline
+Enter display name & Empty string & Highlight, no accept \\
+                   & Too short & Highlight, no accept \\
+                   & All whitespace & Highlight, no accept \\
+                   & Valid display name & Accept, trim whitespace, collapse consecutive whitespace \\
+\hline
+Sign out of app & Tap ``log out'' & Display confirmation message (y/n) \\
+                & Accept confirmation & Log out of the application and display login page \\
+                & Decline confirmation & Dismiss message, do not change application state \\
+\hline
+Send a group message & Emtpy string & Send button disabled \\
+                     & Non-empty string & Message sent to all members and immediately displayed in conversation + saved to storage \\
+\hline
+See locations of group members & Tap on ``map'' tab & Map is displayed, group member locations displayed on map as pins (zoombed out to display all group members) \\
+\hline
+Opt-out location updates & Toggle ``enable location updates'' off & Display toast/notify message \\
+                         & Toggle ``enable location updates'' on & Display confirmation message (y/n) \\
+                         & Accept confirmation & Share user location, begin auto location share \\
+                         & Decline confirmation & Toggle ``enable location updates'' off \\
+\hline
+Receive message & Received message & Unread indicator in tab navigation bar \\
+\hline
+\end{tabularx}
+
+
+
+
+\section{System Integration Analysis} \label{systemIntegrationAnalysis}
+
+In addition to ensuring that every application running on every iOS and Android
+device works as expected, it's equally important to test whether or not the
+applications communicate as expected with the third-party services and our own
+cloud code. Below is the remainder of our testing matrix, which contains test
+cases that test how well individual components of our project integrate with the
+others and how well the system as a whole works.
+
+% TODO
+
 
 \section{Risk Analysis}
 
