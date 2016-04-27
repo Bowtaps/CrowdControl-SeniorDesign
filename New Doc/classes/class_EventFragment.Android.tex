@@ -1,0 +1,190 @@
+\hypertarget{class_EventFragment.Android}{\section{EventFragment Class Reference}
+\label{class_EventFragment.Android}\index{EventFragment.Android@{EventFragment.Android}}
+}
+
+\subsection*{Class EventFragment}
+
+\textit{public interface \textbf{EventFragment}}
+	\bf{extends:}\\
+	\tab ndroid.support.v4.app.Fragment\\
+
+A simple Fragment subclass. Handles showing the user potential Events they could attend\\
+
+\textbf{All Known Implementing Classes:}\\
+\tab     android.content.ComponentCallbacks, android.view.View.OnCreateContextMenuListener\\
+
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_EventFragment.Android.newInstance}{newInstance} ()
+\item 
+\hyperlink{class_EventFragment.Android.onButtonPressed}{onButtonPressed} ()
+\item 
+\hyperlink{class_EventFragment.Android.onCreate}{onCreate} ()
+\item 
+\hyperlink{class_EventFragment.Android.onCreateView}{onCreateView} ()
+\item 
+\hyperlink{class_EventFragment.Android.onDetach}{onDetach} ()
+
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Detail}
+
+%method
+\hypertarget{class_EventFragment.Android.newInstance}{\index{EventFragment.Android.newInstance@{EventFragment.Android.newInstance}!EventFragment.Android.newInstance@{EventFragment.Android.newInstance}}
+\index{EventFragment.Android.newInstance@{EventFragment.Android.newInstance}!EventFragment.Android.newInstance@{EventFragment.Android.newInstance}}
+\subsubsection[{EventFragment.Android.newInstance}]{\setlength{\rightskip}{0pt plus 5cm}newInstance (
+\begin{DoxyParamCaption}
+\item[{java.lang.String}]{text}
+\end{DoxyParamCaption}
+)}}\label{class_EventFragment.Android.newInstance}
+\textit{public void onCreate(android.os.Bundle savedInstanceState)}\\
+
+Use this factory method to create a new instance of this fragment using the provided parameters.\\
+
+\textbf{Modifier and Type:}\\
+\tab public void\\
+
+
+\textbf{Parameters:}\\
+\begin{itemize}
+ \item text - Test text 1
+\end{itemize}
+
+\textbf{Returns:}\\
+\tab     A new instance of fragment EventFragment.\\
+
+
+%method
+\hypertarget{class_EventFragment.Android.onButtonPressed}{\index{EventFragment.Android.onButtonPressed@{EventFragment.Android.onButtonPressed}!EventFragment.Android.onButtonPressed@{EventFragment.Android.onButtonPressed}}
+\index{EventFragment.Android.onButtonPressed@{EventFragment.Android.onButtonPressed}!EventFragment.Android.onButtonPressed@{EventFragment.Android.onButtonPressed}}
+\subsubsection[{EventFragment.Android.onButtonPressed}]{\setlength{\rightskip}{0pt plus 5cm}onButtonPressed (
+\begin{DoxyParamCaption}
+\item[{android.net.Uri}]{uri}
+\end{DoxyParamCaption}
+)}}\label{class_EventFragment.Android.newInstance}
+
+%method
+\hypertarget{class_EventFragment.Android.onCreate}{\index{EventFragment.Android.onCreate@{EventFragment.Android.onCreate}!EventFragment.Android.onCreate@{EventFragment.Android.onCreate}}
+\index{EventFragment.Android.onCreate@{EventFragment.Android.onCreate}!EventFragment.Android.onCreate@{EventFragment.Android.onCreate}}
+\subsubsection[{EventFragment.Android.onCreate}]{\setlength{\rightskip}{0pt plus 5cm}onCreate (
+\begin{DoxyParamCaption}
+\item[{android.os.Bundle}]{savedInstanceState}
+\end{DoxyParamCaption}
+)}}\label{class_EventFragment.Android.onCreate}
+\textit{public void onCreate(android.os.Bundle savedInstanceState)}\\
+
+Called to do initial creation of a fragment. This is called after Fragment.onAttach(Activity) and before Fragment.onCreateView(LayoutInflater, ViewGroup, Bundle).\\
+
+Note that this can be called while the fragment's activity is still in the process of being created. As such, you can not rely on things like the activity's content view hierarchy being initialized at this point. If you want to do work once the activity itself is created, see Fragment.onActivityCreated(Bundle).\\
+
+\textbf{Modifier and Type:}\\
+\tab public void\\
+
+\textbf{Overrides:}\\
+\tab     onCreate in class android.support.v4.app.Fragment\\
+
+\textbf{Parameters:}\\
+\begin{itemize}
+ \item savedInstanceState - If the fragment is being re-created from a previous saved state, this is the state.
+\end{itemize}
+
+%method
+\hypertarget{class_EventFragment.Android.onCreateView}{\index{EventFragment.Android.onCreateView@{EventFragment.Android.onCreateView}!EventFragment.Android.onCreateView@{EventFragment.Android.onCreateView}}
+\index{EventFragment.Android.onCreateView@{EventFragment.Android.onCreateView}!EventFragment.Android.onCreateView@{EventFragment.Android.onCreateView}}
+\subsubsection[{EventFragment.Android.onCreateView}]{\setlength{\rightskip}{0pt plus 5cm}onCreateView (
+\begin{DoxyParamCaption}
+\item[{android.view.LayoutInflater}]{inflater}
+\item[{android.view.ViewGroup}]{container}
+\item[{android.os.Bundle}]{avedInstanceState}
+\end{DoxyParamCaption}
+)}}\label{class_EventFragment.Android.onCreateView}
+\textit{public android.view.View onCreateView(android.view.LayoutInflater inflater,\\
+                             android.view.ViewGroup container,\\
+                             android.os.Bundle savedInstanceState)}\\
+
+alled to have the fragment instantiate its user interface view. This is optional, and non-graphical fragments can return null (which is the default implementation). This will be called between Fragment.onCreate(Bundle) and Fragment.onActivityCreated(Bundle).\\
+
+If you return a View from here, you will later be called in Fragment.onDestroyView() when the view is being released.\\
+\textbf{Modifier and Type:}\\
+\tab public android.view.View\\
+
+\textbf{Overrides:}\\
+\tab         onCreateView in class android.support.v4.app.Fragment\\
+
+\textbf{Parameters:}\\
+\begin{itemize}
+ \item inflater - The LayoutInflater object that can be used to inflate any views in the fragment,
+ \item container - If non-null, this is the parent view that the fragment's UI should be attached to. The fragment should not add the view itself, but this can be used to generate the LayoutParams of the view.
+ \itemsavedInstanceState - If non-null, this fragment is being re-constructed from a previous saved state as given here.
+\end{itemize}
+
+\textbf{Overrides:}\\
+\tab         Return the View for the fragment's UI, or null.\\
+
+%method
+\hypertarget{class_EventFragment.Android.onDetach}{\index{EventFragment.Android.onDetach@{EventFragment.Android.onDetach}!EventFragment.Android.onDetach@{EventFragment.Android.onDetach}}
+\index{EventFragment.Android.onDetach@{EventFragment.Android.onDetach}!EventFragment.Android.onDetach@{EventFragment.Android.onDetach}}
+\subsubsection[{EventFragment.Android.onDetach}]{\setlength{\rightskip}{0pt plus 5cm}onDetach (
+\begin{DoxyParamCaption}
+\item[{android.view.LayoutInflater}]{inflater}
+\item[{android.view.ViewGroup}]{container}
+\item[{android.os.Bundle}]{avedInstanceState}
+\end{DoxyParamCaption}
+)}}\label{class_EventFragment.Android.onCreateView}
+\textit{public void onDetach())}\\
+{}
+
+Called when the fragment is no longer attached to its activity. This is called after Fragment.onDestroy().\\
+
+
+\textbf{Overrides:}\\
+\tab             onDetach in class android.support.v4.app.Fragment\\
+
+\subsection{Method Summary}
+
+\subsubsection{Methods inherited from class android.support.v4.app.Fragment}
+
+\begin{lstlisting}
+dump, equals, getActivity, getAllowEnterTransitionOverlap, getAllowReturnTransitionOverlap, getArguments, getChildFragmentManager, getContext, getEnterTransition, getExitTransition, getFragmentManager, getHost, getId, getLayoutInflater, getLoaderManager, getParentFragment, getReenterTransition, getResources, getRetainInstance, getReturnTransition, getSharedElementEnterTransition, getSharedElementReturnTransition, getString, getString, getTag, getTargetFragment, getTargetRequestCode, getText, getUserVisibleHint, getView, hashCode, hasOptionsMenu, instantiate, instantiate, isAdded, isDetached, isHidden, isInLayout, isMenuVisible, isRemoving, isResumed, isVisible, onActivityCreated, onActivityResult, onAttach, onAttach, onConfigurationChanged, onContextItemSelected, onCreateAnimation, onCreateContextMenu, onCreateOptionsMenu, onDestroy, onDestroyOptionsMenu, onDestroyView, onHiddenChanged, onInflate, onInflate, onLowMemory, onOptionsItemSelected, onOptionsMenuClosed, onPause, onPrepareOptionsMenu, onRequestPermissionsResult, onResume, onSaveInstanceState, onStart, onStop, onViewCreated, onViewStateRestored, registerForContextMenu, requestPermissions, setAllowEnterTransitionOverlap, setAllowReturnTransitionOverlap, setArguments, setEnterSharedElementCallback, setEnterTransition, setExitSharedElementCallback, setExitTransition, setHasOptionsMenu, setInitialSavedState, setMenuVisibility, setReenterTransition, setRetainInstance, setReturnTransition, setSharedElementEnterTransition, setSharedElementReturnTransition, setTargetFragment, setUserVisibleHint, shouldShowRequestPermissionRationale, startActivity, startActivityForResult, toString, unregisterForContextMenu
+\end{lstlisting}
+
+\subsubsection{Methods inherited from class java.lang.Object}
+getClass, notify, notifyAll, wait, wait, wait
+
+
+
+
+
+
+%nestedclasses
+\subsection{Nested Class Summary}
+\begin{DoxyCompactList}
+\item\contentsline{section}{\hyperlink{class_BaseModel.LoadCallback.Android}{BaseModel.LoadCallback} }{\pageref{class_BaseModel.LoadCallback.Android}}{}
+\item\contentsline{section}{\hyperlink{class_BaseModel.SaveCallback.Android}{BaseModel.SaveCallback} }{\pageref{class_BaseModel.SaveCallback.Android}}{}
+\end{DoxyCompactList}
+
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item BaseModel
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

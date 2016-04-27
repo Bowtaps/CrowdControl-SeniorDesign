@@ -1,0 +1,72 @@
+\hypertarget{class_BaseModel.SaveCallback.Android}{\section{BaseModel.SaveCallBack Class Reference}
+\label{class_BaseModel.SaveCallback.Android}\index{BaseModel.SaveCallback.Android@{BaseModel.SaveCallback.Android}}
+}
+
+\subsection*{Interface BaseMode.SaveCallback}
+
+\textit{public static interface \textbf{BaseModel.SaveCallback}}
+
+The callback interface that should be used for asynchronous loading operations.\\
+
+\textbf{Enclosing interfaces:}\\
+\tab     BaseModel\\
+
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_BaseModel.SaveCallback.Android.doneLoadingModel}{doneLoadingModel} ()
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Summary}
+
+%method
+\hypertarget{class_BaseModel.SaveCallback.Android.doneSavingModel}{\index{BaseModel.SaveCallBack.Android.doneSavingModel@{BaseModel.SaveCallback.Android.doneSavingModel}!BaseModel.SaveCallback.Android.doneSavingModel@{BaseModel.SaveCallBack.Android.doneSavingModel}}
+\index{BaseModel.Android@{BaseModel.Android}!BaseModel.Android@{Basemodel.Android}}
+\subsubsection[{BaseModel.Android.doneSavingModel}]{\setlength{\rightskip}{0pt plus 5cm}doneSavingModel (
+\begin{DoxyParamCaption}
+\item[{BaseModel}]{object}
+\item[{java.lang.Exception}]{ex}
+\end{DoxyParamCaption}
+)}}\label{class_ApplicationTest.Android.doneLoadingModel}
+\textit{void doneLoadingModel(BaseModel object,
+                    java.lang.Exception ex)}\\
+
+This method is called after completion of an asynchronous background save on a model. It accepts the saved model and an exception object should something go wrong.\\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Parameters:}\\
+\begin{itemize}
+\item object - The object that attempted to be saved. This parameter cannot be null and will be valid whether or not the operation was successful.
+\item ex - The exception that occurred, if any. This value will be null if the operation was successful and will be a valid exception object if an error occurred.
+\end{itemize}
+
+
+
+
+
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item BaseModel.SaveCallBack
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+
