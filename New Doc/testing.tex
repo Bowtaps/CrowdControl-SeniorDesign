@@ -248,17 +248,17 @@ of a single class, we will create a single test class with the sole purpose of
 testing said class.
 
 A full breakdown of our most current testing matrix can be found in the
-sections \ref{systemTesting} and \ref{systemIntegrationAnalysis}.
+section \ref{systemTesting}.
 
 
 \section{System Testing} \label{systemTesting}
 
 Most of the unit tests our team has designed are related to the functionality of
-each individual application as it relates to itself and its own internal
-functionality. Below is the portion of our testing matrix that contains tests
-that deal exclusively with an individual application ensuring that its own
-internal functionality is correct; these tests do not test how well the
-application integrates with the other products and services in this project.
+the system as a whole, focusing on user experience and how we expect the
+application to respond to inputs at each given state. Rather than focus on
+testing a specific aspect of the project, this testing matrix includes test
+cases and expected results that often require the cooperation of every part of
+the project.
 
 \begin{tabularx}{\linewidth}{|X|X|X|}
 \hline
@@ -342,23 +342,127 @@ Receive message & Received message & Unread indicator in tab navigation bar \\
 \end{tabularx}
 
 
+\section{System Integration Analysis}
 
+System integration testing is a process by which we verify that a newly
+introduced piece of code or feature properly integrates with the existing code
+and that few errors or bugs arise. This usually involves performing black box
+testing on a very specific and well-defined subsystem. In order to accurately
+perform these tests such that the subject subsystem is in no way affected by any
+other aspect of the project, the unit test will often supply mock data and
+mock functionality that behaves according to specifications.
 
-\section{System Integration Analysis} \label{systemIntegrationAnalysis}
-
-In addition to ensuring that every application running on every iOS and Android
-device works as expected, it's equally important to test whether or not the
-applications communicate as expected with the third-party services and our own
-cloud code. Below is the remainder of our testing matrix, which contains test
-cases that test how well individual components of our project integrate with the
-others and how well the system as a whole works.
-
-% TODO
+Due to the time constraints of this project, a majority of our testing design
+efforts were put towards developing the overal system testing matrix, which
+tests the entire system rather than just a specific subset. This allowed us to
+devote more time towards development, documentation, and business endevaors. It
+is unfortunately a side affect that the subsystems we have built will need to be
+revisited and have unit tests applied to them in order for us to verify that
+each component is functioning as expected.
 
 
 \section{Risk Analysis}
 
-\subsection{Risk Mitigation}
+When first starting this project, we quickly became aware of a number of risks
+that could hinder our progress. Many of these risks were related to our team and
+whether or not we would be capable of producing a market-ready product, while
+a fair number of these risks were about the technology we were utilizing and
+whether or not we could depend on it. The third area of risk was the in the
+business as a whole, which is an area in which none of the team was particularly
+knowledgable in.
+
+
+\subsection{Team Risks and Mitigation}
+
+When design and development of this application was first underway, the biggest
+risk was that the team would not have the skills or training necessary to
+successfully produce the desired product. Each team member was an undergraduate
+student studying computer science with little experience in mobile application
+design and development. Few of us had any graphic design experience, and none
+had worked in a professional capacity on apps.
+
+Additionally, being college students with at most part-time jobs, the
+availability of each team member was less than ideal. Each member was required
+to divide their attention between multiple concurrent projects and assignments
+as well as any jobs or internships they have.
+
+To mitigate the lack of experience and education in mobile app development,
+graphic design, and user experience design, each team member spent a large
+amount of time researching and studying in detail the behavior and usage of each
+technology that they would be working with. Frequently, the team would meet to
+share research with each other and educate one another. On multiple occasions,
+team members would prepare impromptu presentations to communicate the results
+of their effots with the other team members.
+
+Mitigating the time management risk was a more challenging task. To do so, each
+team member was forced to cut back on work hours in order to devote more time to
+this project in order to keep up with requirements and deadlines. Weekends were often dedicated to working on this project, with many members spending 4-8 hours
+a day developing the core product. Frequent meetings with the rest of the team
+and strict time schedules helped keep each member on task and the team as a
+whole moving forward at a swift and consistent rate.
+
+
+\subsection{Technology Risks and Mitigation}
+
+The core product of this project depends ehavily on an active internet
+connection and a consistent feed of data between third party services in order
+to function properly. This means that a major risk that lies beyond our control
+is the availability of internet service for our end users as well as service
+uptime. Because these services are provided by third parties, our team has
+little control over their availability, pricing, and features.
+
+Mitigating this risk is a difficult one, as it involves depending on technology
+that we have no guarantee on how it will or will not change. The most we can do
+is ensure that our dependencies on these services is not so much that the
+project will utterly collapse if one of them becomes unavailable or otherewise
+unusable. The best way to do this is to minimize the amount of coupling between
+our software and the libraries provided by third parties and increase
+separability between the two.
+
+This risk is of particular relevance because it was one of the first risks
+identified early on and as a result was addressed before any amount of code was
+written. In the end, this proved to be an extremely wise decision, as one of our
+third party services, Parse, which is responsible for data storage, retrieval,
+account management, and cloud code, will be terminating its services on January,
+2017. When this announcement was made, we realized that our initial efforts
+towards separability and separability were not in vain and will become useful
+shortly. This now introduces a new risk for us to address: finding a backup
+database server service.
+
+Fortunately, with the announcement of Parse's closure, the company that operates
+the service also announced that the software used to power the service will be
+made open source so that we or any other company interested in continuing Parse
+service on their applications without needing to rewrite thousands of lines of
+code can do so by hosting their own servers. To ensure that we can continue
+development of this product without being severely affected by the closure of
+Parse, we plan on utilizing another third-party generic server host that will
+be capable of handling the capacity of our application using the server software
+provided by Parse.
+
+
+\subsection{Business Risks and Mitigation}
+
+The ultimate goal of this project is to develop a mobile application that can be
+released to market. Because of this, one huge aspect of this project was not
+just to produce a piece of software that functions well, but also to position
+the team and company to prepare for launch and to generate revenue from the
+product.
+
+Rather than point out one particular area of the business side of things, we
+realized that as a whole we were inexperienced and largely ignorant on what went
+into building a successful business. This resulted in virtually every business
+decision we made into a potential risk; without fully understanding the
+consequences of each decision, it was entirely possible for us to work ourselves
+into a corner.
+
+To mitigate this risk, we began reaching out to and taking advice from the
+entrepreneurs in residence at our school. These entrepreneurs who have had
+past and present business experience were kind enough to share their knowledge
+with our team. Decisions such as target marget, how to promote our app, and
+alternative sources of revenue are all business aspects that we discussed at
+length with these entrepreneurs.
+
+
 
 \section{Successes, Issues and Problems}
 
