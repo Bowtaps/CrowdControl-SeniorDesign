@@ -65,12 +65,22 @@ In reflection of the shortcomings of the first design iteration, the database sc
 	\end{figure}
 
  \subsection{Data Structures and Algorithms}
- Describe the special data structures and any special algorithms.
+ Describe the special data structures and any special algorithms. 
  
  \subsection{Data Flow}
  
  \subsection{Communications}
+ One of the core features to the Crowd Control app is communication amongst its users. To achieve this, some third-party services are used, which in turn communicate data between users. If a user wishes to send another user a message, that message is sent to the Parse back-end, and delivered to the recipient via the Sinch service. The basic communication overview is outlined below in Figure ~\ref{CommFlow}.
  
+  	\begin{figure}[tbh]
+	\begin{center}
+	\fbox{\includegraphics[scale=.5]{Additional/DesignPictures/CommFlow.PNG}}
+	\end{center}
+	\caption{Communication flow diagram. \label{CommFlow}}
+	\end{figure}
+ 
+ In addition to message-passing, various other data is being transfered from the users' devices. One such example is GPS data. Upon retrieval of a user's location, that value is stored in Parse, and able to be fetched by any group member that wishes to see that location. 
+
  \subsection{Classes}
  
  \subsection{UML}
