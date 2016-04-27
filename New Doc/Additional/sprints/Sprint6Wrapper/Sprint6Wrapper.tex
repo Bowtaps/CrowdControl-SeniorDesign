@@ -1,0 +1,247 @@
+\documentclass[11pt]{article}
+
+\usepackage[width=7.0in, height=9.0in, top=1.0in, papersize={8.5in,11in}]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{datetime}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+\usepackage{verbatim}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{framed}
+\usepackage{pdfpages}
+\usepackage{listings}
+\lstset{language=C}
+
+\lstset{language=python,frame=ltrb,framesep=5pt,basicstyle=\normalsize,
+ keywordstyle=\ttfamily\color{DarkRed},
+%morecomment=[n][\textbf]{In\ [}{]\:},
+%morecomment=[n][\textbf]{Out\ [}{]\:},
+morecomment=[s][\color{blue}]{In\ [}{]\:},
+morecomment=[s][\color{red}]{Out[}{]\:},
+identifierstyle=\ttfamily\color{DarkBlue}\bfseries,
+commentstyle=\color{DarkGreen},
+stringstyle=\ttfamily,
+showstringspaces=false,tabsize = 3}
+
+\lstdefinelanguage{shell} {
+commentstyle = \color{black},
+keywordstyle = \color{black},
+stringstyle = \color{black},
+identifierstyle = \color{black},
+morecomment=[s][\color{blue}]{In\ [}{]\:},
+morecomment=[s][\color{red}]{Out[}{]\:},
+ }
+
+\pagestyle{empty}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{sectsty}
+\sectionfont{\MakeUppercase\rmfamily\hrule}
+
+\usepackage{titlesec}
+\titleformat{\section}
+{\normalfont\large\bfseries}{}{0em}{\hrule height 1pt\vspace{2pt}}[\hrule height 0.2pt]
+
+\begin{document}
+
+{\fontsize{16}{16}\selectfont Sprint Report \#5}
+
+\section*{Team Overview}
+
+\subsection*{Name}
+Crowd Control
+\subsection*{Members}
+Johnathan Ackerman, Daniel Andrus, Charles Bonn, Evan Hammer, Joseph Mowry
+\subsection*{Project Title}
+Crowd Control - Group Management Mobile Application
+\subsection*{Company}
+Bowtaps
+
+
+\section*{Backlog}
+The following items/features were assigned at the beginning of the sprint, and worked on throughout its duration. It is broken down by week as such:
+
+\begin{description}
+	\item[Week 1] \hfill
+	\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Messaging
+			\begin{itemize}
+				\item Messages now include the names of the sender
+				\item Leader can now kick or promote members
+				\item Messages now load per group from parse
+			\end{itemize}
+			\item Group Management Tools
+			\begin{itemize}
+				\item Leader can now kick a member
+				\item Leader can now promote a member
+			\end{itemize}
+			\item GPS (TODO)
+			\begin{itemize}
+				\item TODO
+			\end{itemize}
+		\end{itemize}
+		\item Cloud Code (TODO)
+		\begin{itemize}
+			\item (TODO)
+		\end{itemize}
+	\end{itemize}
+	
+  \item[Week 2] \hfill
+		\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item fixed leader bug, now leader loads properly
+			\item broke ground for notification system
+			\begin{itemize}
+				\item created tab system for invites and accepts
+				\item created fragments for invite and confirm
+				\item created model for notification system
+				\item items can be transferred from the invite fragment to the confirm fragment
+			\end{itemize}
+			\item Option Menu's added 
+			\begin{itemize}
+				\item group join now has an option menu
+				\item settings activity moved to option menu
+				\item Group name can be changed in option menu
+				\item option menu is different if you are a group leader
+				\item option menu leads to invite system
+				\item option menu leads to blank notification page
+			\end{itemize}
+			\item Reformatted settings activity
+			\begin{itemize}
+				\item now displays and can change display name
+				\item displays a current group if in one
+				\item has a finish button for clarity
+			\end{itemize}
+		\end{itemize}
+		\item Cloud code
+		\begin{itemize}
+			\item Safe group operations(leaving/joining group)
+		\end{itemize}
+	\end{itemize}
+  
+  \item[Week 3] \hfill
+		\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Integration Testing
+			\item Start Alpha Testing
+		\end{itemize}
+		\item Cloud Code
+		\begin{itemize}
+			\item test join and leave functionality
+		\end{itemize}
+	\end{itemize}
+\end{description}
+
+\section*{Deliverables}
+During this sprint, these are the items/features from the backlog that were successfully achieved:
+	\begin{itemize}
+	\item Android
+		\begin{enumerate}
+		\item Group Messaging
+			\begin{enumerate}
+			\item Discovered and removed a bug
+			\end{enumerate}
+		\item Location
+			\begin{enumerate}
+			\item Moved remote functionality to model manager
+			\item Updated location model to reflect changes
+			\item Caching objects
+			\end{enumerate}
+		\item App Appearance
+			\begin{enumerate}
+			\item Reformatted the entire theme of the app (all pages are based of the same theme now - no more custom themes per page)
+			\item Added a tool bar to the group join page/ removed settings button (now in tool bar)
+			\item Group Information Page
+				\begin{enumerate}
+				\item Added a group leader display
+				\item Added padding to appearance of display and modified text sizes
+				\item Displays all group members
+				\item Displays Dialog box if user attempts to leave the group
+				\end{enumerate}
+			\end{enumerate}
+		\end{enumerate}
+
+	\item Server (cloud code)
+		\begin{enumerate}
+			\item Join function
+			\item Leave function
+		\end{enumerate}
+		
+	\item Misc/Transitional
+		\begin{enumerate}
+			\item Business Plan revised and submitted to The Governor's Giant Vision Competition
+			\item Finalist for The Governor's Giant Vision Competition
+			\item Some of the overall Senior Design Doc has been touched up
+		\end{enumerate}
+
+	\end{itemize}
+
+\section*{Issues and Changes}
+Some issues that we encountered include:
+
+	\begin{itemize}
+		\item Android
+			\begin{itemize}
+				\item Issues
+				\begin{itemize}
+					\item Another bug came up in messaging which took precious time from other parts of the sprint
+				\end{itemize}
+				
+				\item Changes
+				\begin{itemize}
+					\item Many code related things were pushed to later in the sprint
+				\end{itemize}
+			\end{itemize}
+			
+		\item Server (cloud code)
+		\begin{itemize}
+				\item Issues
+				\begin{itemize}
+					\item Unable to do proper stress tests
+					\item Unrepeatable errors popped up ( could have been a network erro r)		
+				\end{itemize}
+				
+				\item Changes 
+				\begin{itemize}
+					\item added more functions
+					\item more comments.
+				\end{itemize}
+			\end{itemize}
+	\end{itemize}
+	%Is this something that we should include?
+	This is no excuse, but the team was seriously hindered by the amount of other responsibilities due during this sprint.\\
+
+\section*{Remaining Backlog}
+The following items/features remain either incomplete or need improvement for this sprint, and will carry onto the next sprint:
+	\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Messaging still needs an appearance update for usability
+		\end{itemize}
+		\item Cloud Code
+		\begin{itemize}
+			\item Testing on Group Functions.
+			\item Completing Join and Leave functions
+		\end{itemize}
+	\end{itemize}
+
+
+	
+\section*{Team Details}
+Here are some auxiliary details about our work-flow and division of responsibilities, during the sprint: \\\\
+
+The team focused heavily the first week on the Business Plan.\\
+
+For week two of the sprint, very little was accomplished due to other responsibilities\\
+
+Week three: Johnny was able to get many little things in the app to display better, such as more information on the group page. Joe put a lot of work into the theme and got custom pictures displaying in the tabs bar for groups. Evan got the map to function properly with syncing. Dan was able to finally fix the messaging bug. Nicks loud code was created to have safe group alteration functions such as joining and leaving groups.\\
+
+
+\end{document}
