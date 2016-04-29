@@ -65,9 +65,11 @@ In reflection of the shortcomings of the first design iteration, the database sc
 	\end{figure}
 
  \subsection{Data Structures and Algorithms}
- Describe the special data structures and any special algorithms. 
+ TODO: Model classes and hierarchy
  
  \subsection{Data Flow}
+ TODO: Create Data Flow diagram of overall process
+ 
  
  \subsection{Communications}
  One of the core features to the Crowd Control app is communication amongst its users. To achieve this, some third-party services are used, which in turn communicate data between users. If a user wishes to send another user a message, that message is sent to the Parse back-end, and delivered to the recipient via the Sinch service. The basic communication overview is outlined below in Figure ~\ref{CommFlow}.
@@ -84,28 +86,36 @@ In reflection of the shortcomings of the first design iteration, the database sc
  \subsection{Classes}
  
  \subsection{UML}
+ TODO: UML diagram...can Android studio generate these via a plugin?
  
  \subsection{GUI}
+ TODO: Overview of GUI design. Show differences in platform native ``look and feel''
  
  \subsection{MVVM, etc}
+ TODO: Describe MVVM, create diagram laying our components in MVVM format
 
-\section{Major Component \#1 }
+\section{Group Messaging }
 
 \subsection{Technologies  Used}
-This section provides a list of technologies used for this component.  The details 
-for the technologies have already been provided in the Overview section. 
+\begin{itemize}
+  \item Parse
+  \item Sinch
+\end{itemize}
 
 \subsection{Component  Overview}
-This section can take the form of a list of features. 
+\begin{itemize}
+  \item Send/receive messages to/from group members (many-to-many)
+  \item Store messages in Parse (data persistence)
+  \item Message transfer service is independent of carrier/device/platform
+\end{itemize} 
 
 \subsection{Phase Overview}
 This is an extension of the Phase Overview above, but specific to this component. 
  It is meant to be basically a brief list with space for marking the phase status. 
 
-\subsection{ Architecture  Diagram}
+\subsection{Architecture Diagram}
 It is important to build and maintain an architecture diagram.  However, it may 
 be that a component is best described visually with a data flow diagram. 
-
 
 \subsection{Data Flow Diagram}
 It is important to build and maintain a data flow diagram.  However, it may be 
@@ -139,14 +149,20 @@ This code listing is not floating or automatically numbered.  If you want auto-n
 
 
 
-\section{Major Component \#2 }
+\section{Location Tracking }
 
 \subsection{Technologies  Used}
-This section provides a list of technologies used for this component.  The details 
-for the technologies have already been provided in the Overview section. 
+\begin{itemize}
+  \item Google Play Services / Apple Map Features
+  \item Parse
+\end{itemize}
 
 \subsection{Component  Overview}
-This section can take the form of a list of features. 
+\begin{itemize}
+  \item Track all group members in a map fragment
+  \item Homing functionality on the user's location pin
+  \item Sync group locations automatically (interval-based) and manually (on button-press)
+\end{itemize}
 
 \subsection{Phase Overview}
 This is an extension of the Phase Overview above, but specific to this component. 
@@ -156,7 +172,6 @@ This is an extension of the Phase Overview above, but specific to this component
 It is important to build and maintain an architecture diagram.  However, it may 
 be that a component is best described visually with a data flow diagram. 
 
-
 \subsection{Data Flow Diagram}
 It is important to build and maintain a data flow diagram.  However, it may be 
 that a component is best described visually with an architecture diagram. 
@@ -165,15 +180,19 @@ that a component is best described visually with an architecture diagram.
 \subsection{Design Details}
 This is where the details are presented and may contain subsections. 
 
-
-\section{Major Component \#3 }
+\section{Group Management }
 
 \subsection{Technologies  Used}
-This section provides a list of technologies used for this component.  The details 
-for the technologies have already been provided in the Overview section. 
+\begin{itemize}
+  \item Parse
+\end{itemize}
 
 \subsection{Component  Overview}
-This section can take the form of a list of features. 
+\begin{itemize}
+  \item Store group members in a group
+  \item Incorporate a party leader to manage the group (has special priveledges)
+  \item Create a group with specific attributes that can be changed by the leader
+\end{itemize}
 
 \subsection{Phase Overview}
 This is an extension of the Phase Overview above, but specific to this component. 
