@@ -86,7 +86,7 @@ nitialize the contents of the Activity's standard options menu. You should place
 
 This is only called once, the first time the options menu is displayed. To update the menu every time it is displayed, see Activity.onPrepareOptionsMenu(android.view.Menu).\\
 
-The default implementation populates the menu with standard system menu items. These are placed in the Menu.CATEGORY_SYSTEM group so that they will be correctly ordered with application-defined menu items. Deriving classes should always call through to the base implementation.\\
+The default implementation populates the menu with standard system menu items. These are placed in the Menu.CATEGORY\_SYSTEM group so that they will be correctly ordered with application-defined menu items. Deriving classes should always call through to the base implementation.\\
 
 You can safely hold on to menu (and any items created from it), making modifications to it as desired, until the next time onCreateOptionsMenu() is called.\\
 
@@ -226,7 +226,7 @@ Derived classes should call through to the base class for it to perform the defa
 
 \subsubsection{Methods inherited from class android.support.v7.app.AppCompatActivity}
 
-addContentView, getDelegate, getDrawerToggleDelegate, getMenuInflater, getSupportActionBar, getSupportParentActivityIntent, invalidateOptionsMenu, onConfigurationChanged, onContentChanged, onCreateSupportNavigateUpTaskStack, onMenuItemSelected, onMenuOpened, onPanelClosed, onPrepareSupportNavigateUpTaskStack, onSupportActionModeFinished, onSupportActionModeStarted, onSupportContentChanged, onSupportNavigateUp, onWindowStartingSupportActionMode, setContentView, setContentView, setContentView, setSupportActionBar, setSupportProgress, setSupportProgressBarIndeterminate, setSupportProgressBarIndeterminateVisibility, setSupportProgressBarVisibility, startSupportActionMode, supportInvalidateOptionsMenu, supportNavigateUpTo, supportRequestWindowFeature, supportShouldUpRecreateTask//
+addContentView, getDelegate, getDrawerToggleDelegate, getMenuInflater, getSupportActionBar, getSupportParentActivityIntent, invalidateOptionsMenu, onConfigurationChanged, onContentChanged, onCreateSupportNavigateUpTaskStack, onMenuItemSelected, onMenuOpened, onPanelClosed, onPrepareSupportNavigateUpTaskStack, onSupportActionModeFinished, onSupportActionModeStarted, onSupportContentChanged, onSupportNavigateUp, onWindowStartingSupportActionMode, setContentView, setContentView, setContentView, setSupportActionBar, setSupportProgress, setSupportProgressBarIndeterminate, setSupportProgressBarIndeterminateVisibility, setSupportProgressBarVisibility, startSupportActionMode, supportInvalidateOptionsMenu, supportNavigateUpTo, supportRequestWindowFeature, supportShouldUpRecreateTask\\
 
 
 \subsubsection{Methods inherited from class android.support.v4.app.FragmentActivity}
