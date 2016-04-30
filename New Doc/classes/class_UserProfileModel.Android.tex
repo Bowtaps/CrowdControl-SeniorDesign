@@ -1,0 +1,102 @@
+\hypertarget{class_UserProfileModel.Android}{\section{UserProfileModel Interface Reference}
+\label{class_UserProfileModel.Android}\index{UserProfileModel.Android@{UserProfileModel.Android}}
+}
+
+\subsection*{Interface UserProfileModel}
+
+\textit{class \textbf{ParseUserProfileModel}}\\
+\tab \textbf{extends}\hyperlink{class_ParseBaseModel.Android}{ParseBaseModel} ()\\
+\tab \textbf{implements}\hyperlink{class_UserModel.Android}{UserModel} ()\\
+
+The interface for user profile models, providing access to public-facing user profile data, such as display name and profile image.\\
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_UserProfileModel.Android.getDisplayName}{getDisplayName}()
+\item 
+\hyperlink{class_UserProfileModel.Android.setDisplayName}{setDisplayName} ()
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Detail}
+
+%method
+\hypertarget{class_UserProfileModel.Android.getDisplayName}{\index{UserProfileModel.Android.getDisplayName@{UserProfileModel.Android.getDisplayName}!UserProfileModel.Android.getDisplayName@{UserProfileModel.Android.getDisplayName}}
+\index{UserProfileModel.Android.getDisplayName@{UserProfileModel.Android.getDisplayName}!UserProfileModel.Android.getDisplayName@{UserProfileModel.Android.getDisplayName}}
+\subsubsection[{UserProfileModel.Android.getDisplayName}]{\setlength{\rightskip}{0pt plus 5cm}getDisplayName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UserProfileModel.Android.getDisplayName}
+\textit{public java.lang.String getDisplayName()}\\
+
+Gets the display name of the current user. This value is not unique, is chosen by the user, should always be used to represent the user when presented to other users, and should never be used as an index key. This value can and should, however, be indexed for use in text searches. Additionally, the user's display name can be changed and thus should calls to this function should be performed relatively frequently.\\
+
+\textbf{Modifier and Type:}\\
+\tab java.lang.String\\
+
+
+
+\textbf{Returns:}
+\tab String of the user's self-chosen display name.\\
+
+%method
+\hypertarget{class_UserProfileModel.Android.setDisplayName}{\index{UserProfileModel.Android.setDisplayName@{UserProfileModel.Android.setDisplayName}!UserProfileModel.Android.setDisplayName@{UserProfileModel.Android.setDisplayName}}
+\index{UserProfileModel.Android.setDisplayName@{UserProfileModel.Android.setDisplayName}!UserProfileModel.Android.setDisplayName@{UserProfileModel.Android.setDisplayName}}
+\subsubsection[{UserProfileModel.Android.setDisplayName}]{\setlength{\rightskip}{0pt plus 5cm}setDisplayName (
+\begin{DoxyParamCaption}
+\item[{java.lang.String}]{displayName}
+\end{DoxyParamCaption}
+)}}\label{UserProfileModel.Android.setDisplayName}
+\textit{public void setDisplayName(java.lang.String displayName)}\\
+
+Sets the user's display name that will be seen by other users.\\
+
+\textbf{Modifier and Type:}\\
+\tab java.lang.Object\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item displayName - The new display name for the user.
+\end{itemize}
+
+
+%method summary
+\subsection{Method Summary}
+
+\subsubsection{Methods inherited from interface com.bowtaps.crowdcontrol.model.BaseModel}
+
+getCreated, getId, getUpdated, load, loadInBackground, save, saveInBackground, wasModified\\
+
+
+
+%nestedclasses
+\subsection{Nested Class Summary}
+
+\subsubsection{Nested classes/interfaces inherited from interface com.bowtaps.crowdcontrol.model.BaseModel}
+\begin{DoxyCompactItemize}
+\item  \hypertarget{class_BaseModel.Android.LoadCallBack}{BaseModel.LoadCallback}
+\item  \hypertarget{class_BaseModel.Android.SaveCallback}{BaseModel.SaveCallback}
+\end{DoxyCompactItemize} 
+
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item UserProfileModel
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+
