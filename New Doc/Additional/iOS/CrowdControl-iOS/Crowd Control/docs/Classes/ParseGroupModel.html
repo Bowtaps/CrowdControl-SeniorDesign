@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ParseGroupModel Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ParseGroupModel" class="dashAnchor"></a>
+    <a title="ParseGroupModel Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (70% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ParseGroupModel Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChatViewController.html">ChatViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConversationModel.html">ConversationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupInfoViewController.html">GroupInfoViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupOverviewController.html">GroupOverviewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupTableController.html">GroupTableController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MapViewController.html">MapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseBaseModel.html">ParseBaseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseGroupModel.html">ParseGroupModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseLocationModel.html">ParseLocationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseModelManager.html">ParseModelManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseUserModel.html">ParseUserModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ParseUserProfileModel.html">ParseUserProfileModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingsViewController.html">SettingsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignupViewController.html">SignupViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BaseModel.html">BaseModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/GroupModel.html">GroupModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationModel.html">LocationModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ModelManager.html">ModelManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UserModel.html">UserModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/UserProfileModel.html">UserProfileModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Waypoint.html">Waypoint</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ParseGroupModel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ParseGroupModel</span><span class="p">:</span> <span class="kt">ParseBaseModel</span><span class="p">,</span> <span class="kt">GroupModel</span></code></pre>
+
+                </div>
+              </div>
+            <p>The Parse implementation of the <code><a href="../Protocols/GroupModel.html">GroupModel</a></code> protocol. Extends <code><a href="../Classes/ParseBaseModel.html">ParseBaseModel</a></code> class and
+implements the <code><a href="../Protocols/GroupModel.html">GroupModel</a></code> protocol and is designed to allow access to a group&rsquo;s information,
+including the group members, group name, and group description.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control15ParseGroupModelcFMS0_FT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control15ParseGroupModelcFMS0_FT_S0_">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Default class contructor. Creates a new entry in the database if saved.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control15ParseGroupModelcFMS0_FT15withParseObjectCSo8PFObject_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(withParseObject:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control15ParseGroupModelcFMS0_FT15withParseObjectCSo8PFObject_S0_">init(withParseObject:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Class constructor. Initializes the isntance from a <code>PFObject</code>.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter withParseObject: The Parse object to tie this model to the
+                         Parse database.</p>
+
+</div>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p>PFObject</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="n">withParseObject</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">PFObject</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withParseObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Parse object to tie this model to the Parse database.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13Crowd_Control15ParseGroupModel15generalLocationCSo10PFGeoPoint"></a>
+                    <a name="//apple_ref/swift/Property/generalLocation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13Crowd_Control15ParseGroupModel15generalLocationCSo10PFGeoPoint">generalLocation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>PFGeoPoint Object to store the groups general location.  This field is used for
+looking up groups as well as future support with finding ads by location</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    PFGeoPoint
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">generalLocation</span><span class="p">:</span> <span class="kt">PFGeoPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13Crowd_Control15ParseGroupModel16groupDescriptionSS"></a>
+                    <a name="//apple_ref/swift/Property/groupDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13Crowd_Control15ParseGroupModel16groupDescriptionSS">groupDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>String to hold the description of the group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">groupDescription</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13Crowd_Control15ParseGroupModel9groupNameSS"></a>
+                    <a name="//apple_ref/swift/Property/groupName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13Crowd_Control15ParseGroupModel9groupNameSS">groupName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>String to hold the Name of the group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">groupName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13Crowd_Control15ParseGroupModel12groupMembersGSaPS_16UserProfileModel__"></a>
+                    <a name="//apple_ref/swift/Property/groupMembers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13Crowd_Control15ParseGroupModel12groupMembersGSaPS_16UserProfileModel__">groupMembers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An array of <code><a href="../Protocols/UserProfileModel.html">UserProfileModel</a></code> objects to keep track of the members of the group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">groupMembers</span><span class="p">:</span> <span class="p">[</span><span class="kt">UserProfileModel</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13Crowd_Control15ParseGroupModel11groupLeaderGSqPS_16UserProfileModel__"></a>
+                    <a name="//apple_ref/swift/Property/groupLeader" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13Crowd_Control15ParseGroupModel11groupLeaderGSqPS_16UserProfileModel__">groupLeader</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code><a href="../Protocols/UserProfileModel.html">UserProfileModel</a></code> object who is the designated leader of the group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">groupLeader</span><span class="p">:</span> <span class="kt">UserProfileModel</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control15ParseGroupModel14addGroupMemberFS0_FPS_16UserProfileModel_Sb"></a>
+                    <a name="//apple_ref/swift/Method/addGroupMember(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control15ParseGroupModel14addGroupMemberFS0_FPS_16UserProfileModel_Sb">addGroupMember(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method for adding a user as a member of the group. Model must be saved afterwards, as this
+method does not automatically save the model.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addGroupMember</span><span class="p">(</span><span class="nv">member</span><span class="p">:</span> <span class="kt">UserProfileModel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control15ParseGroupModel17removeGroupMemberFS0_FPS_16UserProfileModel_Sb"></a>
+                    <a name="//apple_ref/swift/Method/removeGroupMember(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control15ParseGroupModel17removeGroupMemberFS0_FPS_16UserProfileModel_Sb">removeGroupMember(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method for removing a user from the group. Model must be saved afterwards, as this method
+does not automatically save the model.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">removeGroupMember</span><span class="p">(</span><span class="nv">member</span><span class="p">:</span> <span class="kt">UserProfileModel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control15ParseGroupModel4loadFS0_FzT_T_"></a>
+                    <a name="//apple_ref/swift/Method/load()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control15ParseGroupModel4loadFS0_FzT_T_">load()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads this object from Parse storage synchronously. In addition to the normal functionality
+inherited from <code><a href="../Classes/ParseBaseModel.html">ParseBaseModel</a></code>, this function also fetches and caches the users who are
+members of this group.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Classes/ParseBaseModel.html#/s:FC13Crowd_Control14ParseBaseModel4loadFS0_FzT_T_">ParseBaseModel.load()</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">load</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13Crowd_Control15ParseGroupModel16loadInBackgroundFS0_FGSqFT6objectGSqPS_9BaseModel__5errorGSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/loadInBackground(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13Crowd_Control15ParseGroupModel16loadInBackgroundFS0_FGSqFT6objectGSqPS_9BaseModel__5errorGSqCSo7NSError__T__T_">loadInBackground(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loads this object from Parse storage asynchronously. In addition to the normal functionality
+inherited from <code><a href="../Classes/ParseBaseModel.html">ParseBaseModel</a></code>, this function also fetches and caches the users who are
+members of this group.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Classes/ParseBaseModel.html#/s:FC13Crowd_Control14ParseBaseModel16loadInBackgroundFS0_FGSqFT6objectGSqPS_9BaseModel__5errorGSqCSo7NSError__T__T_">ParseBaseModel.loadInBackground(_:)</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">loadInBackground</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="nv">object</span><span class="p">:</span> <span class="kt">BaseModel</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC13Crowd_Control15ParseGroupModel11createGroupFMS0_FTSS11descriptionSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/createGroup(_:description:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC13Crowd_Control15ParseGroupModel11createGroupFMS0_FTSS11descriptionSS_S0_">createGroup(_:description:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Function to create a group if there is not one that exists</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter name: String containing the group name
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter description: String containing the description of the group</p>
+
+</div>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>Object of type ParseGroupModel that contains the information</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">createGroup</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ParseGroupModel</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String containing the group name</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>description</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String containing the description of the group</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Object of type ParseGroupModel that contains the information</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC13Crowd_Control15ParseGroupModel6getAllFMS0_FzT_GSaS0__"></a>
+                    <a name="//apple_ref/swift/Method/getAll()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC13Crowd_Control15ParseGroupModel6getAllFMS0_FzT_GSaS0__">getAll()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetches all groups in storage synchronously.</p>
+
+<p>This is a blocking function that can take several seconds to complete. If an operation
+fails, then an exception will be thrown.</p>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    Array of group models in storage.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">getAll</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">ParseGroupModel</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Array of group models in storage.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC13Crowd_Control15ParseGroupModel18getAllInBackgroundFMS0_FGSqFT7resultsGSqGSaS0___5errorGSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/getAllInBackground(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC13Crowd_Control15ParseGroupModel18getAllInBackgroundFMS0_FGSqFT7resultsGSqGSaS0___5errorGSqCSo7NSError__T__T_">getAllInBackground(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetches all groups in Parse storage asynchronously, returning control to the main thread
+through the provided callback (if any).</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter callback: Optional closure that will be called on completion or if an error
+                  is encountered.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">getAllInBackground</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="nv">results</span><span class="p">:</span> <span class="p">[</span><span class="kt">ParseGroupModel</span><span class="p">]?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional closure that will be called on completion or if an error is encountered.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC13Crowd_Control15ParseGroupModel22getGroupContainingUserFMS0_FzCS_21ParseUserProfileModelGSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/getGroupContainingUser(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC13Crowd_Control15ParseGroupModel22getGroupContainingUserFMS0_FzCS_21ParseUserProfileModelGSqS0__">getGroupContainingUser(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetches the first group to which the provided user belongs, if any. If no group is found
+that contains the provided user, then <code>nil</code> is returned.</p>
+
+<p>This is a blocking function and should be executed on a thread separate from the main
+thread. See <code><a href="../Classes/ParseGroupModel.html#/s:ZFC13Crowd_Control15ParseGroupModel34getGroupContainingUserInBackgroundFMS0_FTCS_21ParseUserProfileModel8callbackGSqFT6resultGSqS0__5errorGSqCSo7NSError__T___T_">getGroupContainingUserInBackground(_:callback:)</a></code> for fetching on a separate
+thread. This function will throw an exception if an error occurs.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter user: The user to search for.</p>
+
+</div>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>Optional <code><a href="../Classes/ParseGroupModel.html">ParseGroupModel</a></code> object that has <code>user</code> as a member, or <code>nil</code> if no
+       such group could be found. This object will be fully loaded from storage such
+       that a call to <code><a href="../Classes/ParseGroupModel.html#/s:FC13Crowd_Control15ParseGroupModel4loadFS0_FzT_T_">ParseGroupModel.load()</a></code> is not necessary.</p>
+
+</div>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/ParseGroupModel.html#/s:ZFC13Crowd_Control15ParseGroupModel34getGroupContainingUserInBackgroundFMS0_FTCS_21ParseUserProfileModel8callbackGSqFT6resultGSqS0__5errorGSqCSo7NSError__T___T_">getGroupContainingUserInBackground(_:callback:)</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">getGroupContainingUser</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="kt">ParseUserProfileModel</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">ParseGroupModel</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>user</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The user to search for.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Optional <code><a href="../Classes/ParseGroupModel.html">ParseGroupModel</a></code> object that has <code>user</code> as a member, or <code>nil</code> if no such group could be found. This object will be fully loaded from storage such that a call to <code><a href="../Classes/ParseGroupModel.html#/s:FC13Crowd_Control15ParseGroupModel4loadFS0_FzT_T_">ParseGroupModel.load()</a></code> is not necessary.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC13Crowd_Control15ParseGroupModel34getGroupContainingUserInBackgroundFMS0_FTCS_21ParseUserProfileModel8callbackGSqFT6resultGSqS0__5errorGSqCSo7NSError__T___T_"></a>
+                    <a name="//apple_ref/swift/Method/getGroupContainingUserInBackground(_:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC13Crowd_Control15ParseGroupModel34getGroupContainingUserInBackgroundFMS0_FTCS_21ParseUserProfileModel8callbackGSqFT6resultGSqS0__5errorGSqCSo7NSError__T___T_">getGroupContainingUserInBackground(_:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetches the first group to which the provided user belongs, if any. If no group is found
+that contains the provided user, then <code>nil</code> is returned.</p>
+
+<p>This function spawns a new thread for querying storage. After successful execution or if an
+error occurs, this function passes control back to the main thread by calling the closure
+that was optionally passed as an argument.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter user: The user to search for.
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter callback: Optional callback function to call after successful execution or if an
+                  error occurs. If <code>nil</code> is provided, then the callback will not be
+                  called.</p>
+
+</div>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/ParseGroupModel.html#/s:ZFC13Crowd_Control15ParseGroupModel22getGroupContainingUserFMS0_FzCS_21ParseUserProfileModelGSqS0__">getGroupContainingUser(_:)</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">getGroupContainingUserInBackground</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="kt">ParseUserProfileModel</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="nv">result</span><span class="p">:</span> <span class="kt">ParseGroupModel</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>user</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The user to search for.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional callback function to call after successful execution or if an error occurs. If <code>nil</code> is provided, then the callback will not be called.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-04-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
