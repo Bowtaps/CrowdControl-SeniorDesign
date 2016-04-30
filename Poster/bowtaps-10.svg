@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="354.43219"
+   height="64"
+   viewBox="0 0 354.43219 64.000001"
+   id="svg4927"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="bowtaps-10.svg"
+   inkscape:export-filename="C:\Users\1989750\Desktop\bowtaps-10.png"
+   inkscape:export-xdpi="180"
+   inkscape:export-ydpi="180">
+  <defs
+     id="defs4929" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.0713332"
+     inkscape:cx="196.00897"
+     inkscape:cy="19.189127"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata4932">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-988.36216)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="71.425995"
+       y="1038.0864"
+       id="text8050"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8052"
+         x="71.425995"
+         y="1038.0864"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#808080;fill-opacity:1">Bowtaps</tspan></text>
+    <path
+       style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:1.25;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 32,0 A 32,32 0 0 0 0,32 32,32 0 0 0 32,64 32,32 0 0 0 64,32 32,32 0 0 0 32,0 Z M 9.5078125,17.005859 27.095703,28.730469 A 5.896639,5.896639 0 0 0 26.103516,32 a 5.896639,5.896639 0 0 0 0.99414,3.267578 l -17.5898435,11.726563 0,-29.988282 z m 44.9843755,0 0,29.988282 -17.587891,-11.72461 A 5.896639,5.896639 0 0 0 37.896484,32 5.896639,5.896639 0 0 0 36.902344,28.732422 L 54.492188,17.005859 Z M 32,27.789062 A 4.211885,4.211885 0 0 1 36.210938,32 4.211885,4.211885 0 0 1 32,36.212891 4.211885,4.211885 0 0 1 27.789062,32 4.211885,4.211885 0 0 1 32,27.789062 Z"
+       id="path9715"
+       transform="translate(0,988.36216)"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:14.77246475px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="318.54694"
+       y="1038.2239"
+       id="text8050-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="318.54694"
+         y="1038.2239"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.46557999px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#808080;fill-opacity:1"
+         id="tspan4162">LLC</tspan></text>
+  </g>
+</svg>
