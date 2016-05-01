@@ -102,8 +102,12 @@ I explicitly want to note that the messaging service and many of the GUI element
  TODO: Overview of GUI design. Show differences in platform native ``look and feel''
  For Android, the GUI was developed in Android Studio using it's XML designer. The theme of the app is all in one file so that a basic Android feel is applied to the buttons, as well as using Google API calls to make the map feel native to Android users.
  
- \subsection{MVVM, etc}
- TODO: Describe MVVM, create diagram laying our components in MVVM format
+ \subsection{MVC, etc}
+ In Android, the models are called models, the views are called layouts, and the controllers are called activities. Our models work to abstracted our third party software out of the activities. In this way, a parse call will not be scene in an activity. We have several models that keep track of local data and keep up to date with our Parse database using a service. These models include a group model, user model, user-profile model, conversation model, location model, and a notification model. This models can be accessed by a global model controller. This is initialized CrowdControlApplication.java, which is the main class of the app.
+ 
+ Each Activity is a controller, it is responsible for calling functions from the models to either change data in the database or to update the data in the layouts. Each activity has one layout in general. These layouts are XML files so their tags are java specific.
+ 
+ (TODO) more beefyness
 
 \section{Group Messaging }
 
