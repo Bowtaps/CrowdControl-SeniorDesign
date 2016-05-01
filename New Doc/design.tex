@@ -90,6 +90,7 @@ I explicitly want to note that the messaging service and many of the GUI element
  
  \subsection{GUI}
  TODO: Overview of GUI design. Show differences in platform native ``look and feel''
+ For Android, the GUI was developed in Android Studio using it's XML designer. The theme of the app is all in one file so that a basic Android feel is applied to the buttons, as well as using Google API calls to make the map feel native to Android users.
  
  \subsection{MVVM, etc}
  TODO: Describe MVVM, create diagram laying our components in MVVM format
@@ -98,8 +99,8 @@ I explicitly want to note that the messaging service and many of the GUI element
 
 \subsection{Technologies  Used}
 \begin{itemize}
-  \item Parse
-  \item Sinch
+  \item Parse - back-end database tool.
+  \item Sinch - back-end messaging tool.
 \end{itemize}
 
 \subsection{Component  Overview}
@@ -110,8 +111,7 @@ I explicitly want to note that the messaging service and many of the GUI element
 \end{itemize} 
 
 \subsection{Phase Overview}
-This is an extension of the Phase Overview above, but specific to this component. 
- It is meant to be basically a brief list with space for marking the phase status. 
+Group Messaging uses Sinch as a back-end. It allows are users to send a message to every other user in their group. We have modified code from this repo to do group messaging ~\cite{Choset: sinch/android-messaging-tutorial, https://github.com/sinch/android-messaging-tutorial}. This repo gives full permission for commercial use ~\cite{Choset: License, https://github.com/sinch/android-messaging-tutorial/blob/master/LICENSE}. 
 
 \subsection{Architecture Diagram}
 It is important to build and maintain an architecture diagram.  However, it may 
@@ -121,30 +121,9 @@ be that a component is best described visually with a data flow diagram.
 It is important to build and maintain a data flow diagram.  However, it may be 
 that a component is best described visually with an architecture diagram. 
 
-\subsection{Design Details} - NOTE: Code block probably irrelevant here. Will remove later.
-This is where the details are presented and may contain subsections.   Here is an example code listing:
-\begin{lstlisting}
-#include <stdio.h>
-#define N 10
-/* Block
- * comment */
- 
-int main()
-{
-    int i;
- 
-    // Line comment.
-    puts("Hello world!");
- 
-    for (i = 0; i < N; i++)
-    {
-        puts("LaTeX is also great for programmers!");
-    }
- 
-    return 0;
-}
-\end{lstlisting}
-This code listing is not floating or automatically numbered.  If you want auto-numbering, but it in the algorithm environment (not algorithmic however) shown above.
+\subsection{Design Details}
+Messaging interfaces with the user though the MessagingFragment.java class. This class uses the MessageAdapter.java class to take the data from the MessageService.java class, and display it to the user. The MessagingFragment.java class also allows the user to send messages though the MessageService.java class to all other members in the group.
+The MessagingFragment.java class relies on the apps overarching service to keep its messages stored in Parse. This allows the class to load a conversation (group object that holds messages) into view for the user, if that user doesn't have them or loses their local copy.
 
 \section{Location Tracking }
 
@@ -187,7 +166,7 @@ This is where the details are presented and may contain subsections.
 \subsection{Component  Overview}
 \begin{itemize}
   \item Store group members in a group
-  \item Incorporate a party leader to manage the group (has special priveledges)
+  \item Incorporate a party leader to manage the group (has special privileges)
   \item Create a group with specific attributes that can be changed by the leader
 \end{itemize}
 
