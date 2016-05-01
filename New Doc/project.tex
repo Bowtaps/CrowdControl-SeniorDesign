@@ -61,22 +61,12 @@ Joseph Mowry - Joseph is leading the back end side for the android version of Cr
 
 
 \section{Project  Management Approach}
-This section will provide an explanation of the basic approach to managing the 
-project.  Typically, this would detail how the project will be managed through 
-a given Agile methodology.  The sprint length (i.e. 2 weeks) and product backlog 
-ownership and location (ex. Trello) are examples of what will be discussed.  An 
-overview of the system used to track sprint tasks, bug or trouble tickets, and 
-user stories would be warranted. 
 
-Crowd Control was developed using the Agile software development method.  The project was split up into 7 sprints each lasting 3 weeks.  For the first 4 sprints, each sprint was planned out with goals for each sprint.  The last 3 sprints had plans for each week, creating goals for all of the weeks inside of the sprints.  To track sprint goals, meeting minutes were used to define each members goals at the beginning of each sprint.
+Crowd Control was developed using the Agile software development method.  The project was split up into 7 sprints each lasting 3 weeks.  For the first 4 sprints, each sprint was planned out with goals for each sprint.  The last 3 sprints had plans for each week, creating goals for all of the weeks inside of the sprints.  To track sprint goals, meeting minutes were used to define each members goals at the beginning of each sprint.  Another way to track goals and bugs along the way was to use the GitHub Issue tracker, each issue contained data about the feature or bug and any questions or extra data necessary.  All of this was wrapped up in scrum meetings five days a week.  Scrum meetings are stand-up meetings usually lasting five to ten minutes were each member would report on what they had accomplished, what they were working on next, and if there were any issues holding back progress.
 
 
 \section{ Stakeholder Information}
-
-
-This section would provide the basic description of all of the stakeholders for 
-the project.  Who has an interest in the successful and/or unsuccessful completion 
-of this project? 
+The stakeholders of this project were the members of Bowtaps LLC.  These five members were the same five members developing Crowd Control, their names are listed above in section 3.1.
 
 
 \subsection{Customer or End User (Product Owner)}
@@ -85,8 +75,7 @@ and prioritize the product backlog?  Who will they interact with on the team to
 drive product backlog priorities if not done directly? 
 
 \subsection{Management or Instructor (Scrum Master)}
-Who?  What role will they play in the project?  Will the Scrum Master drive the 
-Sprint Meetings? 
+For Crowd Control, Bowtaps chose to make Daniel Andrus the scrum master. His duties included helping guide scrum meetings and helping to break up features into week long goals.
 
 
 \subsection{Investors}
@@ -94,8 +83,7 @@ Currently Bowtaps has not sought out investment from external sources, instead t
 
 
 \subsection{Developers --Testers}
-Who?  Is there a defined project manager, developer, tester, designer, architect, 
-etc.? 
+For the term of our development each member of the team was a developer and a tester.  This meant that before a member of the team merged their code from their branch to a main branch that they would go through and thoroughly test.
 
 \section{Budget}
 Describe the budget for the project including gifted equipment and salaries for 
@@ -117,6 +105,10 @@ Did you use planning poker?
 \section{Terminology and Acronyms}
 Provide a list of terms used in the document that warrant definition.  Consider 
 industry or domain specific terms and acronyms as well as system specific. 
+\begin{itemize}
+\item iOS - Apple's mobile operating system for smartphones
+\item Android - Google's mobile operating system for smartphones
+\end{itemize}
 
 \section{Sprint Schedule}
 Below is a table of dates for each sprint.\\
@@ -125,13 +117,13 @@ Below is a table of dates for each sprint.\\
 	\hline
 	Sprint & Date\\
 	\hline
-	Sprint 1 & 1/18/2016 - 2/5/2016\\
+	Sprint 1 & 9/14/2015 - 10/2/2015\\
 	\hline
-	Sprint 2 & 2/15/2016 - 3/4/2016\\
+	Sprint 2 & 10/12/2015 - 10/30/2015\\
 	\hline
-	Sprint 3 & 3/21/2016 - 4/15/2016\\
+	Sprint 3 & 11/9/2015 - 11/27/2015\\
 	\hline
-	Sprint 3.5 & Time\\
+	Sprint 3.5 & 12/21/2015 - 1/8/2016\\
 	\hline
 	Sprint 4 & 1/18/2016 - 2/5/2016\\
 	\hline
@@ -148,19 +140,19 @@ Below is an overview of the timeline of the project by sprint.
 	\begin{tabular}{c|c|c}
 	Sprint & Tasks & Date\\
 	\hline
-	Sprint 1 &  Design UX & End of Sprint 1\\
-	& Design Database&End of Sprint 1\\
-	& Design Application Layers & End of Sprint 1\\
-	& Set up GitHub repository & End of Sprint 1\\
+	Sprint 1 &  Design UX & 10/2/2015\\
+	& Design Database& 10/2/2015\\
+	& Design Application Layers & 10/2/2015\\
+	& Set up GitHub repository & 10/2/2015\\
 	\hline
-	Sprint 2 & Code UX & End of Sprint 2 \\
-	& Create Models & End of Sprint 2\\
-	& Research public/private key passing & End of Sprint 2\\
+	Sprint 2 & Code UX & 10/30/2015 \\
+	& Create Models & 10/30/2015\\
+	& Research public/private key passing & 10/30/2015\\
 	\hline
-	Sprint 3 & iOS Login & End of Sprint 3\\
-	& iOS Facebook integration & End of Sprint 3\\
-	& Mapping & End of Sprint 3\\
-	& Work on Group Join & End of Sprint 3\\
+	Sprint 3 & iOS Login & 11/27/2015\\
+	& iOS Facebook integration & 11/27/2015\\
+	& Mapping & 11/27/2015\\
+	& Work on Group Join & 11/27/2015\\
 	\hline
 	Sprint 4 & thing & Thing\\
 	\hline
@@ -375,23 +367,24 @@ stories.
 \section{Development Environment}
 The basic purpose for this section is to give a developer all of the necessary 
 information to setup their development environment to run, test, and/or develop. 
-To develop Crowd Control the team used a few differetn products to develop, test, and run.  For development of Crowd Control for Android, the team used the Android Studio IDE which supports all aspects of Android development.  Using Android Studio's Layout Editor to help create the GUI, and using its built in support for Java to code the controller and model layers.  The iOS development all took place on XCode, an Apple Development IDE, much like Android Studio
+To develop Crowd Control the team used a few different products to develop, test, and run.  For development of Crowd Control for Android, the team used the Android Studio IDE which supports all aspects of Android development.  Using Android Studio's Layout Editor to help create the GUI, and using its built in support for Java to code the controller and model layers. The Android Studio download online comes with all of the necessary products to build, run, and test Crowd Control. The iOS development all took place on XCode, an Apple Development IDE, much like Android Studio XCode contains a layout editor and all of the necessary build scripts to build, run, and test the iOS version of Crowd Control.  For the back end of development, the team chose to use parse and created two databases on the platform.  One database for development and one for deployment.  Both databases are wrapped by the app so there is little trouble to switch the code when time for deployment.
 
 \section{Development IDE and Tools}
 Describe which IDE and provide links to installs and/or reference material. 
+\begin{itemize}
+\item[Android]
+	Android Studio - http://developer.android.com/sdk/index.html
+\item[iOS]
+	XCode - Xcode can be found on the Apple App Store for free
+\item[Parse]
+	Parse Accounts can be obtained at parse.com
+\end{itemize}
 
-\section{Source  Control}
-Which source control system is/was used?  How was it setup?  How does a developer 
-connect to it? 
+\section{Source Control}
+To manage source control of Crowd Control, Bowtaps is currently using Git, and the server is hosted by GitHub.
 
-\section{Dependencies}
-Describe all dependencies associated with developing the system. 
-
-\section{Build  Environment}
-How are the packages built?  Are there build scripts? 
+\section{Build Environment}
+To build Crowd Control there is little difference on the developers end between Android and iOS.  On the Android side, Android Studio uses a build environment called Gradle that builds and compiles the source code and packages it into an apk.  However for the developer, little has to be done besides running the Gradle scripts to receive an apk.  The only thing to note on the Android build phases would be that there must be a match between the Java Version used for building and compilation and the SDK version.  This correlation can be found online as new SDK release and as new Java versions are available.  On the iOS side there is even less management necessary. For iOS, XCode manages all of the building and compiling of the Swift code.  Only at the beginning of a project or upon the choice to update the lowest supported version of iOS are changes necessary to the build settings.  However, if needed these settings can be accessed in XCode under the build settings tab.  
 
 \section{Development Machine Setup}
-If warranted, provide a list of steps and details associated with setting up a 
-machine for use by a developer. 
-
-
+To develop Crowd Control for iOS or Android on an Apple device, such as a MacBook or other Apple Product, the only setup required is to download the IDEs necessary.  On the windows side however it should be noted that after installing the Android Studio IDE depending on the type of physical device used for testing, there may be necessary driver downloads to interface with Android Studio's built in ADB(Android Debug Bridge).  These drivers can be found online either from the manufacturer of the mobile device or some can be found on third party sites depending on the phone.
