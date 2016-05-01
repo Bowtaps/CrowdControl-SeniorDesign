@@ -1,0 +1,226 @@
+
+\hypertarget{class_UserModel.iOS}{\section{UserModel Class Reference}
+\label{class_UserModel.iOS}\index{UserModel.iOS@{UserModel.iOS}}
+}
+
+\subsection*{Class UserModel}
+
+\textit{public class \textbf{ UserModel}}
+
+\tab \textbf{class UserModel: BaseModel, UserModel}
+
+This class extends the BaseModel class and implements the UserModel protocol and is the class to access the current user’s information from \\
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_UserModel.iOS.profile}{profile} ()
+\item 
+\hyperlink{class_UserModel.iOS.init}{init} ()
+\item 
+\hyperlink{class_UserModel.iOS.username}{username} ()
+\item 
+\hyperlink{class_UserModel.iOS.emailVerified}{emailVerified} ()
+\item 
+\hyperlink{class_UserModel.iOS.email}{email} ()
+\item 
+\hyperlink{class_UserModel.iOS.phone}{phone} ()
+\item 
+\hyperlink{class_UserModel.iOS.createFromSignUp}{createFromSignUp} ()
+
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Summary}
+
+
+%method
+\hypertarget{class_UserModel.iOS.profile}{\index{UserModel.iOS.profile@{UserModel.iOS.profile}!UserModel.iOS.profile@{UserModel.iOS.profile}}
+\index{UserModel.iOS.profile@{UserModel.iOS.profile}!UserModel.iOS.profile@{UserModel.iOS.profile}}
+\subsubsection[{UserModel.iOS.profile}]{\setlength{\rightskip}{0pt plus 5cm}profile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UserModel.iOS.profile}
+
+The model corresponding to this user’s public profile.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+let profile: UserProfileModel\\
+
+%method
+\hypertarget{class_UserModel.iOS.init}{\index{UserModel.iOS.init@{UserModel.iOS.init}!UserModel.iOS.init@{UserModel.iOS.init}}
+\index{UserModel.iOS.init@{UserModel.iOS.init}!UserModel.iOS.init@{UserModel.iOS.init}}
+\subsubsection[{UserModel.iOS.init}]{\setlength{\rightskip}{0pt plus 5cm}init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UserModel.iOS.init}
+\textbf{init(withUser:profile:)}
+
+Class constructor. Initializes the instance from a PFObject.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+init(withUser user: PFUser, profile: UserProfileModel? = nil)\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item withUser - The  user to tie this model to the  database.
+\item profile - An optional UserProfileModel to connect to this user. If no value is or nil is provided, this constructor will attempt to get the profile from the withUser model.
+\begin{itemize}
+
+%method
+\hypertarget{class_UserModel.iOS.username}{\index{UserModel.iOS.username@{UserModel.iOS.username}!UserModel.iOS.username@{UserModel.iOS.username}}
+\index{UserModel.iOS.username@{UserModel.iOS.username}!UserModel.iOS.username@{UserModel.iOS.username}}
+\subsubsection[{UserModel.iOS.username}]{\setlength{\rightskip}{0pt plus 5cm}username (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UserModel.iOS.username}
+
+String containing the current user’s username as defined in the UserModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tabvar username:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var username: String\\
+
+%method
+\hypertarget{class_UserModel.iOS.emailVerified}{\index{UserModel.iOS.emailVerified@{UserModel.iOS.emailVerified}!UserModel.iOS.emailVerified@{UserModel.iOS.emailVerified}}
+\index{UserModel.iOS.emailVerified@{UserModel.iOS.emailVerified}!UserModel.iOS.emailVerified@{UserModel.iOS.emailVerified}}
+\subsubsection[{UserModel.iOS.emailVerified}]{\setlength{\rightskip}{0pt plus 5cm}emailVerified (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UserModel.iOS.emailVerified}
+
+Boolean to store if the user has verified their email with  as defined by the UserModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tabvar var emailVerified:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var emailVerified: Bool\\
+
+\textbf{Return Value:}\\
+true if their email has been verified, false if their email has not been verified.
+
+%method
+\hypertarget{class_UserModel.iOS.email}{\index{UserModel.iOS.email@{UserModel.iOS.email}!UserModel.iOS.email@{UserModel.iOS.email}}
+\index{UserModel.iOS.email@{UserModel.iOS.email}!UserModel.iOS.email@{UserModel.iOS.email}}
+\subsubsection[{UserModel.iOS.email}]{\setlength{\rightskip}{0pt plus 5cm}email (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UserModel.iOS.email}
+
+String containing the current users email as defined in the UserModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tabvar var emailVerified:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var email: String\\
+
+%method
+\hypertarget{class_UserModel.iOS.createFromSignUp}{\index{UserModel.iOS.createFromSignUp@{UserModel.iOS.createFromSignUp}!UserModel.iOS.createFromSignUp@{UserModel.iOS.createFromSignUp}}
+\index{UserModel.iOS.createFromSignUp@{UserModel.iOS.createFromSignUp}!UserModel.iOS.createFromSignUp@{UserModel.iOS.createFromSignUp}}
+\subsubsection[{UserModel.iOS.phone}]{\setlength{\rightskip}{0pt plus 5cm}createFromSignUp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UserModel.iOS.phone}
+\textbf{createFromSignUp(_:password:)}\\
+
+Main function for creating a new user. Automatically creates a corresponding UserProfileModel and returns both in a tuple.\\
+
+\textbf{Modifier and Type:}\\
+\tabvar var phone:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var phone: String\\
+
+%method
+\hypertarget{class_UserModel.iOS.createFromSignUp}{\index{UserModel.iOS.createFromSignUp@{UserModel.iOS.createFromSignUp}!UserModel.iOS.createFromSignUp@{UserModel.iOS.createFromSignUp}}
+\index{UserModel.iOS.createFromSignUp@{UserModel.iOS.createFromSignUp}!UserModel.iOS.phone@{UserModel.iOS.createFromSignUp}}
+\subsubsection[{UserModel.iOS.createFromSignUp}]{\setlength{\rightskip}{0pt plus 5cm}createFromSignUp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{UserModel.iOS.createFromSignUp}
+\textbf{createFromSignUp(\_:password:)}\\
+
+
+Main function for creating a new user. Automatically creates a corresponding UserProfileModel and returns both in a tuple.\\
+
+\textbf{Modifier and Type:}\\
+\tabvar var phone:\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+var phone: String\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item username - The new user’s username.
+\item password - The new user’s password.
+\end{itemize}
+
+\textbf{Declaration:}\\
+A tuple containing the newly created UserModel object and its corresponding UserProfileModel.\\
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item UserModel
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

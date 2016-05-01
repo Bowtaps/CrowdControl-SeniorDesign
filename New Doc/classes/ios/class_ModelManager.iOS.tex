@@ -1,0 +1,351 @@
+
+\hypertarget{class_ModelManager.iOS}{\section{ModelManager Class Reference}
+\label{class_ModelManager.iOS}\index{ModelManager.iOS@{ModelManager.iOS}}
+}
+
+\subsection*{Class GroupModel}
+
+\textit{public class \textbf{ GroupModel}}
+
+\tab \textbf{class PModelManager}
+
+A class dedicated for providing model functionality that does not belong in any individual model, such as logging users in, signing up new users, or getting the currrent user\\
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ModelManager.iOS.logInUser}{logInUser} ()
+\item 
+\hyperlink{class_ModelManager.iOS.logInUserInBackground}{logInUserInBackground} ()
+\item 
+\hyperlink{class_ModelManager.iOS.createUser}{createUser} ()
+\item 
+\hyperlink{class_ModelManager.iOS.createUserInBackground}{createUserInBackground} ()
+\item 
+\hyperlink{class_ModelManager.iOS.currentUser}{currentUser} ()
+\item 
+\hyperlink{class_ModelManager.iOS.logOutCurrentUser}{logOutCurrentUser} ()
+\item 
+\hyperlink{class_ModelManager.iOS.fetchGroups}{fetchGroups} ()
+\item 
+\hyperlink{class_ModelManager.iOS.fetchGroupsInBackground}{fetchGroupsInBackground} ()
+\item 
+\hyperlink{class_ModelManager.iOS.currentGroup}{currentGroup} ()
+\item 
+\hyperlink{class_ModelManager.iOS.setCurrentGroup}{setCurrentGroup} ()
+\item 
+\hyperlink{class_ModelManager.iOS.fetchCurrentGroup}{fetchCurrentGroup} ()
+\item 
+\hyperlink{class_ModelManager.iOS.fetchCurrentGroupInBackground}{fetchCurrentGroupInBackground} ()
+
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Summary}
+
+
+%method
+\hypertarget{class_GroupModel.iOS.logInUser}{\index{GroupModel.iOS.logInUser@{GroupModel.iOS.logInUser}!GroupModel.iOS.logInUser@{GroupModel.iOS.logInUser}}
+\index{GroupModel.iOS.logInUser@{GroupModel.iOS.logInUser}!ModelManager.iOS.logInUser@{ModelManager.iOS.logInUser}}
+\subsubsection[{GroupModel.iOS.logInUser}]{\setlength{\rightskip}{0pt plus 5cm}logInUser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupModel.iOS.logInUser}
+\textbf{logInUser(\_:password:)}
+
+Compares the submitted username and password to storage and returns a UserModel object if the user was successfully logged in. Otherewise, it throws an exception.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func logInUser(username: String, password: String) throws -> UserModel\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item username -   The username of the user to log in. 
+\item password - The password to use to log in.
+\end{itemize}
+
+\textbf{Return Value:}
+A user object if the login was successful.\\
+
+
+%method
+\hypertarget{class_ModelManager.iOS.logInUserInBackground}{\index{ModelManager.iOS.logInUserInBackground@{ModelManager.iOS.logInUserInBackground}!GroupModel.iOS.logInUserInBackground@{GroupModel.iOS.logInUserInBackground}}
+\index{ModelManager.iOS.logInUserInBackground@{GroupModel.iOS.logInUserInBackground}!ModelManager.iOS.logInUserInBackground@{ModelManager.iOS.logInUserInBackground}}
+\subsubsection[{ModelManager.iOS.logInUserInBackground}]{\setlength{\rightskip}{0pt plus 5cm}logInUserInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ModelManager.iOS.logInUserInBackground}
+\textbf{logInUserInBackground(\_:password:callback:)}
+
+Compares the submitted username and password to storage on a separate thread, executing the given callback if successful. If login is unsuccessful, it throws an exception.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func logInUserInBackground(username: String, password: String, callback: ((user: UserModel?, error: NSError?) -> Void)?) -> Void\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item username -   The username of the user to log in. 
+\item password - The password to use to log in.
+\item callback - An optional callback to call once the operation is complete.
+\end{itemize}
+
+%method
+\hypertarget{class_ModelManager.iOS.createUser}{\index{ModelManager.iOS.createUser@{ModelManager.iOS.createUser}!GroupModel.iOS.createUser@{ModelManager.iOS.createUser}}
+\index{ModelManager.iOS.createUser@{ModelManager.iOS.createUser}!ModelManager.iOS.createUser@{ModelManager.iOS.createUser}}
+\subsubsection[{ModelManager.iOS.createUser}]{\setlength{\rightskip}{0pt plus 5cm}createUser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ModelManager.iOS.createUser}
+\textbf{createUser(\_:email:password:)}
+
+Attempts to create a new user in the system, ensuring that the given username is unique. Also creates the corresponding user profile object. Both objects are then stored in the server.
+
+This is a blocking function that can take several seconds to complete. If an operation fails, then an exception will be thrown.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func createUser(username: String, email: String, password: String) throws -> UserModel\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item username -   The username of the user to log in. 
+\item password - The password to use to log in.
+\end{itemize}
+
+\textbf{Return Value:}\\
+The newly created UserModel if the operation is successful.\\
+
+%method
+\hypertarget{class_ModelManager.iOS.createUserInBackground}{\index{ModelManager.iOS.createUserInBackground@{ModelManager.iOS.createUserInBackground}!GroupModel.iOS.createUserInBackground@{ModelManager.iOS.createUserInBackground}}
+\index{ModelManager.iOS.createUserInBackground@{ModelManager.iOS.createUserInBackground}!ModelManager.iOS.createUserInBackground@{ModelManager.iOS.createUserInBackground}}
+\subsubsection[{ModelManager.iOS.createUserInBackground}]{\setlength{\rightskip}{0pt plus 5cm}createUserInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ModelManager.iOS.createUserInBackground}
+\textbf{createUserInBackground(\_:email:password:callback:)}
+
+Attempts to create a new user in the system, ensuring that the given username is unique. Also creates the corresponding UserProfileObject. Both objects are then stored in the server.\\
+
+This is an asynchronous function that will pass control back to the main thread by executing the given callback prameter if it is not nil.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func createUserInBackground(username: String, email: String, password: String, callback: ((user: UserModel?, error: NSError?) -> Void)?) -> Void\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item username -   The username of the user to log in. 
+\item password - The password to use to log in.
+\item callback - The callback function that will be executed after the operation is complete, either successfully or unsuccessfully.
+\end{itemize}
+
+%method
+\hypertarget{class_ModelManager.iOS.currentUser}{\index{ModelManager.iOS.currentUser@{ModelManager.iOS.currentUser}!GroupModel.iOS.currentUser@{ModelManager.iOS.currentUser}}
+\index{ModelManager.iOS.currentUser@{ModelManager.iOS.currentUser}!ModelManager.iOS.currentUser@{ModelManager.iOS.currentUser}}
+\subsubsection[{ParseModelManager.iOS.currentUser}]{\setlength{\rightskip}{0pt plus 5cm}currentUser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ModelManager.iOS.currentUser}
+
+Retrieves the currently logged-in user. If no user is logged in, returns nil.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func createUserInBackground(username: String, email: String, password: String, callback: ((user: UserModel?, error: NSError?) -> Void)?) -> Void\\
+
+%method
+\hypertarget{class_ModelManager.iOS.logOutCurrentUser}{\index{ModelManager.iOS.logOutCurrentUser@{ModelManager.iOS.logOutCurrentUser}!GroupModel.iOS.logOutCurrentUser@{ModelManager.iOS.logOutCurrentUser}}
+\index{ModelManager.iOS.logOutCurrentUser@{ModelManager.iOS.logOutCurrentUser}!ModelManager.iOS.logOutCurrentUser@{ModelManager.iOS.logOutCurrentUser}}
+\subsubsection[{ModelManager.iOS.logOutCurrentUser}]{\setlength{\rightskip}{0pt plus 5cm}logOutCurrentUser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ModelManager.iOS.logOutCurrentUser}
+
+Logs out the currently logged in user, removing them from any caches and returning whether or not the operation was successful.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func logOutCurrentUser() -> Bool\\
+
+\textbf{Return Vales:}
+true if the operation was successful and the user was successfully logged out, false if not.\\
+
+%method
+\hypertarget{class_ModelManager.iOS.fetchGroupsInBackground}{\index{ModelManager.iOS.fetchGroupsInBackground@{ModelManager.iOS.fetchGroupsInBackground}!GroupModel.iOS.fetchGroupsInBackground@{ModelManager.iOS.fetchGroupsInBackground}}
+\index{ModelManager.iOS.fetchGroupsInBackground@{ModelManager.iOS.fetchGroupsInBackground}!ModelManager.iOS.fetchGroupsInBackground@{ModelManager.iOS.fetchGroupsInBackground}}
+\subsubsection[{ModelManager.iOS.fetchGroupsInBackground}]{\setlength{\rightskip}{0pt plus 5cm}fetchGroupsInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ModelManager.iOS.fetchGroupsInBackground}
+
+etches all gropus in storage asynchronously.\\
+
+This is an asynchronous function that will pass control back to the main thread by executing the given callback parameter if it is not nil.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func fetchGroupsInBackground(callback: ((results: [GroupModel]?, error: NSError?) -> Void)?) -> Void\\
+
+\textbf{Return Vales:}
+Array of all GroupModel objects in storage.\\
+
+%method
+\hypertarget{class_ModelManager.iOS.fetchGroups}{\index{ModelManager.iOS.fetchGroups@{ModelManager.iOS.fetchGroups}!GroupModel.iOS.fetchGroups@{ModelManager.iOS.fetchGroups}}
+\index{ModelManager.iOS.fetchGroups@{ModelManager.iOS.fetchGroups}!ModelManager.iOS.fetchGroups@{ModelManager.iOS.fetchGroups}}
+\subsubsection[{ModelManager.iOS.fetchGroups}]{\setlength{\rightskip}{0pt plus 5cm}fetchGroups (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ModelManager.iOS.fetchGroups}
+\textbf{fetchGroupsInBackground(\_:)}
+Fetches all groups in storage synchronously.\\
+
+This is a blocking function that can take several seconds to complete. If an operation fails, then an exception will be thrown.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func fetchGroups() throws -> [GroupModel]\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item callback - The callback function that will be executed after the operation is complete, either successfully or unsuccessfully.
+\end{itemize}
+
+%method
+\hypertarget{class_ModelManager.iOS.currentGroup}{\index{ModelManager.iOS.currentGroup@{ModelManager.iOS.currentGroup}!GroupModel.iOS.currentGroup@{ModelManager.iOS.currentGroup}}
+\index{ModelManager.iOS.currentGroup@{ModelManager.iOS.currentGroup}!ModelManager.iOS.currentGroup@{ModelManager.iOS.currentGroup}}
+\subsubsection[{ModelManager.iOS.currentGroup}]{\setlength{\rightskip}{0pt plus 5cm}currentGroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ModelManager.iOS.currentGroup}
+Fetches all groups in storage synchronously.\\
+
+Gets the cached currently active group of which the current user is member, if any. If no user is logged in or the logged in user is not a member of any groups, this method will return nil. This function does not access storage in any way.\\
+
+This method deals exclusively with cached values. In order to update the cached value, either set the cached value directly using setCurrentGroup(\_:) or allowing it to be set automatically using fetchCurrentGroup() and fetchCurrentGroupInBackground(\_:).\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func fetchGroups() throws -> [GroupModel]\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item callback - The callback function that will be executed after the operation is complete, either successfully or unsuccessfully.
+\end{itemize}
+
+\textbf{Returns Value:}\\
+The GroupModel of which the logged in user (if any) is a member of, or nil if no such group exists.\\
+
+%method
+\hypertarget{class_ModelManager.iOS.setCurrentGroup}{\index{ModelManager.iOS.setCurrentGroup@{ModelManager.iOS.setCurrentGroup}!GroupModel.iOS.setCurrentGroup@{ModelManager.iOS.setCurrentGroup}}
+\index{ModelManager.iOS.setCurrentGroup@{ModelManager.iOS.setCurrentGroup}!ModelManager.iOS.setCurrentGroup@{ModelManager.iOS.setCurrentGroup}}
+\subsubsection[{ModelManager.iOS.setCurrentGroup}]{\setlength{\rightskip}{0pt plus 5cm}setCurrentGroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ModelManager.iOS.setCurrentGroup}
+\textbf{setCurrentGroup(\_:)}\\
+Sets the current cached value of the active group. Set the value to nil to indicate that there are no currently active groups. This function does not modify storage in anyway.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func setCurrentGroup(group: GroupModel?)\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item group - The current active GroupModel, or nil if no groups are currently active.
+\end{itemize}
+
+
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item ParseModelManager
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

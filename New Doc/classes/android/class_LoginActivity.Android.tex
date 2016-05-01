@@ -41,8 +41,8 @@
 \index{LoginActivity.Android.onCreateLoader@{LoginActivity.Android.onCreateLoader}!LoginActivity.Android.onCreateLoader@{LoginActivity.Android.onCreateLoader}}
 \subsubsection[{LoginActivity.Android.onCreateLoader}]{\setlength{\rightskip}{0pt plus 5cm}onCreateLoader (
 \begin{DoxyParamCaption}
-\item[{int}]{i}
-\item[{android.os.Bundle}]{bundle}
+\item [{int}]{i}
+\item [{android.os.Bundle}]{bundle}
 \end{DoxyParamCaption}
 )}}\label{LoginActivity.Android.onCreateLoader}
 \textit{public android.content.Loader<android.database.Cursor> onCreateLoader(int i,\\
@@ -71,10 +71,10 @@
 \index{LoginActivity.Android.onCreateView@{LoginActivity.Android.onCreateView}!LoginActivity.Android.onCreateLoader@{LoginActivity.Android.onCreateView}}
 \subsubsection[{LoginActivity.Android.onCreateView}]{\setlength{\rightskip}{0pt plus 5cm}onCreateView (
 \begin{DoxyParamCaption}
-\item[{android.view.View}]{parent}
-\item[{java.lang.String}]{name}
-\item[{android.content.Context}]{context}
-\item[{ndroid.util.AttributeSet}]{attrs}
+\item [{android.view.View}]{parent}
+\item [{java.lang.String}]{name}
+\item [{android.content.Context}]{context}
+\item [{ndroid.util.AttributeSet}]{attrs}
 \end{DoxyParamCaption}
 )}}\label{LoginActivity.Android.onCreateView}
 \textit{public android.view.View onCreateView(android.view.View parent,\\
@@ -110,16 +110,16 @@
 \index{LoginActivity.Android.onCreateView2@{LoginActivity.Android.onCreateView}!LoginActivity.Android.onCreateLoader2@{LoginActivity.Android.onCreateView2}}
 \subsubsection[{LoginActivity.Android.onCreateView2}]{\setlength{\rightskip}{0pt plus 5cm}onCreateView (
 \begin{DoxyParamCaption}
-\item[{java.lang.String}]{name}
-\item[{android.content.Context}]{context}
-\item[{ndroid.util.AttributeSet}]{attrs}
+\item [{java.lang.String}]{name}
+\item [{android.content.Context}]{context}
+\item [{ndroid.util.AttributeSet}]{attrs}
 \end{DoxyParamCaption}
 )}}\label{LoginActivity.Android.onCreateView2}
 \textit{public android.view.View onCreateView(java.lang.String name,\\
                              android.content.Context context,\\
                              android.util.AttributeSet attrs)}\\
 
-   Standard implementation of LayoutInflater.Factory.onCreateView(java.lang.String, android.content.Context, android.util.AttributeSet) used when inflating with the LayoutInflater returned by Activity.getSystemService(java.lang.String). This implementation does nothing and is for pre-Build.VERSION_CODES.HONEYCOMB apps. Newer apps should use Activity.onCreateView(View, String, Context, AttributeSet).\\
+   Standard implementation of LayoutInflater.Factory.onCreateView(java.lang.String, android.content.Context, android.util.AttributeSet) used when inflating with the LayoutInflater returned by Activity.getSystemService(java.lang.String). This implementation does nothing and is for pre-Build.VERSION\_CODES.HONEYCOMB apps. Newer apps should use Activity.onCreateView(View, String, Context, AttributeSet).\\
 
 \textbf{Modifier and Type:}\\
 \tab android.content.Loader<android.database.Cursor>\\
@@ -170,8 +170,8 @@
 \index{LoginActivity.Android.onLoadFinished@{LoginActivity.Android.onLoadFinished}!LoginActivity.Android.onLoadFinished@{LoginActivity.Android.onLoadFinished}}
 \subsubsection[{LoginActivity.Android.onLoadFinished}]{\setlength{\rightskip}{0pt plus 5cm}onLoadFinished (
 \begin{DoxyParamCaption}
-\item[{android.content.Loader<android.database.Cursor>}]{cursorLoader}
-\item[{android.database.Cursor}]{cursor}
+\item [{android.content.Loader<android.database.Cursor>}]{cursorLoader}
+\item [{android.database.Cursor}]{cursor}
 \end{DoxyParamCaption}
 )}}\label{LoginActivity.Android.onLoadFinished}
 \textit{public void onLoadFinished(android.content.Loader<android.database.Cursor> cursorLoader,\\
@@ -182,8 +182,8 @@
 This function is guaranteed to be called prior to the release of the last data that was supplied for this Loader. At this point you should remove all use of the old data (since it will be released soon), but should not do your own release of the data since its Loader owns it and will take care of that. The Loader will take care of management of its data so you don't have to. In particular: \\
 
 \begin{itemize}
-\itemThe Loader will monitor for changes to the data, and report them to you through new calls here. You should not monitor the data yourself. For example, if the data is a Cursor and you place it in a CursorAdapter, use the CursorAdapter.CursorAdapter(android.content.Context, android.database.Cursor, int) constructor without passing in either CursorAdapter.FLAG\_AUTO\_REQUERY or CursorAdapter.FLAG\_REGISTER\_CONTENT\_OBSERVER (that is, use 0 for the flags argument). This prevents the CursorAdapter from doing its own observing of the Cursor, which is not needed since when a change happens you will get a new Cursor throw another call here. 
-\itemThe Loader will release the data once it knows the application is no longer using it. For example, if the data is a Cursor from a CursorLoader, you should not call close() on it yourself. If the Cursor is being placed in a CursorAdapter, you should use the CursorAdapter.swapCursor(android.database.Cursor) method so that the old Cursor is not closed. 
+\item The Loader will monitor for changes to the data, and report them to you through new calls here. You should not monitor the data yourself. For example, if the data is a Cursor and you place it in a CursorAdapter, use the CursorAdapter.CursorAdapter(android.content.Context, android.database.Cursor, int) constructor without passing in either CursorAdapter.FLAG\_AUTO\_REQUERY or CursorAdapter.FLAG\_REGISTER\_CONTENT\_OBSERVER (that is, use 0 for the flags argument). This prevents the CursorAdapter from doing its own observing of the Cursor, which is not needed since when a change happens you will get a new Cursor throw another call here. 
+\item The Loader will release the data once it knows the application is no longer using it. For example, if the data is a Cursor from a CursorLoader, you should not call close() on it yourself. If the Cursor is being placed in a CursorAdapter, you should use the CursorAdapter.swapCursor(android.database.Cursor) method so that the old Cursor is not closed. 
 \end{itemize}
 
 \textbf{Modifier and Type:}\\
@@ -229,7 +229,7 @@ This function is guaranteed to be called prior to the release of the last data t
 \begin{itemize}
 \item requestCode - The request code passed in Activity.requestPermissions(String[], int).
 \item permissions - The requested permissions. Never null.
-\item grantResults - The grant results for the corresponding permissions which is either PackageManager.PERMISSION_GRANTED or PackageManager.PERMISSION_DENIED. Never null.
+\item grantResults - The grant results for the corresponding permissions which is either PackageManager.PERMISSION\_GRANTED or PackageManager.PERMISSION\_DENIED. Never null.
 \end{itemize}
 
 

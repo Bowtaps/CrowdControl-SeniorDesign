@@ -1,0 +1,240 @@
+
+\hypertarget{class_BaseModel.iOS}{\section{BaseModel Class Reference}
+\label{class_BaseModel.iOS}\index{BaseModel.iOS@{BaseModel.iOS}}
+}
+
+\subsection*{Class BaseModel}
+
+\textit{public class \textbf{ BaseModel}}
+
+\tab \textbf{protocol BaseModel}\\
+
+Base model protocol, which is to be implemented by all model classes in the project. Provides access to basic information about the model, such as:\\
+
+\begin{itemize}
+\item Unique identifier
+\item Creation timestamp
+\item Last updated timestamp
+\item Flag indicating modification since last save
+\item Methods for loading from and saving to storage
+\end{itemize}
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_BaseModel.iOS.id}{id} ()
+\item 
+\hyperlink{class_BaseModel.iOS.created}{created} ()
+\item 
+\hyperlink{class_BaseModel.iOS.updated}{updated} ()
+\item 
+\hyperlink{class_BaseModel.iOS.modified}{modified} ()
+\item 
+\hyperlink{class_BaseModel.iOS.load}{load} ()
+\item 
+\hyperlink{class_BaseModel.iOS.loadInBackground}{loadInBackground} ()
+\item 
+\hyperlink{class_BaseModel.iOS.save}{save} ()
+\item 
+\hyperlink{class_BaseModel.iOS.saveInBackground}{saveInBackground} ()
+
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Summary}
+
+
+%method
+\hypertarget{class_BaseModel.iOS.id}{\index{BaseModel.iOS.id@{BaseModel.iOS.id}!BaseModel.iOS.id@{BaseModel.iOS.id}}
+\index{BaseModel.iOS.id@{BaseModel.iOS.id}!BaseModel.iOS.id@{BaseModel.iOS.id}}
+\subsubsection[{BaseModel.iOS.id}]{\setlength{\rightskip}{0pt plus 5cm}id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{BaseModel.iOS.id}
+The ID of the object as determined by remote storage. This value is automatically generated when the object is stored and is usually determined by a remote server. It is valid for this value to be nil, and thus should be used with care and only if absolutely necessary.\\
+
+\textbf{Modifier and Type:}\\
+\tab var id:\\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var id: String {get}\\
+
+
+%method
+\hypertarget{class_BaseModel.iOS.created}{\index{BaseModel.iOS.created@{BaseModel.iOS.created}!BaseModel.iOS.created@{BaseModel.iOS.created}}
+\index{BaseModel.iOS.created@{BaseModel.iOS.created}!BaseModel.iOS.created@{BaseModel.iOS.created}}
+\subsubsection[{BaseModel.iOS.created}]{\setlength{\rightskip}{0pt plus 5cm}created (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{BaseModel.iOS.created}
+Timestamp of when this object was first created and stored. This value may be automatically determined by the server if the model is using a remote machine for storage.\\
+
+\textbf{Modifier and Type:}\\
+\tab var created:\\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var created: NSDate {get}\\
+
+%method
+\hypertarget{class_BaseModel.iOS.updated}{\index{BaseModel.iOS.updated@{BaseModel.iOS.updated}!BaseModel.iOS.updated@{BaseModel.iOS.updated}}
+\index{BaseModel.iOS.updated@{BaseModel.iOS.updated}!BaseModel.iOS.updated@{BaseModel.iOS.updated}}
+\subsubsection[{BaseModel.iOS.updated}]{\setlength{\rightskip}{0pt plus 5cm}updated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{BaseModel.iOS.updated}
+Timestamp of the last time this object was updated in storage. This value may be automatically determined by the server if the model is using a remote machine for storage.\\
+
+\textbf{Modifier and Type:}\\
+\tab var created:\\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var created: NSDate {get}\\
+
+%method
+\hypertarget{class_BaseModel.iOS.modified}{\index{BaseModel.iOS.modified@{BaseModel.iOS.modified}!BaseModel.iOS.modified@{BaseModel.iOS.modified}}
+\index{BaseModel.iOS.modified@{BaseModel.iOS.modified}!BaseModel.iOS.updated@{BaseModel.iOS.modified}}
+\subsubsection[{BaseModel.iOS.modified}]{\setlength{\rightskip}{0pt plus 5cm}modified (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{BaseModel.iOS.modified}
+Flag indicating whether or not this object has been modified since it was last pulled from or pushed to storage.\\
+
+\textbf{Modifier and Type:}\\
+\tab var modified: \\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var modified: Bool {get}\\
+
+%method
+\hypertarget{class_BaseModel.iOS.load}{\index{BaseModel.iOS.load@{BaseModel.iOS.load}!BaseModel.iOS.load@{BaseModel.iOS.load}}
+\index{BaseModel.iOS.load@{BaseModel.iOS.load}!BaseModel.iOS.load@{BaseModel.iOS.load}}
+\subsubsection[{BaseModel.iOS.load}]{\setlength{\rightskip}{0pt plus 5cm}load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{BaseModel.iOS.load}
+Loads this object from storage, either local or remote as determined by the implementation.\\
+
+This is a blocking function and should be executed on a thread separate from the main thread. See loadInBackground(\_:) for loading this object on a separate thread. This function will throw an exception if an error occurs.\\
+
+\textbf{Modifier and Type:}\\
+\tab func \\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func load() throws\\
+
+%method
+\hypertarget{class_BaseModel.iOS.loadInBackground}{\index{BaseModel.iOS.loadInBackground@{BaseModel.iOS.loadInBackground}!BaseModel.iOS.loadInBackground@{BaseModel.iOS.loadInBackground}}
+\index{BaseModel.iOS.loadInBackground@{BaseModel.iOS.loadInBackground}!BaseModel.iOS.loadInBackground@{BaseModel.iOS.loadInBackground}}
+\subsubsection[{BaseModel.iOS.loadInBackground}]{\setlength{\rightskip}{0pt plus 5cm}loadInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{BaseModel.iOS.loadInBackground}
+\textbf{loadInBackground(\_:)}
+Loads this object from storage, either local or remote as determined by the implementation.\\
+
+This function spawns a new thread and reloads this object from storage. After successful execution or if an error occurs, this function passes control back to the main thread by calling the closure that was optionally passed as an argument.\\
+
+\textbf{Modifier and Type:}\\
+\tab var modified\\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func loadInBackground(callback: ((object: BaseModel?, error: NSError?) -> Void)?)\\
+
+\textbf{Parameters:}\\
+\begin{itemize}
+\item callback - Optional callback function to call after successful execution or if an error occurs. If nil is provided, then the callback will not be called.
+\end{itemize}
+
+%method
+\hypertarget{class_BaseModel.iOS.save}{\index{BaseModel.iOS.save@{BaseModel.iOS.save}!BaseModel.iOS.save@{BaseModel.iOS.save}}
+\index{BaseModel.iOS.save@{BaseModel.iOS.save}!BaseModel.iOS.save@{BaseModel.iOS.save}}
+\subsubsection[{BaseModel.iOS.save}]{\setlength{\rightskip}{0pt plus 5cm}save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{BaseModel.iOS.save}
+Saves this object storage, either local or remote as determined by the implementation.\\
+
+This is a blocking function and should be executed on a thread separate from the main thread. See saveInBackground(\_:) for saving this object on a separate thread. This function will throw an exception if \\
+
+\textbf{Modifier and Type:}\\
+\tab func \\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+save() throws\\
+
+%method
+\hypertarget{class_BaseModel.iOS.saveInBackground}{\index{BaseModel.iOS.saveInBackground@{BaseModel.iOS.saveInBackground}!BaseModel.iOS.saveInBackground@{BaseModel.iOS.saveInBackground}}
+\index{BaseModel.iOS.saveInBackground@{BaseModel.iOS.saveInBackground}!BaseModel.iOS.saveInBackground@{BaseModel.iOS.saveInBackground}}
+\subsubsection[{BaseModel.iOS.saveInBackground}]{\setlength{\rightskip}{0pt plus 5cm}save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{BaseModel.iOS.saveInBackground}
+\textbf{saveInBackground(\_:)}\\
+
+Saves this object to storage, either local or remote as determined by the implementation.\\
+
+This function spawns a new thread and sends this object to storage. After successful execution or if an error occurs, this function passes control back to the main thread by calling the closure that was optionally passed as an argument.\\
+
+\textbf{Modifier and Type:}\\
+\tab func \\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func saveInBackground(callback: ((object: BaseModel?, error: NSError?) -> Void)?)\\
+
+\textbf{Parameters:}\\
+\begin{itemize}
+\item callback - Optional callback function to call after successful execution or if an error occurs. If nil is provided, then the callback will not be called.
+\end{itemize}
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item BaseModel
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

@@ -145,9 +145,9 @@ Standard implementation of LayoutInflater.Factory2.onCreateView(View, String, Co
 \subsubsection[{SignupActivity.Android.onCreateView2}]{\setlength{\rightskip}{0pt plus 5cm}onCreateView (
 \begin{DoxyParamCaption}
 
-\item[{java.lang.String}]{name}
-\item[{android.content.Context}]{context}
-\item[{android.util.AttributeSet}]{attrs}
+\item [{java.lang.String}]{name}
+\item [{android.content.Context}]{context}
+\item [{android.util.AttributeSet}]{attrs}
 \end{DoxyParamCaption}
 )}}\label{SignupActivity.Android.onCreateView2}
 \textit{public android.view.View onCreateView(java.lang.String name,\\
@@ -213,8 +213,8 @@ Called when a previously created loader has finished its load. Note that normall
 This function is guaranteed to be called prior to the release of the last data that was supplied for this Loader. At this point you should remove all use of the old data (since it will be released soon), but should not do your own release of the data since its Loader owns it and will take care of that. The Loader will take care of management of its data so you don't have to. In particular: \\
 
 \begin{itemize}
-\item The Loader will monitor for changes to the data, and report them to you through new calls here. You should not monitor the data yourself. For example, if the data is a Cursor and you place it in a CursorAdapter, use the CursorAdapter.CursorAdapter(android.content.Context, android.database.Cursor, int) constructor without passing in either CursorAdapter.FLAG_AUTO_REQUERY or CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER (that is, use 0 for the flags argument). This prevents the CursorAdapter from doing its own observing of the Cursor, which is not needed since when a change happens you will get a new Cursor throw another call here. 
-\item he Loader will release the data once it knows the application is no longer using it. For example, if the data is a Cursor from a CursorLoader, you should not call close() on it yourself. If the Cursor is being placed in a CursorAdapter, you should use the CursorAdapter.swapCursor(android.database.Cursor) method so that the old Cursor is not closed. 
+\item The Loader will monitor for changes to the data, and report them to you through new calls here. You should not monitor the data yourself. For example, if the data is a Cursor and you place it in a CursorAdapter, use the CursorAdapter.CursorAdapter(android.content.Context, android.database.Cursor, int) constructor without passing in either CursorAdapter.FLAG\_AUTO\_REQUERY or CursorAdapter.FLAG\_REGISTER\_CONTENT\_OBSERVER (that is, use 0 for the flags argument). This prevents the CursorAdapter from doing its own observing of the Cursor, which is not needed since when a change happens you will get a new Cursor throw another call here. 
+\item the Loader will release the data once it knows the application is no longer using it. For example, if the data is a Cursor from a CursorLoader, you should not call close() on it yourself. If the Cursor is being placed in a CursorAdapter, you should use the CursorAdapter.swapCursor(android.database.Cursor) method so that the old Cursor is not closed. 
 \end{itemize}
 
 \textbf{Modifier and Type:}\\
@@ -258,7 +258,7 @@ Callback received when a permissions request has been completed.\\
 \begin{itemize}
 \item requestCode - The request code passed in Activity.requestPermissions(String[], int).
 \item permissions - The requested permissions. Never null.
-\item grantResults - The grant results for the corresponding permissions which is either PackageManager.PERMISSION\_GRANTED or PackageManager.PERMISSION_DENIED. Never null.
+\item grantResults - The grant results for the corresponding permissions which is either PackageManager.PERMISSION\_GRANTED or PackageManager.PERMISSION\_DENIED. Never null.
 \end{itemize}
 
 
