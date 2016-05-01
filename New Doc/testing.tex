@@ -1,5 +1,7 @@
 % !TEX root = DesignDocument.tex
-
+\definecolor{green}{HTML}{66FF66}
+\definecolor{myGreen}{HTML}{009900}
+\renewcommand{\arraystretch}{1.5}
 
 \chapter{System and Unit Testing}
 
@@ -260,86 +262,202 @@ testing a specific aspect of the project, this testing matrix includes test
 cases and expected results that often require the cooperation of every part of
 the project.
 
-\begin{tabularx}{\linewidth}{|X|X|X|}
-\hline
-\textbf{Requirements} & \textbf{Test Case} & \textbf{Expected} \\
 
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\textbf{Test case} & \textbf{Result}\\
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Log in with email}}}\\
 \hline
-Log in with email & Valid credentials & Success \\
-                  & Invalid email & Failure \\
-                  & Invalid password & Failure \\
-\hline
-Log in with Facebook & Valid credentials & Success \\
-                     & Invalid credentials & Failure \\
-\hline
-Log in with Twitter & Valid credentials & Success \\
-                    & Invalid credentials & Failure \\
-\hline
-Sign up with email & Email already in use & Message \\
-                   & Valid credentials & Success \\
-                   & Invalid password & Failure \\
-                   & Unconfirmed password & Failure \\
-                   & Invalid email & Failure + Message \\
-                   & Whitespace-only username & Failure + Message \\
-                   & Empty username & Failure + Message \\
-                   & Empty email & Failure + Message \\
-                   & Empty password & Failure + Message \\
-\hline
-Create a group & No name & Message \\
-               & Whitespace-only name & Failure + Message \\
-               & No description & Success + Message \\
-               & Whitespace-only description & Success + Message \\
-               & Else & Success + trim whitespace + collapse whitepace in name \\
-\hline
-Search for users & Enter display name & Display list of matching users or ``no matches'' \\
-                 & Enter email & Detect email, no change \\
-                 & Enter phone number & Detect phone number, no change \\
-                 & Enter incomplete phone number or incomplete email & Display ``no matches'' \\
-\hline
-Send invite to users to join group & By email unassociated with user & Generate and send email \\
-                                   & By email associated with user & Send app notification to user, display invite in-app \\
-                                   & By phone number unassociated with user & Detect phone number, no change \\
-                                   & By phone number associated with user & Send app notification to user, display invite in-app \\
-\hline
-Join a public group & Tap ``join group'' & Displays confirmation message (y/n) \\
-                    & Accept confirmation message & Message ``request sent'' \\
-                    & Decline confirmation message & Dismiss message \\
-\hline
-Join group via invite & Tap ``join'' & Join group \\
-                      & Tap ``delete'' & Delete invitation \\
-\hline
-Leave a group & Tap ``Leave Group'' & Display confirmation message (y/n) \\
-              & Accept confirmation message & If leader, display confirmation to choose new leader (y/n), else leave the current group and return to nearby groups \\
-              & Leader accepts confirmation & Display list of group members \\
-              & Leader declines confirmation & Leave current group and return to nearby group list \\
-              & Decline confirmation message & Dismiss message, do not leave group \\
-\hline
-Group leader disbands group & Leader taps ``disband group'' & Display confirmation message (y/n) \\
-                            & Accept confirmation & Display message to all users and return to join group page \\
-                            & Decline confirmation & Dismiss message, do not leave group \\
-\hline
-Enter display name & Empty string & Highlight, no accept \\
-                   & Too short & Highlight, no accept \\
-                   & All whitespace & Highlight, no accept \\
-                   & Valid display name & Accept, trim whitespace, collapse consecutive whitespace \\
-\hline
-Sign out of app & Tap ``log out'' & Display confirmation message (y/n) \\
-                & Accept confirmation & Log out of the application and display login page \\
-                & Decline confirmation & Dismiss message, do not change application state \\
-\hline
-Send a group message & Emtpy string & Send button disabled \\
-                     & Non-empty string & Message sent to all members and immediately displayed in conversation + saved to storage \\
-\hline
-See locations of group members & Tap on ``map'' tab & Map is displayed, group member locations displayed on map as pins (zoombed out to display all group members) \\
-\hline
-Opt-out location updates & Toggle ``enable location updates'' off & Display toast/notify message \\
-                         & Toggle ``enable location updates'' on & Display confirmation message (y/n) \\
-                         & Accept confirmation & Share user location, begin auto location share \\
-                         & Decline confirmation & Toggle ``enable location updates'' off \\
-\hline
-Receive message & Received message & Unread indicator in tab navigation bar \\
-\hline
+Valid credentials & Success \\
+Invalid email & Failure \\
+Invalid password & Failure \\
 \end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Log in with Facebook}}}\\
+\hline
+Valid credentials & Success \\
+Invalid credentials & Failure \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Log in with Facebook}}}\\
+\hline
+Valid credentials & Success \\
+Invalid credentials & Failure \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Sign up with email}}}\\
+\hline
+Email already in use & Message \\
+Valid credentials & Success \\
+Invalid password & Failure \\
+Unconfirmed password & Failure \\
+Invalid email & Failure + Message \\
+Whitespace-only username & Failure + Message \\
+Empty username & Failure + Message \\
+Empty email & Failure + Message \\
+Empty password & Failure + Message \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Create a group}}}\\
+\hline
+No name & Message \\
+Whitespace-only name & Failure + Message \\
+No description & Success + Message \\
+Whitespace-only description & Success + Message \\
+Else & Success + trim whitespace + collapse whitepace in name \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Search for users}}}\\
+\hline
+Enter display name & Display list of matching users or ``no matches'' \\
+Enter email & Detect email, no change \\
+Enter phone number & Detect phone number, no change \\
+Enter incomplete phone number or incomplete email & Display ``no matches'' \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Send invite to users to join group}}}\\
+\hline
+By email unassociated with user & Generate and send email \\
+By email associated with user & Send app notification to user, display invite in-app \\
+By phone number unassociated with user & Detect phone number, no change \\
+By phone number associated with user & Send app notification to user, display invite in-app \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Join a public group}}}\\
+\hline
+Tap ``join group'' & Displays confirmation message (y/n) \\
+Accept confirmation message & Message ``request sent'' \\
+Decline confirmation message & Dismiss message \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Join group via invite}}}\\
+\hline
+Tap ``join'' & Join group \\
+Tap ``delete'' & Delete invitation \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Leave a group}}}\\
+\hline
+Tap ``Leave Group'' & Display confirmation message (y/n) \\
+Accept confirmation message & If leader, display confirmation to choose new leader (y/n), else leave the current group and return to nearby groups \\
+Leader accepts confirmation & Display list of group members \\
+Leader declines confirmation & Leave current group and return to nearby group list \\
+Decline confirmation message & Dismiss message, do not leave group \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Group leader disbands group}}}\\
+\hline
+Leader taps ``disband group'' & Display confirmation message (y/n) \\
+Accept confirmation & Display message to all users and return to join group page \\
+Decline confirmation & Dismiss message, do not leave group \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Enter display name}}}\\
+\hline
+Empty string & Highlight, no accept \\
+Too short & Highlight, no accept \\
+All whitespace & Highlight, no accept \\
+Valid display name & Accept, trim whitespace, collapse consecutive whitespace \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Sign out of app}}}\\
+\hline
+Tap ``log out'' & Display confirmation message (y/n) \\
+Accept confirmation & Log out of the application and display login page \\
+Decline confirmation & Dismiss message, do not change application state \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Send a group message}}}\\
+\hline
+Emtpy string & Send button disabled \\
+Non-empty string & Message sent to all members and immediately displayed in conversation + saved to storage \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{See locations of group members}}}\\
+\hline
+Tap on ``map'' tab & Map is displayed, group member locations displayed on map as pins (zoombed out to display all group members) \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Opt-out location updates}}}\\
+\hline
+Toggle ``enable location updates'' off & Display toast/notify message \\
+Toggle ``enable location updates'' on & Display confirmation message (y/n) \\
+Accept confirmation & Share user location, begin auto location share \\
+Decline confirmation & Toggle ``enable location updates'' off \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Receive message}}}\\
+\hline
+Received message & Unread indicator in tab navigation bar \\
+\end{tabularx}
+\end{center}
+
+\arrayrulecolor{black}
 
 
 \section{System Integration Analysis}
