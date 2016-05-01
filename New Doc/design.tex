@@ -61,16 +61,21 @@ In reflection of the shortcomings of the first design iteration, the database sc
  
  	\subsubsection{Sign up and Log in Classes}
  	Everything starts with the WelcomeActivity.java class. This initial activity checks if the user has logged in or not by looking against its local Parse database. If a user has logged in or signed up it will be stored in the local Parse database.
+ 	
  	The SignupActivity.java is next on the list. It allows a user to sign into parse, it was created using the Android log-in/sign-up template. From here a user can access a Facebook log-in page and a Twitter log-in page. Additionally the class, LoginActivity.java allows the user to log into a registered email account.
+ 	
  	For either of the previous paths, the next class the user will enter is GroupJoinActivity.java.
  	\subsubsection{Menu Classes}
  	The menu can be accessed from the top right of the app after a user has either logged in or created an account. The code for the creation of the menu can be found in GroupJoinActivity.java (for a basic menu) and in GroupInfoFragment.java (which can be basic or a leader menu). 
+ 	
  	The classes connected to the menu include: SettingsActivity.java, NotificationActivity.java and InviteNavigationActivity.java.  The SettingsActivity.java class allows a user to log out and return to the SignUpActivity.java class, as well as see what group they are in, and gives the user the ability to change their user name. The NotificationActivity.java allows the user to access all their in app notifications. The InviteNavigationActivity.java will be discussed later because it is only accessible if the user is a leader of a group.
  	\subsubsection{Initial Tab Class}
  	After a user has joined a group in the class GroupJoinActivity.java, they will reach GroupNavigationActivity.java. This activity is in charge of displaying the four Fragment class: EventFragment.java, GroupInfoFragment.java, MessagingFragment.java, and MapFragment.java. It is the main UX for the user for the duration of a group.
+ 	
  	The EventFragment.java is not implemented and is no longer accessible in the app.
  	\subsubsection{Group Management Classes}
  	The GroupInfoFragment.java class is the main class for group management tools. This class allows a leader of a group to kick a member or promote a new leader. This class also holds the code for the group menu. The group menu also allows the user to change the group name.
+ 	
  	Other group management classes can be accessed though the menu for group leaders. These classes include: InviteNavigationActivity.java, InviteConfirmFragment.java, and InviteSearchFragment.java. The InviteNavicationgActivity.java class is much like the GroupNavigationActivity.java class. It is a tab system holding the other two classes. The InviteSearchFragment.java allows the leader to search for other users they wish to add to the group. It creates a group list that is given to the InviteConfirmFragment.java class. Here the leader can make sure that these are the people that he/she want to invite and completes the process.
  	\subsubsection{Location Classes}
  	(TODO)
@@ -81,8 +86,13 @@ I explicitly want to note that the messaging service and many of the GUI element
 
 	\subsubsection{Miscellaneous Classes}
 	There were a few classes not explained from the ones listed above including: CrowdControlApplication.java, GroupJoinActivity.java, and GroupService.java.
+	
 	The CrowdControlApplication.java is the very first class that initializes the app on launch, it loads up any locally stored data as well as holds some global classes so that other activities can access them.
-	The GroupJoinActivity.java class loads in the groups for the user to select a group. It also holds a basic menu for a user to get to their own user related info.
+	
+	The GroupJoinActivity.java class loads in the groups for the user to select a group. It also holds a basic menu for a user to get to their own user related info. This class also uses the GroupModelAdapter.java class. This is used to change group models loaded in from Parse into objects that can be displayed in a list.
+	
+	The SimpleTabsAdapter.java is used to create views to hold multiple fragments in one activity. This used used in GroupNavigationActivity.java and in InviteNavigationActivity.java.
+	
 	(TODO) GroupService.java class.
 
  \subsection{UML}
