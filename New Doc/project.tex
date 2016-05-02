@@ -2,76 +2,62 @@
 
 
 \chapter{Project Overview}
-This section provides some housekeeping type of information with regard to the 
-team, project, environment, etc. 
+
+Outlined within this section are details involving the development of Crowd Control.  This chapter includes details about the team organization and structure.  Further included is information outlining the financial aspects and the development requirements in these regards as well. 
 
 
 
 \section{Team Member's Roles}
+Each team member plays a pivotal role in the development of Crowd Control.  Listed below are each members and their corresponding responsibilities within the production of Crowd Control.  Some of the duties of each member changed half way through production as development of iOS was halted for more progress on Android.  The entire projects duties are outlined below for each individual developer.  \\
 
-Johnnathon Ackerman - Johnnathon is leading the GUI design and implimentation side for the android version of Crowd Control. This entails: 
+\textbf{Johnathan Ackerman}- Johnathan is leading the front end design and messaging implementation for the Android version of Crowd Control. This entails: 
 	\begin {enumerate}
-	\item Graphical Design
-	\item Smooth Moving Interfaces
-	\item Easy to Use and learn layout
+	\item Creating and designing GUI elements for android
+	\item Designing messaging Layout
+	\item Implementing logic behind group join, group info, and messaging views for Android
 	\end{enumerate}
 
-Daniel Andrus - Daniel is leading the Gui design ad implimentation for the IoS version of Crowd Control. This entails:
+\textbf{Daniel Andrus} - Daniel for the first half was leading the Gui design ad implementation for the iOS version of Crowd Control.  During the second half he worked with Johnathan on Messaging as well as creating our background service.  Daniel has also been the structural designer for the model classes. These duties entail:
 	\begin {enumerate}
-	\item Graphical Design
-	\item Smooth Moving Interfaces
-	\item Easy to Use and learn layout
+	\item Creating and designing GUI elements for iOS.
+	\item Implementing logic behind most views for iOS
+	\item Implementing logic behind messaging for Android
+	\item Model structure design
+	\item Creating and implementing a background group service for Android that checks the server for group data updates
 	\end{enumerate}
 
-Charles Bonn - Charles is leading the database side of Crowd Control. This database is for both IoS and andriod versions. This entails:
+\textbf{Charles Bonn} - Charles is leading the server side of Crowd Control which involves server functions for both iOS and Android versions. This entails:
 	\begin{enumerate}
-	\item Creating and managing database qurries 
+	\item Creating and managing database queries 
 	\item Creating Cloud Code to manage database information
 	\item Database load testing
 	\end{enumerate}
-Charles is also working on future encryption of data going to and from the database.
-\newline
 
-Evan Hammer - Evan is leading the backend side for the IoS version of Crowd Control. This entails:
+\textbf{Evan Hammer} - Evan was leading the backend side for the iOS version of Crowd Control for the first half of development. During the second half of development Evan headed up the location handling and management for Android. This entails:
 	\begin{enumerate}
-	\item Creating links from the database to the mobile application
-		\begin{enumerate}
-		\item Login link
-		\item Group Join Link
-		\item Group Member
-		\end{enumerate}
-	\item Creating links to Apple maps to the mobile application
+		\item Implementing models for iOS
+		\item Creating Location Managers for both iOS and Android
+		\item Organizing location updates automatically between users
+		\item Working with Apple Maps and Google Maps
 	\end{enumerate}
 
-Joseph Mowry - Joseph is leading the backend side for the android version of Crowd Control. This endtails:
+\textbf{Joseph Mowry} - Joseph is leading the backend side for the Android version of Crowd Control. Also Joe has been involved with the creation of location management for the Android version.  This entails:
 
 	\begin{enumerate}
-	\item Creating links from the database to the mobile application
-		\begin{enumerate}
-		\item Login link
-		\item Group Join Link
-		\item Group Member
-		\end{enumerate}
-	\item Creating links to Apple maps to the mobile application
+		\item Implementing models for Android
+		\item Organizing location updates automatically between users
+		\item Working with Google Maps
 	\end{enumerate}
 
 
 
 \section{Project  Management Approach}
-This section will provide an explanation of the basic approach to managing the 
-project.  Typically, this would detail how the project will be managed through 
-a given Agile methodology.  The sprint length (i.e. 2 weeks) and product backlog 
-ownership and location (ex. Trello) are examples of what will be discussed.  An 
-overview of the system used to track sprint tasks, bug or trouble tickets, and 
-user stories would be warranted. 
+
+Crowd Control was developed using the Agile software development method.  The project was split up into 7 sprints each lasting 3 weeks.  For the first 4 sprints, each sprint was planned out with goals for each sprint.  The last 3 sprints had plans for each week, creating goals for all of the weeks inside of the sprints.  To track sprint goals, meeting minutes were used to define each members goals at the beginning of each sprint.  Another way to track goals and bugs along the way was to use the GitHub Issue tracker, each issue contained data about the feature or bug and any questions or extra data necessary.  All of this was wrapped up in scrum meetings five days a week.  Scrum meetings are stand-up meetings usually lasting five to ten minutes were each member would report on what they had accomplished, what they were working on next, and if there were any issues holding back progress.
 
 
 \section{ Stakeholder Information}
-
-
-This section would provide the basic description of all of the stakeholders for 
-the project.  Who has an interest in the successful and/or unsuccessful completion 
-of this project? 
+The stakeholders of this project were the members of Bowtaps LLC.  These five members were the same five members developing Crowd Control, their names are listed above in section 3.1.
 
 
 \subsection{Customer or End User (Product Owner)}
@@ -80,74 +66,402 @@ and prioritize the product backlog?  Who will they interact with on the team to
 drive product backlog priorities if not done directly? 
 
 \subsection{Management or Instructor (Scrum Master)}
-Who?  What role will they play in the project?  Will the Scrum Master drive the 
-Sprint Meetings? 
+For Crowd Control, Bowtaps chose to make Daniel Andrus the scrum master. His duties included helping guide scrum meetings and helping to break up features into week long goals.
 
 
 \subsection{Investors}
-Are there any?  Who?  What role will they play? 
+Currently Bowtaps has not sought out investment from external sources, instead the members developing Crowd Control have done so using funding from other sources.  To fund the development of Crowd Control the team has entered into a few competitions with their intellectual property to help generate funds.   The team has competed in the South Dakota Governor's Giant Vision, The Innovation Expo, and the Mines CEO Business Plan competitions to gain capitol to cover their current costs.
 
 
 \subsection{Developers --Testers}
-Who?  Is there a defined project manager, developer, tester, designer, architect, 
-etc.? 
+For the term of our development each member of the team was a developer and a tester.  This meant that before a member of the team merged their code from their branch to a main branch that they would go through and thoroughly test.
 
 \section{Budget}
-Describe the budget for the project including gifted equipment and salaries for 
-people on the project.
+The budget for Crowd Control is fairly simple.  For starting out and before a user base has been developed, e.g. less than 1000 users, Crowd Control can be developed for free sans developer salaries.  For this project Bowtaps has run on a complete development track where all members of the group have not received a salary for any of their work.  The only funds that have been spent by Bowtaps have not involved the development of Crowd Control and only have been for Bowtaps themselves.
 
 \section{Intellectual Property and Licensing}
-Describe the IP ownership and issues surrounding IP.
+The intellectual property Crowd Control is owned by Bowtaps LLC which is currently made up of the team currently developing Crowd Control.  All source code, documentation and presentation materials are protected by copyright.
 
 \section{Sprint  Overview}
-If the system will be implemented in phases, describe those phases/sub-phases (design, 
-implementation, testing, delivery) and the various milestones in this section. 
- This section should also contain a correlation between the phases of development 
-and the associated versioning of the system, i.e. major version, minor version, 
-revision. 
-
-All of the Agile decisions are listed here.  For example, how do you order your backlog?   
-Did you use planning poker?   
+Crowd Control has been developed in seven phases or sprints.  Each sprint has spanned three weeks and each will a unique set of goals for the development of Crowd Control.  Further in this document each sprint will be broken down into its own goals and also outlined are each of their successes and issues.
 
 \section{Terminology and Acronyms}
 Provide a list of terms used in the document that warrant definition.  Consider 
 industry or domain specific terms and acronyms as well as system specific. 
+\begin{itemize}
+\item iOS - Apple's mobile operating system for smartphones
+\item Android - Google's mobile operating system for smartphones
+\end{itemize}
 
 \section{Sprint Schedule}
-The sprint schedule.  Can be tables or graphs.   This can be a list of dates with the visual 
-representation given below.
+Below is a table of dates for each sprint.\\
+\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	Sprint & Date\\
+	\hline
+	Sprint 1 & 9/14/2015 - 10/2/2015\\
+	\hline
+	Sprint 2 & 10/12/2015 - 10/30/2015\\
+	\hline
+	Sprint 3 & 11/9/2015 - 11/27/2015\\
+	\hline
+	Sprint 3.5 & 12/21/2015 - 1/8/2016\\
+	\hline
+	Sprint 4 & 1/18/2016 - 2/5/2016\\
+	\hline
+	Sprint 5 & 2/15/2016 - 3/4/2016\\
+	\hline
+	Sprint 6 & 3/21/2016 - 4/15/2016\\
+	\hline
+	\end{tabular}
+\end{center}
 
 \section{Timeline}
-Gantt chart or other type of visual representation of the project timeline.
+Below is an overview of the timeline of the project by sprint.
+\begin{center}
+	\begin{tabular}{c|c|c}
+	Sprint & Tasks & Date\\
+	\hline
+	Sprint 1 &  Design UX & 10/2/2015\\
+	& Design Database& 10/2/2015\\
+	& Design Application Layers & 10/2/2015\\
+	& Set up GitHub repository & 10/2/2015\\
+	\hline
+	Sprint 2 & Code UX & 10/30/2015 \\
+	& Create Models & 10/30/2015\\
+	& Research public/private key passing & 10/30/2015\\
+	\hline
+	Sprint 3 & iOS Login & 11/27/2015\\
+	& iOS Facebook integration & 11/27/2015\\
+	& Mapping & 11/27/2015\\
+	& Work on Group Join & 11/27/2015\\
+	\hline
+	Sprint 3.5 & iOS Logout & 1/8/2016\\
+	& iOS Settings Page & 1/8/2016\\
+	& iOS Group Join/Leave & 1/8/2016\\
+	& Android Automatic Login & 1/8/2016\\
+	& Android Settings Page & 1/8/2016\\
+	& Android Group Leave & 1/8/2016\\
+	\hline
+	Sprint 4& Begin implementing Sinch & 1/22/2016\\
+	& Create location and messaging views and managers & 1/22/2016\\
+	& Design models and manager classes for messaging and location  & 1/22/2016\\
+	& Broadcast/receive messages to/from all members in a group & 1/29/2016 \\
+	& Create a layout for messaging & 1/29/2016 \\
+	& Create a MapFragment to display a map & 1/29/2016 \\
+	& Leaving and joining groups handled on Cloud Code & 1/29/2016 \\
+	& Retrieve locations of group members, place their locations on the map via pins & 2/5/2016\\
+	& Update group settings and data when changed & 2/5/2016 \\
+	& Update Group members if someone leaves or joins a group & 2/5/2016 \\
+	\hline
+	Sprint 5 & Moved Location functionality to Model Manager & 2/20/2016\\
+	&Caching of all objects&2/27/2016\\
+	&Android application theme upgrade&2/27/2016\\
+	&Group information displayed in more detail &3/4/2016\\
+	&Cloud functions created for group join/leave&3/4/2016\\
+	\hline
+	Sprint 6 & Updated group leader functionality & 3/21/2016\\
+	& Messaging Polished & 3/21/2016\\
+	& Created notification view layer and started implementation & 3/27/2016\\
+	& Worked out bugs for Giant Vision Demo & 4/8/2016\\
+	\hline
+	\end{tabular}
+\end{center}
 
 \section{Backlogs}
 Place the sprint backlogs here.    The product backlog will be in the chapter with the user 
 stories.
+\subsection{Sprint 1 Backlog}
+	\begin{itemize}
+	\item Design UX
+		\begin{enumerate}
+		\item Create groups
+		\item Leave groups
+		\item Group messaging
+		\item Start page
+		\end{enumerate}
+	\item Database
+		\begin{enumerate}
+		\item Design database schema
+		\item Implement database on Parse
+		\end{enumerate}
+	\item Design application layers ( MVC )
+	\item Set up GitHub repository
+	\end{itemize}
+	
+\subsection{Sprint 2 Backlog}
 
-\section{Burndown Charts}
-Place your burndown charts, team velocity information, etc here.   
+	\begin{itemize}
+	\item Code UX
+		\begin{enumerate}
+		\item Mapping features
+		\item Messaging UI
+		\end{enumerate}
+	\item Model
+		\begin{enumerate}
+		\item User Model
+		\item Communication Layer
+		\item Link back-end and front end
+		\end{enumerate}
+	\item Implement Cloud code
+	\item Business Plan
 
+	\end{itemize}
+\subsection{Sprint 3 Backlog}
+\begin{itemize}
+	\item Messaging API
+	\item Join Group Implementation
+	\item Cloud Code
+	\begin{enumerate}
+	\item Group Clean Up
+	\item User Information Links
+	\end{enumerate}
+	\item Business Plan
+	\begin{enumerate}
+	\item South Dakota Giant Vision
+	\item SDSM\&T Business Plan Competition
+	\end{enumerate}
+\end{itemize}
+
+\subsection{Sprint 3.5 Backlog}
+\begin{itemize}
+	\item iOS
+		\begin{enumerate}
+		\item Login/Logout
+			\begin{enumerate}
+			\item Improved login/sign up screens
+			\item Logout feature added
+			\end{enumerate}
+		\item Settings
+			\begin{enumerate}
+			\item Settings screen implemented
+			\item Logout functionality nested in the Settings screen
+			\end{enumerate}
+		\item Groups
+			\begin{enumerate}
+			\item Leaving/Joining a group implemented
+			\item Basic group operations
+			\item Detect if users are in a group
+			\end{enumerate}
+		\end{enumerate}
+		
+	\item Android
+		\begin{enumerate}
+		\item Login
+			\begin{enumerate}
+			\item Automatic login on startup (from data store)
+			\item Login to existing account via email address
+			\end{enumerate}
+		\item Settings
+			\begin{enumerate}
+			\item Page layout created and linked from Group Join page
+			\item Logout functionality implemented
+			\end{enumerate}
+		\item Groups
+			\begin{enumerate}
+			\item Leave button implemented
+			\item Tested adding/removing users from groups
+			\end{enumerate}
+		\end{enumerate}
+
+	\item Misc/Transitional
+		\begin{enumerate}
+			\item Further documented Android code to prepare for team merge
+			\item Android code review with iOS team, to prepare for team merge
+		\end{enumerate}
+
+	\end{itemize}
+\subsection{Sprint 4 Backlog}
+
+\begin{description}
+	\item[Week 1] \hfill
+		\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Begin implementing Sinch
+			\item Create location and messaging views and managers
+			\item Design models and manager classes for messaging and location
+			\item
+		\end{itemize}
+		\item Cloud Code
+		\begin{itemize}
+			\item Group data parsing started
+		\end{itemize}
+	\end{itemize}
+	
+  \item[Week 2] \hfill
+		\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Broadcast/receive messages to/from all members in a group
+			\item Create a layout for messaging
+			\item Create a MapFragment to display a map
+			\item Created buttons overtop the MapFragment to correspond to syncing and homing locations
+		\end{itemize}
+		\item Cloud code
+		\begin{itemize}
+			\item Leaving and joining groups handled
+			\item Checking existing email upon login (validation)
+		\end{itemize}
+	\end{itemize}
+  
+  \item[Week 3] \hfill
+		\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Retrieve locations of group members, place their locations on the map via pins
+			\item Update group settings and data when changed
+			\item Update Group members if someone leaves or joins a group
+			\item Group messaging unit tests
+			\item GPS Location unit tests
+		\end{itemize}
+		\item Cloud Code
+		\begin{itemize}
+			\item Returning group information upon changes
+			\item Functional Group update indicator complete
+			\item Basic group functionality implemented fully (login/logout, join/leave groups, update on change)
+		\end{itemize}
+	\end{itemize}
+\end{description}
+\subsection{Sprint 5 Backlog}
+\begin{description}
+	\item[Week 1] \hfill
+		\begin{itemize}
+		\item Senior Design Doc
+		\begin{itemize}
+			\item Do a general revision of the doc
+		\end{itemize}
+		\begin{itemize}
+		\item Business Plan
+			\begin{itemize}
+			\item Finish business plan for 2016 Governor's Giant Vision Competition
+			\end{itemize}
+		\end{itemize}
+		\item Android
+		\begin{itemize}
+			\item Model Caching/ Uniformity
+			\item Clean up appearance
+		\end{itemize}
+	\end{itemize}
+	
+  \item[Week 2] \hfill
+		\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Clean up the appearance of the app
+			\item Display Group Members on group info page
+			\item Safe group operations(leaving/joining group)
+			\item Loading animations on homing and syncing
+		\end{itemize}
+		\item Cloud code
+		\begin{itemize}
+			\item Safe group operations(leaving/joining group)
+		\end{itemize}
+	\end{itemize}
+  
+  \item[Week 3] \hfill
+		\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Integration Testing
+			\item Start Alpha Testing
+		\end{itemize}
+		\item Cloud Code
+		\begin{itemize}
+			\item test join and leave functionality
+		\end{itemize}
+	\end{itemize}
+\end{description}
+\subsection{Sprint 6 Backlog}
+\begin{description}
+	\item[Week 1] \hfill
+	\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item Messaging
+			\begin{itemize}
+				\item Messages now include the names of the sender
+				\item Leader can now kick or promote members
+				\item Messages now load per group from parse
+			\end{itemize}
+			\item Group Management Tools
+			\begin{itemize}
+				\item Leader can now kick a member
+				\item Leader can now promote a member
+			\end{itemize}
+			\item Location
+			\begin{itemize}
+				\item Update location automatically using service
+				\item Set Group Location
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	
+  \item[Week 2] \hfill
+		\begin{itemize}
+		\item Android
+		\begin{itemize}
+			\item fixed leader bug, now leader loads properly
+			\item broke ground for notification system
+			\begin{itemize}
+				\item created tab system for invites and accepts
+				\item created fragments for invite and confirm
+				\item created model for notification system
+				\item items can be transferred from the invite fragment to the confirm fragment
+			\end{itemize}
+			\item Option Menu's added 
+			\begin{itemize}
+				\item group join now has an option menu
+				\item settings activity moved to option menu
+				\item Group name can be changed in option menu
+				\item option menu is different if you are a group leader
+				\item option menu leads to invite system
+				\item option menu leads to blank notification page
+			\end{itemize}
+			\item Reformatted settings activity
+			\begin{itemize}
+				\item now displays and can change display name
+				\item displays a current group if in one
+				\item added a finish button for clarity
+			\end{itemize}
+		\end{itemize}
+		\item Cloud code
+		\begin{itemize}
+			\item Safe group operations(leaving/joining group)
+		\end{itemize}
+	\end{itemize}
+  
+  \item[Week 3] \hfill
+		\begin{itemize}
+		\item Giant Vision Competition
+		\begin{itemize}
+			\item Create the pitch
+			\item Create expo supporting materials
+		\end{itemize}
+	\end{itemize}
+\end{description}
 
 \section{Development Environment}
-The basic purpose for this section is to give a developer all of the necessary 
-information to setup their development environment to run, test, and/or develop. 
 
+To develop Crowd Control the team used a few different products to develop, test, and run.  For development of Crowd Control for Android, the team used the Android Studio IDE which supports all aspects of Android development.  Using Android Studio's Layout Editor to help create the GUI, and using its built in support for Java to code the controller and model layers. The Android Studio download online comes with all of the necessary products to build, run, and test Crowd Control. The iOS development all took place on XCode, an Apple Development IDE, much like Android Studio XCode contains a layout editor and all of the necessary build scripts to build, run, and test the iOS version of Crowd Control.  For the back end of development, the team chose to use parse and created two databases on the platform.  One database for development and one for deployment.  Both databases are wrapped by the app so there is little trouble to switch the code when time for deployment.
 
 \section{Development IDE and Tools}
 Describe which IDE and provide links to installs and/or reference material. 
+\begin{itemize}
+\item[Android]
+	Android Studio - http://developer.android.com/sdk/index.html
+\item[iOS]
+	XCode - Xcode can be found on the Apple App Store for free
+\item[Parse]
+	Parse Accounts can be obtained at parse.com
+\end{itemize}
 
-\section{Source  Control}
-Which source control system is/was used?  How was it setup?  How does a developer 
-connect to it? 
+\section{Source Control}
+To manage source control of Crowd Control, Bowtaps is currently using Git, and the server is hosted by GitHub.
 
-\section{Dependencies}
-Describe all dependencies associated with developing the system. 
-
-\section{Build  Environment}
-How are the packages built?  Are there build scripts? 
+\section{Build Environment}
+To build Crowd Control there is little difference on the developers end between Android and iOS.  On the Android side, Android Studio uses a build environment called Gradle that builds and compiles the source code and packages it into an apk.  However for the developer, little has to be done besides running the Gradle scripts to receive an apk.  The only thing to note on the Android build phases would be that there must be a match between the Java Version used for building and compilation and the SDK version.  This correlation can be found online as new SDK release and as new Java versions are available.  On the iOS side there is even less management necessary. For iOS, XCode manages all of the building and compiling of the Swift code.  Only at the beginning of a project or upon the choice to update the lowest supported version of iOS are changes necessary to the build settings.  However, if needed these settings can be accessed in XCode under the build settings tab.  
 
 \section{Development Machine Setup}
-If warranted, provide a list of steps and details associated with setting up a 
-machine for use by a developer. 
-
-
+To develop Crowd Control for iOS or Android on an Apple device, such as a MacBook or other Apple Product, the only setup required is to download the IDEs necessary.  On the windows side however it should be noted that after installing the Android Studio IDE depending on the type of physical device used for testing, there may be necessary driver downloads to interface with Android Studio's built in ADB(Android Debug Bridge).  These drivers can be found online either from the manufacturer of the mobile device or some can be found on third party sites depending on the phone.
