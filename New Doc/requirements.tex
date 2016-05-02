@@ -3,7 +3,7 @@
 \chapter{User Stories,  Requirements, and Product Backlog}
 \section{Overview}
 
-This section contains the features, creation, and develpment of crowd control. It covers prerequsite user stories, to the design and implimentation of the application its self.
+This section contains the features, creation, and development of crowd control. It covers prerequisite user stories, to the design and implementation of the application its self.
 
 %The overview should take the form of an executive summary.  Give the reader a feel 
 %for the purpose of the document, what is contained in the document, and an idea 
@@ -61,7 +61,7 @@ As a user i want to leave a group.
 Much like joining a group the user would like to leave a group at any time and this process to be as painless as possible.  Using a button on the main group page will allow a user to leave the current group for whatever their reason.
 
 \subsection{User Story \#7} 
-As a user I want the abilitiy to login with a custom account.
+As a user I want the ability to login with a custom account.
 
 \subsubsection{User Story \#7 Breakdown}
 For a user to be registered with our system they will have to login.  This gives the option for the user to login with a custom Bowtaps login.
@@ -102,11 +102,6 @@ As a group leader I would like to invite members to a private group
 To join a private group the group leader must send an invitation to the members that would like to join. 
 
 \section{Requirements and Design Constraints}
-%Use this section to discuss what requirements exist that deal with meeting the 
-%business need.  These requirements might equate to design constraints which can 
-%take the form of system, network, and/or user constraints.  Examples:  Windows 
-%Server only, iOS only, slow network constraints, or no offline, local storage capabilities. 
-
 This section contains the requirements and constraints of all aspects of Crowd Control.  This includes requirements and constraints for both iOS and Android operating systems, server side, and network.
 
 
@@ -132,7 +127,7 @@ Crowd Control is being developed to run on two different mobile operating system
 
 \subsection{Network Requirements}
 
-Network requrements are mobile networks as this is a mobile applications. The requirement on our part is making sure that the application is able to reach the server and use at little data as possible when connected to the network. Making sure we use as little data as possible will help our users not use all of their data. 
+Network requirements are mobile networks as this is a mobile applications. The requirement on our part is making sure that the application is able to reach the server and use at little data as possible when connected to the network. Making sure we use as little data as possible will help our users not use all of their data. 
 
 \subsection{Development Environment Requirements}
 %What are they?  Is the system supposed to be cross-platform?
@@ -158,18 +153,51 @@ We have set restrictions on the developemnt of Crowd Control and are listed as f
 Crowd Control is to be built for the two largest mobile operating systems, Android and iOS.  This choice was made to support the two most used smartphone operating systems because between these two, they support 94.7\% of the smartphone market.  Also considering the time restriction of full-time students and the length of Senior Design, the main operating system for development will be Android.
 
 \section{Product Backlog}
-%The full product backlog should go here.  The sprint backlogs are located in the project chapter.
-
- 
 \begin{itemize}
-\item What system will be used to keep track of the backlogs and sprint status?
-\item Will all parties have access to the Sprint and Product Backlogs?
-\item How many Sprints will encompass this particular project?
-\item How long are the Sprint Cycles?
-\item Are there restrictions on source control? 
+\item UX
+\begin{itemize}
+	\item Create groups
+	\item Leave groups
+	\item Group messaging
+	\item Start page
+	\item Mapping features
+	\item Messaging UI
 \end{itemize}
-
-
+\item Database
+\begin{itemize}
+	\item Design database schema
+	\item Implement database on Parse
+\end{itemize}
+\item Cloud Code
+\begin{itemize}
+	\item Safe group operations(leaving/joining group)
+\end{itemize}
+\item Android
+\begin{itemize}
+	\item User Model
+	\item Communication Layer
+	\item Link back-end and front end
+	\item Messaging API
+	\item Join Group Implementation
+	\item Settings screen implemented
+	\item Logout functionality nested in the Settings screen
+	\item Implement Sinch
+	\item Create location and messaging views and managers
+	\item Design models and manager classes for messaging and location
+	\item Retrieve locations of group members, place their locations on the map via pins
+	\item Model Caching/ Uniformity
+\end{itemize}
+\item iOS
+\begin{itemize}
+	\item User Model
+	\item Communication Layer
+	\item Link back-end and front end
+	\item Messaging API
+	\item Join Group Implementation
+	\item Model Manager
+\end{itemize}
+\item Business Plan
+\end{itemize}
 \section{Research or Proof of Concept Results}
 %This section is reserved for the discussion centered on any research that needed 
 %to take place before full system design.  The research efforts may have led to 
@@ -272,10 +300,4 @@ Below are screen shots from the Android version of CrowdControl.
 	\end{figure}
 
 
-\section{Supporting Material}
-
-
-%This document might contain references or supporting material which should be documented 
-%and discussed  either here if appropriate or more often in the appendices at the end.  This material may have been provided by the stakeholders  
-%or it may be material garnered from research tasks.
 
