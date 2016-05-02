@@ -196,3 +196,24 @@ Taken from \href{https://developer.apple.com/library/mac/documentation/IDEs/Conc
 %% \newpage  %%  if needed ...
 \section{Programmer Manual}
 
+\subsection{Api key changes}
+The API keys are located in 
+
+	\begin{figure}[tbh]
+	\begin{center}
+	\fbox{\includegraphics[scale=.4]{Additional/android/apiAndroid.png}}
+	\end{center}
+	\caption{Android Api Location \label{AndroidApiLocation}}
+	\end{figure}
+	
+	This Is The file where the API keys are held.
+	
+	\subsection{Global Strings}
+	Global strings are located in the same spot that the API keys are located. Theses strings are able to change to implement globalization for expansion to other languages. 
+	
+	\subsection{Crash handeling}
+	Crashalitics is integrated and handles and gives email reports of crashes. Crashalitics will give information such as number of crashes, time, file location and file line.
+	
+	\subsection{Database} 
+	
+	Parse handles the database. Values here should not be changed or removed. Tables are able to be added as Crowd Control expands.
