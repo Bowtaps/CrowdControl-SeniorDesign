@@ -189,14 +189,14 @@ var groupMembers: [UserProfileModel]\\
 
 %method
 \hypertarget{class_ParseGroupModel.iOS.groupLeader}{\index{ParseGroupModel.iOS.groupLeader@{ParseGroupModel.iOS.groupLeader}!ParseGroupModel.iOS.groupLeader@{ParseGroupModel.iOS.groupLeader}}
-\index{ParseGroupModel.iOS.groupLeader@{ParseGroupModel.iOS.groupLeader}!ParseGroupModel.iOS.groupLeader@{ParseGroupModel.iOS.groupLeader}
+\index{ParseGroupModel.iOS.groupLeader@{ParseGroupModel.iOS.groupLeader}!ParseGroupModel.iOS.groupLeader@{ParseGroupModel.iOS.groupLeader}}
 \subsubsection[{ParseGroupModel.iOS.groupLeader}]{\setlength{\rightskip}{0pt plus 5cm}groupLeader (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{ParseGroupModel.iOS.groupMembers}
 
-he UserProfileModel object who is the designated leader of the group.\\
+The UserProfileModel object who is the designated leader of the group.\\
 
 \textbf{Modifier and Type:}\\
 \tab var groupMembers:\\
@@ -210,13 +210,13 @@ var groupLeader: UserProfileModel?\\
 
 %method
 \hypertarget{class_ParseGroupModel.iOS.addGroupMember}{\index{ParseGroupModel.iOS.addGroupMember@{ParseGroupModel.iOS.addGroupMember}!ParseGroupModel.iOS.addGroupMember@{ParseGroupModel.iOS.addGroupMember}}
-\index{ParseGroupModel.iOS.addGroupMember@{ParseGroupModel.iOS.addGroupMember}!ParseGroupModel.iOS.addGroupMember@{ParseGroupModel.iOS.addGroupMember}
+\index{ParseGroupModel.iOS.addGroupMember@{ParseGroupModel.iOS.addGroupMember}!ParseGroupModel.iOS.addGroupMember@{ParseGroupModel.iOS.addGroupMember}}
 \subsubsection[{ParseGroupModel.iOS.addGroupMember}]{\setlength{\rightskip}{0pt plus 5cm}addGroupMember (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{ParseGroupModel.iOS.addGroupMember}
-\textbf{addGroupMember(_:)}\\
+\textbf{addGroupMember(\_:)}\\
 
 Method for adding a user as a member of the group. Model must be saved afterwards, as this method does not automatically save the model.\\
 
@@ -232,7 +232,7 @@ func addGroupMember(member: UserProfileModel) -> Bool\\
 
 %method
 \hypertarget{class_ParseGroupModel.iOS.removeGroupMember}{\index{ParseGroupModel.iOS.removeGroupMember@{ParseGroupModel.iOS.removeGroupMember}!ParseGroupModel.iOS.removeGroupMember@{ParseGroupModel.iOS.removeGroupMember}}
-\index{ParseGroupModel.iOS.removeGroupMember@{ParseGroupModel.iOS.removeGroupMember}!ParseGroupModel.iOS.removeGroupMember@{ParseGroupModel.iOS.removeGroupMember}
+\index{ParseGroupModel.iOS.removeGroupMember@{ParseGroupModel.iOS.removeGroupMember}!ParseGroupModel.iOS.removeGroupMember@{ParseGroupModel.iOS.removeGroupMember}}
 \subsubsection[{ParseGroupModel.iOS.removeGroupMember}]{\setlength{\rightskip}{0pt plus 5cm}removeGroupMember (
 \begin{DoxyParamCaption}
 {}
@@ -254,7 +254,7 @@ func removeGroupMember(member: UserProfileModel) -> Bool\\
 
 %method
 \hypertarget{class_ParseGroupModel.iOS.load}{\index{ParseGroupModel.iOS.load@{ParseGroupModel.iOS.load}!ParseGroupModel.iOS.load@{ParseGroupModel.iOS.load}}
-\index{ParseGroupModel.iOS.load@{ParseGroupModel.iOS.load}!ParseGroupModel.iOS.load@{ParseGroupModel.iOS.load}
+\index{ParseGroupModel.iOS.load@{ParseGroupModel.iOS.load}!ParseGroupModel.iOS.load@{ParseGroupModel.iOS.load}}
 \subsubsection[{ParseGroupModel.iOS.load}]{\setlength{\rightskip}{0pt plus 5cm}load (
 \begin{DoxyParamCaption}
 {}
@@ -264,7 +264,7 @@ func removeGroupMember(member: UserProfileModel) -> Bool\\
 Loads this object from Parse storage synchronously. In addition to the normal functionality inherited from ParseBaseModel, this function also fetches and caches the users who are members of this group.\\
 
 \textbf{Modifier and Type:}\\
-\taboverride func\\
+\tab override func\\
 
 
 \textbf{Declaration:}
@@ -275,17 +275,17 @@ override func load() throws\\
 
 %method
 \hypertarget{class_ParseGroupModel.iOS.loadInBackground}{\index{ParseGroupModel.iOS.loadInBackground@{ParseGroupModel.iOS.loadInBackground}!ParseGroupModel.iOS.loadInBackground@{ParseGroupModel.iOS.loadInBackground}}
-\index{ParseGroupModel.iOS.loadInBackground@{ParseGroupModel.iOS.loadInBackground}!ParseGroupModel.iOS.loadInBackground@{ParseGroupModel.iOS.loadInBackground}
+\index{ParseGroupModel.iOS.loadInBackground@{ParseGroupModel.iOS.loadInBackground}!ParseGroupModel.iOS.loadInBackground@{ParseGroupModel.iOS.loadInBackground}}
 \subsubsection[{ParseGroupModel.iOS.loadInBackground}]{\setlength{\rightskip}{0pt plus 5cm}loadInBackground (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{ParseGroupModel.iOS.loadInBackground}
-\textbf{loadInBackground(_:)}\\
+\textbf{loadInBackground(\_:)}\\
 Loads this object from Parse storage asynchronously. In addition to the normal functionality inherited from ParseBaseModel, this function also fetches and caches the users who are members of this group.\\
 
 \textbf{Modifier and Type:}\\
-\taboverride override func\\
+\tab override override func\\
 
 
 \textbf{Declaration:}
@@ -296,17 +296,17 @@ override func loadInBackground(callback: ((object: BaseModel?, error: NSError?) 
 
 %method
 \hypertarget{class_ParseGroupModel.iOS.createGroup}{\index{ParseGroupModel.iOS.createGroup@{ParseGroupModel.iOS.createGroup}!ParseGroupModel.iOS.createGroup@{ParseGroupModel.iOS.createGroup}}
-\index{ParseGroupModel.iOS.createGroup@{ParseGroupModel.iOS.createGroup}!ParseGroupModel.iOS.createGroup@{ParseGroupModel.iOS.createGroup}
+\index{ParseGroupModel.iOS.createGroup@{ParseGroupModel.iOS.createGroup}!ParseGroupModel.iOS.createGroup@{ParseGroupModel.iOS.createGroup}}
 \subsubsection[{ParseGroupModel.iOS.createGroup}]{\setlength{\rightskip}{0pt plus 5cm}createGroup (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{ParseGroupModel.iOS.createGroup}
-\textbf{createGroup(_:description:)}\\
+\textbf{createGroup(\_:description:)}\\
 Function to create a group if there is not one that exists\\
 
 \textbf{Modifier and Type:}\\
-\taboverride override func\\
+\tab override override func\\
 
 
 \textbf{Declaration:}
@@ -326,7 +326,7 @@ Object of type ParseGroupModel that contains the information\\
 
 %method
 \hypertarget{class_ParseGroupModel.iOS.getAll}{\index{ParseGroupModel.iOS.getAll@{ParseGroupModel.iOS.getAll}!ParseGroupModel.iOS.getAll@{ParseGroupModel.iOS.getAll}}
-\index{ParseGroupModel.iOS.getAll@{ParseGroupModel.iOS.getAll}!ParseGroupModel.iOS.getAll@{ParseGroupModel.iOS.getAll}
+\index{ParseGroupModel.iOS.getAll@{ParseGroupModel.iOS.getAll}!ParseGroupModel.iOS.getAll@{ParseGroupModel.iOS.getAll}}
 \subsubsection[{ParseGroupModel.iOS.getAll}]{\setlength{\rightskip}{0pt plus 5cm}getAll (
 \begin{DoxyParamCaption}
 {}
@@ -337,7 +337,7 @@ Fetches all groups in storage synchronously.\\
 This is a blocking function that can take several seconds to complete. If an operation fails, then an exception will be thrown.\\
 
 \textbf{Modifier and Type:}\\
-\taboverride static func\\
+\tab override static func\\
 
 
 \textbf{Declaration:}
@@ -352,7 +352,7 @@ Array of group models in storage. \\
 
 %method
 \hypertarget{class_ParseGroupModel.iOS.getAllInBackground}{\index{ParseGroupModel.iOS.getAllInBackground@{ParseGroupModel.iOS.getAllInBackground}!ParseGroupModel.iOS.getAllInBackground@{ParseGroupModel.iOS.getAllInBackground}}
-\index{ParseGroupModel.iOS.getAllInBackground@{ParseGroupModel.iOS.getAllInBackground}!ParseGroupModel.iOS.getAllInBackground@{ParseGroupModel.iOS.getAllInBackground}
+\index{ParseGroupModel.iOS.getAllInBackground@{ParseGroupModel.iOS.getAllInBackground}!ParseGroupModel.iOS.getAllInBackground@{ParseGroupModel.iOS.getAllInBackground}}
 \subsubsection[{ParseGroupModel.iOS.getAllInBackground}]{\setlength{\rightskip}{0pt plus 5cm}getAllInBackground (
 \begin{DoxyParamCaption}
 {}
@@ -363,7 +363,7 @@ Fetches all groups in storage synchronously.\\
 Fetches all groups in Parse storage asynchronously, returning control to the main thread through the provided callback (if any).\\
 
 \textbf{Modifier and Type:}\\
-\taboverride static func\\
+\tab override static func\\
 
 
 \textbf{Declaration:}
@@ -379,7 +379,7 @@ static func getAllInBackground(callback: ((results: [ParseGroupModel]?, error: N
 
 %method
 \hypertarget{class_ParseGroupModel.iOS.getGroupContainingUser}{\index{ParseGroupModel.iOS.getGroupContainingUser@{ParseGroupModel.iOS.getGroupContainingUser}!ParseGroupModel.iOS.getGroupContainingUser@{ParseGroupModel.iOS.getGroupContainingUser}}
-\index{ParseGroupModel.iOS.getGroupContainingUser@{ParseGroupModel.iOS.getGroupContainingUser}!ParseGroupModel.iOS.getGroupContainingUser@{ParseGroupModel.iOS.getGroupContainingUser}
+\index{ParseGroupModel.iOS.getGroupContainingUser@{ParseGroupModel.iOS.getGroupContainingUser}!ParseGroupModel.iOS.getGroupContainingUser@{ParseGroupModel.iOS.getGroupContainingUser}}
 \subsubsection[{ParseGroupModel.iOS.getGroupContainingUser}]{\setlength{\rightskip}{0pt plus 5cm}getGroupContainingUser (
 \begin{DoxyParamCaption}
 {}
@@ -392,7 +392,7 @@ Fetches the first group to which the provided user belongs, if any. If no group 
 This is a blocking function and should be executed on a thread separate from the main thread. See getGroupContainingUserInBackground(\_:callback:) for fetching on a separate thread. This function will throw an exception if an error occurs.\\
 
 \textbf{Modifier and Type:}\\
-\taboverride static func\\
+\tab override static func\\
 
 
 \textbf{Declaration:}
@@ -413,7 +413,7 @@ Optional ParseGroupModel object that has user as a member, or nil if no such gro
 
 %method
 \hypertarget{class_ParseGroupModel.iOS.getGroupContainingUserInBackground}{\index{ParseGroupModel.iOS.getGroupContainingUserInBackground@{ParseGroupModel.iOS.getGroupContainingUserInBackground}!ParseGroupModel.iOS.getGroupContainingUserInBackground@{ParseGroupModel.iOS.getGroupContainingUserInBackground}}
-\index{ParseGroupModel.iOS.getGroupContainingUserInBackground@{ParseGroupModel.iOS.getGroupContainingUserInBackground}!ParseGroupModel.iOS.getGroupContainingUserInBackground@{ParseGroupModel.iOS.getGroupContainingUserInBackground}
+\index{ParseGroupModel.iOS.getGroupContainingUserInBackground@{ParseGroupModel.iOS.getGroupContainingUserInBackground}!ParseGroupModel.iOS.getGroupContainingUserInBackground@{ParseGroupModel.iOS.getGroupContainingUserInBackground}}
 \subsubsection[{ParseGroupModel.iOS.getGroupContainingUserInBackground}]{\setlength{\rightskip}{0pt plus 5cm}getGroupContainingUserInBackground (
 \begin{DoxyParamCaption}
 {}
@@ -426,7 +426,7 @@ Fetches the first group to which the provided user belongs, if any. If no group 
 This function spawns a new thread for querying storage. After successful execution or if an error occurs, this function passes control back to the main thread by calling the closure that was optionally passed as an argument.\\
 
 \textbf{Modifier and Type:}\\
-\taboverride static func\\
+\tab override static func\\
 
 
 \textbf{Declaration:}
