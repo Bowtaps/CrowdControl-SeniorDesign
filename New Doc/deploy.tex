@@ -2,19 +2,92 @@
 % !TEX root = DesignDocument.tex
 
 \chapter{Release -- Setup -- Deployment}
-This section should contain any specific subsection regarding specifics in releasing, 
-setup, and/or deployment of the system. 
+After the proper licenses are attained. The both Android and iOS will be prepared for release in their respective app stores. This is much more difficult to do for the Apple Play Store due to stricter requirements on app quality. Once the apps are release, updates will also be available to download though each respective store.
 
 
 \section{Deployment Information and Dependencies}
-Are there dependencies that are not embedded into the system install? 
+There are no dependencies that need to be installed after app installation. The app will available in the app store for download.
 
 
 
 \section{Setup Information}
-How is a setup/install built? 
+The app will be down loadable from Google Play Store, or from the Apple Play Store, as a ready to run package.
+
+For testing, a device may be connected to a computer running Android studio or xCode, depending on an Android or Apple device respectively. After the device is connected and the proper drivers are installed (if applicable) the app may be installed using the IDE to the device for whichever version the IDE was currently running.
 
 
 
 \section{System  Versioning Information}
-How is the system versioned? 
+The Following is our versioning for our app during development. Due to being before release, the both iOS and Android are still in their 0 build. Each sprint during the 0 build is denoted by the second number. If there were any substantial changes that required an additional note, it would be denoted by the third number. Thus making our versions look like pre-release(0).sprint(x).substantial change(0), as an example.\\
+
+
+
+Current Version [0.3.0]
+\vspace*{5mm}
+
+{\color{SDColor5}
+\noindent
+\textit{Prepared By:}\\
+\textit{Daniel Andrus}\\
+\textit{Evan Hammer}
+}
+\vfill
+\noindent
+{\color{SDColor3} \textit{\textbf{iOS App Version History}}}\\
+\begin{tabular}{|>{\raggedright}p{1.5cm}|>{\raggedright}p{1.5cm}|>{\raggedright}p{9cm}|}
+\hline
+\textit{\textbf{Date}} &  \textit{\textbf{Version}} & \textit{\textbf{Comments}}\tabularnewline
+\hline
+ \textit{\textbf{10/1/15}} & \textit{0.0.0} & \textit{Napkin Designs and Ideas}\tabularnewline
+ \hline
+  \textit{\textbf{11/3/15}} & \textit{0.1.0} & \textit{App Initialization, basic framework}\tabularnewline
+ \hline
+ \textit{\textbf{12/11/15}} & \textit{0.2.0} & \textit{mapping and group functionality}\tabularnewline
+\hline
+ \textit{\textbf{1/18/16}} & \textit{0.3.0} & \textit{Model Restructure}\tabularnewline
+ &  & \tabularnewline
+\hline
+\end{tabular}
+\vfill
+
+\break
+
+
+Current Version [0.6.0]
+\vspace*{5mm}
+
+{\color{SDColor5}
+\noindent
+\textit{Prepared By:}\\
+\textit{Johnathan Ackerman}\\
+\textit{Daniel Andrus}\\
+\textit{Charles Bonn}\\
+\textit{Evan Hammer}\\
+\textit{Joseph Mowry}
+}
+\vfill
+\noindent
+{\color{SDColor3} \textit{\textbf{Android App Version History}}}\\
+\begin{tabular}{|>{\raggedright}p{1.5cm}|>{\raggedright}p{1.5cm}|>{\raggedright}p{9cm}|}
+\hline
+\textit{\textbf{Date}} &  \textit{\textbf{Version}} & \textit{\textbf{Comments}}\tabularnewline
+\hline
+ \textit{\textbf{10/1/15}} & \textit{0.0.0} & \textit{Napkin Designs and Ideas}\tabularnewline
+ \hline
+  \textit{\textbf{11/3/15}} & \textit{0.1.0} & \textit{App Initialization and Basic Framework}\tabularnewline
+ \hline
+ \textit{\textbf{12/11/15}} & \textit{0.2.0} & \textit{Group Functionality}\tabularnewline
+\hline
+ \textit{\textbf{1/18/16}} & \textit{0.3.0} & \textit{Bug Fixes and Model Reorganization}\tabularnewline
+\hline
+ \textit{\textbf{2/12/16}} & \textit{0.4.0} & \textit{Group Messaging and Mapping}\tabularnewline
+\hline
+ \textit{\textbf{2/18/16}} & \textit{0.5.0} & \textit{Theme Overall and Bug Fixes}\tabularnewline
+\hline
+\textit{\textbf{5/1/16}} & \textit{0.6.0} & \textit{Leader Controls}\tabularnewline
+ &  & \tabularnewline
+\hline
+\end{tabular}
+\vfill
+
+After release, our application will finally hit build 1. From this stage, any further sprints will of course increment the version, and if any bug fixes are required to be public during a sprint, we will increment the last number previously reserved for substantial changes in a sprint.
