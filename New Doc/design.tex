@@ -39,7 +39,7 @@ In reflection of the shortcomings of the first design iteration, the database sc
 	\end{figure}
 
  \subsection{Data Structures and Algorithms}
- TODO: Model classes and hierarchy? Perhaps irrelevant (see ``Classes below'')
+ By developing Crowd Control in the Android Studio environment, all the data structures available to Java are available to the project itself. That being said, there are no particularly noteworthy structures or algorithms that need to be expound upon, but there are class hierarchies that will be explained in later detail in this chapter.
  
  \subsection{Data Flow}
  TODO: Create Data Flow diagram of overall process
@@ -78,11 +78,15 @@ In reflection of the shortcomings of the first design iteration, the database sc
  	
  	Other group management classes can be accessed though the menu for group leaders. These classes include: InviteNavigationActivity.java, InviteConfirmFragment.java, and InviteSearchFragment.java. The InviteNavicationgActivity.java class is much like the GroupNavigationActivity.java class. It is a tab system holding the other two classes. The InviteSearchFragment.java allows the leader to search for other users they wish to add to the group. It creates a group list that is given to the InviteConfirmFragment.java class. Here the leader can make sure that these are the people that he/she want to invite and completes the process.
  	\subsubsection{Location Classes}
- 	(TODO)
+ 	Location functionality took place in three major locations: the GoogleLocationListener.java file in the ``location'' folder, the MapFragment.java file in the ``com.bowtaps.crowdcontrol'' folder, and the GroupService.java file in that same folder. 
+ 	
+ 	The map fragment serves as the controller for the fragment\_map.xml layout file. Since this is a fragment, in contrast to an activity, it must be nested in an activity class. The MapFragment.java class is nested inside the actual tab adapter. 
+ 	
+ 	The two other files work together to call methods to update and store location data when desired. This functionality is done via cloud code in order to carry these tasks out asynchronously. In short, the listeners on the service communicate with the cloud code, which carries out the desired functions, and reports it back to the listener. The data is then updated on the model, for the user and for the group members.
  	\subsubsection{Messaging Classes}
  Messaging consisted of a three major classes. These class include MessageService.java, MessageAdapter.java, and MessagingFragment.java. The MessagingFragment.java class is part of the tab system found in the InviteNavigationActivity.java. This way it can be a key component to the flow of groups. The MessageAdapter.java is a helping class. Its sole purpose is to modify message objects into views so that they can be displayed in the MessagingFragment. The MessageService.java handles our apps connection to Sinch. It's a stand alone service that sends and receives messages with other Sinch servers. Without this service the app wouldn't be able to listen for new messages. Finally, our overarching server, that handles all the updates for data in the database, also handles storing conversations. Each group has its own conversation in the database, that way the conversation can be loaded into the MessageService.java class so that they can be loaded for new members or if something happens to an existing members local copy.
 
-I explicitly want to note that the messaging service and many of the GUI elements were taken from a Sinch Git Hub repo ~\cite{Choset: sinch/android-messaging-tutorial, https://github.com/sinch/android-messaging-tutorial}. This repo gives full permission for commercial use ~\cite{Choset: License, https://github.com/sinch/android-messaging-tutorial/blob/master/LICENSE}.
+I explicitly want to note that the messaging service and many of the GUI elements were taken from a GitHub repository owned by Sinch \cite{sinch:github}. This repository gives full permission for commercial use ~\cite{Choset: License, https://github.com/sinch/android-messaging-tutorial/blob/master/LICENSE}.
 
 	\subsubsection{Miscellaneous Classes}
 	There were a few classes not explained from the ones listed above including: CrowdControlApplication.java, GroupJoinActivity.java, and GroupService.java.
@@ -92,22 +96,65 @@ I explicitly want to note that the messaging service and many of the GUI element
 	The GroupJoinActivity.java class loads in the groups for the user to select a group. It also holds a basic menu for a user to get to their own user related info. This class also uses the GroupModelAdapter.java class. This is used to change group models loaded in from Parse into objects that can be displayed in a list.
 	
 	The SimpleTabsAdapter.java is used to create views to hold multiple fragments in one activity. This used used in GroupNavigationActivity.java and in InviteNavigationActivity.java.
-	
-	(TODO) GroupService.java class.
 
  \subsection{UML}
- TODO: UML diagram...can Android studio generate these via a plugin?
+ Below in \ref{UseCaseUML}is a high-level use case UML diagram that shows basic user functionality of the Crowd Control application. The light-blue nodes are reserved for group leaders only, but the green colored nodes are available to all users. Once a group leader promotes another user to become the new group leader, the previous leader simply becomes a group member and loses their leader privileges. Of course, after creating a group, one must have group members in order to kick or promote members, as well as message or locate other members in the first place.
+ 
+ 	\begin{figure}[tbh!]
+	\begin{center}
+	\fbox{\includegraphics[scale=.55]{Additional/DesignPictures/Use-Case-UML.PNG}}
+	\end{center}
+	\caption{Use Case Diagram in UML. \label{UseCaseUML}}
+	\end{figure}
  
  \subsection{GUI}
- TODO: Overview of GUI design. Show differences in platform native ``look and feel''
- For Android, the GUI was developed in Android Studio using it's XML designer. The theme of the app is all in one file so that a basic Android feel is applied to the buttons, as well as using Google API calls to make the map feel native to Android users.
+ Designing the user interface of a mobile application has many unique challenges, all of which influence design decisions. In order to present users with a satisfying and intuitive experience, it is suggested to follow material design pattern aspects such as using Floating Action Buttons (FABs), and simply adhering to a more unified experience that can be found across multiple new applications on many platforms. With that in mind, we also focused on keeping the overall design very clean and free from clutter.
  
- \subsection{MVC, etc}
- In Android, the models are called models, the views are called layouts, and the controllers are called activities. Our models work to abstracted our third party software out of the activities. In this way, a parse call will not be scene in an activity. We have several models that keep track of local data and keep up to date with our Parse database using a service. These models include a group model, user model, user-profile model, conversation model, location model, and a notification model. This models can be accessed by a global model controller. This is initialized CrowdControlApplication.java, which is the main class of the app.
+ Another influence on our design choices, was the integration of Google Services in Crowd Control. Since Google's components currently follow a material design approach, we chose to do so as well to ensure a consistent experience when a user interacts with one of their interfaces.
  
- Each Activity is a controller, it is responsible for calling functions from the models to either change data in the database or to update the data in the layouts. Each activity has one layout in general. These layouts are XML files so their tags are java specific.
+ Lastly, Crowd Control was designed to look similar to users, regardless of their platform; an Android user should have a very similar interface, compared to that of an iOS user, and vice versa. By choosing elements from each platform's respective layout styles, we are also able to create a design that conforms to the guidelines set by the device or platform itself. Ultimately, our design choices ensure that users have a consistent user experience, independent of their platform or their device.
  
- (TODO) more beefyness
+ \subsection{MVC}
+ 
+ \subsubsection{Introduction}
+ MVC, or ``model-view-controller'' is a design pattern used widely in mobile applications to separate an application's core functionalities. \begin{itemize}
+  \item Model - Model represents an object to carry or store data. It can also have logic to update a controller if its data changes.
+  \item View - Views represent the visualization of the data that model contains, such as a screen or an activity in Android. These are represented as a layout generally.
+  \item Controller - Controllers act on both the model and the views. They control the data flow into model objects and updates the view whenever data changes. It maintains a separation between the view and the model.
+\end{itemize}
+ 
+ 
+ \subsubsection{Models}
+In Android, the models are a collection of model classes, such as the GroupModel and the UserModel, as well as other various storage classes. They can be found in a ``models'' folder at ``\textasciitilde /CrowdControl/app/src/main/java/com/bowtaps/crowdcontrol/model/'', shown below in \ref{ModelFolder}:
+
+	\begin{figure}[tbh!]
+	\begin{center}
+	\fbox{\includegraphics[scale=.85]{Additional/DesignPictures/FD-model-folder.PNG}}
+	\end{center}
+	\caption{Model classes in the ``model'' folder of the project. \label{ModelFolder}}
+	\end{figure}
+
+ Our models were designed to be abstracted away from our third party software in order to keep API-specific code of the activities. In this way, one could implement a different back-end service instead of Parse with minimal refactoring. We have several models that keep track of local data and keep up to date with our Parse database using a service. These models can be accessed by controllers. This is initialized CrowdControlApplication.java, which is the global main class of the app, serving as the application's entry point.
+ 
+ \subsubsection{Controllers}
+ Each activity file is a controller, and is responsible for calling functions from the models to either change data in the database, or to update the data in the layouts; it facilitates information between the models and the views. Each activity has one layout in general. These layouts take place in the form of XML files, and thus their tags are specific to the Android Studio/Java environment. Controller files can be found at ``\textasciitilde /CrowdControl/app/src/main/java/com/bowtaps/crowdcontrol/'', shown below in \ref{ControllersFolder}:
+ 
+ 	\begin{figure}[tbh!]
+	\begin{center}
+	\fbox{\includegraphics[scale=.85]{Additional/DesignPictures/FD-controller-folder.PNG}}
+	\end{center}
+	\caption{Model classes in the ``model'' folder of the project. \label{ControllersFolder}}
+	\end{figure}
+ 
+ \subsubsection{Views}
+ As stated, views typically take the form of XML files in the Crowd Control project. These files contain no business logic, and simply contain layout information that pertains to the appearance and attributes of the page itself. These layouts are constructed via the Android Studio layout designer, then edited to tailor to our specific needs. Views can be found at ``\textasciitilde /CrowdControl/app/src/main/res/layout/'', shown below in \ref{ViewsFolder}:
+ 
+	\begin{figure}[tbh!]
+	\begin{center}
+	\fbox{\includegraphics[scale=.85]{Additional/DesignPictures/FD-view-folder.PNG}}
+	\end{center}
+	\caption{Model classes in the ``model'' folder of the project. \label{ViewsFolder}}
+	\end{figure}
 
 \section{Group Messaging }
 
@@ -125,15 +172,30 @@ I explicitly want to note that the messaging service and many of the GUI element
 \end{itemize} 
 
 \subsection{Phase Overview}
-Group Messaging uses Sinch as a back-end. It allows are users to send a message to every other user in their group. We have modified code from this repo to do group messaging ~\cite{Choset: sinch/android-messaging-tutorial, https://github.com/sinch/android-messaging-tutorial}. This repo gives full permission for commercial use ~\cite{Choset: License, https://github.com/sinch/android-messaging-tutorial/blob/master/LICENSE}. 
+%TODO: Fix citations. The .bib file is set up correctly, and we are properly accessing the .bib sub-structure, but it is either not being displayed correctly. Perhaps incorrect compilation option? Syntax inconsistency?
+
+%Group Messaging uses Sinch as a back-end. It allows are users to send a message to every other user in their group. We have modified code from this repository to do group messaging ~\cite{Choset: sinch/android-messaging-tutorial, https://github.com/sinch/android-messaging-tutorial}. This repository gives full permission for commercial use ~\cite{Choset: License, https://github.com/sinch/android-messaging-tutorial/blob/master/LICENSE}. 
+
+\begin{description}
+  \item [Phase 1] Construct message containers and begin Sinch integration
+  \item [Phase 2] Construct messaging activity and view to encapsulate functionality
+  \item [Phase 3] Construct conversation containers to associate groups of messages
+  \item [Phase 4] Implement many-to-many message passing/broadcasting through Sinch delivery
+  \item [Phase 5] Store associated messages inside conversations, both on Parse, as well as caching locally on the user device
+\end{description}
 
 \subsection{Architecture Diagram}
 It is important to build and maintain an architecture diagram.  However, it may 
 be that a component is best described visually with a data flow diagram. 
 
 \subsection{Data Flow Diagram}
-It is important to build and maintain a data flow diagram.  However, it may be 
-that a component is best described visually with an architecture diagram. 
+
+	\begin{figure}[tbh!]
+	\begin{center}
+	\fbox{\includegraphics[scale=.60]{Additional/DesignPictures/MessagingDataFlow.PNG}}
+	\end{center}
+	\caption{Messaging data flow diagram. \label{MessagingDataFlow}}
+	\end{figure}
 
 \subsection{Design Details}
 Messaging interfaces with the user though the MessagingFragment.java class. This class uses the MessageAdapter.java class to take the data from the MessageService.java class, and display it to the user. The MessagingFragment.java class also allows the user to send messages though the MessageService.java class to all other members in the group.
@@ -155,8 +217,12 @@ The MessagingFragment.java class relies on the apps overarching service to keep 
 \end{itemize}
 
 \subsection{Phase Overview}
-This is an extension of the Phase Overview above, but specific to this component. 
- It is meant to be basically a brief list with space for marking the phase status. 
+\begin{description}
+  \item [Phase 1] Construct location containers and begin location services integration
+  \item [Phase 2] Construct map fragment, buttons for future homing/syncing functionality
+  \item [Phase 3] Implement homing and location syncing features, as well as interval-based location syncing
+  \item [Phase 4] Extract location update functionality from client, place into cloud-based service for better (faster) asynchronous user experience
+\end{description}
 
 \subsection{ Architecture  Diagram}
 It is important to build and maintain an architecture diagram.  However, it may 
@@ -185,9 +251,12 @@ This is where the details are presented and may contain subsections.
 \end{itemize}
 
 \subsection{Phase Overview}
-This is an extension of the Phase Overview above, but specific to this component. 
- It is meant to be basically a brief list with space for marking the phase status. 
-
+\begin{description}
+  \item [Phase 1] Construct model layer and base model classes to communicate with Parse and store data application-side
+  \item [Phase 2] Allow users to create or join groups, manage group members that join and create groups
+  \item [Phase 3] Add Group Leader functionality to manage group (kick/promote members, edit description, etc)
+  \item [Phase 4] Begin design/integration of messaging components for group management
+\end{description}
 \subsection{ Architecture  Diagram}
 It is important to build and maintain an architecture diagram.  However, it may 
 be that a component is best described visually with a data flow diagram. 
