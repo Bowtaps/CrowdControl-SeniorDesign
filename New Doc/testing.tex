@@ -585,17 +585,85 @@ length with these entrepreneurs.
 \section{Successes, Issues and Problems}
 
 During the course of our project's development, we have encountered various
-successes, issues, and problems in regards to system and unit tesing. Details on
-each of these are listed below, along with a summary on the changes made to our
-testing backlog throughout the course of this project.
+successes, issues, and problems. Details on each of these are listed below,
+along with a summary on the changes made to our backlog throughout the course of
+this project. This section covers successes, issues, and problems for the entire
+project, including aspects that are not directly related to testing.
 
 
-\subsection{Successes}
+\subsection{Successes in Client Application}
+
+The core deliverable of this project has been the iOS and Android client
+applications. These apps were the main focus of our design and development and
+are the product that end users will interact with directly. Thus, it was
+important to ensure that care and attention was devoted to this aspect of the
+project.
+
+During this project, we made great progress in creating functional versions of
+the client application for both the iOS and Android mobile phone platforms.
+In both versions we successfully incorporated the following features:
+
+\begin{itemize}
+	\item Create new account
+	\item Log in to existing account using email address
+	\item View list of joinable groups
+	\item ``Pull-to-refresh'' list of joinable groups
+	\item View information on a particualr group
+	\item Join an existing group
+	\item Create a new group
+	\item View own location on a dynamic map
+	\item View information on the current group
+	\item Leave the current group
+	\item Sign out of the application
+\end{itemize}
+
+During the later half of this project, the team shifted focus towards developing
+exclusively for the Android version of the client, as all team members already
+posessed the required tools to work on it. As a result, the Android version of
+our client application has an additional set of features compared to that of the
+iOS version. The following features exist in the Android version at the time of
+this writing:
+
+\begin{itemize}
+	\item View dedicated settings screen
+	\item Change user display name
+	\item View other group members' locations on dynamic map
+	\item View list of other members on group info screen
+	\item Send instant messages to other group members
+	\item Receive instant members from other group members
+	\item Group leaders can choose to disband the group
+	\item Group leaders can promote other members to replace them as the group leader
+	\item Group leaders can remove other members from the group
+	\item Users can view pending invitations to join existing groups
+	\item Clients automatically fetch group changes periodically
+	\item Clients automatically broadcast own location to other group members
+\end{itemize}
+
+Because one of the original deliverables of this project was both iOS and
+Android client applications, this fragmentation of features is less-than-ideal,
+yet ultimately necessary in order to produce at least one functional prototype
+before the end of this course. Over the summer, we plan to continue development
+of these features. We will also be dividing focus between both versions of the
+client so that the iOS version will be caught up to the progress we have made in
+the Android version.
+
+
+\subsection{Successes in Cloud Code}
+
+Our project encompasses both client-side and server-side development. To produce
+server functionality, we developed cloud code to run on our Parse data server.
+Much of the logic that requires chained queries into the database, cross
+references, and multi-row accesses we implemented in cloud code. By moving this
+logic to the server, we are able to serve complicated requests while minimizing
+network access and increasing effiency and data integrity across threads.
+
+
+\subsection{Successes in Testing}
 
 The greatest success of our work in unit and system tesing has been in the
 development of our testing matrix. Our tesing matrix, while not comprehensive
 (as such a matrix requires years of refining to produce), will act as a set of
-blueprints when setting up automated tests. At over one hundred test cases
+blueprints when setting up automated tests. At over one fifty test cases
 strong, this matrix defines the behavior of our application in many different
 possible states. Using this information, we can implement automated unit tests
 more efficiently than if we did not have such a matrix.
@@ -607,16 +675,26 @@ aided us in designing and implementing unit and system tests using these native
 tools. Additionaly, the tools we are using integrate seamlessly into the IDEs we
 are using for development, reducing the number of tools required to use them.
 
-Finally, we have succeeded in designing and implementing a number of unit tests
-for both iOS and Android versions of our client applications. As implementing
-unit tests takes a significant time investment, the ones we have built provide a
-good foundation upon which to build. On iOS for example, many interface tests
-related to the login and signup screens have been implemented and are used for
-tesing account creation and login. On Android, we have implemented a similar set
-of unit tests as we did for iOS.
+Finally, we have succeeded in designing and implementing a number of UI unit
+tests for the iOS version of our client applications. As implementing unit tests
+takes a significant time investment, the ones we have built provide a good
+foundation upon which to build. For example, many interface tests relate to the
+login and signup screens and are used for tesing account creation and login.
 
 
-\subsection{Issues}
+\subsection{Issues in Dependencies}
+
+Midway through this project, one of our core dependencies, Parse, which is a
+third party service that acts as a database backend and cloud code host,
+announced that it would be discontinuing service effective January 31st, 2017.
+This means that before the end of the year, our project's backend will need to
+be transferred to another service of similar functionality. However, because
+Parse will not be discontinuing service until after the end of 2016, we have
+prioritized feature development over mitigating this risk, as there is still
+time to address this issue.
+
+
+\subsection{Issues in Testing}
 
 One major issue we encountered when designing unit tests was the fact that none
 of the team members have had significant experience doing so. Although a number
@@ -643,7 +721,7 @@ now, we are accruing ``technical debt'', which means that this task will be more
 difficult to accomplish the longer we delay.
 
 
-\subsection{Problems}
+\subsection{Problems in Testing}
 
 The unit and system testing section of this project was not without its own set
 of problems. Many of these we did not forsee, as they are problems that have
