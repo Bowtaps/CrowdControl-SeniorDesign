@@ -1,0 +1,152 @@
+\hypertarget{class_MapFragment.Android}{\section{MapFragment Class Reference}
+\label{class_MapFragment.Android}\index{MapFragment.Android@{MapFragment.Android}}
+}
+
+\subsection*{Class MapFragment}
+
+\textit{class \textbf{MapFragment}}\\
+\tab \textbf{extends}android.support.v4.app.Fragment\\
+
+A simple Fragment subclass. Will Display a Google Map and place group members on it\\
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_MapFragment.Android.newInstance}{newInstance} ()
+\item 
+\hyperlink{class_MapFragment.Android.onCreate}{onCreate} ()
+\item 
+\hyperlink{class_MapFragment.Android.onCreateView}{onCreateView} ()
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Detail}
+
+%method
+\hypertarget{class_MapFragment.Android.newInstance}{\index{MapFragment.Android.newInstance@{MapFragment.Android.newInstance}!MapFragment.Android.newInstance@{MapFragment.Android.newInstance}}
+\index{MapFragment.Android.newInstance@{MapFragment.Android.newInstance}!MapFragment.Android.newInstance@{MapFragment.Android.newInstance}}
+\subsubsection[{MapFragment.Android.newInstance}]{\setlength{\rightskip}{0pt plus 5cm}newInstance (
+\begin{DoxyParamCaption}
+\item[{java.lang.String}]{text}
+\end{DoxyParamCaption}
+)}}\label{MapFragment.Android.newInstance}
+\textit{public static MapFragment newInstance(java.lang.String text)}\\
+
+Use this factory method to create a new instance of this fragment using the provided parameters.\\
+
+\textbf{Modifier and Type:}\\
+\tab static MapFragment\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item text - Test text 1
+\end{itemize}
+
+\textbf{Returns:}
+\tab                A new instance of fragment MapFragment.\\
+
+%method
+\hypertarget{class_MapFragment.Android.onCreate}{\index{MapFragment.Android.onCreate@{MapFragment.Android.onCreate}!MapFragment.Android.onCreate@{MapFragment.Android.onCreate}}
+\index{MapFragment.Android.onCreate@{MapFragment.Android.onCreate}!MapFragment.Android.onCreate@{MapFragment.Android.onCreate}}
+\subsubsection[{MapFragment.Android.onCreate}]{\setlength{\rightskip}{0pt plus 5cm}onCreate (
+\begin{DoxyParamCaption}
+\item[{android.os.Bundle}]{savedInstanceState}
+\end{DoxyParamCaption}
+)}}\label{MapFragment.Android.onCreate}
+\textit{public void onCreate(android.os.Bundle savedInstanceState)}\\
+
+Called to do initial creation of a fragment. This is called after Fragment.onAttach(Activity) and before Fragment.onCreateView(LayoutInflater, ViewGroup, Bundle).\\
+
+Note that this can be called while the fragment's activity is still in the process of being created. As such, you can not rely on things like the activity's content view hierarchy being initialized at this point. If you want to do work once the activity itself is created, see Fragment.onActivityCreated(Bundle).\\
+
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Overrides:}
+\tab                onCreate in class android.support.v4.app.Fragment\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item savedInstanceState - If the fragment is being re-created from a previous saved state, this is the state.
+\end{itemize}
+
+%method
+\hypertarget{class_MapFragment.Android.onCreateView}{\index{MapFragment.Android.onCreateView@{MapFragment.Android.onCreateView}!MapFragment.Android.onCreateView@{MapFragment.Android.onCreateView}}
+\index{MapFragment.Android.onCreateView@{MapFragment.Android.onCreateView}!MapFragment.Android.onCreateView@{MapFragment.Android.onCreateView}}
+\subsubsection[{MapFragment.Android.onCreateView}]{\setlength{\rightskip}{0pt plus 5cm}onCreateView (
+\begin{DoxyParamCaption}
+\item[{android.view.LayoutInflater}]{inflater}
+\item[{android.view.ViewGroup}]{container}
+\item[{android.os.Bundle}]{savedInstanceState}
+\end{DoxyParamCaption}
+)}}\label{MapFragment.Android.onCreateView}
+\textit{public void onCreate(android.os.Bundle savedInstanceState)}\\
+
+Called to have the fragment instantiate its user interface view. This is optional, and non-graphical fragments can return null (which is the default implementation). This will be called between Fragment.onCreate(Bundle) and Fragment.onActivityCreated(Bundle).\\
+
+If you return a View from here, you will later be called in Fragment.onDestroyView() when the view is being released.\\
+
+
+\textbf{Modifier and Type:}\\
+\tab android.view.View\\
+
+\textbf{Overrides:}
+\tab                onCreate in class android.support.v4.app.Fragment\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item inflater - The LayoutInflater object that can be used to inflate any views in the fragment
+\item container - If non-null, this is the parent view that the fragment's UI should be attached to. The fragment should not add the view itself, but this can be used to generate the LayoutParams of the view.
+\item savedInstanceState - If non-null, this fragment is being re-constructed from a previous saved state as given here.
+\end{itemize}
+
+\textbf{Returns:}
+\tab                Return the View for the fragment's UI, or null.\\
+
+
+%method summary
+\subsection{Method Summary}
+
+\subsubsection{Methods inherited from class android.support.v4.app.Fragment}
+
+dump, equals, getActivity, getAllowEnterTransitionOverlap, getAllowReturnTransitionOverlap, getArguments, getChildFragmentManager, getContext, getEnterTransition, getExitTransition, getFragmentManager, getHost, getId, getLayoutInflater, getLoaderManager, getParentFragment, getReenterTransition, getResources, getRetainInstance, getReturnTransition, getSharedElementEnterTransition, getSharedElementReturnTransition, getString, getString, getTag, getTargetFragment, getTargetRequestCode, getText, getUserVisibleHint, getView, hashCode, hasOptionsMenu, instantiate, instantiate, isAdded, isDetached, isHidden, isInLayout, isMenuVisible, isRemoving, isResumed, isVisible, onActivityCreated, onActivityResult, onAttach, onAttach, onConfigurationChanged, onContextItemSelected, onCreateAnimation, onCreateContextMenu, onCreateOptionsMenu, onDestroy, onDestroyOptionsMenu, onDestroyView, onDetach, onHiddenChanged, onInflate, onInflate, onLowMemory, onOptionsItemSelected, onOptionsMenuClosed, onPause, onPrepareOptionsMenu, onRequestPermissionsResult, onResume, onSaveInstanceState, onStart, onStop, onViewCreated, onViewStateRestored, registerForContextMenu, requestPermissions, setAllowEnterTransitionOverlap, setAllowReturnTransitionOverlap, setArguments, setEnterSharedElementCallback, setEnterTransition, setExitSharedElementCallback, setExitTransition, setHasOptionsMenu, setInitialSavedState, setMenuVisibility, setReenterTransition, setRetainInstance, setReturnTransition, setSharedElementEnterTransition, setSharedElementReturnTransition, setTargetFragment, setUserVisibleHint, shouldShowRequestPermissionRationale, startActivity, startActivityForResult, toString, unregisterForContextMenu\\
+
+\subsubsection{Methods inherited from class java.lang.Object}
+
+getClass, notify, notifyAll, wait, wait, wait\\
+
+
+
+%nestedclasses
+\subsection{Nested Class Summary}
+
+\subsubsection{ested classes/interfaces inherited from class android.support.v4.app.Fragment}
+\begin{DoxyCompactItemize}
+\item android.support.v4.app.Fragment.InstantiationException
+\item android.support.v4.app.Fragment.SavedState
+\end{DoxyCompactItemize} 
+
+
+
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item MapFragment
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

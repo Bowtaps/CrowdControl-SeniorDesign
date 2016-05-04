@@ -1,0 +1,195 @@
+
+\hypertarget{class_GroupModel.iOS}{\section{GroupModel Class Reference}
+\label{class_GroupModel.iOS}\index{GroupModel.iOS@{GroupModel.iOS}}
+}
+
+\subsection*{Class GroupModel}
+
+\textit{public class \textbf{GroupModel}}
+
+\tab \textbf{protocol GroupModel: BaseModel}\\
+
+Model protocol representing a group of users using the app. This model contains data accessible to all users of the app, including group name, group description, group leader, and members of the group. This model does not provide direct access to messages related to the group, nor does does it allow access to member locations, although it does provide a generic group location.\\
+
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_GroupModel.iOS.generalLocation}{generalLocation} ()
+\item 
+\hyperlink{class_GroupModel.iOS.groupDescription}{groupDescription} ()
+\item 
+\hyperlink{class_GroupModel.iOS.groupName}{groupName} ()
+\item 
+\hyperlink{class_GroupModel.iOS.groupMembers}{groupMembers} ()
+\item 
+\hyperlink{class_GroupModel.iOS.groupLeader}{groupLeader} ()
+\item 
+\hyperlink{class_GroupModel.iOS.addGroupMember}{addGroupMember} ()
+\item 
+\hyperlink{class_GroupModel.iOS.removeGroupMember}{removeGroupMember} ()
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Summary}
+
+
+%method
+\hypertarget{class_GroupModel.iOS.generalLocation}{\index{GroupModel.iOS.generalLocation@{GroupModel.iOS.generalLocation}!GroupModel.iOS.generalLocation@{GroupModel.iOS.generalLocation}}
+\index{GroupModel.iOS.generalLocation@{GroupModel.iOS.generalLocation}!GroupModel.iOS.generalLocation@{GroupModel.iOS.generalLocation}}
+\subsubsection[{GroupModel.iOS.generalLocation}]{\setlength{\rightskip}{0pt plus 5cm}generalLocation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupModel.iOS.generalLocation}
+Group’s general location, used for location filtering\\
+
+\textbf{Modifier and Type:}\\
+\tab  PFGeoPoint \\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var generalLocation: PFGeoPoint {get set}\\
+
+%method
+\hypertarget{class_GroupModel.iOS.groupDescription}{\index{GroupModel.iOS.groupDescription@{GroupModel.iOS.groupDescription}!GroupModel.iOS.groupDescription@{GroupModel.iOS.groupDescription}}
+\index{GroupModel.iOS.groupDescription@{GroupModel.iOS.groupDescription}!GroupModel.iOS.groupDescription@{GroupModel.iOS.groupDescription}}
+\subsubsection[{GroupModel.iOS.groupDescription}]{\setlength{\rightskip}{0pt plus 5cm}groupDescription (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupModel.iOS.groupDescription}
+Group description set by the group leader during creation\\
+
+\textbf{Modifier and Type:}\\
+\tab  String \\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var groupDescription: String {get set}\\
+
+%method
+\hypertarget{class_GroupModel.iOS.groupName}{\index{GroupModel.iOS.groupName@{GroupModel.iOS.groupName}!GroupModel.iOS.groupName@{GroupModel.iOS.groupName}}
+\index{GroupModel.iOS.groupName@{GroupModel.iOS.groupName}!GroupModel.iOS.groupName@{GroupModel.iOS.groupName}}
+\subsubsection[{GroupModel.iOS.groupName}]{\setlength{\rightskip}{0pt plus 5cm}groupName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupModel.iOS.groupName}
+Group name set by the group leader during creation\\
+
+\textbf{Modifier and Type:}\\
+\tab  String \\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var groupName: String {get set}\\
+
+%method
+\hypertarget{class_GroupModel.iOS.groupMembers}{\index{GroupModel.iOS.groupMembers@{GroupModel.iOS.groupMembers}!GroupModel.iOS.groupMembers@{GroupModel.iOS.groupMembers}}
+\index{GroupModel.iOS.groupMembers@{GroupModel.iOS.groupMembers}!GroupModel.iOS.groupMembers@{GroupModel.iOS.groupMembers}}
+\subsubsection[{GroupModel.iOS.groupMembers}]{\setlength{\rightskip}{0pt plus 5cm}groupMembers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupModel.iOS.groupMembers}
+List of users who are members of the group. This property can only be modified by the addGroupMember(\_:) and removeGroupMember(\_:) methods.\\
+
+\textbf{Modifier and Type:}\\
+\tab  Array \\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var groupMembers: [UserProfileModel] {get}\\
+
+%method
+\hypertarget{class_GroupModel.iOS.groupLeader}{\index{GroupModel.iOS.groupLeader@{GroupModel.iOS.groupLeader}!GroupModel.iOS.groupLeader@{GroupModel.iOS.groupLeader}}
+\index{GroupModel.iOS.groupLeader@{GroupModel.iOS.groupLeader}!GroupModel.iOS.groupLeader@{GroupModel.iOS.groupLeader}}
+\subsubsection[{GroupModel.iOS.groupLeader}]{\setlength{\rightskip}{0pt plus 5cm}groupLeader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupModel.iOS.groupLeader}
+The user who is the designated leader of the group, usually the user who created the group.\\
+
+\textbf{Modifier and Type:}\\
+\tab  Array \\
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var groupLeader: UserProfileModel? {get set}\\
+
+%method
+\hypertarget{class_GroupModel.iOS.addGroupMemeber}{\index{GroupModel.iOS.addGroupMemeber@{GroupModel.iOS.addGroupMemeber}!GroupModel.iOS.addGroupMemeber@{GroupModel.iOS.addGroupMemeber}}
+\index{GroupModel.iOS.addGroupMemeber@{GroupModel.iOS.addGroupMemeber}!GroupModel.iOS.addGroupMemeber@{GroupModel.iOS.addGroupMemeber}}
+\subsubsection[{GroupModel.iOS.addGroupMemeber}]{\setlength{\rightskip}{0pt plus 5cm}addGroupMemeber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupModel.iOS.addGroupMemeber}
+\textbf{addGroupMemeber(\_:)}\\
+Method for adding a user as a member of the group. Model must be saved afterwards, as this method does not automatically save the model.\\
+
+\textbf{Modifier and Type:}\\
+\tab  Array \\
+
+\textbf{Declaration:}
+\tab 
+func\\
+
+func addGroupMember(member: UserProfileModel) -> Bool\\
+
+%method
+\hypertarget{class_GroupModel.iOS.removeGroupMemeber}{\index{GroupModel.iOS.removeGroupMemeber@{GroupModel.iOS.removeGroupMemeber}!GroupModel.iOS.removeGroupMemeber@{GroupModel.iOS.removeGroupMemeber}}
+\index{GroupModel.iOS.removeGroupMemeber@{GroupModel.iOS.removeGroupMemeber}!GroupModel.iOS.removeGroupMemeber@{GroupModel.iOS.removeGroupMemeber}}
+\subsubsection[{GroupModel.iOS.removeGroupMemeber}]{\setlength{\rightskip}{0pt plus 5cm}removeGroupMemeber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupModel.iOS.removeGroupMemeber}
+\textbf{removeGroupMemeber(\_:)}\\
+Method for removing a user from the group. Model must be saved afterwards, as this method does not automatically save the model.\\
+
+\textbf{Modifier and Type:}\\
+\tab  Array \\
+
+\textbf{Declaration:}
+\tab 
+func\\
+
+func removeGroupMember(member: UserProfileModel) -> Bool\\
+
+
+
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item GroupModel
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

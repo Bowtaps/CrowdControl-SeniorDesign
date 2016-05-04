@@ -1,0 +1,292 @@
+
+\hypertarget{class_CreateAccountActivity.Android}{\section{CreateAccountActivity Class Reference}
+\label{class_CreateAccountActivity.Android}\index{CreateAccountActivity.Android@{CreateAccountActivity.Android}}
+}
+
+\subsection*{Class CreateAccountActivity}
+
+\textit{public class \textbf{CreateAccountActivity}}
+	extends android.support.v7.app.AppCompatActivity\\
+	implements android.view.View.OnClickListener\\
+
+
+
+
+\textbf{All Implemented Interfaces:}\\
+\tab        android.content.ComponentCallbacks, android.content.ComponentCallbacks2, \\
+android.support.v4.app.ActivityCompat.OnRequestPermissionsResultCallback, \\
+android.support.v4.app.ActivityCompatApi23.RequestPermissionsRequestCodeValidator, \\
+android.support.v4.app.TaskStackBuilder.SupportParentable,\\
+ android.support.v7.app.ActionBarDrawerToggle.DelegateProvider, android.support.v7.app.AppCompatCallback,\\
+  android.view.KeyEvent.Callback, android.view.LayoutInflater.Factory, android.view.LayoutInflater.Factory2, \\
+  android.view.View.OnClickListener, android.view.View.OnCreateContextMenuListener, android.view.Window.Callback,\\
+   android.view.Window.OnWindowDismissedCallback\\
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_CreateAccountActivity.Android.onClick}{onClick} ()
+\item 
+\hyperlink{class_CreateAccountActivity.Android.onCreateOptionsMenu}{onCreateOptionsMenu} ()
+\item 
+\hyperlink{class_CreateAccountActivity.Android.onCreateView}{onCreateView} ()
+\item 
+\hyperlink{class_CreateAccountActivity.Android.onCreateView2}{onCreateView} ()
+\item 
+\hyperlink{class_CreateAccountActivity.Android.onOptionsItemSelected}{onOptionItemSelected} ()
+
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Summary}
+
+%method
+\hypertarget{class_CreateAccountActivity.Android.onClick}{\index{CreateAccountActivity.Android.onClick@{CreateAccountActivity.Android.onClick}!CreateAccountActivity.Android.onClick@{CreateAccountActivity.Android.onClick}}
+\index{CreateAccountActivity.Android.onClick@{CreateAccountActivity.Android.onClick}!CreateAccountActivity.Android.onClick@{CreateAccountActivity.Android.onClick}}
+\subsubsection[{CreateAccountActivity.Android.onClick}]{\setlength{\rightskip}{0pt plus 5cm}onClick (
+\begin{DoxyParamCaption}
+\item[{android.view.View}]{view}
+\end{DoxyParamCaption}
+)}}\label{CreateAccountActivity.Android.onClick}
+\textit{public void onClick(android.view.View view)}\\
+
+Called when a view has been clicked.\\
+
+\textbf{Modifier and Type:}\\
+\tab public void\\
+
+\textbf{Speciified by:}\\
+\tab     onClick in interface android.view.View.OnClickListener\\
+
+\textbf{Parameters':}
+\begin{itemize}
+\item view - The view that was clicked.
+\end{itemize}
+
+%method
+\hypertarget{class_CreateAccountActivity.Android.onCreateOptionsMenu}{\index{CreateAccountActivity.Android.onCreateOptionsMenu@{CreateAccountActivity.Android.onCreateOptionsMenu}!CreateAccountActivity.Android.onCreateOptionsMenu@{CreateAccountActivity.Android.onCreateOptionsMenu}}
+\index{CreateAccountActivity.Android.onCreateOptionsMenu@{CreateAccountActivity.Android.onCreateOptionsMenu}!CreateAccountActivity.Android.onCreateOptionsMenu@{CreateAccountActivity.Android.onCreateOptionsMenu}}
+\subsubsection[{CreateAccountActivity.Android.onCreateOptionsMenu}]{\setlength{\rightskip}{0pt plus 5cm}onCreateOptionsMenu (
+\begin{DoxyParamCaption}
+\item[{android.view.Menu}]{menu}
+\end{DoxyParamCaption}
+)}}\label{CreateAccountActivity.Android.onCreateOptionsMenu}
+\textit{public boolean onCreateOptionsMenu(android.view.Menu menu)}\\
+Initialize the contents of the Activity's standard options menu. You should place your menu items in to menu.\\
+
+This is only called once, the first time the options menu is displayed. To update the menu every time it is displayed, see Activity.onPrepareOptionsMenu(android.view.Menu).\\
+
+The default implementation populates the menu with standard system menu items. These are placed in the Menu.CATEGORY\_SYSTEM group so that they will be correctly ordered with application-defined menu items. Deriving classes should always call through to the base implementation.\\
+
+You can safely hold on to menu (and any items created from it), making modifications to it as desired, until the next time onCreateOptionsMenu() is called.\\
+
+When you add items to the menu, you can implement the Activity's Activity.onOptionsItemSelected(android.view.MenuItem) method to handle them there.\\
+
+\textbf{Modifier and Type:}\\
+\tab public boolean\\
+
+\textbf{Overrides:}\\
+\tab        onCreateOptionsMenu in class android.app.Activity
+
+\textbf{Parameters:}
+\begin{itemize}
+\item menu - The options menu in which you place your items.\\
+\end{itemize}
+
+\textbf{Returns:}
+\begin{itemize}
+\item You must return true for the menu to be displayed; if you return false it will not be shown.
+\end{itemize}
+
+%method
+\hypertarget{class_CreateAccountActivity.Android.onCreateView}{\index{CreateAccountActivity.Android.onCreateView@{CreateAccountActivity.Android.onCreateView}!CreateAccountActivity.Android.onCreateView@{CreateAccountActivity.Android.onCreateView}}
+\index{CreateAccountActivity.Android.onCreateView@{CreateAccountActivity.Android.onCreateView}!CreateAccountActivity.Android.onCreateView@{CreateAccountActivity.Android.onCreateView}}
+\subsubsection[{CreateAccountActivity.Android.onCreateView}]{\setlength{\rightskip}{0pt plus 5cm}onCreateView (
+\begin{DoxyParamCaption}
+\item[{android.view.View}]{parent}
+\item[{java.lang.String}]{name}
+\item[{android.content.Context}]{context}
+\item[{android.util.AttributeSet}]{attrs}
+\end{DoxyParamCaption}
+)}}\label{CreateAccountActivity.Android.onCreateView}
+\textit{public android.view.View onCreateView(android.view.View parent,\\
+                             \tab java.lang.String name,\\
+                             \tab android.content.Context context,\\
+                             \tab android.util.AttributeSet attrs)}\\
+
+Standard implementation of LayoutInflater.Factory2.onCreateView(View, String, Context, AttributeSet) used when inflating with the LayoutInflater returned by Activity.getSystemService(java.lang.String). This implementation handles tags to embed fragments inside of the activity.\\
+
+\textbf{Modifier and Type:}\\
+\tab public\\
+
+\textbf{Specified by:}\\
+\tab                onCreateView in interface android.view.LayoutInflater.Factory2\\
+
+\textbf{Overrides:}\\
+\tab            onCreateView in class android.app.Activity\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item parent - The parent that the created view will be placed in; note that this may be null.
+\item name - Tag name to be inflated.
+\item context - The context the view is being created in.
+\item attrs - Inflation attributes as specified in XML file.
+\end{itemize}
+
+\textbf{Returns:}
+\begin{itemize}
+\item View Newly created view. Return null for the default behavior.
+\end{itemize}
+
+%method
+\hypertarget{class_CreateAccountActivity.Android.onCreateView2}{\index{CreateAccountActivity.Android.onCreateView2@{CreateAccountActivity.Android.onCreateView2}!CreateAccountActivity.Android.onCreateView2@{CreateAccountActivity.Android.onCreateView2}}
+\index{CreateAccountActivity.Android.onCreateView2@{CreateAccountActivity.Android.onCreateView2}!CreateAccountActivity.Android.onCreateView2@{CreateAccountActivity.Android.onCreateView2}}
+\subsubsection[{CreateAccountActivity.Android.onCreateView2}]{\setlength{\rightskip}{0pt plus 5cm}onCreateView (
+\begin{DoxyParamCaption}
+\item[{java.lang.String}]{name}
+\item[{android.content.Context}]{context}
+\item[{android.util.AttributeSet}]{attrs}
+\end{DoxyParamCaption}
+)}}\label{CreateAccountActivity.Android.onCreateView2}
+\textit{public android.view.View onCreateView( java.lang.String name,\\
+                             \tab android.content.Context context,\\
+                             \tab android.util.AttributeSet attrs)}\\
+
+Standard implementation of LayoutInflater.Factory.onCreateView(java.lang.String, android.content.Context, android.util.AttributeSet) used when inflating with the LayoutInflater returned by Activity.getSystemService(java.lang.String). This implementation does nothing and is for pre-Build.VERSION\_CODES.HONEYCOMB apps. Newer apps should use Activity.onCreateView(View, String, Context, AttributeSet).\\
+
+\textbf{Modifier and Type:}\\
+\tab public\\
+
+\textbf{Specified by:}\\
+\tab                onCreateView in interface android.view.LayoutInflater.Factory\\
+
+\textbf{Overrides:}\\
+\tab            onCreateView in class android.app.Activity\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item name - Tag name to be inflated.
+\item context - The context the view is being created in.
+\item attrs - Inflation attributes as specified in XML file.
+\end{itemize}
+
+\textbf{Returns:}
+\begin{itemize}
+\item View Newly created view. Return null for the default behavior.
+\end{itemize}
+
+%method
+\hypertarget{class_CreateAccountActivity.Android.onOptionsItemSelect}{\index{CreateAccountActivity.Android.onOptionsItemSelect@{CreateAccountActivity.Android.onOptionsItemSelect}!CreateAccountActivity.Android.onOptionsItemSelect@{CreateAccountActivity.Android.onOptionsItemSelect}}
+\index{CreateAccountActivity.Android.onOptionsItemSelect@{CreateAccountActivity.Android.onOptionsItemSelect}!CreateAccountActivity.Android.onOptionsItemSelect@{CreateAccountActivity.Android.onOptionsItemSelect}}
+\subsubsection[{CreateAccountActivity.Android.onOptionsItemSelect}]{\setlength{\rightskip}{0pt plus 5cm}onOptionsItemSelect (
+\begin{DoxyParamCaption}
+\item[{android.view.MenuItem}]{item}
+\end{DoxyParamCaption}
+)}}\label{CreateAccountActivity.Android.onCreateView2}
+\textit{public boolean onOptionsItemSelected(android.view.MenuItem item)}\\
+
+This hook is called whenever an item in your options menu is selected. The default implementation simply returns false to have the normal processing happen (calling the item's Runnable or sending a message to its Handler as appropriate). You can use this method for any items for which you would like to do processing without those other facilities.\\
+
+Derived classes should call through to the base class for it to perform the default menu handling.\\
+
+\textbf{Modifier and Type:}\\
+\tab public boolean\\
+
+
+\textbf{Overrides:}\\
+\tab                onOptionsItemSelected in class android.app.Activity\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item item - The menu item that was selected.
+\end{itemize}
+
+\textbf{Returns:}
+\begin{itemize}
+\item boolean Return false to allow normal menu processing to proceed, true to consume it here.
+\end{itemize}
+
+
+%methiods summary
+\subsection{Method Summary}
+
+\subsubsection{Methods inherited from class android.support.v7.app.AppCompatActivity}
+
+addContentView, getDelegate, getDrawerToggleDelegate, getMenuInflater, getSupportActionBar, getSupportParentActivityIntent, invalidateOptionsMenu, onConfigurationChanged, onContentChanged, onCreateSupportNavigateUpTaskStack, onMenuItemSelected, onMenuOpened, onPanelClosed, onPrepareSupportNavigateUpTaskStack, onSupportActionModeFinished, onSupportActionModeStarted, onSupportContentChanged, onSupportNavigateUp, onWindowStartingSupportActionMode, setContentView, setContentView, setContentView, setSupportActionBar, setSupportProgress, setSupportProgressBarIndeterminate, setSupportProgressBarIndeterminateVisibility, setSupportProgressBarVisibility, startSupportActionMode, supportInvalidateOptionsMenu, supportNavigateUpTo, supportRequestWindowFeature, supportShouldUpRecreateTask\\
+
+\subsubsection{Methods inherited from class android.support.v4.app.FragmentActivity}
+
+ump, getLastCustomNonConfigurationInstance, getSupportFragmentManager, getSupportLoaderManager, onAttachFragment, onBackPressed, onCreatePanelMenu, onKeyDown, onLowMemory, onPreparePanel, onRequestPermissionsResult, onRetainCustomNonConfigurationInstance, onRetainNonConfigurationInstance, onStateNotSaved, setEnterSharedElementCallback, setExitSharedElementCallback, startActivityForResult, startActivityFromFragment, supportFinishAfterTransition, supportPostponeEnterTransition, supportStartPostponedEnterTransition, validateRequestPermissionsRequestCode\\
+
+\subsubsection{Methods inherited from class android.app.Activity}
+
+canStartActivityForResult, closeContextMenu, closeOptionsMenu, convertFromTranslucent, convertToTranslucent, createPendingResult, dismissDialog, dispatchEnterAnimationComplete, dispatchGenericMotionEvent, dispatchKeyEvent, dispatchKeyShortcutEvent, dispatchPopulateAccessibilityEvent, dispatchTouchEvent, dispatchTrackballEvent, findViewById, finish, finishActivity, finishActivityFromChild, finishAffinity, finishAfterTransition, finishAndRemoveTask, finishFromChild, getActionBar, getActivityToken, getApplication, getCallingActivity, getCallingPackage, getChangingConfigurations, getComponentName, getContentScene, getContentTransitionManager, getCurrentFocus, getFragmentManager, getIntent, getLastNonConfigurationInstance, getLayoutInflater, getLoaderManager, getLocalClassName, getMediaController, getParent, getParentActivityIntent, getPreferences, getReferrer, getRequestedOrientation, getSearchEvent, getSystemService, getTaskId, getTitle, getTitleColor, getVoiceInteractor, getVolumeControlStream, getWindow, getWindowManager, hasWindowFocus, isBackgroundVisibleBehind, isChangingConfigurations, isChild, isDestroyed, isFinishing, isImmersive, isResumed, isTaskRoot, isVoiceInteraction, isVoiceInteractionRoot, managedQuery, managedQuery, moveTaskToBack, navigateUpTo, navigateUpToFromChild, onActionModeFinished, onActionModeStarted, onActivityReenter, onAttachedToWindow, onAttachFragment, onBackgroundVisibleBehindChanged, onContextItemSelected, onContextMenuClosed, onCreate, onCreateContextMenu, onCreateDescription, onCreateNavigateUpTaskStack, onCreatePanelView, onCreateThumbnail, onDetachedFromWindow, onEnterAnimationComplete, onGenericMotionEvent, onKeyLongPress, onKeyMultiple, onKeyShortcut, onKeyUp, onNavigateUp, onNavigateUpFromChild, onNewActivityOptions, onOptionsMenuClosed, onPostCreate, onPrepareNavigateUpTaskStack, onPrepareOptionsMenu, onProvideAssistContent, onProvideAssistData, onProvideReferrer, onRestoreInstanceState, onSaveInstanceState, onSearchRequested, onSearchRequested, onTouchEvent, onTrackballEvent, onTrimMemory, onUserInteraction, onVisibleBehindCanceled, onWindowAttributesChanged, onWindowDismissed, onWindowFocusChanged, onWindowStartingActionMode, onWindowStartingActionMode, openContextMenu, openOptionsMenu, overridePendingTransition, postponeEnterTransition, recreate, registerForContextMenu, releaseInstance, removeDialog, reportFullyDrawn, requestPermissions, requestVisibleBehind, requestWindowFeature, runOnUiThread, setActionBar, setContentTransitionManager, setDefaultKeyMode, setEnterSharedElementCallback, setExitSharedElementCallback, setFeatureDrawable, setFeatureDrawableAlpha, setFeatureDrawableResource, setFeatureDrawableUri, setFinishOnTouchOutside, setImmersive, setIntent, setMediaController, setPersistent, setProgress, setProgressBarIndeterminate, setProgressBarIndeterminateVisibility, setProgressBarVisibility, setRequestedOrientation, setResult, setResult, setSecondaryProgress, setTaskDescription, setTitle, setTitle, setTitleColor, setVisible, setVolumeControlStream, shouldShowRequestPermissionRationale, shouldUpRecreateTask, showAssist, showDialog, showDialog, showLockTaskEscapeMessage, startActionMode, startActionMode, startActivities, startActivities, startActivity, startActivity, startActivityAsCaller, startActivityAsUser, startActivityAsUser, startActivityForResult, startActivityForResult, startActivityForResultAsUser, startActivityForResultAsUser, startActivityFromChild, startActivityFromChild, startActivityFromFragment, startActivityFromFragment, startActivityIfNeeded, startActivityIfNeeded, startIntentSender, startIntentSender, startIntentSenderForResult, startIntentSenderForResult, startIntentSenderFromChild, startIntentSenderFromChild, startLockTask, startManagingCursor, startNextMatchingActivity, startNextMatchingActivity, startPostponedEnterTransition, startSearch, stopLockTask, stopManagingCursor, takeKeyEvents, triggerSearch, unregisterForContextMenu\\
+
+\subsubsection{Methods inherited from class android.view.ContextThemeWrapper}
+
+applyOverrideConfiguration, getResources, getTheme, getThemeResId, setTheme\\
+
+\subsubsection{Methods inherited from class android.content.ContextWrapper}
+
+bindService, bindServiceAsUser, checkCallingOrSelfPermission, checkCallingOrSelfUriPermission, checkCallingPermission, checkCallingUriPermission, checkPermission, checkPermission, checkSelfPermission, checkUriPermission, checkUriPermission, checkUriPermission, clearWallpaper, createApplicationContext, createConfigurationContext, createDisplayContext, createPackageContext, createPackageContextAsUser, databaseList, deleteDatabase, deleteFile, enforceCallingOrSelfPermission, enforceCallingOrSelfUriPermission, enforceCallingPermission, enforceCallingUriPermission, enforcePermission, enforceUriPermission, enforceUriPermission, fileList, getApplicationContext, getApplicationInfo, getAssets, getBaseContext, getBasePackageName, getCacheDir, getClassLoader, getCodeCacheDir, getContentResolver, getDatabasePath, getDir, getDisplayAdjustments, getExternalCacheDir, getExternalCacheDirs, getExternalFilesDir, getExternalFilesDirs, getExternalMediaDirs, getFilesDir, getFileStreamPath, getMainLooper, getNoBackupFilesDir, getObbDir, getObbDirs, getOpPackageName, getPackageCodePath, getPackageManager, getPackageName, getPackageResourcePath, getSharedPreferences, getSharedPrefsFile, getSystemServiceName, getUserId, getWallpaper, getWallpaperDesiredMinimumHeight, getWallpaperDesiredMinimumWidth, grantUriPermission, isRestricted, openFileInput, openFileOutput, openOrCreateDatabase, openOrCreateDatabase, peekWallpaper, registerReceiver, registerReceiver, registerReceiverAsUser, removeStickyBroadcast, removeStickyBroadcastAsUser, revokeUriPermission, sendBroadcast, sendBroadcast, sendBroadcast, sendBroadcast, sendBroadcastAsUser, sendBroadcastAsUser, sendBroadcastAsUser, sendBroadcastMultiplePermissions, sendOrderedBroadcast, sendOrderedBroadcast, sendOrderedBroadcast, sendOrderedBroadcast, sendOrderedBroadcastAsUser, sendOrderedBroadcastAsUser, sendOrderedBroadcastAsUser, sendStickyBroadcast, sendStickyBroadcastAsUser, sendStickyOrderedBroadcast, sendStickyOrderedBroadcastAsUser, setWallpaper, setWallpaper, startActivitiesAsUser, startInstrumentation, startService, startServiceAsUser, stopService, stopServiceAsUser, unbindService, unregisterReceiver\\
+
+\subsubsection{Methods inherited from class android.content.Context}
+getColor, getColorStateList, getDrawable, getString, getString, getSystemService, getText, obtainStyledAttributes, obtainStyledAttributes, obtainStyledAttributes, obtainStyledAttributes, registerComponentCallbacks, unregisterComponentCallbacks\\
+
+\subsubsection{Methods inherited from class java.lang.Object}
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait\\
+
+
+
+%nestedclasses
+\subsection{Nested Class Summary}
+\subsubsection{Nested classes/interfaces inherited from class android.app.Activity}
+
+android.app.Activity.TranslucentConversionListener\\
+
+\subsubsection{Nested classes/interfaces inherited from class android.content.Context}
+
+android.content.Context.BindServiceFlags, android.content.Context.CreatePackageOptions\\, android.content.Context.ServiceName\\
+
+%feild summary
+\subsection{Feild Summary}
+\subsubsection{Fields inherited from class android.app.Activity}
+
+\begin{lstlisting}
+DEFAULT_KEYS_DIALER, DEFAULT_KEYS_DISABLE, DEFAULT_KEYS_SEARCH_GLOBAL, DEFAULT_KEYS_SEARCH_LOCAL, DEFAULT_KEYS_SHORTCUT, RESULT_CANCELED, RESULT_FIRST_USER, RESULT_OK
+\end{lstlisting}
+
+\subsubsection{Fields inherited from class android.content.Context}
+
+
+\begin{lstlisting}
+ACCESSIBILITY_SERVICE, ACCOUNT_SERVICE, ACTIVITY_SERVICE, ALARM_SERVICE, APP_OPS_SERVICE, APPWIDGET_SERVICE, AUDIO_SERVICE, BACKUP_SERVICE, BATTERY_SERVICE, BIND_ABOVE_CLIENT, BIND_ADJUST_WITH_ACTIVITY, BIND_ALLOW_OOM_MANAGEMENT, BIND_AUTO_CREATE, BIND_DEBUG_UNBIND, BIND_FOREGROUND_SERVICE, BIND_FOREGROUND_SERVICE_WHILE_AWAKE, BIND_IMPORTANT, BIND_NOT_FOREGROUND, BIND_NOT_VISIBLE, BIND_SHOWING_UI, BIND_TREAT_LIKE_ACTIVITY, BIND_VISIBLE, BIND_WAIVE_PRIORITY, BLUETOOTH_SERVICE, CAMERA_SERVICE, CAPTIONING_SERVICE, CARRIER_CONFIG_SERVICE, CLIPBOARD_SERVICE, CONNECTIVITY_SERVICE, CONSUMER_IR_SERVICE, CONTEXT_IGNORE_SECURITY, CONTEXT_INCLUDE_CODE, CONTEXT_REGISTER_PACKAGE, CONTEXT_RESTRICTED, COUNTRY_DETECTOR, DEVICE_IDLE_CONTROLLER, DEVICE_POLICY_SERVICE, DISPLAY_SERVICE, DOWNLOAD_SERVICE, DROPBOX_SERVICE, ETHERNET_SERVICE, FINGERPRINT_SERVICE, HDMI_CONTROL_SERVICE, INPUT_METHOD_SERVICE, INPUT_SERVICE, JOB_SCHEDULER_SERVICE, KEYGUARD_SERVICE, LAUNCHER_APPS_SERVICE, LAYOUT_INFLATER_SERVICE, LOCATION_SERVICE, MEDIA_PROJECTION_SERVICE, MEDIA_ROUTER_SERVICE, MEDIA_SESSION_SERVICE, MIDI_SERVICE, MODE_APPEND, MODE_ENABLE_WRITE_AHEAD_LOGGING, MODE_MULTI_PROCESS, MODE_PRIVATE, MODE_WORLD_READABLE, MODE_WORLD_WRITEABLE, NETWORK_POLICY_SERVICE, NETWORK_SCORE_SERVICE, NETWORK_STATS_SERVICE, NETWORKMANAGEMENT_SERVICE, NFC_SERVICE, NOTIFICATION_SERVICE, NSD_SERVICE, PERSISTENT_DATA_BLOCK_SERVICE, POWER_SERVICE, PRINT_SERVICE, RADIO_SERVICE, RESTRICTIONS_SERVICE, SEARCH_SERVICE, SENSOR_SERVICE, SERIAL_SERVICE, SIP_SERVICE, STATUS_BAR_SERVICE, STORAGE_SERVICE, TELECOM_SERVICE, TELEPHONY_SERVICE, TELEPHONY_SUBSCRIPTION_SERVICE, TEXT_SERVICES_MANAGER_SERVICE, TRUST_SERVICE, TV_INPUT_SERVICE, UI_MODE_SERVICE, UPDATE_LOCK_SERVICE, USAGE_STATS_SERVICE, USB_SERVICE, USER_SERVICE, VIBRATOR_SERVICE, VOICE_INTERACTION_MANAGER_SERVICE, WALLPAPER_SERVICE, WIFI_P2P_SERVICE, WIFI_PASSPOINT_SERVICE, WIFI_RTT_SERVICE, WIFI_SCANNING_SERVICE, WIFI_SERVICE, WINDOW_SERVICE
+\end{lstlisting}
+
+
+
+
+\subsection{Fields inherited from interface android.content.ComponentCallbacks2}
+\begin{lstlisting}
+TRIM_MEMORY_BACKGROUND, TRIM_MEMORY_COMPLETE, TRIM_MEMORY_MODERATE, TRIM_MEMORY_RUNNING_CRITICAL, TRIM_MEMORY_RUNNING_LOW, TRIM_MEMORY_RUNNING_MODERATE, TRIM_MEMORY_UI_HIDDEN
+\end{lstlisting}
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item CrowdControlApplication
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

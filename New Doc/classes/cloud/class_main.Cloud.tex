@@ -1,0 +1,125 @@
+\hypertarget{class_main.Cloud}{\section{Maint Class Reference}
+\label{class_main.Cloud}\index{main.Cloud@{main.Cloud}}
+}
+
+\subsection*{Class main}
+
+\textit{public class \textbf{main}}
+
+
+Cloud functions that allow for background functions with Parse.\\
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_main.Cloud.fetchGroupUpdates}{fetchGroupUpdates} ()
+\item 
+\hyperlink{class_main.Cloud.joinGroup}{joinGroup} ()
+\item 
+\hyperlink{class_main.Cloud.leaveGroup}{leaveGroup} ()
+\item 
+\hyperlink{class_main.Cloud.fetchNotifications}{fetchNotifications} ()
+\end{DoxyCompactItemize}
+
+
+%constructor and deconstructor
+\subsection{Method Detail}
+
+%method
+\hypertarget{class_main.Cloud.fetchGroupUpdates}{\index{class_main.Cloud.fetchGroupUpdates@{class_main.Cloud.fetchGroupUpdates}!class_main.Cloud.fetchGroupUpdates@{class_main.Cloud.fetchGroupUpdates}}
+\index{class_main.Cloud.fetchGroupUpdates@{class_main.Cloud.fetchGroupUpdates}!class_main.Cloud.fetchGroupUpdates@{class_main.Cloud.fetchGroupUpdates}}
+\subsubsection[{class_main.Cloud.fetchGroupUpdates}]{\setlength{\rightskip}{0pt plus 5cm}fetchGroupUpdates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main.Cloud.fetchGroupUpdates}
+\textit{Parse.Cloud.define('fetchGroupUpdates', function(request, response)}\\
+
+This function allows for group updates.\\
+
+
+\textbf{Parameters:}
+\begin{itemize}
+\item group - current group of the user.
+\item userProfile - current user calling the function
+\item timestamp -  current timestamp
+\end{itemize}
+
+\textbf{Returns:}
+\tab changes in the group status.\\
+
+
+%method
+\hypertarget{class_main.Cloud.joinGroup}{\index{class_main.Cloud.joinGroup@{class_main.Cloud.joinGroup}!class_main.Cloud.joinGroup@{class_main.Cloud.joinGroup}}
+\index{class_main.Cloud.joinGroup@{class_main.Cloud.joinGroup}!class_main.Cloud.joinGroup@{class_main.Cloud.joinGroup}}
+\subsubsection[{class_main.Cloud.joinGroup}]{\setlength{\rightskip}{0pt plus 5cm}joinGroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main.Cloud.joinGroup}
+\textit{parse.Cloud.define('joinGroup', function(request, response)}\\
+
+This function allows for an user to join a group.\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item group - current group of the user.
+\item userProfile - current user calling the function
+\end{itemize}
+
+\textbf{Returns:}
+\tab user join group and group information.\\
+
+%method
+\hypertarget{class_main.Cloud.leaveGroup}{\index{class_main.Cloud.leaveGroup@{class_main.Cloud.leaveGroup}!class_main.Cloud.leaveGroup@{class_main.Cloud.leaveGroup}}
+\index{class_main.Cloud.leaveGroup@{class_main.Cloud.leaveGroup}!class_main.Cloud.leaveGroup@{class_main.Cloud.leaveGroup}}
+\subsubsection[{class_main.Cloud.leaveGroup}]{\setlength{\rightskip}{0pt plus 5cm}leaveGroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main.Cloud.leaveGroup}
+\textit{parse.Cloud.define('leaveGroup', function(request, response)}\\
+
+This function allows for an user to leave a group.\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item group - current group of the user.
+\item userProfile - current user calling the function
+\end{itemize}
+
+\textbf{Returns:}
+\tab removes the user from group information\\
+
+%method
+\hypertarget{class_main.Cloud.fetchNotifications}{\index{class_main.Cloud.fetchNotifications@{class_main.Cloud.fetchNotifications}!class_main.Cloud.fetchNotifications@{class_main.Cloud.fetchNotifications}}
+\index{class_main.Cloud.fetchNotifications@{class_main.Cloud.fetchNotifications}!class_main.Cloud.fetchNotifications@{class_main.Cloud.fetchNotifications}}
+\subsubsection[{class_main.Cloud.fetchNotifications}]{\setlength{\rightskip}{0pt plus 5cm}fetchNotifications (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main.Cloud.fetchNotifications}
+\textit{parse.Cloud.define('lfetchNotifications', function(request, response)}\\
+
+This function fetches notification ipdates for the group.\\
+
+\textbf{Returns:}
+\tab new notifications for current group\\
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item main
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

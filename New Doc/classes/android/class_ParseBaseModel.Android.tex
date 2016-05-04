@@ -1,0 +1,269 @@
+\hypertarget{class_ParseBaseModel.Android}{\section{ParseBaseModel Class Reference}
+\label{class_ParseBaseModel.Android}\index{ParseBaseModel.Android@{ParseBaseModel.Android}}
+}
+
+\subsection*{Class ParseBaseModel}
+
+\textit{class \textbf{ParseBaseModel}}\\
+\tab \textbf{extends}java.lang.Object\\
+\tab \textbf{implements}\hyperlink{class_BaseModel.Android}{BaseModel} ()\\
+
+
+The base Parse implementation of models. Fully implements the\\
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ParseBaseModel.Android.getCreated}{getCreated} ()
+\item 
+\hyperlink{class_ParseBaseModel.Android.getId}{getId} ()
+\item 
+\hyperlink{class_ParseBaseModel.Android.getUpdated}{getUpdated} ()
+\item 
+\hyperlink{class_ParseBaseModel.Android.load}{load} ()
+\item 
+\hyperlink{class_ParseBaseModel.Android.loadInBackground}{loadInBackground} ()
+\item 
+\hyperlink{class_ParseBaseModel.Android.save}{save} ()
+\item 
+\hyperlink{class_ParseBaseModel.Android.saveInBackground}{saveInBackground} ()
+\item 
+\hyperlink{class_ParseBaseModel.Android.wasModified}{wasModified} ()
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Detail}
+
+%method
+\hypertarget{class_ParseBaseModel.Android.getCreated}{\index{ParseBaseModel.Android.getCreated@{ParseBaseModel.Android.getCreated}!ParseBaseModel.Android.getCreated@{ParseBaseModel.Android.getCreated}}
+\index{ParseBaseModel.Android.getCreated@{ParseBaseModel.Android.getCreated}!ParseBaseModel.Android.getCreated@{ParseBaseModel.Android.getCreated}}
+\subsubsection[{ParseBaseModel.Android.getCreated}]{\setlength{\rightskip}{0pt plus 5cm}getCreated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.Android.getCreated}
+\textit{public java.util.Date getCreated()}\\
+
+Gets the object's creation timestamp.\\
+
+\textbf{Modifier and Type:}\\
+\tab java.util.Date\\
+
+\textbf{Specified by:}
+\tab        \hypertarget{class_BaseModel.Android.getUpdated}\\
+
+
+\textbf{Returns:}
+\tab            The object's last update timestamp.\\
+
+%method
+\hypertarget{class_ParseBaseModel.Android.getId}{\index{ParseBaseModel.Android.getId@{ParseBaseModel.Android.getId}!ParseBaseModel.Android.getId@{ParseBaseModel.Android.getId}}
+\index{ParseBaseModel.Android.getId@{ParseBaseModel.Android.getId}!ParseBaseModel.Android.getId@{ParseBaseModel.Android.getId}}
+\subsubsection[{ParseBaseModel.Android.getId}]{\setlength{\rightskip}{0pt plus 5cm}getId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.Android.getId}
+\textit{public java.lang.String getId()}\\
+
+Gets this object's unique identifier.\\
+
+\textbf{Modifier and Type:}\\
+\tab java.lang.String\\
+
+\textbf{Specified by:}
+\tab        \hypertarget{class_BaseModel.Android.getId}{getId in BaseModel}\\
+
+
+\textbf{Returns:}
+\tab            The object's unique identifier.\\
+
+%method
+\hypertarget{class_ParseBaseModel.Android.getUpdated}{\index{ParseBaseModel.Android.getUpdated@{ParseBaseModel.Android.getUpdated}!ParseBaseModel.Android.getUpdated@{ParseBaseModel.Android.getUpdated}}
+\index{ParseBaseModel.Android.getUpdated@{ParseBaseModel.Android.getUpdated}!ParseBaseModel.Android.getUpdated@{ParseBaseModel.Android.getUpdated}}
+\subsubsection[{ParseBaseModel.Android.getUpdated}]{\setlength{\rightskip}{0pt plus 5cm}getUpdated(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.Android.getUpdated}
+\textit{public java.util.Date getUpdated()}\\
+
+Gets the object's last updated timestamp.\\
+
+\textbf{Modifier and Type:}\\
+\tab java.util.Date\\
+
+\textbf{Specified by:}
+\tab        \hypertarget{class_BaseModel.Android.wasModified}{wasModified in BaseModel}\\
+
+
+\textbf{Returns:}
+\tab            Whether or not the object has unsaved changes.\\
+
+%method
+\hypertarget{class_ParseBaseModel.Android.load}{\index{ParseBaseModel.Android.load@{ParseBaseModel.Android.load}!ParseBaseModel.Android.load@{ParseBaseModel.Android.load}}
+\index{ParseBaseModel.Android.load@{ParseBaseModel.Android.load}!ParseBaseModel.Android.load@{ParseBaseModel.Android.load}}
+\subsubsection[{ParseBaseModel.Android.load}]{\setlength{\rightskip}{0pt plus 5cm}load(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.Android.load}
+\textit{public void load()}\\
+ throws com.parse.ParseException\\
+Attempts to load the model from parse synchronously. This is a blocking function and thus should never be used on the main thread.\\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Specified by:}
+\tab        \hypertarget{class_BaseModel.Android.load}{load in BaseModel}\\
+
+
+\textbf{Throws:}
+\tab               java.lang.Exception - If an exception is thrown by Parse, it will be passed on to this function's caller.\\
+    com.parse.ParseException.\\
+
+%method
+\hypertarget{class_ParseBaseModel.Android.loadInBackground}{\index{ParseBaseModel.Android.loadInBackground@{ParseBaseModel.Android.loadInBackground}!ParseBaseModel.Android.loadInBackground@{ParseBaseModel.Android.loadInBackground}}
+\index{ParseBaseModel.Android.loadInBackground@{ParseBaseModel.Android.loadInBackground}!ParseBaseModel.Android.loadInBackground@{ParseBaseModel.Android.loadInBackground}}
+\subsubsection[{ParseBaseModel.Android.loadInBackground}]{\setlength{\rightskip}{0pt plus 5cm}loadInBackground(
+\begin{DoxyParamCaption}
+\item[{BaseModel.LoadCallback}]{callback}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.Android.loadInBackground}
+\textit{public void loadInBackground(BaseModel.LoadCallback callback)}\\
+
+Attempts to save the model to Parse asynchronously and passes control back to the main thread by using the object passed as a parameter to this function.\\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Specified by:}
+\tab        \hypertarget{class_BaseModel.Android.loadInBackground}{loadInBackground in BaseModel}\\
+
+
+\textbf{Parameters:}
+\begin{itemize}
+\item callback - The callback object to pass control to once the operation is completed. If no object is provided (or null is given), then no callback will be executed.
+\end{itemize}
+
+%method
+\hypertarget{class_ParseBaseModel.Android.save}{\index{ParseBaseModel.Android.save@{ParseBaseModel.Android.save}!ParseBaseModel.Android.save@{ParseBaseModel.Android.save}}
+\index{ParseBaseModel.Android.save@{ParseBaseModel.Android.save}!ParseBaseModel.Android.save@{ParseBaseModel.Android.save}}
+\subsubsection[{ParseBaseModel.Android.save}]{\setlength{\rightskip}{0pt plus 5cm}save(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.Android.save}
+\textit{public void save()}\\
+
+  throws com.parse.ParseException\\
+Attempts to save the model to Parse synchronously. This is a blocking function and thus should never be used on the main thread.\\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Specified by:}
+\tab        \hypertarget{class_BaseModel.Android.save}{save in BaseModel}\\
+
+
+\textbf{Throws:}
+\tab     java.lang.Exception - If an exception is thrown by Parse, it will be passed on to this function's caller.
+    com.parse.ParseException\\
+
+%method
+\hypertarget{class_ParseBaseModel.Android.saveInBackground}{\index{ParseBaseModel.Android.saveInBackground@{ParseBaseModel.Android.saveInBackground}!ParseBaseModel.Android.saveInBackground@{ParseBaseModel.Android.saveInBackground}}
+\index{ParseBaseModel.Android.saveInBackground@{ParseBaseModel.Android.saveInBackground}!ParseBaseModel.Android.saveInBackground@{ParseBaseModel.Android.saveInBackground}}
+\subsubsection[{ParseBaseModel.Android.saveInBackground}]{\setlength{\rightskip}{0pt plus 5cm}saveInBackground(
+\begin{DoxyParamCaption}
+\item[{BaseModel.SaveCallback}]{callback}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.Android.saveInBackground}
+\textit{public void saveInBackground(BaseModel.SaveCallback callback)}\\
+
+Attempts to save the model to Parse asynchronously and passes control back to the main thread by using the object passed as a parameter to this function.\\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Specified by:}
+\tab        \hypertarget{class_BaseModel.Android.saveInBackground}{saveInBackground in BaseModel}\\
+
+
+\textbf{Parameters:}
+\begin{itemize}
+\item callback - The callback object to pass control to once the operation is completed. If no object is provided (or null is given), then no callback will be executed.
+\end{itemize}
+
+%method
+\hypertarget{class_ParseBaseModel.Android.wasModified}{\index{ParseBaseModel.Android.wasModified@{ParseBaseModel.Android.wasModified}!ParseBaseModel.Android.wasModified@{ParseBaseModel.Android.wasModified}}
+\index{ParseBaseModel.Android.wasModified@{ParseBaseModel.Android.wasModified}!ParseBaseModel.Android.wasModified@{ParseBaseModel.Android.wasModified}}
+\subsubsection[{ParseBaseModel.Android.wasModified}]{\setlength{\rightskip}{0pt plus 5cm}wasModified(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.Android.wasModified}
+\textit{public java.lang.Boolean wasModified()}\\
+
+Gets whether or not the object has unsaved changes.\
+
+\textbf{Modifier and Type:}\\
+\tab java.lang.Boolean\\
+
+\textbf{Specified by:}
+\tab        \hypertarget{class_BaseModel.Android.wasModified}{wasModified in BaseModel}\\
+
+
+\textbf{Returns:}
+\tab Whether or not the object has unsaved changes.\\
+
+
+
+
+%method summary
+\subsection{Method Summary}
+
+\subsubsection{Methods inherited from class java.lang.Object}
+
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait\\
+
+
+
+%nestedclasses
+\subsection{Nested Class Summary}
+
+\subsubsection{Nested classes/interfaces inherited from class android.app.Activity}
+\begin{DoxyCompactItemize}
+\item  \hypertarget{class_BaseModel.Android.LoadCallBack}{BaseModel.LoadCallback}
+\item  \hypertarget{class_BaseModel.Android.SaveCallback}{BaseModel.SaveCallback}
+\end{DoxyCompactItemize} 
+
+
+%Feild Summary
+\subsection{Constructor Summary}
+
+\subsubsection{Constructor and Description}
+ParseBaseModel(com.parse.ParseObject object)\\
+The class constructor.\\
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item ParseBaseModel
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

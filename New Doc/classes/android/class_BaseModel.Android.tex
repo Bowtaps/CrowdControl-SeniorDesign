@@ -1,0 +1,216 @@
+\hypertarget{class_BaseModel.Android}{\section{BaseModel Class Reference}
+\label{class_BaseModel.Android}\index{BaseModel.Android@{Basemodel.Android}}
+}
+
+\subsection*{Interface BaseModel}
+
+\textit{public interface \textbf{BaseModel}}
+
+The base model interface, providing access to core model functionality, including: - unique object identifier - the initial object creation - the last updated date - model saving and loading.\\
+
+\textbf{All Known Subinterfaces:}\\
+\tab     GroupModel, UserModel, UserProfileModel\\
+
+\textbf{All Known Implementing Classes:}\\
+\tab        ParseBaseModel, ParseGroupModel, ParseUserModel, ParseUserProfileModel\\
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_BaseModel.Android.getCreated}{getCreated} ()
+\item 
+\hyperlink{class_BaseModel.Android.getId}{getId} ()
+\item 
+\hyperlink{class_BaseModel.Android.getUpdated}{getUpdated} ()
+\item 
+\hyperlink{class_BaseModel.Android.load}{load} ()
+\item 
+\hyperlink{class_BaseModel.Android.loadInBackground}{loadInBackground} ()
+\item 
+\hyperlink{class_BaseModel.Android.save}{save} ()
+\item 
+\hyperlink{class_BaseModel.Android.saveInBackground}{saveInBackground} ()
+\item 
+\hyperlink{class_BaseModel.Android.wasModified}{wasModified} ()
+
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Detail}
+
+%method
+\hypertarget{class_BaseModel.Android.getCreated}{\index{BaseModel.Android.getCreated@{BaseModel.Android.getCreated}!BaseModel.Android.getCreated@{BaseModel.Android.getCreated}}
+\index{BaseModel.Android.getCreated@{BaseModel.Android.getCreated}!BaseModel.Android.getCreated@{Basemodel.Android.getCreated}}
+\subsubsection[{BaseModel.Android.getCreated}]{\setlength{\rightskip}{0pt plus 5cm}getCreated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_ApplicationTest.Android.getCreated}
+\textit{java.lang.Date getCreated()}\\
+
+Gets the creation date and time for the model. This value is automatically generated and assigned when the object is first added to storage.\\
+
+\textbf{Modifier and Type:}\\
+\tab java.util.Date\\
+
+\textbf{Returns:}\\
+\tab Date object representing the date and time when the model was first introduced into storage.
+
+%method
+\hypertarget{class_BaseModel.Android.getId}{\index{BaseModel.Android.getId@{BaseModel.Android.getId}!BaseModel.Android.getId@{BaseModel.Android}}
+\index{BaseModel.Android.getId@{BaseModel.Android.getId}!BaseModel.Android.getId@{Basemodel.Android.getId}}
+\subsubsection[{BaseModel.Android.getId}]{\setlength{\rightskip}{0pt plus 5cm}getId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_ApplicationTest.Android.getId}
+\textit{java.lang.String getId()}\\
+
+Gets the unique object identifier for the model. This value is usually determined by the storage medium, such as the database where the model is stored.\\
+
+\textbf{Modifier and Type:}\\
+\tab java.util.String\\
+
+\textbf{Returns:}\\
+\tab String representation of the unique identifier that can be used to reference this object.
+
+%method
+\hypertarget{class_BaseModel.Android.getUpdated}{\index{BaseModel.Android.getUpdated@{BaseModel.Android.getUpdated}!BaseModel.Android.getUpdated@{BaseModel.Android.getUpdated}}
+\index{BaseModel.Android.getUpdated@{BaseModel.Android.getUpdated}!BaseModel.Android.getUpdated@{Basemodel.Android.getUpdated}}
+\subsubsection[{BaseModel.Android.getUpdated}]{\setlength{\rightskip}{0pt plus 5cm}getUpdated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_ApplicationTest.Android.getUpdated}
+\textit{java.lang.Date getId()}\\
+
+Gets the date and time that the model was last updated in storage. This timestamp is automatically assigned by storage and represents when the storage-side model was last changed.\\
+
+\textbf{Modifier and Type:}\\
+\tab java.util.Date\\
+
+\textbf{Returns:}\\
+\tab Date object representing the date and time when the model was last updated in storage.
+
+%method
+\hypertarget{class_BaseModel.Android.load}{\index{BaseModel.Android.load@{BaseModel.Android.load}!BaseModel.Android.load@{BaseModel.Android.load}}
+\index{BaseModel.Android.load@{BaseModel.Android.load}!BaseModel.Android.load@{Basemodel.Android.load}}
+\subsubsection[{BaseModel.Android.load}]{\setlength{\rightskip}{0pt plus 5cm}load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_ApplicationTest.Android.load}
+\textit{void getId()}\\
+
+Loads this object from storage. This is a blocking function, so care should be taken to not call this function on the main thread.\\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Throws:}\\
+\tab java.lang.Exception
+
+%method
+\hypertarget{class_BaseModel.Android.loadInBackground}{\index{BaseModel.Android.loadInBackground@{BaseModel.Android.loadInBackground}!BaseModel.Android.loadInBackground@{BaseModel.Android.loadInBackground}}
+\index{BaseModel.Android.loadInBackground@{BaseModel.Android.loadInBackground}!BaseModel.Android.loadInBackground@{Basemodel.Android.loadInBackground}}
+\subsubsection[{BaseModel.Android.loadInBackground}]{\setlength{\rightskip}{0pt plus 5cm}loadInBackground (
+\begin{DoxyParamCaption}
+\item[{BaseModel.LoadCallback}]{callback}
+\end{DoxyParamCaption}
+)}}\label{class_ApplicationTest.Android.loadInBackground}
+\textit{void loadInBackground(BaseModel.LoadCallback callback)}\\
+
+Loads this object from storage asynchronously. Spawns a separate thread so that this function can be called from the main thread without blocking the UI. Upon completion, whether successful or unsuccessful, returns control to the main thread by calling the. \\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item callback - The callback object to pass control to once the operation is completed. If no object is provided (or null is given), then nothing will happen after the object has been loaded.
+\end{itemize}
+
+%method
+\hypertarget{class_BaseModel.Android.save}{\index{BaseModel.Android.save@{BaseModel.Android.save}!BaseModel.Android.save@{BaseModel.Android.save}}
+\index{BaseModel.Android.save@{BaseModel.Android.save}!BaseModel.Android.save@{Basemodel.Android.save}}
+\subsubsection[{BaseModel.Android.save}]{\setlength{\rightskip}{0pt plus 5cm}load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_ApplicationTest.Android.save}
+\textit{void save()}\\
+
+Saves this object to storage. This is a blocking function, so care should be taken to not call this function on the main thread\\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Throws:}\\
+\tab java.lang.Exception
+
+%method
+\hypertarget{class_BaseModel.Android.saveInBackground}{\index{BaseModel.Android.saveInBackground@{BaseModel.Android.saveInBackground}!BaseModel.Android.saveInBackground@{BaseModel.Android.saveInBackground}}
+\index{BaseModel.Android.saveInBackground@{BaseModel.Android.saveInBackground}!BaseModel.Android.saveInBackground@{Basemodel.Android.saveInBackground}}
+\subsubsection[{BaseModel.Android.saveInBackground}]{\setlength{\rightskip}{0pt plus 5cm}loadInBackground (
+\begin{DoxyParamCaption}
+\item[{BaseModel.SaveCallback}]{callback}
+\end{DoxyParamCaption}
+)}}\label{class_ApplicationTest.Android.saveInBackground}
+\textit{void loadInBackground(BaseModel.saveCallback callback)}\\
+
+Saves this object to storage asynchronously. Spawns a separate thread so that this function can be called from the main thread without blocking the UI. Upon completion, whether successful or unsuccessful, returns control to the main thread by calling the. \\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item callback - The callback object to pass control to once the operation is complete. If no object is provided (or null is given), then nothing will happen after the object has been saved.
+\end{itemize}
+
+%method
+\hypertarget{class_BaseModel.Android.wasModified}{\index{BaseModel.Android.wasModified@{BaseModel.Android.wasModified}!BaseModel.Android.wasModified@{BaseModel.Android.wasModified}}
+\index{BaseModel.Android.wasModified@{BaseModel.Android.wasModified}!BaseModel.Android.wasModified@{Basemodel.Android.wasModified}}
+\subsubsection[{BaseModel.Android.wasModified}]{\setlength{\rightskip}{0pt plus 5cm}wasModified (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_ApplicationTest.Android.wasModified}
+\textit{void wasModified()}\\
+
+Gets a flag indicating that the model has new changes that haven't been saved in storage. This value will change whenever a property is set in the model but hasn't been saved.\\
+
+\textbf{Modifier and Type:}\\
+\tab Boolean\\
+
+\textbf{Returns:}\\
+\tab Boolean flag indicating whether or not the model contains unsaved changes.
+
+%nestedclasses
+\subsection{Nested Class Summary}
+\begin{DoxyCompactList}
+\item\contentsline{section}{\hyperlink{class_BaseModel.LoadCallback.Android}{BaseModel.LoadCallback} }{\pageref{class_BaseModel.LoadCallback.Android}}{}
+\item\contentsline{section}{\hyperlink{class_BaseModel.SaveCallback.Android}{BaseModel.SaveCallback} }{\pageref{class_BaseModel.SaveCallback.Android}}{}
+\end{DoxyCompactList}
+
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item BaseModel
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

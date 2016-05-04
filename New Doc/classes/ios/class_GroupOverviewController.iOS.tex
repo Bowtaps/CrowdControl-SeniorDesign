@@ -1,0 +1,205 @@
+
+\hypertarget{class_GroupOverviewController.iOS}{\section{GroupOverviewController Class Reference}
+\label{class_GroupOverviewController.iOS}\index{GroupOverviewController.iOS@{GroupOverviewController.iOS}}
+}
+
+\subsection*{Class GroupOverviewController}
+
+\textit{public class \textbf{GroupOverviewController}}
+
+\tab \textbf{class GroupOverviewController: UIViewController}
+
+Group Overview Controller contains the logic for the Group Overiew page.\\
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_GroupOverviewController.iOS.groupToDisplay}{groupToDisplay} ()
+\item 
+\hyperlink{class_GroupOverviewController.iOS.groupLeader}{groupLeader} ()
+\item 
+\hyperlink{class_GroupOverviewController.iOS.groupNameLabel}{groupNameLabel} ()
+\item 
+\hyperlink{class_GroupOverviewController.iOS.groupLeaderLabel}{groupLeaderLabel} ()
+\item 
+\hyperlink{class_GroupOverviewController.iOS.groupDescriptionLabel}{groupDescriptionLabel} ()
+\item 
+\hyperlink{class_GroupOverviewController.iOS.onRequestButtonTapped}{onRequestButtonTapped} ()
+\item 
+\hyperlink{class_GroupOverviewController.iOS.viewDidLoad}{viewDidLoad} ()
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Summary}
+
+%method
+\hypertarget{class_GroupOverviewController.iOS.groupToDisplay}{\index{GroupOverviewController.iOS.groupToDisplay@{GroupOverviewController.iOS.groupToDisplay}!GroupOverviewController.iOS.groupToDisplay@{GroupOverviewController.iOS.groupToDisplay}}
+\index{GroupOverviewController.iOS.groupToDisplay@{GroupOverviewController.iOS.groupToDisplay}!GroupOverviewController.iOS.groupToDisplay@{GroupOverviewController.iOS.groupToDisplay}}
+\subsubsection[{GroupOverviewController.iOS.groupToDisplay}]{\setlength{\rightskip}{0pt plus 5cm}groupToDisplay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupOverviewController.iOS.groupToDisplay}
+
+Group to display in current view\\
+
+\textbf{Modifier and Type:}\\
+\tab var groupToDisplay:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var groupToDisplay: GroupModel?\\
+
+%method
+\hypertarget{class_GroupOverviewController.iOS.groupLeader}{\index{GroupOverviewController.iOS.groupLeader@{GroupOverviewController.iOS.groupLeader}!GroupOverviewController.iOS.groupLeader@{GroupOverviewController.iOS.groupLeader}}
+\index{GroupOverviewController.iOS.groupLeader@{GroupOverviewController.iOS.groupLeader}!GroupOverviewController.iOS.groupLeader@{GroupOverviewController.iOS.groupLeader}}
+\subsubsection[{GroupOverviewController.iOS.groupLeader}]{\setlength{\rightskip}{0pt plus 5cm}groupLeader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupOverviewController.iOS.groupLeader}
+
+User display name of the Group Leader\\
+
+\textbf{Modifier and Type:}\\
+\tab var groupLeader: \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var groupLeader: UserProfileModel?\\
+
+%method
+\hypertarget{class_GroupOverviewController.iOS.groupNameLabel}{\index{GroupOverviewController.iOS.groupNameLabel@{GroupOverviewController.iOS.groupNameLabel}!GroupOverviewController.iOS.groupNameLabel@{GroupOverviewController.iOS.groupNameLabel}}
+\index{GroupOverviewController.iOS.groupNameLabel@{GroupOverviewController.iOS.groupNameLabel}!GroupOverviewController.iOS.groupNameLabel@{GroupOverviewController.iOS.groupNameLabel}}
+\subsubsection[{GroupOverviewController.iOS.groupNameLabel}]{\setlength{\rightskip}{0pt plus 5cm}groupNameLabel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupOverviewController.iOS.groupNameLabel}
+
+UILabel for group name\\
+
+\textbf{Modifier and Type:}\\
+\tab @IBOutlet weak var groupNameLabel: \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+@IBOutlet weak var groupNameLabel: UILabel!\\
+
+%method
+\hypertarget{class_GroupOverviewController.iOS.groupLeaderLabel}{\index{GroupOverviewController.iOS.groupLeaderLabel@{GroupOverviewController.iOS.groupLeaderLabel}!GroupOverviewController.iOS.groupLeaderLabel@{GroupOverviewController.iOS.groupLeaderLabel}}
+\index{GroupOverviewController.iOS.groupLeaderLabel@{GroupOverviewController.iOS.groupLeaderLabel}!GroupOverviewController.iOS.groupLeaderLabel@{GroupOverviewController.iOS.groupLeaderLabel}}
+\subsubsection[{GroupOverviewController.iOS.groupLeaderLabel}]{\setlength{\rightskip}{0pt plus 5cm}groupLeaderLabel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupOverviewController.iOS.groupLeaderLabel}
+
+UILabel for group leader name\\
+
+\textbf{Modifier and Type:}\\
+\tab @IBOutlet weak var groupLeaderLabel: \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+@IBOutlet weak var groupLeaderLabel: UILabel!\\
+
+%method
+\hypertarget{class_GroupOverviewController.iOS.groupDescriptionLabel}{\index{GroupOverviewController.iOS.groupDescriptionLabel@{GroupOverviewController.iOS.groupDescriptionLabel}!GroupOverviewController.iOS.groupDescriptionLabel@{GroupOverviewController.iOS.groupDescriptionLabel}}
+\index{GroupOverviewController.iOS.groupDescriptionLabel@{GroupOverviewController.iOS.groupDescriptionLabel}!GroupOverviewController.iOS.groupDescriptionLabel@{GroupOverviewController.iOS.groupDescriptionLabel}}
+\subsubsection[{GroupOverviewController.iOS.groupDescriptionLabel}]{\setlength{\rightskip}{0pt plus 5cm}groupDescriptionLabel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupOverviewController.iOS.groupDescriptionLabel}
+
+UILable for group description text\\
+
+\textbf{Modifier and Type:}\\
+\tab @IBOutlet weak var groupDescriptionLabel: \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+@IBOutlet weak var groupDescriptionLabel: UILabel!\\
+
+%method
+\hypertarget{class_GroupOverviewController.iOS.onRequestButtonTapped}{\index{GroupOverviewController.iOS.onRequestButtonTapped@{GroupOverviewController.iOS.onRequestButtonTapped}!GroupOverviewController.iOS.onRequestButtonTapped@{GroupOverviewController.iOS.onRequestButtonTapped}}
+\index{GroupOverviewController.iOS.onRequestButtonTapped@{GroupOverviewController.iOS.onRequestButtonTapped}!GroupOverviewController.iOS.onRequestButtonTapped@{GroupOverviewController.iOS.onRequestButtonTapped}}
+\subsubsection[{GroupOverviewController.iOS.onRequestButtonTapped}]{\setlength{\rightskip}{0pt plus 5cm}onRequestButtonTapped (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupOverviewController.iOS.onRequestButtonTapped}
+
+When user clicks on the group to join - Parameter sender: Caller of button\\
+
+\textbf{Modifier and Type:}\\
+\tab @IBAction func onRequestButtonTapped \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+@IBAction func onRequestButtonTapped(sender: AnyObject)\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item sender - Caller of button
+\end{itemize}
+
+%method
+\hypertarget{class_GroupOverviewController.iOS.viewDidLoad}{\index{GroupOverviewController.iOS.viewDidLoad@{GroupOverviewController.iOS.viewDidLoad}!GroupOverviewController.iOS.viewDidLoad@{GroupOverviewController.iOS.viewDidLoad}}
+\index{GroupOverviewController.iOS.viewDidLoad@{GroupOverviewController.iOS.viewDidLoad}!GroupOverviewController.iOS.viewDidLoad@{GroupOverviewController.iOS.viewDidLoad}}
+\subsubsection[{GroupOverviewController.iOS.viewDidLoad}]{\setlength{\rightskip}{0pt plus 5cm}viewDidLoad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{GroupOverviewController.iOS.viewDidLoad}
+
+Overrides superclass then loads data from group object into view.\\
+
+\textbf{Modifier and Type:}\\
+\tab override func \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+override func viewDidLoad()\\
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item GroupOverviewController
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

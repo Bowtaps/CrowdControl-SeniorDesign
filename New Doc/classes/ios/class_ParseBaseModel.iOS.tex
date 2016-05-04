@@ -1,0 +1,283 @@
+
+\hypertarget{class_ParseBaseModel.iOS}{\section{ParseBaseModel Class Reference}
+\label{class_ParseBaseMode.iOS}\index{ParseBaseModel.iOS@{ParseBaseModel.iOS}}
+}
+
+\subsection*{Class ParseBaseMode}
+
+\textit{public class \textbf{ParseBaseMode}}
+
+\tab \textbf{class ParseBaseModel: BaseModel}
+
+The core Parse implementation for models. Implements the BaseModel protocol and provies functionality to access the basic information about the model, such as:\\
+\begin{itemize}
+\item Unique identifier
+\item Creation timestamp
+\item Last updated timestamp
+\item Flag indicating modification since last save
+\item Methods for loading from and saving to storage
+\end{itemize}
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ParseBaseModel.iOS.parseObject}{parseObject} ()
+\item 
+\hyperlink{class_ParseBaseModel.iOS.init}{init} ()
+\item 
+\hyperlink{class_ParseBaseModel.iOS.id}{id} ()
+\item 
+\hyperlink{class_ParseBaseModel.iOS.created}{created} ()
+\item 
+\hyperlink{class_ParseBaseModel.iOS.updated}{updated} ()
+\item 
+\hyperlink{class_ParseBaseModel.iOS.modified}{modified} ()
+\item 
+\hyperlink{class_ParseBaseModel.iOS.load}{load} ()
+\item 
+\hyperlink{class_ParseBaseModel.iOS.loadInBackground}{loadInBackground} ()
+\item 
+\hyperlink{class_ParseBaseModel.iOS.save}{save} ()
+\item 
+\hyperlink{class_ParseBaseModel.iOS.saveInBackground}{saveInBackground} ()
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Summary}
+
+%method
+\hypertarget{class_ParseBaseModel.iOS.parseObject}{\index{ParseBaseModel.iOS.parseObject@{ParseBaseModel.iOS.parseObject}!ParseBaseModel.iOS.parseObject@{ParseBaseModel.iOS.parseObject}}
+\index{ParseBaseModel.iOS.parseObject@{ParseBaseModel.iOS.parseObject}!ParseBaseModel.iOS.parseObject@{ParseBaseModel.iOS.parseObject}}
+\subsubsection[{ParseBaseModel.iOS.parseObject}]{\setlength{\rightskip}{0pt plus 5cm}parseObject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.iOS.parseObject}
+Internal reference to the Parse API object representing this object in the remote database.\\
+
+\textbf{Modifier and Type:}\\
+\tab let parseObject:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+let parseObject: PFObject\\
+
+%method
+\hypertarget{class_ParseBaseModel.iOS.init}{\index{ParseBaseModel.iOS.init@{ParseBaseModel.iOS.init}!ParseBaseModel.iOS.init@{ParseBaseModel.iOS.init}}
+\index{ParseBaseModel.iOS.init@{ParseBaseModel.iOS.init}!ParseBaseModel.iOS.init@{ParseBaseModel.iOS.init}}
+\subsubsection[{ParseBaseModel.iOS.init}]{\setlength{\rightskip}{0pt plus 5cm}init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.iOS.init}
+\textbf{init(withParseObject:)}
+Class constructor. Initializes the instance from a PFObject.\\
+
+\textbf{Modifier and Type:}\\
+\tab withParseObject object:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+init(withParseObject object: PFObject)\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item withParseObject - The Parse object to tie this model to the Parse Parse database.
+\end{itemize}
+
+
+%method
+\hypertarget{class_ParseBaseModel.iOS.id}{\index{ParseBaseModel.iOS.id@{ParseBaseModel.iOS.id}!ParseBaseModel.iOS.id@{ParseBaseModel.iOS.id}}
+\index{ParseBaseModel.iOS.id@{ParseBaseModel.iOS.id}!ParseBaseModel.iOS.id@{ParseBaseModel.iOS.id}}
+\subsubsection[{ParseBaseModel.iOS.id}]{\setlength{\rightskip}{0pt plus 5cm}id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.iOS.id}
+\textbf{init(withParseObject:)}
+Read-only computed value representing the ID of the object as defined in the BaseModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tab var id:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var id: String\\
+
+
+%method
+\hypertarget{class_ParseBaseModel.iOS.created}{\index{ParseBaseModel.iOS.created@{ParseBaseModel.iOS.created}!ParseBaseModel.iOS.created@{ParseBaseModel.iOS.created}}
+\index{ParseBaseModel.iOS.created@{ParseBaseModel.iOS.created}!ParseBaseModel.iOS.created@{ParseBaseModel.iOS.created}}
+\subsubsection[{ParseBaseModel.iOS.created}]{\setlength{\rightskip}{0pt plus 5cm}created (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.iOS.created}
+\textbf{init(withParseObject:)}
+Read-only computed value for the timestamp when this object was initially created as defined in the BaseModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tab var created: \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var created: NSDate\\
+
+%method
+\hypertarget{class_ParseBaseModel.iOS.updated}{\index{ParseBaseModel.iOS.updated@{ParseBaseModel.iOS.updated}!ParseBaseModel.iOS.updated@{ParseBaseModel.iOS.updated}}
+\index{ParseBaseModel.iOS.updated@{ParseBaseModel.iOS.updated}!ParseBaseModel.iOS.created@{ParseBaseModel.iOS.updated}}
+\subsubsection[{ParseBaseModel.iOS.updated}]{\setlength{\rightskip}{0pt plus 5cm}updated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.iOS.updated}
+\textbf{init(withParseObject:)}
+Read-only computed value for the timestamp when this object was initially created as defined in the BaseModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tab var created: \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var created: NSDate\\
+
+%method
+\hypertarget{class_ParseBaseModel.iOS.modified}{\index{ParseBaseModel.iOS.modified@{ParseBaseModel.iOS.modified}!ParseBaseModel.iOS.modified@{ParseBaseModel.iOS.modified}}
+\index{ParseBaseModel.iOS.modified@{ParseBaseModel.iOS.modified}!ParseBaseModel.iOS.modified@{ParseBaseModel.iOS.modified}}
+\subsubsection[{ParseBaseModel.iOS.modified}]{\setlength{\rightskip}{0pt plus 5cm}modified (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.iOS.modified}
+\textbf{init(withParseObject:)}
+Read-only computed value indicating whether or not the data contained in this model is "dirty", which is to say that this model contains changes that have not been saved to the server.\\
+
+\textbf{Modifier and Type:}\\
+\tab var modified: \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var modified: Bool\\
+
+%method
+\hypertarget{class_ParseBaseModel.iOS.load}{\index{ParseBaseModel.iOS.load@{ParseBaseModel.iOS.load}!ParseBaseModel.iOS.load@{ParseBaseModel.iOS.load}}
+\index{ParseBaseModel.iOS.load@{ParseBaseModel.iOS.load}!ParseBaseModel.iOS.load@{ParseBaseModel.iOS.load}}
+\subsubsection[{ParseBaseModel.iOS.load}]{\setlength{\rightskip}{0pt plus 5cm}load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.iOS.load}
+\textbf{init(withParseObject:)}
+Reloads this object from Parse as defined by the BaseModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tab func \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func load() throws\\
+
+%method
+\hypertarget{class_ParseBaseModel.iOS.loadInBackground}{\index{ParseBaseModel.iOS.loadInBackground@{ParseBaseModel.iOS.loadInBackground}!ParseBaseModel.iOS.loadInBackground@{ParseBaseModel.iOS.loadInBackground}}
+\index{ParseBaseModel.iOS.loadInBackground@{ParseBaseModel.iOS.loadInBackground}!ParseBaseModel.iOS.loadInBackground@{ParseBaseModel.iOS.loadInBackground}}
+\subsubsection[{ParseBaseModel.iOS.loadInBackground}]{\setlength{\rightskip}{0pt plus 5cm}loadInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.iOS.loadInBackground}
+\textbf{init(withParseObject:)}
+Reloads this object from Parse asynchronously as defined by the BaseModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tab func \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func loadInBackground(callback: ((object: BaseModel?, error: NSError?) -> Void)?)\\
+
+%method
+\hypertarget{class_ParseBaseModel.iOS.save}{\index{ParseBaseModel.iOS.save@{ParseBaseModel.iOS.save}!ParseBaseModel.iOS.save@{ParseBaseModel.iOS.save}}
+\index{ParseBaseModel.iOS.save@{ParseBaseModel.iOS.save}!ParseBaseModel.iOS.save@{ParseBaseModel.iOS.save}}
+\subsubsection[{ParseBaseModel.iOS.save}]{\setlength{\rightskip}{0pt plus 5cm}save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.iOS.save}
+\textbf{init(withParseObject:)}
+Reloads this object from Parse asynchronously as defined by the BaseModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tab func \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func save() throws\\
+
+%method
+\hypertarget{class_ParseBaseModel.iOS.saveInBackground}{\index{ParseBaseModel.iOS.saveInBackground@{ParseBaseModel.iOS.saveInBackground}!ParseBaseModel.iOS.saveInBackground@{ParseBaseModel.iOS.saveInBackground}}
+\index{ParseBaseModel.iOS.saveInBackground@{ParseBaseModel.iOS.saveInBackground}!ParseBaseModel.iOS.saveInBackground@{ParseBaseModel.iOS.saveInBackground}}
+\subsubsection[{ParseBaseModel.iOS.saveInBackground}]{\setlength{\rightskip}{0pt plus 5cm}saveInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseBaseModel.iOS.saveInBackground}
+\textbf{init(withParseObject:)}
+Saves this object to Parse as defined by the BaseModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tab func \\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func saveInBackground(callback: ((object: BaseModel?, error: NSError?) -> Void)?)\\
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item MapViewController
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

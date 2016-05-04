@@ -1,0 +1,466 @@
+
+\hypertarget{class_ParseGroupModel.iOS}{\section{ParseGroupModel Class Reference}
+\label{class_ParseGroupModel.iOS}\index{ParseGroupModel.iOS@{ParseGroupModel.iOS}}
+}
+
+\subsection*{Class ParseGroupModel}
+
+\textit{public class \textbf{ ParseGroupModel}}
+
+\tab \textbf{class ParseGroupModel: ParseBaseModel, GroupModel}
+
+The Parse implementation of the GroupModel protocol. Extends ParseBaseModel class and implements the GroupModel protocol and is designed to allow access to a group’s information, including the group members, group name, and group description.\\
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ParseGroupModel.iOS.init}{init} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.init2}{init} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.generalLocation}{generalLocation} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.groupDescription}{groupDescription} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.groupName}{groupName} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.groupMembers}{groupMembers} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.groupLeader}{groupLeader} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.addGroupMember}{addGroupMember} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.removeGroupMember}{removeGroupMember} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.load}{load} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.loadInBackground}{loadInBackground} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.createGroup}{createGroup} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.getAll}{getAll} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.getAllInBackground}{getAllInBackground} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.getGroupContainingUser}{getGroupContainingUser} ()
+\item 
+\hyperlink{class_ParseGroupModel.iOS.getGroupContainingUserInBackground}{getGroupContainingUserInBackground} ()
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Summary}
+
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.init}{\index{ParseGroupModel.iOS.init@{ParseGroupModel.iOS.init}!ParseGroupModel.iOS.init@{ParseGroupModel.iOS.init}}
+\index{ParseGroupModel.iOS.init@{ParseGroupModel.iOS.init}!ParseGroupModel.iOS.init@{ParseGroupModel.iOS.init}}
+\subsubsection[{ParseGroupModel.iOS.init}]{\setlength{\rightskip}{0pt plus 5cm}init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.init}
+Default class contructor. Creates a new entry in the database if saved.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+init\\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.init2}{\index{ParseGroupModel.iOS.init2@{ParseGroupModel.iOS.init2}!ParseGroupModel.iOS.init2@{ParseGroupModel.iOS.init2}}
+\index{ParseGroupModel.iOS.init2@{ParseGroupModel.iOS.init2}!ParseGroupModel.iOS.init2@{ParseGroupModel.iOS.init2}}
+\subsubsection[{ParseGroupModel.iOS.init2}]{\setlength{\rightskip}{0pt plus 5cm}init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.init2}
+\textbf{init(withParseObject:)}\\
+Class constructor. Initializes the isntance from a PFObject.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+init\\
+
+\textbf{Parameteres:}
+\begin{itemize}
+\item  withParseObject  - The Parse object to tie this model to the Parse database.
+\end{itemize}
+
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.generalLocation}{\index{ParseGroupModel.iOS.generalLocation@{ParseGroupModel.iOS.generalLocation}!ParseGroupModel.iOS.generalLocation@{ParseGroupModel.iOS.generalLocation}}
+\index{ParseGroupModel.iOS.generalLocation@{ParseGroupModel.iOS.generalLocation}!ParseGroupModel.iOS.generalLocation@{ParseGroupModel.iOS.generalLocation}}
+\subsubsection[{ParseGroupModel.iOS.generalLocation}]{\setlength{\rightskip}{0pt plus 5cm}generalLocation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.generalLocation}
+
+PFGeoPoint Object to store the groups general location. This field is used for looking up groups as well as future support with finding ads by location\\
+
+\textbf{Modifier and Type:}\\
+\tab var generalLocation:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var generalLocation: PFGeoPoint\\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.groupDescription}{\index{ParseGroupModel.iOS.groupDescription@{ParseGroupModel.iOS.groupDescription}!ParseGroupModel.iOS.groupDescription@{ParseGroupModel.iOS.groupDescription}}
+\index{ParseGroupModel.iOS.groupDescription@{ParseGroupModel.iOS.groupDescription}!ParseGroupModel.iOS.groupDescription@{ParseGroupModel.iOS.groupDescription}}
+\subsubsection[{ParseGroupModel.iOS.groupDescription}]{\setlength{\rightskip}{0pt plus 5cm}groupDescription (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.groupDescription}
+
+String to hold the description of the group.\\
+
+\textbf{Modifier and Type:}\\
+\tab var groupDescription:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var groupDescription: String\\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.groupName}{\index{ParseGroupModel.iOS.groupName@{ParseGroupModel.iOS.groupName}!ParseGroupModel.iOS.groupName@{ParseGroupModel.iOS.groupName}}
+\index{ParseGroupModel.iOS.groupName@{ParseGroupModel.iOS.groupName}!ParseGroupModel.iOS.groupName@{ParseGroupModel.iOS.groupName}}
+\subsubsection[{ParseGroupModel.iOS.groupName}]{\setlength{\rightskip}{0pt plus 5cm}groupName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.groupName}
+
+String to hold the Name of the group.\\
+
+\textbf{Modifier and Type:}\\
+\tab var groupName:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var groupName: String\\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.groupMembers}{\index{ParseGroupModel.iOS.groupMembers@{ParseGroupModel.iOS.groupMembers}!ParseGroupModel.iOS.groupMembers@{ParseGroupModel.iOS.groupMembers}}
+\index{ParseGroupModel.iOS.groupMembers@{ParseGroupModel.iOS.groupMembers}!ParseGroupModel.iOS.groupMembers@{ParseGroupModel.iOS.groupMembers}}
+\subsubsection[{ParseGroupModel.iOS.groupMembers}]{\setlength{\rightskip}{0pt plus 5cm}groupMembers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.groupMembers}
+
+An array of UserProfileModel objects to keep track of the members of the group.\\
+
+\textbf{Modifier and Type:}\\
+\tab var groupMembers:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var groupMembers: [UserProfileModel]\\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.groupLeader}{\index{ParseGroupModel.iOS.groupLeader@{ParseGroupModel.iOS.groupLeader}!ParseGroupModel.iOS.groupLeader@{ParseGroupModel.iOS.groupLeader}}
+\index{ParseGroupModel.iOS.groupLeader@{ParseGroupModel.iOS.groupLeader}!ParseGroupModel.iOS.groupLeader@{ParseGroupModel.iOS.groupLeader}}
+\subsubsection[{ParseGroupModel.iOS.groupLeader}]{\setlength{\rightskip}{0pt plus 5cm}groupLeader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.groupMembers}
+
+The UserProfileModel object who is the designated leader of the group.\\
+
+\textbf{Modifier and Type:}\\
+\tab var groupMembers:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var groupLeader: UserProfileModel?\\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.addGroupMember}{\index{ParseGroupModel.iOS.addGroupMember@{ParseGroupModel.iOS.addGroupMember}!ParseGroupModel.iOS.addGroupMember@{ParseGroupModel.iOS.addGroupMember}}
+\index{ParseGroupModel.iOS.addGroupMember@{ParseGroupModel.iOS.addGroupMember}!ParseGroupModel.iOS.addGroupMember@{ParseGroupModel.iOS.addGroupMember}}
+\subsubsection[{ParseGroupModel.iOS.addGroupMember}]{\setlength{\rightskip}{0pt plus 5cm}addGroupMember (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.addGroupMember}
+\textbf{addGroupMember(\_:)}\\
+
+Method for adding a user as a member of the group. Model must be saved afterwards, as this method does not automatically save the model.\\
+
+\textbf{Modifier and Type:}\\
+\tab func addGroupMember\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func addGroupMember(member: UserProfileModel) -> Bool\\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.removeGroupMember}{\index{ParseGroupModel.iOS.removeGroupMember@{ParseGroupModel.iOS.removeGroupMember}!ParseGroupModel.iOS.removeGroupMember@{ParseGroupModel.iOS.removeGroupMember}}
+\index{ParseGroupModel.iOS.removeGroupMember@{ParseGroupModel.iOS.removeGroupMember}!ParseGroupModel.iOS.removeGroupMember@{ParseGroupModel.iOS.removeGroupMember}}
+\subsubsection[{ParseGroupModel.iOS.removeGroupMember}]{\setlength{\rightskip}{0pt plus 5cm}removeGroupMember (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.removeGroupMember}
+
+
+Method for removing a user from the group. Model must be saved afterwards, as this method does not automatically save the model.\\
+
+\textbf{Modifier and Type:}\\
+\tab func removeGroupMember\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func removeGroupMember(member: UserProfileModel) -> Bool\\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.load}{\index{ParseGroupModel.iOS.load@{ParseGroupModel.iOS.load}!ParseGroupModel.iOS.load@{ParseGroupModel.iOS.load}}
+\index{ParseGroupModel.iOS.load@{ParseGroupModel.iOS.load}!ParseGroupModel.iOS.load@{ParseGroupModel.iOS.load}}
+\subsubsection[{ParseGroupModel.iOS.load}]{\setlength{\rightskip}{0pt plus 5cm}load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.load}
+
+Loads this object from Parse storage synchronously. In addition to the normal functionality inherited from ParseBaseModel, this function also fetches and caches the users who are members of this group.\\
+
+\textbf{Modifier and Type:}\\
+\tab override func\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+override func load() throws\\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.loadInBackground}{\index{ParseGroupModel.iOS.loadInBackground@{ParseGroupModel.iOS.loadInBackground}!ParseGroupModel.iOS.loadInBackground@{ParseGroupModel.iOS.loadInBackground}}
+\index{ParseGroupModel.iOS.loadInBackground@{ParseGroupModel.iOS.loadInBackground}!ParseGroupModel.iOS.loadInBackground@{ParseGroupModel.iOS.loadInBackground}}
+\subsubsection[{ParseGroupModel.iOS.loadInBackground}]{\setlength{\rightskip}{0pt plus 5cm}loadInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.loadInBackground}
+\textbf{loadInBackground(\_:)}\\
+Loads this object from Parse storage asynchronously. In addition to the normal functionality inherited from ParseBaseModel, this function also fetches and caches the users who are members of this group.\\
+
+\textbf{Modifier and Type:}\\
+\tab override override func\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+override func loadInBackground(callback: ((object: BaseModel?, error: NSError?) -> Void)?)\\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.createGroup}{\index{ParseGroupModel.iOS.createGroup@{ParseGroupModel.iOS.createGroup}!ParseGroupModel.iOS.createGroup@{ParseGroupModel.iOS.createGroup}}
+\index{ParseGroupModel.iOS.createGroup@{ParseGroupModel.iOS.createGroup}!ParseGroupModel.iOS.createGroup@{ParseGroupModel.iOS.createGroup}}
+\subsubsection[{ParseGroupModel.iOS.createGroup}]{\setlength{\rightskip}{0pt plus 5cm}createGroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.createGroup}
+\textbf{createGroup(\_:description:)}\\
+Function to create a group if there is not one that exists\\
+
+\textbf{Modifier and Type:}\\
+\tab override override func\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+static func createGroup(name: String, description: String) -> ParseGroupModel\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item name - String containing the group name
+\item description - String containing the description of the group
+\end{itemize}
+
+\textbf{Return Value:}
+Object of type ParseGroupModel that contains the information\\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.getAll}{\index{ParseGroupModel.iOS.getAll@{ParseGroupModel.iOS.getAll}!ParseGroupModel.iOS.getAll@{ParseGroupModel.iOS.getAll}}
+\index{ParseGroupModel.iOS.getAll@{ParseGroupModel.iOS.getAll}!ParseGroupModel.iOS.getAll@{ParseGroupModel.iOS.getAll}}
+\subsubsection[{ParseGroupModel.iOS.getAll}]{\setlength{\rightskip}{0pt plus 5cm}getAll (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.getAll}
+Fetches all groups in storage synchronously.\\
+
+This is a blocking function that can take several seconds to complete. If an operation fails, then an exception will be thrown.\\
+
+\textbf{Modifier and Type:}\\
+\tab override static func\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+static func getAll() throws -> [ParseGroupModel]\\
+
+
+\textbf{Return Value:}
+Array of group models in storage. \\
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.getAllInBackground}{\index{ParseGroupModel.iOS.getAllInBackground@{ParseGroupModel.iOS.getAllInBackground}!ParseGroupModel.iOS.getAllInBackground@{ParseGroupModel.iOS.getAllInBackground}}
+\index{ParseGroupModel.iOS.getAllInBackground@{ParseGroupModel.iOS.getAllInBackground}!ParseGroupModel.iOS.getAllInBackground@{ParseGroupModel.iOS.getAllInBackground}}
+\subsubsection[{ParseGroupModel.iOS.getAllInBackground}]{\setlength{\rightskip}{0pt plus 5cm}getAllInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.getAllInBackground}
+Fetches all groups in storage synchronously.\\
+
+Fetches all groups in Parse storage asynchronously, returning control to the main thread through the provided callback (if any).\\
+
+\textbf{Modifier and Type:}\\
+\tab override static func\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+static func getAllInBackground(callback: ((results: [ParseGroupModel]?, error: NSError?) -> Void)?)\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item  callback  - Optional closure that will be called on completion or if an error is encountered.
+\end{itemize}
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.getGroupContainingUser}{\index{ParseGroupModel.iOS.getGroupContainingUser@{ParseGroupModel.iOS.getGroupContainingUser}!ParseGroupModel.iOS.getGroupContainingUser@{ParseGroupModel.iOS.getGroupContainingUser}}
+\index{ParseGroupModel.iOS.getGroupContainingUser@{ParseGroupModel.iOS.getGroupContainingUser}!ParseGroupModel.iOS.getGroupContainingUser@{ParseGroupModel.iOS.getGroupContainingUser}}
+\subsubsection[{ParseGroupModel.iOS.getGroupContainingUser}]{\setlength{\rightskip}{0pt plus 5cm}getGroupContainingUser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.getGroupContainingUser}
+
+
+Fetches the first group to which the provided user belongs, if any. If no group is found that contains the provided user, then nil is returned.
+
+This is a blocking function and should be executed on a thread separate from the main thread. See getGroupContainingUserInBackground(\_:callback:) for fetching on a separate thread. This function will throw an exception if an error occurs.\\
+
+\textbf{Modifier and Type:}\\
+\tab override static func\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+static func getGroupContainingUser(user: ParseUserProfileModel) throws -> ParseGroupModel?\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item   user  - The user to search for.
+\end{itemize}
+
+\textbf{Returns:}
+Optional ParseGroupModel object that has user as a member, or nil if no such group could be found. This object will be fully loaded from storage such that a call to ParseGroupModel.load() is not necessary.\\
+
+
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.getGroupContainingUserInBackground}{\index{ParseGroupModel.iOS.getGroupContainingUserInBackground@{ParseGroupModel.iOS.getGroupContainingUserInBackground}!ParseGroupModel.iOS.getGroupContainingUserInBackground@{ParseGroupModel.iOS.getGroupContainingUserInBackground}}
+\index{ParseGroupModel.iOS.getGroupContainingUserInBackground@{ParseGroupModel.iOS.getGroupContainingUserInBackground}!ParseGroupModel.iOS.getGroupContainingUserInBackground@{ParseGroupModel.iOS.getGroupContainingUserInBackground}}
+\subsubsection[{ParseGroupModel.iOS.getGroupContainingUserInBackground}]{\setlength{\rightskip}{0pt plus 5cm}getGroupContainingUserInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.getGroupContainingUserInBackground}
+\textbf{getGroupContainingUserInBackground(\_:callback:)}
+
+Fetches the first group to which the provided user belongs, if any. If no group is found that contains the provided user, then nil is returned.\\
+
+This function spawns a new thread for querying storage. After successful execution or if an error occurs, this function passes control back to the main thread by calling the closure that was optionally passed as an argument.\\
+
+\textbf{Modifier and Type:}\\
+\tab override static func\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+static func getGroupContainingUserInBackground(user: ParseUserProfileModel, callback: ((result: ParseGroupModel?, error: NSError?) -> Void)?)\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item   user  - The user to search for.
+\item  callback  - Optional callback function to call after successful execution or if an error occurs. If nil is provided, then the callback will not be called.
+\end{itemize}
+
+\textbf{Returns:}
+Optional ParseGroupModel object that has user as a member, or nil if no such group could be found. This object will be fully loaded from storage such that a call to ParseGroupModel.load() is not necessary.\\
+
+
+
+
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item ParseGroupModel
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

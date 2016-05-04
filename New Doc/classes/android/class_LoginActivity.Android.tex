@@ -1,0 +1,330 @@
+\hypertarget{class_LoginActivity.Android}{\section{LoginActivity Class Reference}
+\label{class_LoginActivity.Android}\index{LoginActivity.Android@{LoginActivity.Android}}
+}
+
+\subsection*{Class LoginActivity}
+
+\textit{class \textbf{LoginActivity}}\\
+\tab \textbf{extends} android.support.v7.app.AppCompatActivity\\
+\tab \textbf{implements} android.app.LoaderManager.LoaderCallbacks<android.database.Cursor>\\
+
+\textbf{All Known Implementing Classes:}\\
+\tab            android.app.LoaderManager.LoaderCallbacks<android.database.Cursor>,\\ android.content.ComponentCallbacks, android.content.ComponentCallbacks2,\\ android.support.v4.app.ActivityCompat.OnRequestPermissionsResultCallback,\\ android.support.v4.app.ActivityCompatApi23.RequestPermissionsRequestCodeValidator,\\ android.support.v4.app.TaskStackBuilder.SupportParentable,\\ android.support.v7.app.ActionBarDrawerToggle.DelegateProvider,\\ android.support.v7.app.AppCompatCallback, android.view.KeyEvent.Callback,\\ android.view.LayoutInflater.Factory, android.view.LayoutInflater.Factory2,\\ android.view.View.OnCreateContextMenuListener, android.view.Window.Callback,\\ android.view.Window.OnWindowDismissedCallback\\
+
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_LoginActivity.Android.onCreateLoader}{onCreateLoader} ()
+\item 
+\hyperlink{class_LoginActivity.Android.onCreateView}{onCreateView} ()
+\item 
+\hyperlink{class_LoginActivity.Android.onCreateView2}{onCreateView} ()
+\item 
+\hyperlink{class_LoginActivity.Android.onLoaderReset}{onLoaderReset} ()
+\item 
+\hyperlink{class_LoginActivity.Android.onLoadFinished}{onLoadFinished} ()
+\item 
+\hyperlink{class_LoginActivity.Android.onRequestPerissionsResult}{onRequestPerissionsResult} ()
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Detail}
+
+%method
+\hypertarget{class_LoginActivity.Android.onCreateLoader}{\index{LoginActivity.Android.onCreateLoader@{LoginActivity.Android.onCreateLoader}!LoginActivity.Android.onCreateLoader@{LoginActivity.Android.onCreateLoader}}
+\index{LoginActivity.Android.onCreateLoader@{LoginActivity.Android.onCreateLoader}!LoginActivity.Android.onCreateLoader@{LoginActivity.Android.onCreateLoader}}
+\subsubsection[{LoginActivity.Android.onCreateLoader}]{\setlength{\rightskip}{0pt plus 5cm}onCreateLoader (
+\begin{DoxyParamCaption}
+\item [{int}]{i}
+\item [{android.os.Bundle}]{bundle}
+\end{DoxyParamCaption}
+)}}\label{LoginActivity.Android.onCreateLoader}
+\textit{public android.content.Loader<android.database.Cursor> onCreateLoader(int i,\\
+                                                             android.os.Bundle bundle)}\\
+
+    onCreateLoader in interface android.app.LoaderManager.LoaderCallbacks<android.database.Cursor>\\
+
+\textbf{Modifier and Type:}\\
+\tab android.content.Loader<android.database.Cursor>\\
+
+\textbf{Specified by:}
+\tab                 onCreateLoader in interface android.app.LoaderManager.LoaderCallbacks<android.database.Cursor>\\
+
+
+\textbf{Parameters:}
+\begin{itemize}
+\item i - The ID whose loader is to be created.
+\item bundle - Any arguments supplied by the caller.
+\end{itemize}
+
+\textbf{Returns:}
+\tab            Return a new Loader instance that is ready to start loading.\\
+
+%method
+\hypertarget{class_LoginActivity.Android.onCreateView}{\index{LoginActivity.Android.onCreateView@{LoginActivity.Android.onCreateLoader}!LoginActivity.Android.onCreateView@{LoginActivity.Android.onCreateView}}
+\index{LoginActivity.Android.onCreateView@{LoginActivity.Android.onCreateView}!LoginActivity.Android.onCreateLoader@{LoginActivity.Android.onCreateView}}
+\subsubsection[{LoginActivity.Android.onCreateView}]{\setlength{\rightskip}{0pt plus 5cm}onCreateView (
+\begin{DoxyParamCaption}
+\item [{android.view.View}]{parent}
+\item [{java.lang.String}]{name}
+\item [{android.content.Context}]{context}
+\item [{ndroid.util.AttributeSet}]{attrs}
+\end{DoxyParamCaption}
+)}}\label{LoginActivity.Android.onCreateView}
+\textit{public android.view.View onCreateView(android.view.View parent,\\
+                             java.lang.String name,\\
+                             android.content.Context context,\\
+                             android.util.AttributeSet attrs)}\\
+
+    Standard implementation of LayoutInflater.Factory2.onCreateView(View, String, Context, AttributeSet) used when inflating with the LayoutInflater returned by Activity.getSystemService(java.lang.String). This implementation handles tags to embed fragments inside of the activity.\\
+
+\textbf{Modifier and Type:}\\
+\tab android.content.Loader<android.database.Cursor>\\
+
+\textbf{Specified by:}
+\tab                    onCreateView in interface android.view.LayoutInflater.Factory2\\
+
+\textbf{Overrides:}
+\tab                        onCreateView in class android.app.Activity\\
+
+
+\textbf{Parameters:}
+\begin{itemize}
+\item parent - The parent that the created view will be placed in; note that this may be null.
+\item name - Tag name to be inflated.
+\item context - The context the view is being created in.
+\item attrs - Inflation attributes as specified in XML file.
+\end{itemize}
+
+\textbf{Returns:}
+\tab            View Newly created view. Return null for the default behavior.\\
+
+%method
+\hypertarget{class_LoginActivity.Android.onCreateView2}{\index{LoginActivity.Android.onCreateView2@{LoginActivity.Android.onCreateLoader2}!LoginActivity.Android.onCreateView2@{LoginActivity.Android.onCreateView2}}
+\index{LoginActivity.Android.onCreateView2@{LoginActivity.Android.onCreateView}!LoginActivity.Android.onCreateLoader2@{LoginActivity.Android.onCreateView2}}
+\subsubsection[{LoginActivity.Android.onCreateView2}]{\setlength{\rightskip}{0pt plus 5cm}onCreateView (
+\begin{DoxyParamCaption}
+\item [{java.lang.String}]{name}
+\item [{android.content.Context}]{context}
+\item [{ndroid.util.AttributeSet}]{attrs}
+\end{DoxyParamCaption}
+)}}\label{LoginActivity.Android.onCreateView2}
+\textit{public android.view.View onCreateView(java.lang.String name,\\
+                             android.content.Context context,\\
+                             android.util.AttributeSet attrs)}\\
+
+   Standard implementation of LayoutInflater.Factory.onCreateView(java.lang.String, android.content.Context, android.util.AttributeSet) used when inflating with the LayoutInflater returned by Activity.getSystemService(java.lang.String). This implementation does nothing and is for pre-Build.VERSION\_CODES.HONEYCOMB apps. Newer apps should use Activity.onCreateView(View, String, Context, AttributeSet).\\
+
+\textbf{Modifier and Type:}\\
+\tab android.content.Loader<android.database.Cursor>\\
+
+\textbf{Specified by:}
+\tab                    onCreateView in interface android.view.LayoutInflater.Factory\\
+
+\textbf{Overrides:}
+\tab                        onCreateView in class android.app.Activity\\
+
+
+\textbf{Parameters:}
+\begin{itemize}
+\item name - Tag name to be inflated.
+\item context - The context the view is being created in.
+\item attrs - Inflation attributes as specified in XML file.
+\end{itemize}
+
+\textbf{Returns:}
+\tab            View Newly created view. Return null for the default behavior.\\
+
+%method
+\hypertarget{class_LoginActivity.Android.onLoaderReset}{\index{LoginActivity.Android.onLoaderReset@{LoginActivity.Android.onLoaderReset}!LoginActivity.Android.onLoaderReset@{LoginActivity.Android.onLoaderReset}}
+\index{LoginActivity.Android.onLoaderReset@{LoginActivity.Android.onLoaderReset}!LoginActivity.Android.onLoaderReset@{LoginActivity.Android.onLoaderReset}}
+\subsubsection[{LoginActivity.Android.onLoaderReset}]{\setlength{\rightskip}{0pt plus 5cm}onLoaderReset (
+\begin{DoxyParamCaption}
+\item[{android.content.Loader<android.database.Cursor>}]{cursorLoader}
+\end{DoxyParamCaption}
+)}}\label{LoginActivity.Android.onLoaderReset}
+\textit{public void onLoaderReset(android.content.Loader<android.database.Cursor> cursorLoader)}\\
+
+   Called when a previously created loader is being reset, and thus making its data unavailable. The application should at this point remove any references it has to the Loader's data.\\
+
+\textbf{Modifier and Type:}\\
+\tab void>\\
+
+\textbf{Specified by:}
+\tab                        onLoaderReset in interface android.app.LoaderManager.LoaderCallbacks<android.database.Cursor>\\
+
+
+\textbf{Parameters:}
+\begin{itemize}
+\item cursorLoader - The Loader that is being reset.
+\end{itemize}
+
+%method
+\hypertarget{class_LoginActivity.Android.onLoadFinished}{\index{LoginActivity.Android.onLoadFinished@{LoginActivity.Android.onLoadFinished}!LoginActivity.Android.onLoadFinished@{LoginActivity.Android.onLoadFinished}}
+\index{LoginActivity.Android.onLoadFinished@{LoginActivity.Android.onLoadFinished}!LoginActivity.Android.onLoadFinished@{LoginActivity.Android.onLoadFinished}}
+\subsubsection[{LoginActivity.Android.onLoadFinished}]{\setlength{\rightskip}{0pt plus 5cm}onLoadFinished (
+\begin{DoxyParamCaption}
+\item [{android.content.Loader<android.database.Cursor>}]{cursorLoader}
+\item [{android.database.Cursor}]{cursor}
+\end{DoxyParamCaption}
+)}}\label{LoginActivity.Android.onLoadFinished}
+\textit{public void onLoadFinished(android.content.Loader<android.database.Cursor> cursorLoader,\\
+                  android.database.Cursor cursor)}\\
+
+   Called when a previously created loader has finished its load. Note that normally an application is not allowed to commit fragment transactions while in this call, since it can happen after an activity's state is saved. See FragmentManager.openTransaction() for further discussion on this.\\
+
+This function is guaranteed to be called prior to the release of the last data that was supplied for this Loader. At this point you should remove all use of the old data (since it will be released soon), but should not do your own release of the data since its Loader owns it and will take care of that. The Loader will take care of management of its data so you don't have to. In particular: \\
+
+\begin{itemize}
+\item The Loader will monitor for changes to the data, and report them to you through new calls here. You should not monitor the data yourself. For example, if the data is a Cursor and you place it in a CursorAdapter, use the CursorAdapter.CursorAdapter(android.content.Context, android.database.Cursor, int) constructor without passing in either CursorAdapter.FLAG\_AUTO\_REQUERY or CursorAdapter.FLAG\_REGISTER\_CONTENT\_OBSERVER (that is, use 0 for the flags argument). This prevents the CursorAdapter from doing its own observing of the Cursor, which is not needed since when a change happens you will get a new Cursor throw another call here. 
+\item The Loader will release the data once it knows the application is no longer using it. For example, if the data is a Cursor from a CursorLoader, you should not call close() on it yourself. If the Cursor is being placed in a CursorAdapter, you should use the CursorAdapter.swapCursor(android.database.Cursor) method so that the old Cursor is not closed. 
+\end{itemize}
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Specified by:}
+\tab                            onLoadFinished in interface android.app.LoaderManager.LoaderCallbacks<android.database.Cursor>\\
+
+
+\textbf{Parameters:}
+\begin{itemize}
+\item cursorLoader - The Loader that has finished.
+\item cursor - The data generated by the Loader.
+\end{itemize}
+
+
+%method
+\hypertarget{class_LoginActivity.Android.onRequestPermissionsResult}{\index{LoginActivity.Android.onRequestPermissionsResult@{LoginActivity.Android.onRequestPermissionsResult}!LoginActivity.Android.onRequestPermissionsResult@{LoginActivity.Android.onRequestPermissionsResult}}
+\index{LoginActivity.Android.onRequestPermissionsResult@{LoginActivity.Android.onRequestPermissionsResult}!LoginActivity.Android.onRequestPermissionsResult@{LoginActivity.Android.onRequestPermissionsResult}}
+\subsubsection[{LoginActivity.Android.onRequestPermissionsResult}]{\setlength{\rightskip}{0pt plus 5cm}onRequestPermissionsResult (
+\begin{DoxyParamCaption}
+\item[{android.content.Loader<android.database.Cursor>}]{cursorLoader}
+\item[{android.database.Cursor}]{cursor}
+\end{DoxyParamCaption}
+)}}\label{LoginActivity.Android.onRequestPermissionsResult}
+\textit{public void onRequestPermissionsResult(int requestCode,\\
+                              java.lang.String[] permissions,\\
+                              int[] grantResults)}\\
+
+   Callback received when a permissions request has been completed.\\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Specified by:}
+\tab                               onRequestPermissionsResult in interface android.support.v4.app.ActivityCompat.OnRequestPermissionsResultCallback\\
+
+\textbf{Overrides:}
+\tab                                   onRequestPermissionsResult in class android.support.v4.app.FragmentActivity\\
+
+
+\textbf{Parameters:}
+\begin{itemize}
+\item requestCode - The request code passed in Activity.requestPermissions(String[], int).
+\item permissions - The requested permissions. Never null.
+\item grantResults - The grant results for the corresponding permissions which is either PackageManager.PERMISSION\_GRANTED or PackageManager.PERMISSION\_DENIED. Never null.
+\end{itemize}
+
+
+
+%method summary
+\subsection{Method Summary}
+
+\subsubsection{Methods inherited from class android.support.v7.app.AppCompatActivity}
+
+addContentView, getDelegate, getDrawerToggleDelegate, getMenuInflater, getSupportActionBar, getSupportParentActivityIntent, invalidateOptionsMenu, onConfigurationChanged, onContentChanged, onCreateSupportNavigateUpTaskStack, onMenuItemSelected, onMenuOpened, onPanelClosed, onPrepareSupportNavigateUpTaskStack, onSupportActionModeFinished, onSupportActionModeStarted, onSupportContentChanged, onSupportNavigateUp, onWindowStartingSupportActionMode, setContentView, setContentView, setContentView, setSupportActionBar, setSupportProgress, setSupportProgressBarIndeterminate, setSupportProgressBarIndeterminateVisibility, setSupportProgressBarVisibility, startSupportActionMode, supportInvalidateOptionsMenu, supportNavigateUpTo, supportRequestWindowFeature, supportShouldUpRecreateTask\\
+
+\subsubsection{Methods inherited from class android.support.v4.app.FragmentActivity}
+
+dump, getLastCustomNonConfigurationInstance, getSupportFragmentManager, getSupportLoaderManager, onAttachFragment, onBackPressed, onCreatePanelMenu, onKeyDown, onLowMemory, onPreparePanel, onRetainCustomNonConfigurationInstance, onRetainNonConfigurationInstance, onStateNotSaved, setEnterSharedElementCallback, setExitSharedElementCallback, startActivityForResult, startActivityFromFragment, supportFinishAfterTransition, supportPostponeEnterTransition, supportStartPostponedEnterTransition, validateRequestPermissionsRequestCode\\
+
+\subsubsection{Methods inherited from class android.app.Activity}
+
+canStartActivityForResult, closeContextMenu, closeOptionsMenu, convertFromTranslucent, convertToTranslucent, createPendingResult, dismissDialog, dispatchEnterAnimationComplete, dispatchGenericMotionEvent, dispatchKeyEvent, dispatchKeyShortcutEvent, dispatchPopulateAccessibilityEvent, dispatchTouchEvent, dispatchTrackballEvent, findViewById, finish, finishActivity, finishActivityFromChild, finishAffinity, finishAfterTransition, finishAndRemoveTask, finishFromChild, getActionBar, getActivityToken, getApplication, getCallingActivity, getCallingPackage, getChangingConfigurations, getComponentName, getContentScene, getContentTransitionManager, getCurrentFocus, getFragmentManager, getIntent, getLastNonConfigurationInstance, getLayoutInflater, getLoaderManager, getLocalClassName, getMediaController, getParent, getParentActivityIntent, getPreferences, getReferrer, getRequestedOrientation, getSearchEvent, getSystemService, getTaskId, getTitle, getTitleColor, getVoiceInteractor, getVolumeControlStream, getWindow, getWindowManager, hasWindowFocus, isBackgroundVisibleBehind, isChangingConfigurations, isChild, isDestroyed, isFinishing, isImmersive, isResumed, isTaskRoot, isVoiceInteraction, isVoiceInteractionRoot, managedQuery, managedQuery, moveTaskToBack, navigateUpTo, navigateUpToFromChild, onActionModeFinished, onActionModeStarted, onActivityReenter, onAttachedToWindow, onAttachFragment, onBackgroundVisibleBehindChanged, onContextItemSelected, onContextMenuClosed, onCreate, onCreateContextMenu, onCreateDescription, onCreateNavigateUpTaskStack, onCreateOptionsMenu, onCreatePanelView, onCreateThumbnail, onDetachedFromWindow, onEnterAnimationComplete, onGenericMotionEvent, onKeyLongPress, onKeyMultiple, onKeyShortcut, onKeyUp, onNavigateUp, onNavigateUpFromChild, onNewActivityOptions, onOptionsItemSelected, onOptionsMenuClosed, onPostCreate, onPrepareNavigateUpTaskStack, onPrepareOptionsMenu, onProvideAssistContent, onProvideAssistData, onProvideReferrer, onRestoreInstanceState, onSaveInstanceState, onSearchRequested, onSearchRequested, onTouchEvent, onTrackballEvent, onTrimMemory, onUserInteraction, onVisibleBehindCanceled, onWindowAttributesChanged, onWindowDismissed, onWindowFocusChanged, onWindowStartingActionMode, onWindowStartingActionMode, openContextMenu, openOptionsMenu, overridePendingTransition, postponeEnterTransition, recreate, registerForContextMenu, releaseInstance, removeDialog, reportFullyDrawn, requestPermissions, requestVisibleBehind, requestWindowFeature, runOnUiThread, setActionBar, setContentTransitionManager, setDefaultKeyMode, setEnterSharedElementCallback, setExitSharedElementCallback, setFeatureDrawable, setFeatureDrawableAlpha, setFeatureDrawableResource, setFeatureDrawableUri, setFinishOnTouchOutside, setImmersive, setIntent, setMediaController, setPersistent, setProgress, setProgressBarIndeterminate, setProgressBarIndeterminateVisibility, setProgressBarVisibility, setRequestedOrientation, setResult, setResult, setSecondaryProgress, setTaskDescription, setTitle, setTitle, setTitleColor, setVisible, setVolumeControlStream, shouldShowRequestPermissionRationale, shouldUpRecreateTask, showAssist, showDialog, showDialog, showLockTaskEscapeMessage, startActionMode, startActionMode, startActivities, startActivities, startActivity, startActivity, startActivityAsCaller, startActivityAsUser, startActivityAsUser, startActivityForResult, startActivityForResult, startActivityForResultAsUser, startActivityForResultAsUser, startActivityFromChild, startActivityFromChild, startActivityFromFragment, startActivityFromFragment, startActivityIfNeeded, startActivityIfNeeded, startIntentSender, startIntentSender, startIntentSenderForResult, startIntentSenderForResult, startIntentSenderFromChild, startIntentSenderFromChild, startLockTask, startManagingCursor, startNextMatchingActivity, startNextMatchingActivity, startPostponedEnterTransition, startSearch, stopLockTask, stopManagingCursor, takeKeyEvents, triggerSearch, unregisterForContextMenu\\
+
+\subsubsection{Methods inherited from class android.view.ContextThemeWrapper}
+
+applyOverrideConfiguration, getResources, getTheme, getThemeResId, setTheme\\
+
+\subsubsection{Methods inherited from class android.content.ContextWrapper}
+
+bindService, bindServiceAsUser, checkCallingOrSelfPermission, checkCallingOrSelfUriPermission, checkCallingPermission, checkCallingUriPermission, checkPermission, checkPermission, checkSelfPermission, checkUriPermission, checkUriPermission, checkUriPermission, clearWallpaper, createApplicationContext, createConfigurationContext, createDisplayContext, createPackageContext, createPackageContextAsUser, databaseList, deleteDatabase, deleteFile, enforceCallingOrSelfPermission, enforceCallingOrSelfUriPermission, enforceCallingPermission, enforceCallingUriPermission, enforcePermission, enforceUriPermission, enforceUriPermission, fileList, getApplicationContext, getApplicationInfo, getAssets, getBaseContext, getBasePackageName, getCacheDir, getClassLoader, getCodeCacheDir, getContentResolver, getDatabasePath, getDir, getDisplayAdjustments, getExternalCacheDir, getExternalCacheDirs, getExternalFilesDir, getExternalFilesDirs, getExternalMediaDirs, getFilesDir, getFileStreamPath, getMainLooper, getNoBackupFilesDir, getObbDir, getObbDirs, getOpPackageName, getPackageCodePath, getPackageManager, getPackageName, getPackageResourcePath, getSharedPreferences, getSharedPrefsFile, getSystemServiceName, getUserId, getWallpaper, getWallpaperDesiredMinimumHeight, getWallpaperDesiredMinimumWidth, grantUriPermission, isRestricted, openFileInput, openFileOutput, openOrCreateDatabase, openOrCreateDatabase, peekWallpaper, registerReceiver, registerReceiver, registerReceiverAsUser, removeStickyBroadcast, removeStickyBroadcastAsUser, revokeUriPermission, sendBroadcast, sendBroadcast, sendBroadcast, sendBroadcast, sendBroadcastAsUser, sendBroadcastAsUser, sendBroadcastAsUser, sendBroadcastMultiplePermissions, sendOrderedBroadcast, sendOrderedBroadcast, sendOrderedBroadcast, sendOrderedBroadcast, sendOrderedBroadcastAsUser, sendOrderedBroadcastAsUser, sendOrderedBroadcastAsUser, sendStickyBroadcast, sendStickyBroadcastAsUser, sendStickyOrderedBroadcast, sendStickyOrderedBroadcastAsUser, setWallpaper, setWallpaper, startActivitiesAsUser, startInstrumentation, startService, startServiceAsUser, stopService, stopServiceAsUser, unbindService, unregisterReceiver\\
+
+\subsubsection{Methods inherited from class android.content.Context}
+
+getColor, getColorStateList, getDrawable, getString, getString, getSystemService, getText, obtainStyledAttributes, obtainStyledAttributes, obtainStyledAttributes, obtainStyledAttributes, registerComponentCallbacks, unregisterComponentCallbacks\\
+
+\subsubsection{Methods inherited from class java.lang.Object}
+
+equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait\\
+
+
+
+
+
+%nestedclasses
+\subsection{Nested Class Summary}
+
+\subsubsection{Nested Classes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ 	LoginActivity.Android.UserLoginTask}{UserLoginTask} ()
+\end{DoxyCompactItemize} 
+
+\subsubsection{Nested classes/interfaces inherited from class android.content.Context}
+\begin{DoxyCompactItemize}
+\item android.app.Activity.TranslucentConversionListener
+\end{DoxyCompactItemize}
+
+\subsubsection{Nested classes/interfaces inherited from class android.content.Context}
+\begin{DoxyCompactItemize}
+\item android.content.Context.BindServiceFlags
+\item android.content.Context.CreatePackageOptions
+\item android.content.Context.ServiceName
+\end{DoxyCompactItemize} 
+
+%Feild Summary
+\subsection{Feild Summary}
+
+\subsection{Fields inherited from class android.app.Activity}
+
+
+\begin{lstlisting}
+DEFAULT_KEYS_DIALER, DEFAULT_KEYS_DISABLE, DEFAULT_KEYS_SEARCH_GLOBAL, DEFAULT_KEYS_SEARCH_LOCAL, DEFAULT_KEYS_SHORTCUT, RESULT_CANCELED, RESULT_FIRST_USER, RESULT_OK
+\end{lstlisting}
+
+\subsection{Fields inherited from class android.content.Context}
+
+\begin{lstlisting}
+ACCESSIBILITY_SERVICE, ACCOUNT_SERVICE, ACTIVITY_SERVICE, ALARM_SERVICE, APP_OPS_SERVICE, APPWIDGET_SERVICE, AUDIO_SERVICE, BACKUP_SERVICE, BATTERY_SERVICE, BIND_ABOVE_CLIENT, BIND_ADJUST_WITH_ACTIVITY, BIND_ALLOW_OOM_MANAGEMENT, BIND_AUTO_CREATE, BIND_DEBUG_UNBIND, BIND_FOREGROUND_SERVICE, BIND_FOREGROUND_SERVICE_WHILE_AWAKE, BIND_IMPORTANT, BIND_NOT_FOREGROUND, BIND_NOT_VISIBLE, BIND_SHOWING_UI, BIND_TREAT_LIKE_ACTIVITY, BIND_VISIBLE, BIND_WAIVE_PRIORITY, BLUETOOTH_SERVICE, CAMERA_SERVICE, CAPTIONING_SERVICE, CARRIER_CONFIG_SERVICE, CLIPBOARD_SERVICE, CONNECTIVITY_SERVICE, CONSUMER_IR_SERVICE, CONTEXT_IGNORE_SECURITY, CONTEXT_INCLUDE_CODE, CONTEXT_REGISTER_PACKAGE, CONTEXT_RESTRICTED, COUNTRY_DETECTOR, DEVICE_IDLE_CONTROLLER, DEVICE_POLICY_SERVICE, DISPLAY_SERVICE, DOWNLOAD_SERVICE, DROPBOX_SERVICE, ETHERNET_SERVICE, FINGERPRINT_SERVICE, HDMI_CONTROL_SERVICE, INPUT_METHOD_SERVICE, INPUT_SERVICE, JOB_SCHEDULER_SERVICE, KEYGUARD_SERVICE, LAUNCHER_APPS_SERVICE, LAYOUT_INFLATER_SERVICE, LOCATION_SERVICE, MEDIA_PROJECTION_SERVICE, MEDIA_ROUTER_SERVICE, MEDIA_SESSION_SERVICE, MIDI_SERVICE, MODE_APPEND, MODE_ENABLE_WRITE_AHEAD_LOGGING, MODE_MULTI_PROCESS, MODE_PRIVATE, MODE_WORLD_READABLE, MODE_WORLD_WRITEABLE, NETWORK_POLICY_SERVICE, NETWORK_SCORE_SERVICE, NETWORK_STATS_SERVICE, NETWORKMANAGEMENT_SERVICE, NFC_SERVICE, NOTIFICATION_SERVICE, NSD_SERVICE, PERSISTENT_DATA_BLOCK_SERVICE, POWER_SERVICE, PRINT_SERVICE, RADIO_SERVICE, RESTRICTIONS_SERVICE, SEARCH_SERVICE, SENSOR_SERVICE, SERIAL_SERVICE, SIP_SERVICE, STATUS_BAR_SERVICE, STORAGE_SERVICE, TELECOM_SERVICE, TELEPHONY_SERVICE, TELEPHONY_SUBSCRIPTION_SERVICE, TEXT_SERVICES_MANAGER_SERVICE, TRUST_SERVICE, TV_INPUT_SERVICE, UI_MODE_SERVICE, UPDATE_LOCK_SERVICE, USAGE_STATS_SERVICE, USB_SERVICE, USER_SERVICE, VIBRATOR_SERVICE, VOICE_INTERACTION_MANAGER_SERVICE, WALLPAPER_SERVICE, WIFI_P2P_SERVICE, WIFI_PASSPOINT_SERVICE, WIFI_RTT_SERVICE, WIFI_SCANNING_SERVICE, WIFI_SERVICE, WINDOW_SERVICE
+\end{lstlisting}
+
+\subsection{Fields inherited from interface android.content.ComponentCallbacks2}
+
+
+\begin{lstlisting}
+TRIM_MEMORY_BACKGROUND, TRIM_MEMORY_COMPLETE, TRIM_MEMORY_MODERATE, TRIM_MEMORY_RUNNING_CRITICAL, TRIM_MEMORY_RUNNING_LOW, TRIM_MEMORY_RUNNING_MODERATE, TRIM_MEMORY_UI_HIDDEN
+\end{lstlisting}
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item LoginActivity
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

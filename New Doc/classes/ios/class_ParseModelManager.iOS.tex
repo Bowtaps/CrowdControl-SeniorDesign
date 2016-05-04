@@ -1,0 +1,351 @@
+
+\hypertarget{class_ParseModelManager.iOS}{\section{ParseModelManager Class Reference}
+\label{class_ParseModelManager.iOS}\index{ParseModelManager.iOS@{ParseModelManager.iOS}}
+}
+
+\subsection*{Class ParseGroupModel}
+
+\textit{public class \textbf{ ParseGroupModel}}
+
+\tab \textbf{class ParseModelManager: ModelManager}
+
+A Parse implementation of the ModelManager protocol. Class designed to query Parse for various models, including users and groups.\\
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ParseModelManager.iOS.logInUser}{logInUser} ()
+\item 
+\hyperlink{class_ParseModelManager.iOS.logInUserInBackground}{logInUserInBackground} ()
+\item 
+\hyperlink{class_ParseModelManager.iOS.createUser}{createUser} ()
+\item 
+\hyperlink{class_ParseModelManager.iOS.createUserInBackground}{createUserInBackground} ()
+\item 
+\hyperlink{class_ParseModelManager.iOS.currentUser}{currentUser} ()
+\item 
+\hyperlink{class_ParseModelManager.iOS.logOutCurrentUser}{logOutCurrentUser} ()
+\item 
+\hyperlink{class_ParseModelManager.iOS.fetchGroups}{fetchGroups} ()
+\item 
+\hyperlink{class_ParseModelManager.iOS.fetchGroupsInBackground}{fetchGroupsInBackground} ()
+\item 
+\hyperlink{class_ParseModelManager.iOS.currentGroup}{currentGroup} ()
+\item 
+\hyperlink{class_ParseModelManager.iOS.setCurrentGroup}{setCurrentGroup} ()
+\item 
+\hyperlink{class_ParseModelManager.iOS.fetchCurrentGroup}{fetchCurrentGroup} ()
+\item 
+\hyperlink{class_ParseModelManager.iOS.fetchCurrentGroupInBackground}{fetchCurrentGroupInBackground} ()
+
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Summary}
+
+
+%method
+\hypertarget{class_ParseGroupModel.iOS.logInUser}{\index{ParseGroupModel.iOS.logInUser@{ParseGroupModel.iOS.logInUser}!ParseGroupModel.iOS.logInUser@{ParseGroupModel.iOS.logInUser}}
+\index{ParseGroupModel.iOS.logInUser@{ParseGroupModel.iOS.logInUser}!ParseModelManager.iOS.logInUser@{ParseModelManager.iOS.logInUser}}
+\subsubsection[{ParseGroupModel.iOS.logInUser}]{\setlength{\rightskip}{0pt plus 5cm}logInUser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseGroupModel.iOS.logInUser}
+\textbf{logInUser(\_:password:)}
+
+Compares the submitted username and password to storage and returns a UserModel object if the user was successfully logged in. Otherewise, it throws an exception.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func logInUser(username: String, password: String) throws -> UserModel\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item username -   The username of the user to log in. 
+\item password - The password to use to log in.
+\end{itemize}
+
+\textbf{Return Value:}
+A user object if the login was successful.\\
+
+
+%method
+\hypertarget{class_ParseModelManager.iOS.logInUserInBackground}{\index{ParseModelManager.iOS.logInUserInBackground@{ParseModelManager.iOS.logInUserInBackground}!ParseGroupModel.iOS.logInUserInBackground@{ParseGroupModel.iOS.logInUserInBackground}}
+\index{ParseModelManager.iOS.logInUserInBackground@{ParseGroupModel.iOS.logInUserInBackground}!ParseModelManager.iOS.logInUserInBackground@{ParseModelManager.iOS.logInUserInBackground}}
+\subsubsection[{ParseModelManager.iOS.logInUserInBackground}]{\setlength{\rightskip}{0pt plus 5cm}logInUserInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseModelManager.iOS.logInUserInBackground}
+\textbf{logInUserInBackground(\_:password:callback:)}
+
+Compares the submitted username and password to storage on a separate thread, executing the given callback if successful. If login is unsuccessful, it throws an exception.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+func logInUserInBackground(username: String, password: String, callback: ((user: UserModel?, error: NSError?) -> Void)?) -> Void\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item username -   The username of the user to log in. 
+\item password - The password to use to log in.
+\item callback - An optional callback to call once the operation is complete.
+\end{itemize}
+
+%method
+\hypertarget{class_ParseModelManager.iOS.createUser}{\index{ParseModelManager.iOS.createUser@{ParseModelManager.iOS.createUser}!ParseGroupModel.iOS.createUser@{ParseModelManager.iOS.createUser}}
+\index{ParseModelManager.iOS.createUser@{ParseModelManager.iOS.createUser}!ParseModelManager.iOS.createUser@{ParseModelManager.iOS.createUser}}
+\subsubsection[{ParseModelManager.iOS.createUser}]{\setlength{\rightskip}{0pt plus 5cm}createUser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseModelManager.iOS.createUser}
+\textbf{createUser(\_:email:password:)}
+
+Attempts to create a new user in the system, ensuring that the given username is unique. Also creates the corresponding user profile object. Both objects are then stored in the server.
+
+This is a blocking function that can take several seconds to complete. If an operation fails, then an exception will be thrown.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func createUser(username: String, email: String, password: String) throws -> UserModel\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item username -   The username of the user to log in. 
+\item password - The password to use to log in.
+\end{itemize}
+
+\textbf{Return Value:}\\
+The newly created UserModel if the operation is successful.\\
+
+%method
+\hypertarget{class_ParseModelManager.iOS.createUserInBackground}{\index{ParseModelManager.iOS.createUserInBackground@{ParseModelManager.iOS.createUserInBackground}!ParseGroupModel.iOS.createUserInBackground@{ParseModelManager.iOS.createUserInBackground}}
+\index{ParseModelManager.iOS.createUserInBackground@{ParseModelManager.iOS.createUserInBackground}!ParseModelManager.iOS.createUserInBackground@{ParseModelManager.iOS.createUserInBackground}}
+\subsubsection[{ParseModelManager.iOS.createUserInBackground}]{\setlength{\rightskip}{0pt plus 5cm}createUserInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseModelManager.iOS.createUserInBackground}
+\textbf{createUserInBackground(\_:email:password:callback:)}
+
+Attempts to create a new user in the system, ensuring that the given username is unique. Also creates the corresponding UserProfileObject. Both objects are then stored in the server.\\
+
+This is an asynchronous function that will pass control back to the main thread by executing the given callback prameter if it is not nil.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func createUserInBackground(username: String, email: String, password: String, callback: ((user: UserModel?, error: NSError?) -> Void)?) -> Void\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item username -   The username of the user to log in. 
+\item password - The password to use to log in.
+\item callback - The callback function that will be executed after the operation is complete, either successfully or unsuccessfully.
+\end{itemize}
+
+%method
+\hypertarget{class_ParseModelManager.iOS.currentUser}{\index{ParseModelManager.iOS.currentUser@{ParseModelManager.iOS.currentUser}!ParseGroupModel.iOS.currentUser@{ParseModelManager.iOS.currentUser}}
+\index{ParseModelManager.iOS.currentUser@{ParseModelManager.iOS.currentUser}!ParseModelManager.iOS.currentUser@{ParseModelManager.iOS.currentUser}}
+\subsubsection[{ParseModelManager.iOS.currentUser}]{\setlength{\rightskip}{0pt plus 5cm}currentUser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseModelManager.iOS.currentUser}
+
+Retrieves the currently logged-in user. If no user is logged in, returns nil.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func createUserInBackground(username: String, email: String, password: String, callback: ((user: UserModel?, error: NSError?) -> Void)?) -> Void\\
+
+%method
+\hypertarget{class_ParseModelManager.iOS.logOutCurrentUser}{\index{ParseModelManager.iOS.logOutCurrentUser@{ParseModelManager.iOS.logOutCurrentUser}!ParseGroupModel.iOS.logOutCurrentUser@{ParseModelManager.iOS.logOutCurrentUser}}
+\index{ParseModelManager.iOS.logOutCurrentUser@{ParseModelManager.iOS.logOutCurrentUser}!ParseModelManager.iOS.logOutCurrentUser@{ParseModelManager.iOS.logOutCurrentUser}}
+\subsubsection[{ParseModelManager.iOS.logOutCurrentUser}]{\setlength{\rightskip}{0pt plus 5cm}logOutCurrentUser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseModelManager.iOS.logOutCurrentUser}
+
+Logs out the currently logged in user, removing them from any caches and returning whether or not the operation was successful.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func logOutCurrentUser() -> Bool\\
+
+\textbf{Return Vales:}
+true if the operation was successful and the user was successfully logged out, false if not.\\
+
+%method
+\hypertarget{class_ParseModelManager.iOS.fetchGroupsInBackground}{\index{ParseModelManager.iOS.fetchGroupsInBackground@{ParseModelManager.iOS.fetchGroupsInBackground}!ParseGroupModel.iOS.fetchGroupsInBackground@{ParseModelManager.iOS.fetchGroupsInBackground}}
+\index{ParseModelManager.iOS.fetchGroupsInBackground@{ParseModelManager.iOS.fetchGroupsInBackground}!ParseModelManager.iOS.fetchGroupsInBackground@{ParseModelManager.iOS.fetchGroupsInBackground}}
+\subsubsection[{ParseModelManager.iOS.fetchGroupsInBackground}]{\setlength{\rightskip}{0pt plus 5cm}fetchGroupsInBackground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseModelManager.iOS.fetchGroupsInBackground}
+
+etches all gropus in storage asynchronously.\\
+
+This is an asynchronous function that will pass control back to the main thread by executing the given callback parameter if it is not nil.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func fetchGroupsInBackground(callback: ((results: [GroupModel]?, error: NSError?) -> Void)?) -> Void\\
+
+\textbf{Return Vales:}
+Array of all GroupModel objects in storage.\\
+
+%method
+\hypertarget{class_ParseModelManager.iOS.fetchGroups}{\index{ParseModelManager.iOS.fetchGroups@{ParseModelManager.iOS.fetchGroups}!ParseGroupModel.iOS.fetchGroups@{ParseModelManager.iOS.fetchGroups}}
+\index{ParseModelManager.iOS.fetchGroups@{ParseModelManager.iOS.fetchGroups}!ParseModelManager.iOS.fetchGroups@{ParseModelManager.iOS.fetchGroups}}
+\subsubsection[{ParseModelManager.iOS.fetchGroups}]{\setlength{\rightskip}{0pt plus 5cm}fetchGroups (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseModelManager.iOS.fetchGroups}
+\textbf{fetchGroupsInBackground(\_:)}
+Fetches all groups in storage synchronously.\\
+
+This is a blocking function that can take several seconds to complete. If an operation fails, then an exception will be thrown.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func fetchGroups() throws -> [GroupModel]\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item callback - The callback function that will be executed after the operation is complete, either successfully or unsuccessfully.
+\end{itemize}
+
+%method
+\hypertarget{class_ParseModelManager.iOS.currentGroup}{\index{ParseModelManager.iOS.currentGroup@{ParseModelManager.iOS.currentGroup}!ParseGroupModel.iOS.currentGroup@{ParseModelManager.iOS.currentGroup}}
+\index{ParseModelManager.iOS.currentGroup@{ParseModelManager.iOS.currentGroup}!ParseModelManager.iOS.currentGroup@{ParseModelManager.iOS.currentGroup}}
+\subsubsection[{ParseModelManager.iOS.currentGroup}]{\setlength{\rightskip}{0pt plus 5cm}currentGroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseModelManager.iOS.currentGroup}
+Fetches all groups in storage synchronously.\\
+
+Gets the cached currently active group of which the current user is member, if any. If no user is logged in or the logged in user is not a member of any groups, this method will return nil. This function does not access storage in any way.\\
+
+This method deals exclusively with cached values. In order to update the cached value, either set the cached value directly using setCurrentGroup(\_:) or allowing it to be set automatically using fetchCurrentGroup() and fetchCurrentGroupInBackground(\_:).\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func fetchGroups() throws -> [GroupModel]\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item callback - The callback function that will be executed after the operation is complete, either successfully or unsuccessfully.
+\end{itemize}
+
+\textbf{Returns Value:}\\
+The GroupModel of which the logged in user (if any) is a member of, or nil if no such group exists.\\
+
+%method
+\hypertarget{class_ParseModelManager.iOS.setCurrentGroup}{\index{ParseModelManager.iOS.setCurrentGroup@{ParseModelManager.iOS.setCurrentGroup}!ParseGroupModel.iOS.setCurrentGroup@{ParseModelManager.iOS.setCurrentGroup}}
+\index{ParseModelManager.iOS.setCurrentGroup@{ParseModelManager.iOS.setCurrentGroup}!ParseModelManager.iOS.setCurrentGroup@{ParseModelManager.iOS.setCurrentGroup}}
+\subsubsection[{ParseModelManager.iOS.setCurrentGroup}]{\setlength{\rightskip}{0pt plus 5cm}setCurrentGroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseModelManager.iOS.setCurrentGroup}
+\textbf{setCurrentGroup(\_:)}\\
+Sets the current cached value of the active group. Set the value to nil to indicate that there are no currently active groups. This function does not modify storage in anyway.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+func setCurrentGroup(group: GroupModel?)\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item group - The current active GroupModel, or nil if no groups are currently active.
+\end{itemize}
+
+
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item ParseModelManager
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

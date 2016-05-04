@@ -1,0 +1,168 @@
+\hypertarget{class_GroupInfoFragment.Android}{\section{GroupInfoFragment Class Reference}
+\label{class_GroupInfoFragment.Android}\index{GroupInfoFragment.Android@{GroupInfoFragment.Android}}
+}
+
+\subsection*{Class GroupInfoFragment}
+
+\textit{public class \textbf{GroupInfoFragment}}
+\textbf{extends} android.support.v4.app.Fragment\\
+
+A simple Fragment subclass. Activities that contain this fragment must implement the to handle interaction events. Use the newInstance(java.lang.String) factory method to create an instance of this fragment. Will display information of the current group and allow the user to leave the group\\
+
+
+\textbf{All Known Implementing Classes:}\\
+\tab            android.content.ComponentCallbacks, android.content.ComponentCallbacks2,\\
+android.support.v4.app.ActivityCompat.OnRequestPermissionsResultCallback, \\
+android.support.v4.app.ActivityCompatApi23.RequestPermissionsRequestCodeValidator,\\
+ android.support.v4.app.TaskStackBuilder.SupportParentable,\\
+  android.support.v7.app.ActionBarDrawerToggle.DelegateProvider,\\
+  android.support.v7.app.AppCompatCallback, android.view.KeyEvent.Callback, \\
+  android.view.LayoutInflater.Factory, android.view.LayoutInflater.Factory2, \\
+  android.view.View.OnClickListener, android.view.View.OnCreateContextMenuListener,\\
+    android.view.Window.Callback, android.view.Window.OnWindowDismissedCallback\\
+
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_GroupInfoFragment.Android.newInstance}{newInstance} ()
+\item 
+\hyperlink{class_GroupInfoFragment.Android.onCreate}{onCreate} ()
+\item 
+\hyperlink{class_GroupInfoFragment.Android.onCreateView}{onCreateView} ()
+
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Detail}
+
+%method
+\hypertarget{class_GroupInfoFragment.Android.newInstance}{\index{GroupInfoFragment.Android.newInstance@{GroupInfoFragment.Android.newInstance}!GroupInfoFragment.Android.newInstance@{GroupInfoFragment.Android.newInstance}}
+\index{GroupInfoFragment.Android.newInstance@{GroupInfoFragment.Android.newInstance}!GroupInfoFragment.Android.newInstance@{GroupInfoFragment.Android.newInstance}}
+\subsubsection[{GroupInfoFragment.Android.newInstance}]{\setlength{\rightskip}{0pt plus 5cm}newInstance (
+\begin{DoxyParamCaption}
+\item[{java.lang.String}]{text}
+\end{DoxyParamCaption}
+)}}\label{class_GroupCreateActivity.Android.onClick}
+\textit{newInstance(java.lang.String text))}\\
+
+Use this factory method to create a new instance of this fragment using the provided parameters.\\
+
+\textbf{Modifier and Type:}\\
+\tab static GroupInfoFragment\\
+
+
+\textbf{Parameters:}
+\begin{itemize}
+\item text - Test text 1
+\end{itemize}
+
+\textbf{Returns:}
+\tab A new instance of fragment GroupInfoFragment.\\
+
+
+
+%method
+\hypertarget{class_GroupInfoFragment.Android.onCreate}{\index{GroupInfoFragment.Android.onCreate@{GroupInfoFragment.Android.onCreate}!GroupInfoFragment.Android.onCreate@{GroupInfoFragment.Android.onCreate}}
+\index{GroupInfoFragment.Android.onCreate@{GroupInfoFragment.Android.onCreate}!GroupInfoFragment.Android.onCreate@{GroupInfoFragment.Android.onCreate}}
+\subsubsection[{GroupInfoFragment.Android.onCreate}]{\setlength{\rightskip}{0pt plus 5cm}onCreate (
+\begin{DoxyParamCaption}
+\item[{java.lang.String}]{text}
+\end{DoxyParamCaption}
+)}}\label{class_GroupCreateActivity.Android.onCreate}
+\textit{public void onCreate(android.os.Bundle savedInstanceState)}\\
+
+Called to do initial creation of a fragment. This is called after Fragment.onAttach(Activity) and before Fragment.onCreateView(LayoutInflater, ViewGroup, Bundle).\\
+
+Note that this can be called while the fragment's activity is still in the process of being created. As such, you can not rely on things like the activity's content view hierarchy being initialized at this point. If you want to do work once the activity itself is created, see Fragment.onActivityCreated(Bundle).\\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Overrides:}
+\tab    onCreate in class android.support.v4.app.Fragment.\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item savedInstanceState - If the fragment is being re-created from a previous saved state, this is the state.
+\end{itemize}
+
+%method
+\hypertarget{class_GroupInfoFragment.Android.onCreateView}{\index{GroupInfoFragment.Android.onCreateView@{GroupInfoFragment.Android.onCreateView}!GroupInfoFragment.Android.onCreateView@{GroupInfoFragment.Android.onCreateView}}
+\index{GroupInfoFragment.Android.onCreateView@{GroupInfoFragment.Android.onCreateView}!GroupInfoFragment.Android.onCreateView@{GroupInfoFragment.Android.onCreateView}}
+\subsubsection[{GroupInfoFragment.Android.onCreateView}]{\setlength{\rightskip}{0pt plus 5cm}onCreateView (
+\begin{DoxyParamCaption}
+\item[{android.view.LayoutInflater}]{inflater}
+\item[{android.view.ViewGroup}]{container}
+\item[{android.os.Bundle}]{savedInstanceState}
+\end{DoxyParamCaption}
+)}}\label{class_GroupCreateActivity.Android.onCreateView}
+\textit{public android.view.View onCreateView(android.view.LayoutInflater inflater,\\
+                             android.view.ViewGroup container,\\
+                             android.os.Bundle savedInstanceState)}\\
+
+Called to have the fragment instantiate its user interface view. This is optional, and non-graphical fragments can return null (which is the default implementation). This will be called between Fragment.onCreate(Bundle) and Fragment.onActivityCreated(Bundle).\\
+
+If you return a View from here, you will later be called in Fragment.onDestroyView() when the view is being released.\\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Overrides:}
+\tab    onCreate in class android.support.v4.app.Fragment.\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item inflater - The LayoutInflater object that can be used to inflate any views in the fragment,
+\item container - If non-null, this is the parent view that the fragment's UI should be attached to. The fragment should not add the view itself, but this can be used to generate the LayoutParams of the view.
+\item savedInstanceState - If non-null, this fragment is being re-constructed from a previous saved state as given here.
+\end{itemize}
+
+\textbf{Returns:}
+\tab   Return the View for the fragment's UI, or null.\\
+
+
+%method summary
+\subsection{Method Summary}
+
+\subsubsection{Methods inherited from class android.support.v4.app.Fragment}
+
+dump, equals, getActivity, getAllowEnterTransitionOverlap, getAllowReturnTransitionOverlap, getArguments, getChildFragmentManager, getContext, getEnterTransition, getExitTransition, getFragmentManager, getHost, getId, getLayoutInflater, getLoaderManager, getParentFragment, getReenterTransition, getResources, getRetainInstance, getReturnTransition, getSharedElementEnterTransition, getSharedElementReturnTransition, getString, getString, getTag, getTargetFragment, getTargetRequestCode, getText, getUserVisibleHint, getView, hashCode, hasOptionsMenu, instantiate, instantiate, isAdded, isDetached, isHidden, isInLayout, isMenuVisible, isRemoving, isResumed, isVisible, onActivityCreated, onActivityResult, onAttach, onAttach, onConfigurationChanged, onContextItemSelected, onCreateAnimation, onCreateContextMenu, onCreateOptionsMenu, onDestroy, onDestroyOptionsMenu, onDestroyView, onDetach, onHiddenChanged, onInflate, onInflate, onLowMemory, onOptionsItemSelected, onOptionsMenuClosed, onPause, onPrepareOptionsMenu, onRequestPermissionsResult, onResume, onSaveInstanceState, onStart, onStop, onViewCreated, onViewStateRestored, registerForContextMenu, requestPermissions, setAllowEnterTransitionOverlap, setAllowReturnTransitionOverlap, setArguments, setEnterSharedElementCallback, setEnterTransition, setExitSharedElementCallback, setExitTransition, setHasOptionsMenu, setInitialSavedState, setMenuVisibility, setReenterTransition, setRetainInstance, setReturnTransition, setSharedElementEnterTransition, setSharedElementReturnTransition, setTargetFragment, setUserVisibleHint, shouldShowRequestPermissionRationale, startActivity, startActivityForResult, toString, unregisterForContextMenu\\
+
+\subsubsection{Methods inherited from class java.lang.Object}
+
+getClass, notify, notifyAll, wait, wait, wait\\
+
+
+
+
+
+%nestedclasses
+\subsection{Nested Class Summary}
+
+\subsubsection{Nested classes/interfaces inherited from class android.support.v4.app.Fragment}
+\begin{DoxyCompactItemize}
+\item android.support.v4.app.Fragment.InstantiationException
+\item android.support.v4.app.Fragment.SavedState
+\end{DoxyCompactItemize} 
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item GroupCreateActivity
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

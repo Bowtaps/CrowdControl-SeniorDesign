@@ -1,0 +1,226 @@
+
+\hypertarget{class_ParseUserModel.iOS}{\section{ParseUserModel Class Reference}
+\label{class_ParseUserModel.iOS}\index{ParseUserModel.iOS@{ParseUserModel.iOS}}
+}
+
+\subsection*{Class ParseUserModel}
+
+\textit{public class \textbf{ ParseUserModel}}
+
+\tab \textbf{class ParseUserModel: ParseBaseModel, UserModel}
+
+This class extends the ParseBaseModel class and implements the UserModel protocol and is the class to access the current user’s information from Parse\\
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ParseUserModel.iOS.profile}{profile} ()
+\item 
+\hyperlink{class_ParseUserModel.iOS.init}{init} ()
+\item 
+\hyperlink{class_ParseUserModel.iOS.username}{username} ()
+\item 
+\hyperlink{class_ParseUserModel.iOS.emailVerified}{emailVerified} ()
+\item 
+\hyperlink{class_ParseUserModel.iOS.email}{email} ()
+\item 
+\hyperlink{class_ParseUserModel.iOS.phone}{phone} ()
+\item 
+\hyperlink{class_ParseUserModel.iOS.createFromSignUp}{createFromSignUp} ()
+
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Summary}
+
+
+%method
+\hypertarget{class_ParseUserModel.iOS.profile}{\index{ParseUserModel.iOS.profile@{ParseUserModel.iOS.profile}!ParseUserModel.iOS.profile@{ParseUserModel.iOS.profile}}
+\index{ParseUserModel.iOS.profile@{ParseUserModel.iOS.profile}!ParseUserModel.iOS.profile@{ParseUserModel.iOS.profile}}
+\subsubsection[{ParseUserModel.iOS.profile}]{\setlength{\rightskip}{0pt plus 5cm}profile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseUserModel.iOS.profile}
+
+The model corresponding to this user’s public profile.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+let profile: UserProfileModel\\
+
+%method
+\hypertarget{class_ParseUserModel.iOS.init}{\index{ParseUserModel.iOS.init@{ParseUserModel.iOS.init}!ParseUserModel.iOS.init@{ParseUserModel.iOS.init}}
+\index{ParseUserModel.iOS.init@{ParseUserModel.iOS.init}!ParseUserModel.iOS.init@{ParseUserModel.iOS.init}}
+\subsubsection[{ParseUserModel.iOS.init}]{\setlength{\rightskip}{0pt plus 5cm}init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseUserModel.iOS.init}
+\textbf{init(withParseUser:profile:)}
+
+Class constructor. Initializes the instance from a PFObject.\\
+
+\textbf{Modifier and Type:}\\
+\tab init\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+init(withParseUser user: PFUser, profile: UserProfileModel? = nil)\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item withParseUser - The Parse user to tie this model to the Parse database.
+\item profile - An optional UserProfileModel to connect to this user. If no value is or nil is provided, this constructor will attempt to get the profile from the withParseUser model.
+\end{itemize}
+
+%method
+\hypertarget{class_ParseUserModel.iOS.username}{\index{ParseUserModel.iOS.username@{ParseUserModel.iOS.username}!ParseUserModel.iOS.username@{ParseUserModel.iOS.username}}
+\index{ParseUserModel.iOS.username@{ParseUserModel.iOS.username}!ParseUserModel.iOS.username@{ParseUserModel.iOS.username}}
+\subsubsection[{ParseUserModel.iOS.username}]{\setlength{\rightskip}{0pt plus 5cm}username (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseUserModel.iOS.username}
+
+String containing the current user’s username as defined in the UserModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tab var username:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var username: String\\
+
+%method
+\hypertarget{class_ParseUserModel.iOS.emailVerified}{\index{ParseUserModel.iOS.emailVerified@{ParseUserModel.iOS.emailVerified}!ParseUserModel.iOS.emailVerified@{ParseUserModel.iOS.emailVerified}}
+\index{ParseUserModel.iOS.emailVerified@{ParseUserModel.iOS.emailVerified}!ParseUserModel.iOS.emailVerified@{ParseUserModel.iOS.emailVerified}}
+\subsubsection[{ParseUserModel.iOS.emailVerified}]{\setlength{\rightskip}{0pt plus 5cm}emailVerified (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseUserModel.iOS.emailVerified}
+
+Boolean to store if the user has verified their email with parse as defined by the UserModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tab  var emailVerified:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var emailVerified: Bool\\
+
+\textbf{Return Value:}\\
+true if their email has been verified, false if their email has not been verified.
+
+%method
+\hypertarget{class_ParseUserModel.iOS.email}{\index{ParseUserModel.iOS.email@{ParseUserModel.iOS.email}!ParseUserModel.iOS.email@{ParseUserModel.iOS.email}}
+\index{ParseUserModel.iOS.email@{ParseUserModel.iOS.email}!ParseUserModel.iOS.email@{ParseUserModel.iOS.email}}
+\subsubsection[{ParseUserModel.iOS.email}]{\setlength{\rightskip}{0pt plus 5cm}email (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseUserModel.iOS.email}
+
+String containing the current users email as defined in the UserModel protocol.\\
+
+\textbf{Modifier and Type:}\\
+\tab var emailVerified:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var email: String\\
+
+%method
+\hypertarget{class_ParseUserModel.iOS.createFromSignUp}{\index{ParseUserModel.iOS.createFromSignUp@{ParseUserModel.iOS.createFromSignUp}!ParseUserModel.iOS.createFromSignUp@{ParseUserModel.iOS.createFromSignUp}}
+\index{ParseUserModel.iOS.createFromSignUp@{ParseUserModel.iOS.createFromSignUp}!ParseUserModel.iOS.createFromSignUp@{ParseUserModel.iOS.createFromSignUp}}
+\subsubsection[{ParseUserModel.iOS.phone}]{\setlength{\rightskip}{0pt plus 5cm}createFromSignUp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseUserModel.iOS.phone}
+\textbf{createFromSignUp(\_:password:)}\\
+
+Main function for creating a new user. Automatically creates a corresponding UserProfileModel and returns both in a tuple.\\
+
+\textbf{Modifier and Type:}\\
+\tab var phone:\\
+
+
+\textbf{Declaration:}
+\tab 
+Swift\\
+
+var phone: String\\
+
+%method
+\hypertarget{class_ParseUserModel.iOS.createFromSignUp}{\index{ParseUserModel.iOS.createFromSignUp@{ParseUserModel.iOS.createFromSignUp}!ParseUserModel.iOS.createFromSignUp@{ParseUserModel.iOS.createFromSignUp}}
+\index{ParseUserModel.iOS.createFromSignUp@{ParseUserModel.iOS.createFromSignUp}!ParseUserModel.iOS.phone@{ParseUserModel.iOS.createFromSignUp}}
+\subsubsection[{ParseUserModel.iOS.createFromSignUp}]{\setlength{\rightskip}{0pt plus 5cm}createFromSignUp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ParseUserModel.iOS.createFromSignUp}
+\textbf{createFromSignUp(\_:password:)}\\
+
+
+Main function for creating a new user. Automatically creates a corresponding UserProfileModel and returns both in a tuple.\\
+
+\textbf{Modifier and Type:}\\
+\tab var phone:\\
+
+
+\textbf{Declaration:}\\
+\tab 
+Swift\\
+
+var phone: String\\
+
+\textbf{Parameters:}
+\begin{itemize}
+\item username - The new user’s username.
+\item password - The new user’s password.
+\end{itemize}
+
+\textbf{Declaration:}\\
+A tuple containing the newly created UserModel object and its corresponding UserProfileModel.\\
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item ParseUserModel
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+

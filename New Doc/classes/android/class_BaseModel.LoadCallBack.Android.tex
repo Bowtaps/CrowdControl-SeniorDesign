@@ -1,0 +1,72 @@
+\hypertarget{class_BaseModel.LoadCallback.Android}{\section{BaseModel.LoadCallback Class Reference}
+\label{class_BaseModel.LoadCallback.Android}\index{BaseModel.LoadCallback.Android@{BaseModel.LoadCallback.Android}}
+}
+
+\subsection*{Interface BaseMode.LoadCallback}
+
+\textit{public static interface \textbf{BaseModel.LoadCallback}}
+
+The callback interface that should be used for asynchronous loading operations.\\
+
+\textbf{Enclosing interfaces:}\\
+\tab     BaseModel\\
+
+
+
+%public member functions
+\subsection*{Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_BaseModel.LoadCallback.Android.doneLoadingModel}{doneLoadingModel} ()
+\end{DoxyCompactItemize}
+
+
+
+
+%constructor and deconstructor
+\subsection{Method Detail}
+
+%method
+\hypertarget{class_BaseModel.LoadCallback.Android.doneLoadingModel}{\index{BaseModel.LoadCallBack.Android.doneLoading.Model@{BaseModel.LoadCallBack.Andrid.doneLoading}!BaseModel.LoadCallBack.Android.doneLoading@{BaseModel.LoadCallBack.Android.doneLoading}}
+\index{BaseModel.LoadCallBack.Android.doneLoading@{BaseModel.LoadCallBack.Android.doneLoading}!BaseModel.LoadCallBack.Android.doneLoading@{Basemodel.LoadCallBack.doneLoading}}
+\subsubsection[{BaseMode.LoadCallback.Android.doneLoadingModel}]{\setlength{\rightskip}{0pt plus 5cm}doneLoadingModel (
+\begin{DoxyParamCaption}
+\item[{BaseModel}]{object}
+\item[{java.lang.Exception}]{ex}
+\end{DoxyParamCaption}
+)}}\label{class_BaseMode.LoadCallback.Android.doneLoadingModel}
+\textit{void doneLoadingModel(BaseModel object,
+                    java.lang.Exception ex)}\\
+
+This method is called after completion of an asynchronous background load on a model. It accepts the loaded model and an exception object should something go wrong.\\
+
+\textbf{Modifier and Type:}\\
+\tab void\\
+
+\textbf{Parameters:}\\
+\begin{itemize}
+\item object - The object that attempted to be loaded. This parameter cannot be null and will be valid whether or not the operation was successful.
+\item ex - The exception that occurred, if any. This value will be null if the operation was successful and will be a valid exception object if an error occurred.
+\end{itemize}
+
+
+
+
+
+
+
+%generation
+\subsection{Generation}
+The documentation for this class was generated from the following file\-:
+\begin{DoxyCompactItemize}
+\item BaseModel.LoadCallBack
+\end{DoxyCompactItemize} 
+
+
+
+
+
+
+
+
+
