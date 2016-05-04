@@ -5,9 +5,9 @@
 
 \chapter{System and Unit Testing}
 
-Crowd Control utilizes multiple sevices across different platforms, requiring
+Crowd Control utilizes multiple services across different platforms, requiring
 all parts to be operating correctly in order to provide consistent service to
-all users. We use system and unit testing to assist developers in identifing 
+all users. We use system and unit testing to assist developers in identifying 
 potential issues and to verify that the product being produced meets
 requirements. The goal of system and unit testing is to automate the process to
 increase development efficiency and reduce testing errors.
@@ -18,7 +18,7 @@ automated unit testing, can be as time-consuming as writing production code. In
 fact, it is extremely common for a single function of production code to require
 many times as many lines of unit testing code to completely test the function.
 While automated testing provides many invaluable benefits, it would ultimately be
-a hinderance to the project if it means missing critical deadlines and not
+a hindrance to the project if it means missing critical deadlines and not
 achieving crucial project milestones.
 
 In this section, we describe our approach to testing, our goals, and the test
@@ -119,7 +119,7 @@ as class documentation are available from this website.
 \subsection{iOS Client Application}
 
 To test our client code running locally on iOS devices, we use the testing tools
-included in Xcode, our iOS integrated development environment. Backend unit
+included in Xcode, our iOS integrated development environment. Back-end unit
 testing and interface testing are all handled by the same framework. These tests
 are run from within Xcode. Interface tests require a running iOS emulator or an
 iOS device connected to the computer. Because the unit testing tools used to
@@ -135,9 +135,9 @@ tests. Class documentation can also be found on this website.
 \subsection{Parse Service and Cloud Code}
 
 Some aspects of our project exist as ``cloud code'', which is custom server-side
-logic executed by our database backend service, Parse. This cloud code is
+logic executed by our database back-end service, Parse. This cloud code is
 written in JavaScript and handles database operations that require security,
-data integrity, consistency, and efficency. However, because this cloud code
+data integrity, consistency, and efficiency. However, because this cloud code
 runs on a remote server to which we have limited access and concealed knowledge
 of its internal workings, we are forced to test the our code by the only means
 we have; using the client applications.
@@ -174,8 +174,8 @@ assigned by Parse and used to access the database.
 Because running tests on Parse result in changes to the data in the database we
 are testing with, it is crucial that the automated tests be run on an
 independent Parse database dedicated to testing. Running such tests on either
-the production or development databases could result in irreversable destruction
-of data that we cannot afford to jeapordize. In order to avoid this, all unit
+the production or development databases could result in irreversible destruction
+of data that we cannot afford to jeopardize. In order to avoid this, all unit
 tests that involve testing Parse functionality should be executed using a
 database where the data is used exclusively for testing.
 
@@ -223,7 +223,7 @@ other. Also like Parse, we require that all tests run through Sinch also be run
 using a special Sinch application key that is completely separate from the
 production and development versions of the application. We must do this in order
 to avoid user ID conflicts and to limit any operations that may affect service
-uptime and reliability.
+up-time and reliability.
 
 
 \section{Test Setup and Execution}
@@ -233,7 +233,7 @@ two distinct phases: design and execution. As functionality and features are
 designed and built, correlating tests are designed concurrently and added to our
 testing matrix. After a test has been adequately designed with inputs and
 expected outputs defined, the unit tests can be implemented in whatever testing
-framework associated with the platform which the tests are targetting.
+framework associated with the platform which the tests are targeting.
 
 Setting up unit tests involves referencing the previously designed test
 parameters while writing code that will run on the target platform within the
@@ -305,7 +305,7 @@ Valid credentials & Success \\
 Invalid password & Failure \\
 Unconfirmed password & Failure \\
 Invalid email & Failure + Message \\
-Whitespace-only username & Failure + Message \\
+White-space-only username & Failure + Message \\
 Empty username & Failure + Message \\
 Empty email & Failure + Message \\
 Empty password & Failure + Message \\
@@ -321,7 +321,7 @@ No name & Message \\
 Whitespace-only name & Failure + Message \\
 No description & Success + Message \\
 Whitespace-only description & Success + Message \\
-Else & Success + trim whitespace + collapse whitepace in name \\
+Else & Success + trim white-space + collapse white-space in name \\
 \end{tabularx}
 \end{center}
 
@@ -402,7 +402,7 @@ Decline confirmation & Dismiss message, do not leave group \\
 Empty string & Highlight, no accept \\
 Too short & Highlight, no accept \\
 All whitespace & Highlight, no accept \\
-Valid display name & Accept, trim whitespace, collapse consecutive whitespace \\
+Valid display name & Accept, trim white-space, collapse consecutive white-space \\
 \end{tabularx}
 \end{center}
 
@@ -412,7 +412,7 @@ Valid display name & Accept, trim whitespace, collapse consecutive whitespace \\
 \multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Sign out of app}}}\\
 \hline
 Tap ``log out'' & Display confirmation message (y/n) \\
-Accept confirmation & Log out of the application and display login page \\
+Accept confirmation & Log out of the application and display log-in page \\
 Decline confirmation & Dismiss message, do not change application state \\
 \end{tabularx}
 \end{center}
@@ -422,7 +422,7 @@ Decline confirmation & Dismiss message, do not change application state \\
 \arrayrulecolor{green}\hline
 \multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Send a group message}}}\\
 \hline
-Emtpy string & Send button disabled \\
+Empty string & Send button disabled \\
 Non-empty string & Message sent to all members and immediately displayed in conversation + saved to storage \\
 \end{tabularx}
 \end{center}
@@ -432,7 +432,7 @@ Non-empty string & Message sent to all members and immediately displayed in conv
 \arrayrulecolor{green}\hline
 \multicolumn{2}{l}{\textbf{\textcolor{myGreen}{See locations of group members}}}\\
 \hline
-Tap on ``map'' tab & Map is displayed, group member locations displayed on map as pins (zoombed out to display all group members) \\
+Tap on ``map'' tab & Map is displayed, group member locations displayed on map as pins (zoomed out to display all group members) \\
 \end{tabularx}
 \end{center}
 
@@ -471,9 +471,9 @@ other aspect of the project, the unit test will often supply mock data and
 mock functionality that behaves according to specifications.
 
 Due to the time constraints of this project, a majority of our testing design
-efforts were put towards developing the overal system testing matrix, which
+efforts were put towards developing the overall system testing matrix, which
 tests the entire system rather than just a specific subset. This allowed us to
-devote more time towards development, documentation, and business endevaors. It
+devote more time towards development, documentation, and business endeavors. It
 is unfortunately a side affect that the subsystems we have built will need to be
 revisited and have unit tests applied to them in order for us to verify that
 each component is functioning as expected.
@@ -487,7 +487,7 @@ whether or not we would be capable of producing a market-ready product, while
 a fair number of these risks were about the technology we were utilizing and
 whether or not we could depend on it. The third area of risk was the in the
 business as a whole, which is an area in which none of the team was particularly
-knowledgable in.
+knowledgeable in.
 
 
 \subsection{Team Risks and Mitigation}
@@ -510,7 +510,7 @@ amount of time researching and studying in detail the behavior and usage of each
 technology that they would be working with. Frequently, the team would meet to
 share research with each other and educate one another. On multiple occasions,
 team members would prepare impromptu presentations to communicate the results
-of their effots with the other team members.
+of their efforts with the other team members.
 
 Mitigating the time management risk was a more challenging task. To do so, each
 team member was forced to cut back on work hours in order to devote more time to
@@ -522,17 +522,17 @@ whole moving forward at a swift and consistent rate.
 
 \subsection{Technology Risks and Mitigation}
 
-The core product of this project depends ehavily on an active internet
+The core product of this project depends heavily on an active internet
 connection and a consistent feed of data between third party services in order
 to function properly. This means that a major risk that lies beyond our control
 is the availability of internet service for our end users as well as service
-uptime. Because these services are provided by third parties, our team has
+up-time. Because these services are provided by third parties, our team has
 little control over their availability, pricing, and features.
 
 Mitigating this risk is a difficult one, as it involves depending on technology
 that we have no guarantee on how it will or will not change. The most we can do
 is ensure that our dependencies on these services is not so much that the
-project will utterly collapse if one of them becomes unavailable or otherewise
+project will utterly collapse if one of them becomes unavailable or otherwise
 unusable. The best way to do this is to minimize the amount of coupling between
 our software and the libraries provided by third parties and increase
 separability between the two.
@@ -576,7 +576,7 @@ into a corner.
 To mitigate this risk, we began reaching out to and taking advice from the
 entrepreneurs in residence at our school. These entrepreneurs who have had
 past and present business experience were kind enough to share their knowledge
-with our team. Decisions such as target marget, how to promote our app, and
+with our team. Decisions such as target market, how to promote our app, and
 alternative sources of revenue are all business aspects that we discussed at
 length with these entrepreneurs.
 
@@ -606,9 +606,9 @@ In both versions we successfully incorporated the following features:
 \begin{itemize}
 	\item Create new account
 	\item Log in to existing account using email address
-	\item View list of joinable groups
-	\item ``Pull-to-refresh'' list of joinable groups
-	\item View information on a particualr group
+	\item View list of join-able groups
+	\item ``Pull-to-refresh'' list of join-able groups
+	\item View information on a particular group
 	\item Join an existing group
 	\item Create a new group
 	\item View own location on a dynamic map
@@ -619,7 +619,7 @@ In both versions we successfully incorporated the following features:
 
 During the later half of this project, the team shifted focus towards developing
 exclusively for the Android version of the client, as all team members already
-posessed the required tools to work on it. As a result, the Android version of
+possessed the required tools to work on it. As a result, the Android version of
 our client application has an additional set of features compared to that of the
 iOS version. The following features exist in the Android version at the time of
 this writing:
@@ -655,13 +655,13 @@ server functionality, we developed cloud code to run on our Parse data server.
 Much of the logic that requires chained queries into the database, cross
 references, and multi-row accesses we implemented in cloud code. By moving this
 logic to the server, we are able to serve complicated requests while minimizing
-network access and increasing effiency and data integrity across threads.
+network access and increasing efficiency and data integrity across threads.
 
 
 \subsection{Successes in Testing}
 
-The greatest success of our work in unit and system tesing has been in the
-development of our testing matrix. Our tesing matrix, while not comprehensive
+The greatest success of our work in unit and system testing has been in the
+development of our testing matrix. Our testing matrix, while not comprehensive
 (as such a matrix requires years of refining to produce), will act as a set of
 blueprints when setting up automated tests. At over one fifty test cases
 strong, this matrix defines the behavior of our application in many different
@@ -669,25 +669,25 @@ possible states. Using this information, we can implement automated unit tests
 more efficiently than if we did not have such a matrix.
 
 A secondary success in our testing efforts was in discovering that all of the
-necessary tesing frameworks are free and are mature enough to have exhaustive
+necessary testing frameworks are free and are mature enough to have exhaustive
 documentation and support. We have access to a plethora of information that has
 aided us in designing and implementing unit and system tests using these native
-tools. Additionaly, the tools we are using integrate seamlessly into the IDEs we
+tools. Additionally, the tools we are using integrate seamlessly into the IDEs we
 are using for development, reducing the number of tools required to use them.
 
 Finally, we have succeeded in designing and implementing a number of UI unit
 tests for the iOS version of our client applications. As implementing unit tests
 takes a significant time investment, the ones we have built provide a good
 foundation upon which to build. For example, many interface tests relate to the
-login and signup screens and are used for tesing account creation and login.
+log-in and sign-up screens and are used for testing account creation and log-in.
 
 
 \subsection{Issues in Dependencies}
 
 Midway through this project, one of our core dependencies, Parse, which is a
-third party service that acts as a database backend and cloud code host,
+third party service that acts as a database back-end and cloud code host,
 announced that it would be discontinuing service effective January 31st, 2017.
-This means that before the end of the year, our project's backend will need to
+This means that before the end of the year, our project's back-end will need to
 be transferred to another service of similar functionality. However, because
 Parse will not be discontinuing service until after the end of 2016, we have
 prioritized feature development over mitigating this risk, as there is still
@@ -699,7 +699,7 @@ time to address this issue.
 One major issue we encountered when designing unit tests was the fact that none
 of the team members have had significant experience doing so. Although a number
 of us have had a moderate amount of formal education on the subject through
-couse and guest lectures, none have designed or implemented automated tesing in
+course and guest lectures, none have designed or implemented automated testing in
 a project of this magnitude. Thus, an enormous part of testing for this project
 was devoted to studying testing methods used in other projects and researching
 how to use our tools to build these tests.
@@ -707,15 +707,15 @@ how to use our tools to build these tests.
 The second issue encountered was time constraints. Our goals to turn this
 project into a viable product fit for the market required that we focus heavily
 on progress towards a working prototype that can be demonstrated by the end of
-the semester. Automated tesing, although an important development tool, requires
+the semester. Automated testing, although an important development tool, requires
 a large time investment overhead that we could not afford if we desired to meet
 requirement deadlines and achieve our critical milestones.
 
-When making the concious decision to prioritize our efforts, we agreed that code
-separability and maintainability should not be neglected. These two tennants of
-software development are heavilty promoted by automated tesing. By choosing to
+When making the conscious decision to prioritize our efforts, we agreed that code
+separability and maintainability should not be neglected. These two tenants of
+software development are heavily promoted by automated testing. By choosing to
 prioritize separability and maintainability when designing our software, we are
-confident that delaying automated tesing will be less of a hurdle when the time
+confident that delaying automated testing will be less of a hurdle when the time
 comes to implement them. Regardless, we are aware that by not investing the time
 now, we are accruing ``technical debt'', which means that this task will be more
 difficult to accomplish the longer we delay.
@@ -724,25 +724,21 @@ difficult to accomplish the longer we delay.
 \subsection{Problems in Testing}
 
 The unit and system testing section of this project was not without its own set
-of problems. Many of these we did not forsee, as they are problems that have
-arisen from our tools or our tesing devices, both of which we have limited
+of problems. Many of these we did not foresee, as they are problems that have
+arisen from our tools or our testing devices, both of which we have limited
 control over.
 
-Xcode, the IDE chosen for iOS development underwent an update that apeared to
-cause UI tesing on iOS to become undependable. Often unit tests run using this
+Xcode, the IDE chosen for iOS development underwent an update that appeared to
+cause UI testing on iOS to become undependable. Often unit tests run using this
 tool would immediately report failures without apparently running the test
 properly. It is possible that this is a configuration error, but it is one that
 we have yet to solve if it is. Other Xcode users have reported similar problems
 using these features.
 
 Another problem encountered was in using our hardware devices to run automated
-tesing. For the most part, the device simulators and emulators are adequate for
+testing. For the most part, the device simulators and emulators are adequate for
 running most tests. In some cases, the devices would not cooperate with the
 testing frameworks. These devices would either run too slowly for the tests and
 sometimes reject the incoming connection to the IDE. In the end, we decided to
 forego solving these technical difficulties to focus on product development and
 business-related issues.
-
-
-\subsection{Changes to the Backlog}
-
