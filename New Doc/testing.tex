@@ -1,38 +1,748 @@
 % !TEX root = DesignDocument.tex
+\definecolor{green}{HTML}{66FF66}
+\definecolor{myGreen}{HTML}{009900}
+\renewcommand{\arraystretch}{1.5}
 
+\chapter{System and Unit Testing}
 
-\chapter{System  and Unit Testing}
+Crowd Control utilizes multiple sevices across different platforms, requiring
+all parts to be operating correctly in order to provide consistent service to
+all users. We use system and unit testing to assist developers in identifing 
+potential issues and to verify that the product being produced meets
+requirements. The goal of system and unit testing is to automate the process to
+increase development efficiency and reduce testing errors.
 
-This section describes the approach taken with regard to system and unit testing. 
+Given the time constraints and scope of Crowd Control, we have been forced to
+make compromises in regards to system and unit testing. Implementing and running
+automated unit testing, can be as time-consuming as writing production code. In
+fact, it is extremely common for a single function of production code to require
+many times as many lines of unit testing code to completely test the function.
+While automated testing provides many invaluable benefits, it would ultimately be
+a hinderance to the project if it means missing critical deadlines and not
+achieving crucial project milestones.
+
+In this section, we describe our approach to testing, our goals, and the test
+cases that we have developed and implemented thus far. We also discuss the
+future plans for testing and how we will be able to devote more time and energy
+towards this project in the upcoming months.
+
 
 \section{Overview}
-Provides a brief overview of the testing approach, testing frameworks, and general 
-how testing is/will be done to provide a measure of success for the system. 
 
-Each requirement (user story component) should be tested.    A review of objectives and
-constraints might be needed here.  
+For this project, we use a combination of ``black-box'' and ``white-box''
+testing. This means that there are some aspects of the project that we have
+created ourselves and have full control over its execution, and there are others
+that we have little control over because it is was provided by a third party.
+In practical terms, it means that we can test our own code with the full
+knowledge of how it is intended to work, allowing us to design tests that target
+potential problem areas. When designing tests that make use of a third-party
+service or a library that we have not written ourselves, we can only write tests
+that verify that the supplied functionality works as documented.
+
+Because one of the goals of this project is to develop the applications using
+native languages and technology, we make use of the most established testing
+frameworks for the platform we are testing on. For the iOS application, we use
+the testing tools and frameworks built directly into Xcode. For the Android
+application, we use Espresso for testing our interface and JUnit for testing our
+classes and methods. To test Parse, the third party service we use for data
+storage and retrieval, we use unit testing on both Android and iOS, as
+interacting with Parse requires a running application on a device. To test
+Sinch, the third party service we use for instant messaging between users, we
+use the unit testing frameworks we use for testing our Android and iOS
+applications since interacting with Sinch also requires a running instance of
+the application on a device.
+
+Running unit tests in all of the frameworks above yields a list of binary
+results; for each test executed, we receive either a ``pass'' or ``fail''
+result. If a test fails, we may also receive a message describing the issue
+that caused the test to fail. There exist several conditions that could cause
+a test to fail.
+
+\begin{itemize}
+	\item An uncaught exception is thrown
+	\item A runtime error is encountered
+	\item The application crashes
+	\item A test assertion fails
+\end{itemize}
+
+When designing test cases, we begin with the set of user stories identified at
+the beginning of the project. A list of user stories can be found in the section
+\ref{userStories}. From these user stories, we build a testing matrix that will
+be referenced when writing our automated tests. Tests are then written as the
+code they are intended to test is written.
+
+Tests are also to be run relatively frequently. Ideally, developers would enable
+the set of tests relevant for the aspect of the project they are currently
+working on and run those tests as needed during development and again before the
+code is merged in with the rest of the project. Then, the full set of tests
+would be run automatically and at a time that would not interfere with
+development or execution of the product.
+
 
 \section{Dependencies}
-Describe the basic dependencies which should include unit testing frameworks and 
-reference material. 
+
+This project can be broken into several pieces that all work together to form a
+single cohesive product. Taken individually, these pieces would be of little
+utility. It is important that we test each how well each component interacts
+with each other as well as each isolated part as best we can. The four main
+components of this project are as follows:
+
+\begin{itemize}
+	\item Android client application
+	\item iOS client application
+	\item Parse service and cloud code
+	\item Sinch service
+\end{itemize}
+
+Each of these aspects of the project need to be somehow tested, although some
+parts can be more accurately tested than others. More thorough requirement
+breakdowns of each aspect are described in the subsections below.
+
+
+\subsection{Android Client Application}
+
+To test our client code running locally on Android devices, we use two testing
+frameworks: JUnit for testing Android-independent code and Espresso for testing
+navigation and user interface requirements. These frameworks are run from within
+our integrated development environment, Android Studio. Additionally, for
+interface testing, we require a running emulator or a connected Android device on
+which Android Studio can run the unit tests.
+
+While developing unit tests for the JUnit and Espresso frameworks, we use
+\href{https://google.github.io/android-testing-support-library/docs/index.html}
+{Google's Android testing Support Library Documentation} website. This resource
+provides accurate information on installing and using these frameworks in
+conjunction with Android Studio. Writing unit tests and best practices, as well
+as class documentation are available from this website.
+
+
+\subsection{iOS Client Application}
+
+To test our client code running locally on iOS devices, we use the testing tools
+included in Xcode, our iOS integrated development environment. Backend unit
+testing and interface testing are all handled by the same framework. These tests
+are run from within Xcode. Interface tests require a running iOS emulator or an
+iOS device connected to the computer. Because the unit testing tools used to
+test iOS devices are tied to Xcode, this means that the tests can only be run on
+a Macintosh computer.
+
+While developing unit tests for iOS devices, we reference \href{https://developer.apple.com/library/ios/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html}
+{iOS Developer Library} website. This resource contains instructions on
+designing and setting up unit tests, as well as instructions on running unit
+tests. Class documentation can also be found on this website.
+
+
+\subsection{Parse Service and Cloud Code}
+
+Some aspects of our project exist as ``cloud code'', which is custom server-side
+logic executed by our database backend service, Parse. This cloud code is
+written in JavaScript and handles database operations that require security,
+data integrity, consistency, and efficency. However, because this cloud code
+runs on a remote server to which we have limited access and concealed knowledge
+of its internal workings, we are forced to test the our code by the only means
+we have; using the client applications.
+
+Parse does not supply testing features, and thus we must devise a way to execute
+our own unit tests using the tools we have. To test the functionality of our
+cloud code and our Parse interaction code, we require these things:
+
+\begin{enumerate}
+	\item The Parse libraries installed
+	\item Parse interactivity built into the application
+	\item An active Internet connection to the Parse service
+	\item An emulator/simulator/developer device
+	\item The testing framework associated with the client platform being used
+	for testing
+	\item A Parse application key
+	\item A separate Parse database dedicated to testing
+\end{enumerate}
+
+In order to run tests on our cloud code, we use both versions of our client (iOS
+and Android) to connect to the Parse server, perform database operations by
+calling cloud code, then verifying the results. We use the aforementioned
+testing frameworks to develop and execute these tests on both platforms. These
+tests can be performed on device simulators, device emulators, and physical
+developer devices alike.
+
+When using client software to test server software, we must properly configure
+the clients to interact with the database as if it were no different than a
+production database. Thus, we require that the Parse libraries be included in
+the project and that actual Parse functionality built into the application. As
+with all Parse-enabled applications, this requires a unique application key be
+assigned by Parse and used to access the database.
+
+Because running tests on Parse result in changes to the data in the database we
+are testing with, it is crucial that the automated tests be run on an
+independent Parse database dedicated to testing. Running such tests on either
+the production or development databases could result in irreversable destruction
+of data that we cannot afford to jeapordize. In order to avoid this, all unit
+tests that involve testing Parse functionality should be executed using a
+database where the data is used exclusively for testing.
+
+
+\subsection{Sinch Service}
+
+Another crucial third party service we utilize is Sinch, an instant messaging
+platform that we use in conjunction with Parse. This service does not have cloud
+code support, but that is okay since we have no need for cloud code here.
+However, it is important that we test how well our client applications connect
+to and use the service to ensure that communications run smoothly.
+
+In order to test the functionality of Sinch and how well our applications
+interact with it, we require these things:
+
+\begin{enumerate}
+	\item The Sinch libraries installed
+	\item Sinch functionality built into the application
+	\item An active internet connection to Sinch
+	\item An emulator/simulator/developer device running the application
+	\item The testing framework associated with the client platform being used
+	for testing
+	\item A Sinch application key
+	\item A separate Sinch application dedicated to testing
+\end{enumerate}
+
+As with Parse, Sinch is a third party service to which we have limited access
+and no knowledge of the implementation details. With the addition of the fact
+that we have no cloud code for Sinch to test, the only aspect of this service we
+need to test is how our client applications interact with the service.
+
+To test our integration with Sinch, we run tests using our Android and iOS
+client applications on either device emulators, device simulators, or physical
+development devices. To develop and run these tests, we use the aforementioned
+testing frameworks used for testing the client code itself on each platform.
+We then run our tests on these devices, which cause the application to connect
+to and communicate with Sinch using the provided developer API. Sinch requires
+an active Internet connection, so the success of the tests depends on the
+testing devices having a stable Internet connection.
+
+Lastly, like Parse, Sinch supplies a unique application key which our clients
+use to authenticate with the Sinch servers. All versions of our client
+applications use this key and is what allows them to communicate with each
+other. Also like Parse, we require that all tests run through Sinch also be run
+using a special Sinch application key that is completely separate from the
+production and development versions of the application. We must do this in order
+to avoid user ID conflicts and to limit any operations that may affect service
+uptime and reliability.
 
 
 \section{Test Setup and Execution}
-Describe how test cases were developed, setup, and executed.  This section can 
-be extremely involved if a complete list of test cases was warranted for the system.   One 
-approach is to list each requirement, module, or component and describe the test.
 
-The unit tests are described here.
+As with most aspects of software development, test setup and execution requires
+two distinct phases: design and execution. As functionality and features are
+designed and built, correlating tests are designed concurrently and added to our
+testing matrix. After a test has been adequately designed with inputs and
+expected outputs defined, the unit tests can be implemented in whatever testing
+framework associated with the platform which the tests are targetting.
 
-\section{System Testing}
+Setting up unit tests involves referencing the previously designed test
+parameters while writing code that will run on the target platform within the
+selected testing framework. For example, implementing a unit test that will run
+on the Android platform, we create a new unit test class for the portion of the
+code we aim to test, following framework usage. The specifics on implementing a
+unit test within the constraints of a framework often differ greatly between
+frameworks.
+
+Essentially, we create a new testing class that extends some framework-supplied
+class. We then create functions that will perform the tests under different
+conditions, called test cases. Usually, if our goal is to test the functionality
+of a single class, we will create a single test class with the sole purpose of
+testing said class.
+
+A full breakdown of our most current testing matrix can be found in the
+section \ref{systemTesting}.
+
+
+\section{System Testing} \label{systemTesting}
+
+Most of the unit tests our team has designed are related to the functionality of
+the system as a whole, focusing on user experience and how we expect the
+application to respond to inputs at each given state. Rather than focus on
+testing a specific aspect of the project, this testing matrix includes test
+cases and expected results that often require the cooperation of every part of
+the project.
+
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\textbf{Test case} & \textbf{Result}\\
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Log in with email}}}\\
+\hline
+Valid credentials & Success \\
+Invalid email & Failure \\
+Invalid password & Failure \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Log in with Facebook}}}\\
+\hline
+Valid credentials & Success \\
+Invalid credentials & Failure \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Log in with Facebook}}}\\
+\hline
+Valid credentials & Success \\
+Invalid credentials & Failure \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Sign up with email}}}\\
+\hline
+Email already in use & Message \\
+Valid credentials & Success \\
+Invalid password & Failure \\
+Unconfirmed password & Failure \\
+Invalid email & Failure + Message \\
+Whitespace-only username & Failure + Message \\
+Empty username & Failure + Message \\
+Empty email & Failure + Message \\
+Empty password & Failure + Message \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Create a group}}}\\
+\hline
+No name & Message \\
+Whitespace-only name & Failure + Message \\
+No description & Success + Message \\
+Whitespace-only description & Success + Message \\
+Else & Success + trim whitespace + collapse whitepace in name \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Search for users}}}\\
+\hline
+Enter display name & Display list of matching users or ``no matches'' \\
+Enter email & Detect email, no change \\
+Enter phone number & Detect phone number, no change \\
+Enter incomplete phone number or incomplete email & Display ``no matches'' \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Send invite to users to join group}}}\\
+\hline
+By email unassociated with user & Generate and send email \\
+By email associated with user & Send app notification to user, display invite in-app \\
+By phone number unassociated with user & Detect phone number, no change \\
+By phone number associated with user & Send app notification to user, display invite in-app \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Join a public group}}}\\
+\hline
+Tap ``join group'' & Displays confirmation message (y/n) \\
+Accept confirmation message & Message ``request sent'' \\
+Decline confirmation message & Dismiss message \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Join group via invite}}}\\
+\hline
+Tap ``join'' & Join group \\
+Tap ``delete'' & Delete invitation \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Leave a group}}}\\
+\hline
+Tap ``Leave Group'' & Display confirmation message (y/n) \\
+Accept confirmation message & If leader, display confirmation to choose new leader (y/n), else leave the current group and return to nearby groups \\
+Leader accepts confirmation & Display list of group members \\
+Leader declines confirmation & Leave current group and return to nearby group list \\
+Decline confirmation message & Dismiss message, do not leave group \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Group leader disbands group}}}\\
+\hline
+Leader taps ``disband group'' & Display confirmation message (y/n) \\
+Accept confirmation & Display message to all users and return to join group page \\
+Decline confirmation & Dismiss message, do not leave group \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Enter display name}}}\\
+\hline
+Empty string & Highlight, no accept \\
+Too short & Highlight, no accept \\
+All whitespace & Highlight, no accept \\
+Valid display name & Accept, trim whitespace, collapse consecutive whitespace \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Sign out of app}}}\\
+\hline
+Tap ``log out'' & Display confirmation message (y/n) \\
+Accept confirmation & Log out of the application and display login page \\
+Decline confirmation & Dismiss message, do not change application state \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Send a group message}}}\\
+\hline
+Emtpy string & Send button disabled \\
+Non-empty string & Message sent to all members and immediately displayed in conversation + saved to storage \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{See locations of group members}}}\\
+\hline
+Tap on ``map'' tab & Map is displayed, group member locations displayed on map as pins (zoombed out to display all group members) \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Opt-out location updates}}}\\
+\hline
+Toggle ``enable location updates'' off & Display toast/notify message \\
+Toggle ``enable location updates'' on & Display confirmation message (y/n) \\
+Accept confirmation & Share user location, begin auto location share \\
+Decline confirmation & Toggle ``enable location updates'' off \\
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tabularx}{\textwidth}[t]{p{4cm} X}
+\arrayrulecolor{green}\hline
+\multicolumn{2}{l}{\textbf{\textcolor{myGreen}{Receive message}}}\\
+\hline
+Received message & Unread indicator in tab navigation bar \\
+\end{tabularx}
+\end{center}
+
+\arrayrulecolor{black}
+
 
 \section{System Integration Analysis}
 
+System integration testing is a process by which we verify that a newly
+introduced piece of code or feature properly integrates with the existing code
+and that few errors or bugs arise. This usually involves performing black box
+testing on a very specific and well-defined subsystem. In order to accurately
+perform these tests such that the subject subsystem is in no way affected by any
+other aspect of the project, the unit test will often supply mock data and
+mock functionality that behaves according to specifications.
+
+Due to the time constraints of this project, a majority of our testing design
+efforts were put towards developing the overal system testing matrix, which
+tests the entire system rather than just a specific subset. This allowed us to
+devote more time towards development, documentation, and business endevaors. It
+is unfortunately a side affect that the subsystems we have built will need to be
+revisited and have unit tests applied to them in order for us to verify that
+each component is functioning as expected.
+
+
 \section{Risk Analysis}
 
-\subsection{Risk Mitigation}
+When first starting this project, we quickly became aware of a number of risks
+that could hinder our progress. Many of these risks were related to our team and
+whether or not we would be capable of producing a market-ready product, while
+a fair number of these risks were about the technology we were utilizing and
+whether or not we could depend on it. The third area of risk was the in the
+business as a whole, which is an area in which none of the team was particularly
+knowledgable in.
+
+
+\subsection{Team Risks and Mitigation}
+
+When design and development of this application was first underway, the biggest
+risk was that the team would not have the skills or training necessary to
+successfully produce the desired product. Each team member was an undergraduate
+student studying computer science with little experience in mobile application
+design and development. Few of us had any graphic design experience, and none
+had worked in a professional capacity on apps.
+
+Additionally, being college students with at most part-time jobs, the
+availability of each team member was less than ideal. Each member was required
+to divide their attention between multiple concurrent projects and assignments
+as well as any jobs or internships they have.
+
+To mitigate the lack of experience and education in mobile app development,
+graphic design, and user experience design, each team member spent a large
+amount of time researching and studying in detail the behavior and usage of each
+technology that they would be working with. Frequently, the team would meet to
+share research with each other and educate one another. On multiple occasions,
+team members would prepare impromptu presentations to communicate the results
+of their effots with the other team members.
+
+Mitigating the time management risk was a more challenging task. To do so, each
+team member was forced to cut back on work hours in order to devote more time to
+this project in order to keep up with requirements and deadlines. Weekends were often dedicated to working on this project, with many members spending 4-8 hours
+a day developing the core product. Frequent meetings with the rest of the team
+and strict time schedules helped keep each member on task and the team as a
+whole moving forward at a swift and consistent rate.
+
+
+\subsection{Technology Risks and Mitigation}
+
+The core product of this project depends ehavily on an active internet
+connection and a consistent feed of data between third party services in order
+to function properly. This means that a major risk that lies beyond our control
+is the availability of internet service for our end users as well as service
+uptime. Because these services are provided by third parties, our team has
+little control over their availability, pricing, and features.
+
+Mitigating this risk is a difficult one, as it involves depending on technology
+that we have no guarantee on how it will or will not change. The most we can do
+is ensure that our dependencies on these services is not so much that the
+project will utterly collapse if one of them becomes unavailable or otherewise
+unusable. The best way to do this is to minimize the amount of coupling between
+our software and the libraries provided by third parties and increase
+separability between the two.
+
+This risk is of particular relevance because it was one of the first risks
+identified early on and as a result was addressed before any amount of code was
+written. In the end, this proved to be an extremely wise decision, as one of our
+third party services, Parse, which is responsible for data storage, retrieval,
+account management, and cloud code, will be terminating its services on January,
+2017. When this announcement was made, we realized that our initial efforts
+towards separability and separability were not in vain and will become useful
+shortly. This now introduces a new risk for us to address: finding a backup
+database server service.
+
+Fortunately, with the announcement of Parse's closure, the company that operates
+the service also announced that the software used to power the service will be
+made open source so that we or any other company interested in continuing Parse
+service on their applications without needing to rewrite thousands of lines of
+code can do so by hosting their own servers. To ensure that we can continue
+development of this product without being severely affected by the closure of
+Parse, we plan on utilizing another third-party generic server host that will
+be capable of handling the capacity of our application using the server software
+provided by Parse.
+
+
+\subsection{Business Risks and Mitigation}
+
+The ultimate goal of this project is to develop a mobile application that can be
+released to market. Because of this, one huge aspect of this project was not
+just to produce a piece of software that functions well, but also to position
+the team and company to prepare for launch and to generate revenue from the
+product.
+
+Rather than point out one particular area of the business side of things, we
+realized that as a whole we were inexperienced and largely ignorant on what went
+into building a successful business. This resulted in virtually every business
+decision we made into a potential risk; without fully understanding the
+consequences of each decision, it was entirely possible for us to work ourselves
+into a corner.
+
+To mitigate this risk, we began reaching out to and taking advice from the
+entrepreneurs in residence at our school. These entrepreneurs who have had
+past and present business experience were kind enough to share their knowledge
+with our team. Decisions such as target marget, how to promote our app, and
+alternative sources of revenue are all business aspects that we discussed at
+length with these entrepreneurs.
+
+
 
 \section{Successes, Issues and Problems}
+
+During the course of our project's development, we have encountered various
+successes, issues, and problems. Details on each of these are listed below,
+along with a summary on the changes made to our backlog throughout the course of
+this project. This section covers successes, issues, and problems for the entire
+project, including aspects that are not directly related to testing.
+
+
+\subsection{Successes in Client Application}
+
+The core deliverable of this project has been the iOS and Android client
+applications. These apps were the main focus of our design and development and
+are the product that end users will interact with directly. Thus, it was
+important to ensure that care and attention was devoted to this aspect of the
+project.
+
+During this project, we made great progress in creating functional versions of
+the client application for both the iOS and Android mobile phone platforms.
+In both versions we successfully incorporated the following features:
+
+\begin{itemize}
+	\item Create new account
+	\item Log in to existing account using email address
+	\item View list of joinable groups
+	\item ``Pull-to-refresh'' list of joinable groups
+	\item View information on a particualr group
+	\item Join an existing group
+	\item Create a new group
+	\item View own location on a dynamic map
+	\item View information on the current group
+	\item Leave the current group
+	\item Sign out of the application
+\end{itemize}
+
+During the later half of this project, the team shifted focus towards developing
+exclusively for the Android version of the client, as all team members already
+posessed the required tools to work on it. As a result, the Android version of
+our client application has an additional set of features compared to that of the
+iOS version. The following features exist in the Android version at the time of
+this writing:
+
+\begin{itemize}
+	\item View dedicated settings screen
+	\item Change user display name
+	\item View other group members' locations on dynamic map
+	\item View list of other members on group info screen
+	\item Send instant messages to other group members
+	\item Receive instant members from other group members
+	\item Group leaders can choose to disband the group
+	\item Group leaders can promote other members to replace them as the group leader
+	\item Group leaders can remove other members from the group
+	\item Users can view pending invitations to join existing groups
+	\item Clients automatically fetch group changes periodically
+	\item Clients automatically broadcast own location to other group members
+\end{itemize}
+
+Because one of the original deliverables of this project was both iOS and
+Android client applications, this fragmentation of features is less-than-ideal,
+yet ultimately necessary in order to produce at least one functional prototype
+before the end of this course. Over the summer, we plan to continue development
+of these features. We will also be dividing focus between both versions of the
+client so that the iOS version will be caught up to the progress we have made in
+the Android version.
+
+
+\subsection{Successes in Cloud Code}
+
+Our project encompasses both client-side and server-side development. To produce
+server functionality, we developed cloud code to run on our Parse data server.
+Much of the logic that requires chained queries into the database, cross
+references, and multi-row accesses we implemented in cloud code. By moving this
+logic to the server, we are able to serve complicated requests while minimizing
+network access and increasing effiency and data integrity across threads.
+
+
+\subsection{Successes in Testing}
+
+The greatest success of our work in unit and system tesing has been in the
+development of our testing matrix. Our tesing matrix, while not comprehensive
+(as such a matrix requires years of refining to produce), will act as a set of
+blueprints when setting up automated tests. At over one fifty test cases
+strong, this matrix defines the behavior of our application in many different
+possible states. Using this information, we can implement automated unit tests
+more efficiently than if we did not have such a matrix.
+
+A secondary success in our testing efforts was in discovering that all of the
+necessary tesing frameworks are free and are mature enough to have exhaustive
+documentation and support. We have access to a plethora of information that has
+aided us in designing and implementing unit and system tests using these native
+tools. Additionaly, the tools we are using integrate seamlessly into the IDEs we
+are using for development, reducing the number of tools required to use them.
+
+Finally, we have succeeded in designing and implementing a number of UI unit
+tests for the iOS version of our client applications. As implementing unit tests
+takes a significant time investment, the ones we have built provide a good
+foundation upon which to build. For example, many interface tests relate to the
+login and signup screens and are used for tesing account creation and login.
+
+
+\subsection{Issues in Dependencies}
+
+Midway through this project, one of our core dependencies, Parse, which is a
+third party service that acts as a database backend and cloud code host,
+announced that it would be discontinuing service effective January 31st, 2017.
+This means that before the end of the year, our project's backend will need to
+be transferred to another service of similar functionality. However, because
+Parse will not be discontinuing service until after the end of 2016, we have
+prioritized feature development over mitigating this risk, as there is still
+time to address this issue.
+
+
+\subsection{Issues in Testing}
+
+One major issue we encountered when designing unit tests was the fact that none
+of the team members have had significant experience doing so. Although a number
+of us have had a moderate amount of formal education on the subject through
+couse and guest lectures, none have designed or implemented automated tesing in
+a project of this magnitude. Thus, an enormous part of testing for this project
+was devoted to studying testing methods used in other projects and researching
+how to use our tools to build these tests.
+
+The second issue encountered was time constraints. Our goals to turn this
+project into a viable product fit for the market required that we focus heavily
+on progress towards a working prototype that can be demonstrated by the end of
+the semester. Automated tesing, although an important development tool, requires
+a large time investment overhead that we could not afford if we desired to meet
+requirement deadlines and achieve our critical milestones.
+
+When making the concious decision to prioritize our efforts, we agreed that code
+separability and maintainability should not be neglected. These two tennants of
+software development are heavilty promoted by automated tesing. By choosing to
+prioritize separability and maintainability when designing our software, we are
+confident that delaying automated tesing will be less of a hurdle when the time
+comes to implement them. Regardless, we are aware that by not investing the time
+now, we are accruing ``technical debt'', which means that this task will be more
+difficult to accomplish the longer we delay.
+
+
+\subsection{Problems in Testing}
+
+The unit and system testing section of this project was not without its own set
+of problems. Many of these we did not forsee, as they are problems that have
+arisen from our tools or our tesing devices, both of which we have limited
+control over.
+
+Xcode, the IDE chosen for iOS development underwent an update that apeared to
+cause UI tesing on iOS to become undependable. Often unit tests run using this
+tool would immediately report failures without apparently running the test
+properly. It is possible that this is a configuration error, but it is one that
+we have yet to solve if it is. Other Xcode users have reported similar problems
+using these features.
+
+Another problem encountered was in using our hardware devices to run automated
+tesing. For the most part, the device simulators and emulators are adequate for
+running most tests. In some cases, the devices would not cooperate with the
+testing frameworks. These devices would either run too slowly for the tests and
+sometimes reject the incoming connection to the IDE. In the end, we decided to
+forego solving these technical difficulties to focus on product development and
+business-related issues.
+
 
 \subsection{Changes to the Backlog}
 
