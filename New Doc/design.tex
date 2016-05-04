@@ -4,11 +4,7 @@
 \chapter{Design  and Implementation}
 This section is used to describe the design details for each of the major components 
 in the system.   The major components include: Parse for our database, Sinch for messaging, 
-and native APKs (Google and Apple) for maps.   
-
-(TODO) Citations look like~\cite{Choset:2005:PRM, arkin2009governing, lavalle2006}  and~\cite{wiki:asimo,lumelsky:1987, nolfi2000evolutionary}.  These are done automatically.  Just fill in the database {\tt designrefs.bib} using the same field structure as the other entries.  Then pdflatex the document, bibtex the document and pdflatex twice again.  The first pdflatex creates requests for bibliography entries.
-The bibtex extracts and formats the requested entries.  The next pdflatex puts them in order and assigns labels.  The final pdflatex replaces references in the text with the assigned labels.
-The bibliography is automatically constructed.  
+and native APKs (Google and Apple) for maps.    
  
  \section{Architecture and System Design}
  This is section will detail the overall system design and general architecture of Crowd Control. The software was designed in such a way that minimizes dependency from third-party services such as Sinch and Parse.  It does this by abstracting everything using an extra layer of models.  The extra models stop the third party calls from being visible in the main activities in Android as well as the view logic in iOS.
@@ -40,10 +36,7 @@ In reflection of the shortcomings of the first design iteration, the database sc
 
  \subsection{Data Structures and Algorithms}
  By developing Crowd Control in the Android Studio environment, all the data structures available to Java are available to the project itself. That being said, there are no particularly noteworthy structures or algorithms that need to be expound upon, but there are class hierarchies that will be explained in later detail in this chapter.
- 
- \subsection{Data Flow}
- TODO: Create Data Flow diagram of overall process
- 
+
  
  \subsection{Communications}
  One of the core features to the Crowd Control app is communication amongst its users. To achieve this, some third-party services are used, which in turn communicate data between users. If a user wishes to send another user a message, that message is sent to the Parse back-end, and delivered to the recipient via the Sinch service. The basic communication overview is outlined below in Figure ~\ref{CommFlow}.
@@ -171,10 +164,6 @@ In Android, the models are a collection of model classes, such as the GroupModel
   \item Message transfer service is independent of carrier/device/platform
 \end{itemize} 
 
-\subsection{Phase Overview}
-%TODO: Fix citations. The .bib file is set up correctly, and we are properly accessing the .bib sub-structure, but it is either not being displayed correctly. Perhaps incorrect compilation option? Syntax inconsistency?
-
-%Group Messaging uses Sinch as a back-end. It allows are users to send a message to every other user in their group. We have modified code from this repository to do group messaging ~\cite{Choset: sinch/android-messaging-tutorial, https://github.com/sinch/android-messaging-tutorial}. This repository gives full permission for commercial use ~\cite{Choset: License, https://github.com/sinch/android-messaging-tutorial/blob/master/LICENSE}. 
 
 \begin{description}
   \item [Phase 1] Construct message containers and begin Sinch integration
