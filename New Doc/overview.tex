@@ -55,10 +55,10 @@ The deliverables for this two-semester senior design project are the following i
 \section{System Description}
 Behind the UI, Crowd Control is written using an MVC architecture. IOS is written natively in Swift under the IDE XCode. On the Android side, the code is written in Native Mobile Java under Android Studio.
 
-The code for Android uses XML files for storing layout-related code, which act as the view in the MVC pattern. Each activity acts as a controller. Each one of the models has an interface, which is how the controllers get access to the functions and data provided by the model. Each interface is set up in such a way that it uses OOP inheritance to generalize the models, thus abstracting our third party software. This contract allows us to write our code in such a way that, if ever needed, we could change the underlying implementation of certain modules with minimal refactoring.\\\\
+The code for Android uses XML files for storing layout-related code, which act as the view in the MVC pattern. Each activity acts as a controller. Each one of the models has an interface, which is how the controllers get access to the functions and data provided by the model. Each interface is set up in such a way that it uses OOP inheritance to generalize the models, thus abstracting our third party software. This contract allows us to write our code in such a way that, if ever needed, we could change the underlying implementation of certain modules with minimal re-factoring.\\\\
 %Remove explicit newlines after iOS section is taken care of.
-The iOS platform follows a very similar MVC design pattern, too.\\
-(TODO: iOS details needed.)
+The iOS platform follows a very similar MVC design pattern, too. Swift uses the MVC paradigm, there are the three segments of files.  For views Swift uses storyboards, these are much like XML layout files in Android.  They define where things are laid out and what storyboard comes next.  For the model and controller files, each of these are classes in Swift.  The difference between these classes are what object they extend.  Controllers extend the UIDelegates and our models extend our base class, BaseModel.  Much like android our model classes follow a similar pattern so that the back end could be changed with minimal effort. \\
+
 
 \subsection{Integrated Group Messaging}
 Integrated group messaging is an important feature of Crowd Control. It allows for communication across different platforms, different phone brands, and different carriers. This allows for seamless communication between users without the issues associated with SMS such as messages not using the same format, messages not going to all recipients, and messages with users in the group that you do not want to have your personal information.
@@ -120,7 +120,7 @@ REFERENCE LINK: \url{http://parse.com/}
 REFERENCE LINK: \url{https://www.sinch.com/}
 	
 	\subsubsection{Usage}
-	Sinch ables Crowd Control to handle the sending and receiving of messages between group members. Through use of the Sinch help manuals, Bowtaps has constructed a fragment to control a user interface that fetches messages sent by users. We have also modified the basic one-to-one message sending implementation to broadcast the message to the entire group.
+	Sinch enables Crowd Control to handle the sending and receiving of messages between group members. Through use of the Sinch help manuals, Bowtaps has constructed a fragment to control a user interface that fetches messages sent by users. We have also modified the basic one-to-one message sending implementation to broadcast the message to the entire group.
 
 
 
